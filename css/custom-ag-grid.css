@@ -1,0 +1,135 @@
+.grid {
+  width: 100%;
+}
+
+html[dir]
+  .ag-theme-balham
+  .ag-root-wrapper
+  .ag-root-wrapper-body
+  .ag-root
+  .ag-body
+  .ag-body-viewport-wrapper
+  .ag-body-viewport {
+  direction: ltr;
+}
+
+@-moz-document url-prefix() {
+  html[dir="rtl"]
+    .ag-theme-balham
+    .ag-root-wrapper
+    .ag-root-wrapper-body
+    .ag-root
+    .ag-body
+    .ag-body-viewport-wrapper
+    .ag-body-viewport {
+    direction: rtl;
+  }
+}
+html[dir]
+  .ag-theme-balham
+  .ag-root-wrapper
+  .ag-root-wrapper-body
+  .ag-root
+  .ag-body
+  .ag-body-viewport-wrapper
+  .ag-body-viewport
+  .ag-body-container
+  .ag-row:last-child {
+  border-bottom: none;
+}
+
+html[dir="ltr"]
+  .ag-theme-balham
+  .ag-root-wrapper
+  .ag-root-wrapper-body
+  .ag-root
+  .ag-body
+  .ag-body-viewport-wrapper
+  .ag-body-viewport
+  .ag-body-container
+  .ag-row
+  .ag-cell.input-cell.autocomplete-cell
+  .form-group
+  a {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"]
+  .ag-theme-balham
+  .ag-root-wrapper
+  .ag-root-wrapper-body
+  .ag-root
+  .ag-body
+  .ag-body-viewport-wrapper
+  .ag-body-viewport
+  .ag-body-container
+  .ag-row
+  .ag-cell.input-cell.autocomplete-cell
+  .form-group
+  a {
+  right: auto;
+  left: 0;
+}
+
+.grid,
+.ag-root-wrapper.ag-layout-normal,
+.ag-root-wrapper-body .ag-layout-normal .ag-focus-managed,
+.ag-root.ag-layout-normal,
+.ag-root-wrapper-body.ag-layout-normal,
+.ag-body.ag-layout-normal {
+  height: 100% !important;
+  height: -moz-fit-content !important;
+}
+
+.ag-root-wrapper-body .ag-layout-normal .ag-focus-managed {
+  height: 100% !important;
+}
+
+html[dir] .ag-theme-balham .ag-root-wrapper .ag-root-wrapper-body .ag-root {
+  padding: 0px;
+}
+
+.ag-overlay {
+  position: static !important;
+  padding: 10px;
+}
+
+.ag-body-viewport.ag-layout-normal {
+  overflow-x: auto !important;
+  overflow-y: inherit !important;
+}
+
+.display-note {
+  color: gray;
+}
+
+.popover {
+  max-width: 500px;
+}
+.popover .popover-body #myform {
+  width: 400px;
+}
+
+.grid,
+.ag-root-wrapper.ag-layout-normal,
+.ag-root-wrapper-body .ag-layout-normal .ag-focus-managed,
+.ag-root.ag-layout-normal,
+.ag-root-wrapper-body.ag-layout-normal,
+.ag-body.ag-layout-normal {
+  height: 100% !important;
+  height: -moz-fit-content !important;
+}
+
+.ag-root-wrapper-body .ag-layout-normal .ag-focus-managed {
+  height: 100% !important;
+}
+
+.ag-theme-balham .btn {
+  padding: 0;
+  width: 100%;
+  font-size: 0.9rem;
+}
+
+
+/*# sourceMappingURL=custom-ag-grid.css.map */

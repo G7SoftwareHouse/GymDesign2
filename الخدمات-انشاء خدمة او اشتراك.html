@@ -12,17 +12,12 @@
     <link href="./css/solid.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/select2.min.css" />
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="css/jstree.css" />
     <!-- AG-grid -->
-    <script src="https://unpkg.com/ag-grid-enterprise/dist/ag-grid-enterprise.min.noStyle.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-alpine.css"
-    />
+    <link rel="stylesheet" href="./css/ag-grid.css" />
+    <link rel="stylesheet" href="./css/ag-theme-balham.css" />
+    <link rel="stylesheet" href="./css/custom-ag-grid.css" />
+    <script src="js/ag-grid-enterprise.min.noStyle.js"></script>
     <!-- Custom style -->
     <link rel="stylesheet" href="./css/custom.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -1040,7 +1035,7 @@
 
                     <div
                       id="servicesGrid"
-                      class="ag-theme-alpine"
+                      class="ag-theme-balham"
                       style="height: 320px"
                     ></div>
                   </div>
@@ -1082,7 +1077,7 @@
 
                     <div
                       id="servicesGrid"
-                      class="ag-theme-alpine"
+                      class="ag-theme-balham"
                       style="height: 200px"
                     ></div>
                   </div>
@@ -1124,7 +1119,7 @@
 
                     <div
                       id="servicesGrid"
-                      class="ag-theme-alpine"
+                      class="ag-theme-balham"
                       style="height: 200px"
                     ></div>
                   </div>
@@ -1173,7 +1168,7 @@
 
                 <div
                   id="AccountsGrid"
-                  class="ag-theme-alpine"
+                  class="ag-theme-balham"
                   style="height: 320px"
                 ></div>
               </div>
@@ -1200,9 +1195,34 @@
           <div class="modal-body">
             <div class="form-group px-3">
               <label for="searchInput">البحث بالكود والإسم</label>
-              <input type="text" class="form-control" id="searchInput" />
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="searchInput"
+                  aria-describedby="search-icon"
+                />
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="search-icon">
+                    <button class="btn btn-link p-0">
+                      <i class="fas fa-search"></i>
+                    </button>
+                  </span>
+                </div>
+              </div>
 
-              <div id="jstree_demo_div"></div>
+              <div id="jstree">
+                <ul>
+                  <li>
+                    Root node 1
+                    <ul>
+                      <li id="child_node_1">Child node 1</li>
+                      <li>Child node 2</li>
+                    </ul>
+                  </li>
+                  <li>Root node 2</li>
+                </ul>
+              </div>
             </div>
           </div>
           <div class="modal-footer border-0 px-3">
@@ -1245,6 +1265,94 @@
           $("#jstree").jstree("select_node", "child_node_1");
           $.jstree.reference("#jstree").select_node("child_node_1");
         });
+      });
+    </script>
+    <script>
+      // services with grid 4
+      self.code = function () {};
+      self.code.prototype = {
+        init: function (params) {
+          this.codeButton = document.createElement("div");
+          this.codeButton.innerHTML = `12342
+    <button
+        type="button"
+        class="btn"
+        data-toggle="modal"
+        data-target="#codeModal"
+        ><i class="fas fa-file-alt basic_text_color" style="font-size: 1.2rem;
+        margin: 0 5px;"></i></button>`;
+        },
+        getGui: function () {
+          return this.codeButton;
+        },
+        refresh: function () {
+          return true;
+        },
+        destroy: function () {
+          $(this.codeButton).remove();
+        },
+      };
+      // specify the columns
+      const columnDefs4 = [
+        {
+          headerName: "حسابات الأستاذ",
+          field: "id",
+          resizable: true,
+          minWidth: 50,
+          sortable: true,
+        },
+        {
+          headerName: "كود الحساب",
+          field: "codeNo",
+          resizable: true,
+          minWidth: 150,
+          cellRenderer: code,
+          suppressSorting: true,
+          editable: true,
+        },
+        {
+          headerName: "إسم الحساب",
+          field: "recpNo",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+      ];
+
+      // specify the data
+      const dataSource4 = [
+        {
+          id: "حساب إيرادات الخدمة",
+          codeNo: "12342",
+          recpNo: "إسم الحساب المختار",
+          height: 100,
+        },
+        {
+          id: "حساب مرتجع الخدمة",
+          codeNo: "12342",
+          recpNo: "إسم الحساب المختار",
+          height: 100,
+        },
+      ];
+      var gridOptions4 = {
+        columnDefs: columnDefs4,
+        rowData: dataSource4,
+        enableRowGroup: true,
+        enableColResize: true,
+        enableFilter: true,
+        enableSorting: true,
+        enableFilter: true,
+        enableRtl: true,
+        suppressRowTransform: true,
+        domLayout: "autoHeight",
+        onGridReady: function (params) {
+          params.api.sizeColumnsToFit();
+        },
+      };
+      // setup the grid after the page has finished loading
+      document.addEventListener("DOMContentLoaded", function () {
+        var gridDiv4 = document.querySelector("#AccountsGrid");
+        new agGrid.Grid(gridDiv4, gridOptions4);
       });
     </script>
   </body>

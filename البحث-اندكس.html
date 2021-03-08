@@ -13,15 +13,10 @@
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/select2.min.css" />
     <!-- AG-grid -->
-    <script src="https://unpkg.com/ag-grid-enterprise/dist/ag-grid-enterprise.min.noStyle.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-alpine.css"
-    />
+    <link rel="stylesheet" href="./css/ag-grid.css" />
+    <link rel="stylesheet" href="./css/ag-theme-balham.css" />
+    <link rel="stylesheet" href="./css/custom-ag-grid.css" />
+    <script src="js/ag-grid-enterprise.min.noStyle.js"></script>
     <!-- Custom style -->
     <link rel="stylesheet" href="./css/custom.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -655,7 +650,7 @@
               >
                 <div
                   id="servicesGrid"
-                  class="ag-theme-alpine"
+                  class="ag-theme-balham"
                   style="height: 320px"
                 ></div>
               </div>
@@ -677,5 +672,118 @@
     <script src="js/all.min.js"></script>
     <script src="js/select2.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+      // services index grid
+      self.actions2 = function () {};
+      self.actions2.prototype = {
+        init: function (params) {
+          this.actions2Button = document.createElement("div");
+          this.actions2Button.innerHTML = `
+    <ul class="actions-list list-inline">
+        <li class="list-inline-item info-color"><a href="#" title="مرفقات"><i class="fas fa-paperclip mx-1"></i></a></li>
+        <li class="list-inline-item"><a href="#" title="عرض"><i class="fas fa-eye mx-1"></i></a></li>
+        <li class="list-inline-item warning-color"><a href="#" title="تعديل"><i class="fas fa-pen mx-1"></i></a></li>
+        <li class="list-inline-item danger-color"><a href="#" title="الغاء"><i class="fas fa-trash-alt mx-1"></i></a></li>
+    </ul>
+        `;
+        },
+        getGui: function () {
+          return this.actions2Button;
+        },
+        refresh: function () {
+          return true;
+        },
+        destroy: function () {
+          $(this.actions2Button).remove();
+        },
+      };
+
+      // specify the columns
+      const columnDefs3 = [
+        {
+          headerName: "م",
+          field: "id",
+          resizable: true,
+          minWidth: 50,
+          sortable: true,
+        },
+        {
+          headerName: "الكود",
+          field: "branch",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "إسم التصنيف",
+          field: "recpNo",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "نوع التصنيف",
+          field: "serviceNo",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "الحالة",
+          field: "status",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "تاريخ التفعيل",
+          field: "serviceNo",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "اجراءات",
+          field: "actions",
+          resizable: true,
+          minWidth: 200,
+          cellRenderer: actions2,
+          sortable: true,
+        },
+      ];
+
+      // specify the data
+      const dataSource3 = [
+        {
+          id: "1",
+          branch: "",
+          recpNo: "A-12342",
+          serviceNo: "302",
+          service: "12-month gym mem",
+          datePurchase: "12-2-2020",
+          height: 100,
+        },
+      ];
+      var gridOptions3 = {
+        columnDefs: columnDefs3,
+        rowData: dataSource3,
+        enableRowGroup: true,
+        enableColResize: true,
+        enableFilter: true,
+        enableSorting: true,
+        enableFilter: true,
+        enableRtl: true,
+        suppressRowTransform: true,
+        domLayout: "autoHeight",
+        onGridReady: function (params) {
+          params.api.sizeColumnsToFit();
+        },
+      };
+      // setup the grid after the page has finished loading
+      document.addEventListener("DOMContentLoaded", function () {
+        var gridDiv3 = document.querySelector("#servicesGrid");
+        new agGrid.Grid(gridDiv3, gridOptions3);
+      });
+    </script>
   </body>
 </html>

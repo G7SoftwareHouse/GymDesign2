@@ -141,6 +141,10 @@
   .single-tab .buttons-container .btn {
     padding: 0.5rem;
   }
+  .head-top {
+    flex-direction: column-reverse !important;
+    align-items: flex-start !important;
+  }
 }
 
 /* Portrait phones and smaller */

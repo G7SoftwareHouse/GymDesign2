@@ -2,7 +2,7 @@
 /* scrollbar */
 ::-webkit-scrollbar {
   width: 5px;
-  height: 3px;
+  height: 4px;
 }
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
@@ -283,30 +283,30 @@ select {
   background-color: #f3f3f3;
   box-shadow: inset 1px 0 0 #dcdcdc, inset -1px 0 0 #eeeeee;
 }
-.ag-theme-alpine {
+.ag-theme-balham {
   font-family: var(--neo-sans-regular);
 }
-.ag-theme-alpine .ag-rtl .ag-cell div,
-.ag-theme-alpine .ag-rtl .ag-cell button {
+.ag-theme-balham .ag-rtl .ag-cell div,
+.ag-theme-balham .ag-rtl .ag-cell button {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
 }
-.ag-theme-alpine .ag-rtl .ag-cell button {
+.ag-theme-balham .ag-rtl .ag-cell button {
   padding: 0;
   font-size: 0.9rem;
   outline: none !important;
   box-shadow: none !important;
 }
-.ag-theme-alpine .ag-rtl .ag-cell button:focus,
-.ag-theme-alpine .ag-rtl .ag-cell button:hover {
+.ag-theme-balham .ag-rtl .ag-cell button:focus,
+.ag-theme-balham .ag-rtl .ag-cell button:hover {
   color: var(--basic-main-color);
 }
-.ag-theme-alpine .dropdown-toggle::after {
+.ag-theme-balham .dropdown-toggle::after {
   border-top: 0.3em solid #919191;
 }
-.ag-theme-alpine .dropdown-menu {
+.ag-theme-balham .dropdown-menu {
   left: -17px !important;
   border: none;
   border-radius: 0;
@@ -315,7 +315,7 @@ select {
   padding: 0.5rem 0.2rem;
   background-color: #efefef;
 }
-.ag-theme-alpine .dropdown-menu a {
+.ag-theme-balham .dropdown-menu a {
   color: #707070;
 }
 .attach-list,
@@ -324,13 +324,13 @@ select {
   list-style: none;
   margin: 0 !important;
 }
-.ag-theme-alpine .ag-rtl .ag-cell .attach-list button {
+.ag-theme-balham .ag-rtl .ag-cell .attach-list button {
   display: block;
   height: auto;
   font-size: 0.7rem;
 }
 .actions-list .list-inline-item {
-  margin: 10px 2px 0 !important;
+  margin: 7px 2px 0 !important;
 }
 .actions-list .svg-inline--fa {
   display: block;
@@ -381,9 +381,16 @@ select {
   border: none;
   background-color: #b8c2c8;
   margin-right: 5px;
+  font-size: 0.7rem;
 }
 .move_info .form-control::-webkit-calendar-picker-indicator {
   filter: invert(1);
+}
+.move_info .form-control::-webkit-datetime-edit {
+  padding: 0.375rem 0.1rem;
+}
+.move_info .form-control::-webkit-calendar-picker-indicator {
+  position: initial;
 }
 .edit_modal .modal-header .btn {
   font-size: 0.9rem;
@@ -481,4 +488,7 @@ select {
 }
 .accountant p {
   color: #707070;
+}
+.input-group-prepend .btn {
+  color: black;
 }

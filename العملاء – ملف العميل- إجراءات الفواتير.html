@@ -13,9 +13,10 @@
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/select2.min.css" />
 	  <!-- AG-grid -->
-    <script src="https://unpkg.com/ag-grid-enterprise/dist/ag-grid-enterprise.min.noStyle.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css">
-    <link rel="stylesheet" href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-alpine.css">
+    <link rel="stylesheet" href="./css/ag-grid.css" />
+    <link rel="stylesheet" href="./css/ag-theme-balham.css" />
+    <link rel="stylesheet" href="./css/custom-ag-grid.css" />
+    <script src="js/ag-grid-enterprise.min.noStyle.js"></script>
     <!-- Custom style -->
     <link rel="stylesheet" href="./css/custom.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -762,7 +763,7 @@
                 role="tabpanel"
                 aria-labelledby="rec-tab"
               >
-                <div id="myGrid" class="ag-theme-alpine" style="height:320px"></div>
+                <div id="myGrid" class="ag-theme-balham" style="height:320px"></div>
               </div>
             </div>
           </div>
@@ -898,13 +899,13 @@
               <div class="col-md-3">
                 <h5 class="modal-title bold">تفعيل \ تعديل تفعيل الخدمة</h5>
               </div>
-              <div class="col-md-5">
+              <div class="col-md-6">
                 <div class="row align-items-center  move_info">
                   <div class="col p-0">رقم الحركة : 1234</div>
                   <div class="col p-0">تاريخ الحركة : <input type="date" class="form-control d-inline-block" /></div>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col p-0">
                 <button type="button" class="btn btn-info">إرفاق</button>
                 <button type="button" class="btn btn-info">طباعة</button>
                 <button type="button" class="btn btn-primary">Log</button>
@@ -970,10 +971,10 @@
             <!-- ag-grid tables -->
             <div class="more_info_table p-3">
               <h6>معلومات الاشتراك</h6>
-              <div id="infoGrid" class="ag-theme-alpine"></div>
+              <div id="infoGrid" class="ag-theme-balham"></div>
 
               <h6 class="mt-3">العروض على الخدمة</h6>
-              <div id="offersGrid" class="ag-theme-alpine"></div>
+              <div id="offersGrid" class="ag-theme-balham"></div>
             </div>
           </div>
           <div class="modal-footer">
@@ -996,5 +997,288 @@
     <script src="js/all.min.js"></script>
     <script src="js/select2.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+      self.actionCellRenderer = function () {};
+      self.actionCellRenderer.prototype = {
+        init: function (params) {
+          this.actionsButton = document.createElement("div");
+          this.actionsButton.innerHTML = `
+              <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  تفعيل <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#editModal"
+                        >تعديل التفعيل</button>
+                      </li>
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#fingerPrintModal"
+                        >تجميد</button>
+                      </li>
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#fingerPrintModal"
+                        >تجميد اضافي</button>
+                      </li>
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#fingerPrintModal"
+                        >فك تجميد</button>
+                      </li>
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#fingerPrintModal"
+                        >تمديد</button>
+                      </li>
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#fingerPrintModal"
+                        >الغاء</button>
+                      </li>
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#fingerPrintModal"
+                        >ترقية</button>
+                      </li>
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#fingerPrintModal"
+                        >تحويل</button>
+                      </li>
+                  </ul>
+              </div>
+              `;
+        },
+        getGui: function () {
+          return this.actionsButton;
+        },
+        refresh: function () {
+          return true;
+        },
+        destroy: function () {
+          $(this.actionsButton).remove();
+        },
+      };
+
+      self.attach = function () {};
+      self.attach.prototype = {
+        init: function (params) {
+          this.attachButton = document.createElement("div");
+          this.attachButton.innerHTML = `
+          <ul class="attach-list text-center">
+            <li>
+              <button
+              type="button"
+              class="btn green-color"
+              data-toggle="modal"
+              data-target="#fingerPrintModal"
+              ><i class="fas fa-paperclip mx-1"></i>العقد</button>
+            </li>
+            <li>
+              <button
+              type="button"
+              class="btn"
+              data-toggle="modal"
+              data-target="#fingerPrintModal"
+              ><i class="fas fa-paperclip mx-1"></i>مرفقات اخرى</button>
+            </li>
+          </ul>
+              `;
+        },
+        getGui: function () {
+          return this.attachButton;
+        },
+        refresh: function () {
+          return true;
+        },
+        destroy: function () {
+          $(this.attachButton).remove();
+        },
+      };
+
+      self.actions = function () {};
+      self.actions.prototype = {
+        init: function (params) {
+          this.actionsButton = document.createElement("div");
+          this.actionsButton.innerHTML = `
+          <ul class="actions-list list-inline">
+              <li class="list-inline-item"><a><i class="fas fa-thumbs-up"></i><p>تنفيذ الاجراء</p></a></li>
+              <li class="list-inline-item"><a><i class="fas fa-dollar-sign"></i><p>تحصيل</p></a></li>
+              <li class="list-inline-item"><a><i class="fas fa-eye"></i><p>عرض</p></a></li>
+          </ul>
+              `;
+        },
+        getGui: function () {
+          return this.actionsButton;
+        },
+        refresh: function () {
+          return true;
+        },
+        destroy: function () {
+          $(this.actionsButton).remove();
+        },
+      };
+
+      // specify the columns
+      const columnDefs = [
+        { headerName: "م", field: "id", resizable: true, minWidth: 50 },
+        {
+          headerName: "الفرع",
+          field: "branch",
+          resizable: true,
+          minWidth: 100,
+        },
+        {
+          headerName: "رقم الفاتورة",
+          field: "recpNo",
+          resizable: true,
+          minWidth: 100,
+        },
+        {
+          headerName: "رقم الخدمة",
+          field: "serviceNo",
+          resizable: true,
+          minWidth: 100,
+        },
+        { headerName: "الخدمة", field: "service", resizable: true, minWidth: 200 },
+        {
+          headerName: "تاريخ الشراء",
+          field: "datePurchase",
+          resizable: true,
+          minWidth: 140,
+        },
+        {
+          headerName: "تاريخ التفعيل",
+          field: "dateActive",
+          resizable: true,
+          minWidth: 140,
+        },
+        {
+          headerName: "تاريخ الانتهاء",
+          field: "dateExpire",
+          resizable: true,
+          minWidth: 140,
+        },
+        {
+          headerName: "قيمة الاشتراك",
+          field: "value",
+          resizable: true,
+          minWidth: 130,
+        },
+        { headerName: "المدفوع", field: "paid", resizable: true, minWidth: 100 },
+        { headerName: "المتبقي", field: "remain", resizable: true, minWidth: 100 },
+        {
+          headerName: "الاجراء",
+          field: "action",
+          resizable: true,
+          minWidth: 100,
+          cellRenderer: actionCellRenderer,
+          suppressSorting: true,
+        },
+        { headerName: "الحالة", field: "status", resizable: true, minWidth: 100 },
+        {
+          headerName: "المرفقات",
+          field: "attach",
+          resizable: true,
+          minWidth: 100,
+          cellRenderer: attach,
+          suppressSorting: true,
+        },
+        {
+          headerName: "اجراءات",
+          field: "actions",
+          resizable: true,
+          minWidth: 200,
+          cellRenderer: actions,
+          suppressSorting: true,
+        },
+      ];
+
+      // specify the data
+      const dataSource = [
+        {
+          id: "1",
+          branch: "",
+          recpNo: "A-12342",
+          serviceNo: "302",
+          service: "12-month gym mem",
+          datePurchase: "12-2-2020",
+          dateActive: "18-2-2020",
+          dateExpire: "18-5-2020",
+          value: "3500 R.S",
+          paid: "3000",
+          remain: "500",
+          status: "نشط",
+          attach: "Celica",
+          actions: 35000,
+          height: 100,
+        },
+        {
+          id: "1",
+          branch: "",
+          recpNo: "A-12342",
+          serviceNo: "302",
+          service: "12-month gym mem",
+          datePurchase: "12-2-2020",
+          dateActive: "18-2-2020",
+          dateExpire: "18-5-2020",
+          value: "3500 R.S",
+          paid: "3000",
+          remain: "500",
+          status: "منتهي",
+          attach: "Celica",
+          actions: 35000,
+          height: 100,
+        },
+      ];
+
+      var gridOptions = {
+        columnDefs: columnDefs,
+        rowData: dataSource,
+        enableRowGroup: true,
+        enableColResize: true,
+        enableFilter: true,
+        enableSorting: true,
+        enableFilter: true,
+        enableRtl: true,
+        suppressRowTransform: true,
+        // domLayout: "autoHeight",
+        onGridReady: function (params) {
+          params.api.sizeColumnsToFit();
+        },
+      };
+      // setup the grid after the page has finished loading
+      document.addEventListener("DOMContentLoaded", function () {
+        var gridDiv1 = document.querySelector("#myGrid");
+        new agGrid.Grid(gridDiv1, gridOptions);
+      });
+    </script>
   </body>
 </html>

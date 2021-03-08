@@ -683,13 +683,15 @@ label,
   font-size: 0.8rem;
 }
 
-.form-control {
+.form-control,
+.select2 .select2-selection {
   border: 1px solid #707070;
   border-radius: 5px;
 }
 /*************popups********************/
 .select2 {
-  height: 45px;
+  height: 40px;
+  width: 100% !important;
 }
 
 .select2 .select2-selection,
@@ -831,7 +833,8 @@ label,
   top: 25%;
   left: 1%;
 }
-.form-control {
+.form-control,
+.select2 .select2-selection {
   height: 40px !important;
   text-align: right;
 }
@@ -1067,11 +1070,6 @@ body {
 .w-custom {
   width: 94px !important;
 }
-.customer_card_list li p span::after {
-  content: ":";
-  position: absolute;
-  left: 0;
-}
 
 .Transformation-card .card-box {
   min-height: 300px;
@@ -1094,7 +1092,6 @@ body {
 /***************************End Assumptions **********************************/
 
 /***************************Employees Tabbs*****************************************/
-
 .Employees-heading-box .box-shadow-gray {
   min-width: 185px;
   padding: 12px;
@@ -1111,6 +1108,7 @@ body {
 
 .Employees-box .side_bar a {
   font-weight: bold;
+  border-bottom: 2px solid #b8c2c8;
 }
 
 .Employees-box .active {
@@ -1122,12 +1120,8 @@ body {
   color: #b63594;
 }
 
-.Employees-box .side_bar li {
-  border-bottom: 2px solid #b8c2c8;
-}
-
 .Employees-box .side_bar li:hover,
-.Employees-box .side_bar .active {
+.Employees-box .side_bar .active a {
   border-color: #b63594;
 }
 
