@@ -1273,14 +1273,14 @@
       self.code.prototype = {
         init: function (params) {
           this.codeButton = document.createElement("div");
-          this.codeButton.innerHTML = `12342
-    <button
+          this.codeButton.innerHTML = `<input readonly type="text" style="color: black" class="form-control col openPop" /> <button
         type="button"
         class="btn"
         data-toggle="modal"
         data-target="#codeModal"
         ><i class="fas fa-file-alt basic_text_color" style="font-size: 1.2rem;
-        margin: 0 5px;"></i></button>`;
+        margin: 0 5px;"></i></button>
+    `;
         },
         getGui: function () {
           return this.codeButton;

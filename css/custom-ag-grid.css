@@ -131,5 +131,14 @@ html[dir] .ag-theme-balham .ag-root-wrapper .ag-root-wrapper-body .ag-root {
   font-size: 0.9rem;
 }
 
+.ag-theme-balham .form-control[readonly] {
+  height: 27px !important;
+  padding: 0 5px;
+  background-color: transparent;
+  min-width: 110px;
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
 
 /*# sourceMappingURL=custom-ag-grid.css.map */
