@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>Collapse table</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style media="only screen">
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      ul li {
+        min-width: 200px;
+      }
+      .dragging li.ui-state-hover {
+        min-width: 240px;
+      }
+      .dragging .ui-state-hover a {
+        color: green !important;
+        font-weight: bold;
+      }
+      th,
+      td {
+        padding: 2px 4px;
+        border: 1px solid;
+      }
+      .connectedSortable tr,
+      .ui-sortable-helper {
+        cursor: move;
+      }
+      .connectedSortable tr:first-child {
+        cursor: default;
+      }
+      .ui-sortable-placeholder {
+        background: yellow;
+      }
+
+      body {
+        padding: 1rem;
+        overflow: auto;
+      }
+      .row-overflow {
+        overflow-y: scroll;
+        height: 300px;
+      }
+
+      .myTable {
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+      }
+      #myTable tr:hover {
+        cursor: move;
+      }
+      .myTable .table {
+        background-color: transparent;
+      }
+      .bold {
+        font-weight: 600;
+      }
+      .bg-white {
+        background-color: white impo !important;
+      }
+
+      [data-toggle="collapse"]:before {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\f054";
+        margin-top: 10px;
+        transform: rotate(90deg);
+        transition: all linear 0.25s;
+      }
+      [data-toggle="collapse"].collapsed:before {
+        transform: rotate(0deg);
+      }
+    </style>
+  </head>
+  <body class="py-5">
+    <div class="container mb-5">
+      <div class="table table-responsive myTable">
+        <thead>
+          <div class="card-header">
+            <table class="table table-responsive table-sm mb-0">
+              <tbody>
+                <tr>
+                  <td class="border-0 bold">#</td>
+                  <td class="border-0 bold">Mark</td>
+                  <td class="border-0 bold">Otto</td>
+                  <td class="border-0 bold">@mdo</td>
+                  <td class="border-0 bold text-right">
+                    <i class="fa"></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </thead>
+        <tbody id="myTable">
+          <tr class="card border-0" id="1">
+            <div class="card-header bg-white">
+              <table class="table table-responsive table-sm mb-0">
+                <tbody>
+                  <tr
+                    id="headingOne"
+                    data-toggle="collapse"
+                    data-target="#collapseOne"
+                  >
+                    <td class="border-0"></td>
+                    <td class="border-0">Mark</td>
+                    <td class="border-0">Otto</td>
+                    <td class="border-0">@mdo</td>
+                    <td class="border-0 text-right">
+                      <i class="fa"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              id="collapseOne"
+              class="collapse show"
+              role="tabpanel"
+              aria-labelledby="headingOne"
+              data-parent="#accordion"
+            >
+              <div class="card-body px-5">
+                <table class="table table-responsive border table-sm">
+                  <tbody>
+                    <tr class="card-header">
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table
+                  class="table table-responsive table-hover table-hover border table-sm"
+                >
+                  <tbody>
+                    <tr class="card-header">
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table
+                  class="table table-responsive table-hover border table-sm"
+                >
+                  <tbody>
+                    <tr class="card-header">
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table
+                  class="table table-responsive table-hover border table-sm"
+                >
+                  <tbody>
+                    <tr class="card-header">
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </tr>
+          <tr class="card border-0" id="2">
+            <div class="card-header bg-white collapsed" role="tab" id="headingTwo">
+              <table class="table table-responsive table-sm mb-0">
+                <tbody>
+                  <tr
+                    id="headingTwo"
+                    data-toggle="collapse"
+                    data-target="#collapseTwo"
+                  >
+                    <td class="border-0"></td>
+                    <td class="border-0">2222</td>
+                    <td class="border-0">Otto</td>
+                    <td class="border-0">@mdo</td>
+                    <td class="border-0 text-right">
+                      <i class="fa"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              id="collapseTwo"
+              class="collapse"
+              role="tabpanel"
+              aria-labelledby="headingTwo"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                <table class="table table-responsive border table-sm">
+                  <tbody>
+                    <tr class="card-header bg-white">
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table
+                  class="table table-responsive table-hover table-hover border table-sm"
+                >
+                  <tbody>
+                    <tr class="card-header">
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table
+                  class="table table-responsive table-hover border table-sm"
+                >
+                  <tbody>
+                    <tr class="card-header">
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table
+                  class="table table-responsive table-hover border table-sm"
+                >
+                  <tbody>
+                    <tr class="card-header">
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </tr>
+          <tr class="card border-0" id="3">
+            <div class="card-header bg-white collapsed" role="tab" id="headingThree">
+              <table class="table table-responsive table-sm mb-0">
+                <tbody>
+                  <tr
+                    id="headingThree"
+                    data-toggle="collapse"
+                    data-target="#collapseThree"
+                  >
+                    <td class="border-0"></td>
+                    <td class="border-0">3333</td>
+                    <td class="border-0">Otto</td>
+                    <td class="border-0">@mdo</td>
+                    <td class="border-0 text-right">
+                      <i class="fa"></i>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div
+              id="collapseThree"
+              class="collapse"
+              role="tabpanel"
+              aria-labelledby="headingThree"
+              data-parent="#accordion"
+            >
+              <div class="card-body">
+                <table class="table table-responsive border table-sm">
+                  <tbody>
+                    <tr class="card-header">
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table
+                  class="table table-responsive table-hover table-hover border table-sm"
+                >
+                  <tbody>
+                    <tr class="card-header">
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table
+                  class="table table-responsive table-hover border table-sm"
+                >
+                  <tbody>
+                    <tr class="card-header">
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table
+                  class="table table-responsive table-hover border table-sm"
+                >
+                  <tbody>
+                    <tr class="card-header">
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </tr>
+        </tbody>
+      </div>
+    </div>
+
+    <!-- <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <table class="table table-hover" id="myTable">
+            <thead>
+              <tr>
+                <th scope="col" class="text-center">#</th>
+                <th scope="col">Input</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="1">
+                <td class="index">1</td>
+                <td class="indexInput">
+                  <input type="text" name="abc" id="index" value="1" />
+                </td>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr id="2">
+                <td class="index">2</td>
+                <td class="indexInput">
+                  <input type="text" name="abc" id="index" value="2" />
+                </td>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr id="3">
+                <td class="index">3</td>
+                <td class="indexInput">
+                  <input type="text" name="abc" id="index" value="3" />
+                </td>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- AG-GRID -->
+    <div id="myGrid" class="ag-theme-alpine" style="height: 100%"></div>
+    <script>
+      var __basePath = "./";
+    </script>
+    <script src="https://unpkg.com/@ag-grid-enterprise/all-modules@25.1.0/dist/ag-grid-enterprise.min.js"></script>
+    <script>
+      function DetailCellRenderer() {}
+
+      DetailCellRenderer.prototype.init = function (params) {
+        this.eGui = document.createElement("div");
+        this.eGui.classList.add("row-overflow");
+        this.eGui.innerHTML =
+          '<div class="px-5 py-2"><table class="table table-responsive table-hover border table-sm"><tbody><tr class="card-header"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table><table class="table table-responsive table-hover border table-sm"><tbody><tr class="card-header"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table><table class="table table-responsive table-hover border table-sm"><tbody><tr class="card-header"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table><table class="table table-responsive table-hover border table-sm"><tbody><tr class="card-header"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table></div>';
+      };
+
+      DetailCellRenderer.prototype.getGui = function () {
+        return this.eGui;
+      };
+
+      var gridOptions = {
+        masterDetail: true,
+        autoHeight: true,
+        wrapText: true,
+        autoHeight: true,
+        sortable: true,
+        resizable: true,
+        detailCellRenderer: "myDetailCellRenderer",
+        components: {
+          myDetailCellRenderer: DetailCellRenderer,
+        },
+        columnDefs: [
+          // group cell renderer needed for expand / collapse icons
+          { field: "name", cellRenderer: "agGroupCellRenderer", rowDrag: true },
+          { field: "account" },
+          { field: "calls" },
+          { field: "minutes", valueFormatter: "x.toLocaleString() + 'm'" },
+        ],
+        defaultColDef: {
+          flex: 1,
+          autoHeight: true,
+          wrapText: true,
+          autoHeight: true,
+          sortable: true,
+          resizable: true,
+        },
+        rowHeight: 150,
+        onColumnResized: onColumnResized,
+        onColumnVisible: onColumnVisible,
+        onFirstDataRendered: onFirstDataRendered,
+        rowDragManaged: true,
+        animateRows: true,
+      };
+
+      function onFirstDataRendered(params) {
+        params.api.forEachNode(function (node) {
+          node.setExpanded(node.id === "1");
+        });
+      }
+
+      function onColumnResized(params) {
+        params.api.resetRowHeights();
+      }
+
+      function onColumnVisible(params) {
+        params.api.resetRowHeights();
+      }
+
+      // setup the grid after the page has finished loading
+      document.addEventListener("DOMContentLoaded", function () {
+        var gridDiv = document.querySelector("#myGrid");
+        new agGrid.Grid(gridDiv, gridOptions);
+
+        agGrid
+          .simpleHttpRequest({
+            url:
+              "https://www.ag-grid.com/example-assets/master-detail-data.json",
+          })
+          .then(function (data) {
+            gridOptions.api.setRowData(data);
+          });
+      });
+    </script>
+
+    <!-- for table bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script>
+      var fixHelperModified = function (e, tr) {
+          var $originals = tr.children();
+          var $helper = tr.clone();
+          $helper.children().each(function (index) {
+            $(this).width($originals.eq(index).width());
+          });
+          return $helper;
+        },
+        updateIndex = function (e, ui) {
+          $("td.index", ui.item.parent()).each(function (i) {
+            $(this).html(i + 1);
+          });
+          $("input[type=text]", ui.item.parent()).each(function (i) {
+            $(this).val(i + 1);
+          });
+        };
+
+      $("#myTable card")
+        .sortable({
+          helper: fixHelperModified,
+          stop: updateIndex,
+        })
+        .disableSelection();
+
+      $("tbody").sortable({
+        distance: 5,
+        delay: 100,
+        opacity: 0.6,
+        cursor: "move",
+        update: function () {},
+      });
+    </script>
+  </body>
+</html>

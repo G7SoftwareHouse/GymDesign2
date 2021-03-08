@@ -1,0 +1,184 @@
+/* Large desktops and laptops */
+@media (min-width: 1400px) {
+  .col-xxl-2 {
+    -ms-flex: 0 0 16.666667%;
+    flex: 0 0 16.666667%;
+    max-width: 16.666667%;
+  }
+
+  .col-xxl-10 {
+    -ms-flex: 0 0 83.333333%;
+    flex: 0 0 83.333333%;
+    max-width: 83.333333%;
+  }
+}
+@media (min-width: 1200px) {
+}
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 1167px) {
+  .select2 {
+    width: 100% !important;
+  }
+  .side-menu .nav-side-menu .menu-list .menu-content {
+    display: block;
+  }
+  .button_search_tabs {
+    width: 165px;
+  }
+  .btn_add_rec p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 990px) {
+  .edit_modal .modal-header .col.p-0,
+  .edit_modal .modal-header .btn {
+    margin-bottom: 10px;
+  }
+  .edit_modal .modal-header .col-md-4 {
+    text-align: center;
+  }
+  .edit_modal .modal-body {
+    padding: 1.3rem 1rem;
+  }
+  .edit_modal .modal-body label,
+  .edit_modal .customer_card_list li p {
+    font-size: 0.9rem;
+  }
+  .edit_modal .customer_card_name {
+    font-size: 1rem;
+  }
+  .btn_add_rec p {
+    display: none !important;
+  }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 769px) {
+  .billing_section .col-md-9.pr-0 {
+    padding-right: 15px !important;
+  }
+  .customer_card {
+    margin-top: 1.5rem;
+  }
+  .customer_card.fst-card {
+    padding-bottom: 2rem;
+  }
+  .customer_card + .customer_card {
+    margin-top: 0;
+  }
+  .col-6.border-right {
+    padding: 0;
+  }
+  .button_search_tabs {
+    width: 195px;
+  }
+  .btn_add_rec {
+    width: auto;
+  }
+  .btn_add_rec p {
+    display: none !important;
+  }
+  .edit_modal .modal-dialog {
+    max-width: 100%;
+  }
+  .edit_modal .modal-title,
+  .edit_modal .customer_card_header {
+    margin-bottom: 20px;
+  }
+  .edit_modal .customer_card_list li p {
+    font-size: 0.75rem;
+  }
+  .edit_modal .customer_card_list li p span {
+    min-width: 105px;
+  }
+  .edit_modal .modal-dialog {
+    max-width: 95%;
+  }
+  .billing_section .col-md-3,
+  .billing_section .col-md-9 {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .box-input {
+    margin: 0 !important;
+  }
+  .buttons-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    display: block !important;
+  }
+  .buttons-container .btn {
+    margin: 10px 0px !important;
+    font-size: 0;
+    margin: 0 !important;
+  }
+  .checkbox-inpt {
+    font-size: 12px;
+  }
+  .card-box .w-custom {
+    width: 40px !important;
+  }
+  .title-page {
+    font-size: 16px;
+  }
+  .client-search img {
+    width: 50% !important;
+  }
+  .client-search .rotate-title {
+    writing-mode: lr;
+  }
+  .Employees-index .button_search_tabs {
+    width: 100% !important;
+  }
+  .buttons-container button p {
+    display: none !important;
+  }
+  .single-tab .buttons-container .btn {
+    padding: 0.5rem;
+  }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 550px) {
+  .col-md.border-right {
+    border-right: none;
+    border-top: 1px solid;
+  }
+  .billing_section .nav-tabs .nav-link {
+    min-width: 130px;
+  }
+  .customer_info h6 {
+    font-size: 0.85rem;
+  }
+  .customer_info p {
+    font-size: 0.8rem;
+  }
+  .single-tab .tabbable .nav-tabs {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .single-tab .buttons-container .btn {
+    margin-bottom: 15px !important;
+  }
+  .card_index .nav-tabs .nav-link {
+    min-width: 175px;
+  }
+  .navbar_section .form-search {
+    min-height: 52px;
+    text-align: right;
+    padding: 0.5rem !important;
+    font-size: 0.58rem;
+  }
+  .navbar-search .svg-inline--fa.fa-w-16 {
+    margin: 0 !important;
+  }
+  .card_index .tab-content {
+    min-height: auto;
+    padding-bottom: 2.2rem !important;
+  }
+}
