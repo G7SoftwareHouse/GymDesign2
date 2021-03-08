@@ -492,3 +492,8 @@ select {
 .input-group-prepend .btn {
   color: black;
 }
+.code-icon-btn {
+  position: absolute;
+  left: 5px;
+  width: 26px !important;
+}
