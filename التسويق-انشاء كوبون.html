@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar">
   <head>
-    <title>index</title>
+    <title>انشاء كوبون</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -12,7 +12,8 @@
     <link href="./css/solid.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/select2.min.css" />
-	  <!-- AG-grid -->
+    <link rel="stylesheet" href="css/jstree.css" />
+    <!-- AG-grid -->
     <link rel="stylesheet" href="./css/ag-grid.css" />
     <link rel="stylesheet" href="./css/ag-theme-balham.css" />
     <link rel="stylesheet" href="./css/custom-ag-grid.css" />
@@ -20,7 +21,7 @@
     <!-- Custom style -->
     <link rel="stylesheet" href="./css/custom.css" />
     <link rel="stylesheet" href="./css/style.css" />
-	  <link rel="stylesheet" href="./css/responsive.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
 
     <!-- Favicons -->
     <link rel="shortcut icon" href="images/fa-icon.png" />
@@ -331,9 +332,17 @@
                   >الإعدادات</a
                 >
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="./الاعدادات - افتراضات النادي الرياضي.html">افتراضات النادي الرياضي</a>
-                  <a class="dropdown-item" href="./الاعدادات-المواظفين.html">مديرين</a>
-                  <a class="dropdown-item" href="./الاعدادات-المواظفين.html">موظفين</a>
+                  <a
+                    class="dropdown-item"
+                    href="./الاعدادات - افتراضات النادي الرياضي.html"
+                    >افتراضات النادي الرياضي</a
+                  >
+                  <a class="dropdown-item" href="./الاعدادات-المواظفين.html"
+                    >مديرين</a
+                  >
+                  <a class="dropdown-item" href="./الاعدادات-المواظفين.html"
+                    >موظفين</a
+                  >
                   <a class="dropdown-item" href="#">التنبيهات الطبية</a>
                   <a class="dropdown-item" href="#">أنواع الضرائب</a>
                   <a class="dropdown-item" href="#">نسب وشرائح الضرائب</a>
@@ -353,9 +362,17 @@
                   >الخدمات</a
                 >
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="./البحث-اندكس.html">اضافة تصنيف رئيسي</a>
-                  <a class="dropdown-item" href="./البحث-اندكس.html">اضافة تصنيف ثانوي</a>
-                  <a class="dropdown-item" href="./الخدمات-انشاء خدمة او اشتراك.html">اضافة خدمة او اشتراك</a>
+                  <a class="dropdown-item" href="./البحث-اندكس.html"
+                    >اضافة تصنيف رئيسي</a
+                  >
+                  <a class="dropdown-item" href="./البحث-اندكس.html"
+                    >اضافة تصنيف ثانوي</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    href="./الخدمات-انشاء خدمة او اشتراك.html"
+                    >اضافة خدمة او اشتراك</a
+                  >
                 </div>
               </li>
               <li class="nav-item dropdown">
@@ -370,8 +387,15 @@
                   >العملاء</a
                 >
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="./العملاء – ملف العميل.html">ملف العملاء</a>
-                  <a class="dropdown-item" data-toggle="modal" data-target="#salePointsModal">الدخول على نقاط البيع</a>
+                  <a class="dropdown-item" href="./العملاء – ملف العميل.html"
+                    >ملف العملاء</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-toggle="modal"
+                    data-target="#salePointsModal"
+                    >الدخول على نقاط البيع</a
+                  >
                   <a class="dropdown-item" href="#">فواتير المبيعات</a>
                   <a class="dropdown-item" href="#">مرتجع مبيعات</a>
                   <a class="dropdown-item" href="#">التجميد</a>
@@ -470,7 +494,9 @@
                   <a class="dropdown-item" href="#"
                     >تقرير العمولات الشهرية للتدريب الشخصي</a
                   >
-                  <a class="dropdown-item" href="./التسويق-انشاء كوبون.html">انشاء كوبون</a>
+                  <a class="dropdown-item" href="./التسويق-انشاء كوبون.html"
+                    >انشاء كوبون</a
+                  >
                 </div>
               </li>
               <li class="nav-item dropdown">
@@ -507,348 +533,426 @@
     </header>
 
     <main class="p-4">
-      <!-- Start services section -->
-    <section class="">
-
-      <div class="card card_index mt-2 border-0">
+      <!-- Start services form -->
+      <form class="services">
+        <!-- tab 1 -->
+        <div class="card card_index mt-2 border-0">
           <div class="card-header border-0 p-0">
             <!-- START TABS DIV -->
-            <div class="tabbable-responsive overflow-none">
+            <div class="single-tab tabbable-responsive overflow-none">
               <div class="tabbable">
-                <ul
-                  class="nav nav-tabs border-0"
-                  role="tablist"
-                >
+                <ul class="nav nav-tabs border-0" role="tablist">
                   <li class="nav-item float-left">
                     <a
                       class="nav-link text-center bold active"
-                      href="#search"
+                      href="#createCoupon"
                       role="tab"
                       aria-controls="contact"
                       aria-selected="false"
-                      >البحث</a
+                      >انشاء كوبون جديد</a
                     >
                   </li>
                   <li class="nav-item float-right">
-                    <a href="./الخدمات-اضافة تصنيف رئيسي.html" class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5"><i class="fas fa-plus mx-2"></i><p class="d-inline m-0">إضافة تصنيف رئيسي</p></a>
+                    <div class="buttons-container">
+                      <button type="button" class="btn btn-info m-1">
+                        <i class="fas fa-paperclip font-size-14 ml-1"></i>
+                        <p class="d-inline m-0">إرفاق</p>
+                      </button>
+                      <button type="button" class="btn btn-warning m-1">
+                        <i class="fas fa-pen font-size-14 ml-1"></i>
+                        <p class="d-inline m-0">تعديل</p>
+                      </button>
+                      <button type="button" class="btn btn-success m-1">
+                        <i class="fas fa-check font-size-14 ml-1"></i>
+                        <p class="d-inline m-0">حفظ</p>
+                      </button>
+                      <button type="button" class="btn btn-danger m-1">
+                        <i class="fas fa-trash-alt font-size-14 ml-1"></i>
+                        <p class="d-inline m-0">إلغاء</p>
+                      </button>
+                    </div>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="card-body p-0">
-            <div class="tab-content mt--5 p-3">
+            <div class="tab-content basic_background_white_color mt--5 p-4">
               <div
                 class="tab-pane fade show active"
-                id="search"
+                id="createCoupon"
                 role="tabpanel"
-                aria-labelledby="search-tab"
+                aria-labelledby="createCoupon-tab"
               >
-                <form>
-                  <div class="form-row no-gutters">
-                    <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                      <label for="codeNo">كود التصنيف</label>
-                      <input type="text" class="form-control" id="codeNo">
-                    </div>
-                    <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                      <label for="categoryName">إسم التصنيف</label>
-                      <input type="text" class="form-control" id="categoryName">
-                    </div>
-                    <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                      <label for="categoryType">التصنيف</label>
-                      <select id="categoryType" class="form-control">
-                        <option selected disabled>اختر...</option>
-                        <option>تغذية</option>
-                        <option>تدريب شخصي</option>
-                        <option>مساج</option>
-                        <option>استشارة رياضية</option>
-                        <option>خدمات اضافية</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                      <label for="status">الحالة</label>
-                      <select id="status" class="form-control">
-                        <option selected disabled>اختر...</option>
-                        <option></option>
-                      </select>
-                    </div>
+                <div class="form-row no-gutters">
+                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                    <label>كود الكوبون</label>
+                    <input type="text" class="form-control" />
                   </div>
-                  <div class="form-row align-items-end no-gutters">
-                    <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                      <label for="date">من تاريخ تفعيل</label>
-                      <input type="date" class="form-control" id="date">
-                    </div>
-                    <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                      <label for="activeDate">إلى تاريخ تفعيل</label>
-                      <input type="date" class="form-control" id="activeDate">
-                    </div>
-                    <div class="form-group col-lg-6 col-sm-12 px-3">
-                      <button class="btn box-shadow basic_background_color text-white float-right m-0"><i class="fas fa-share mx-2 rotate"></i><p class="d-inline m-0">عرض</p></button>
-                    </div>
+                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                    <label>اسم الكوبون</label>
+                    <input type="text" class="form-control" />
                   </div>
-                </form>
-              </div>
-            </div>
-          </div>
-      </div>
-
-      <div class="card card_index mt-2 border-0">
-        <div class="card-header border-0 p-0">
-          <!-- START TABS DIV -->
-          <div class="single-tab tabbable-responsive overflow-none">
-            <div class="tabbable">
-              <ul
-                class="nav nav-tabs border-0"
-                role="tablist"
-              >
-                <li class="nav-item float-left">
-                  <a
-                    class="nav-link text-center bold active"
-                    id="Billing-tab"
-                    data-toggle="tab"
-                    href="#viewTable"
-                    role="tab"
-                    aria-controls="contact"
-                    aria-selected="false"
-                    >جدول العرض</a
+                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                    <label>تاريخ التحديث</label>
+                    <input
+                      type="date"
+                      data-date=""
+                      data-date-format="DD MMMM YYYY"
+                      value="2021-03-09"
+                      class="form-control date_inputs w-100"
+                    />
+                  </div>
+                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                    <label for="status">الحالة</label>
+                    <select id="status" class="form-control">
+                      <option selected>نشط</option>
+                      <option>غير نشط</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row align-items-end no-gutters">
+                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                    <label for="typeOfDiscount">نوع الخصم</label>
+                    <select id="typeOfDiscount" class="form-control">
+                      <option selected>نسبة / قيمة</option>
+                      <option>نسبة / قيمة</option>
+                    </select>
+                  </div>
+                  <div
+                    class="form-group or-after col-lg-3 col-md-6 col-sm-12 px-3"
                   >
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="card-body p-0">
-          <div class="tab-content mt--5 p-3">
-            <div
-              class="tab-pane fade show active"
-              id="viewTable"
-              role="tabpanel"
-              aria-labelledby="viewTable-tab"
-            >
-              <div id="servicesGrid" class="ag-theme-balham" style="height:320px"></div>
-            </div>
-          </div>
-        </div>
-    </div>
-    </section>
-    <!-- End services section -->
-    </main>
-
-    <!-- fingerPrint Modal -->
-    <div
-      class="modal fade"
-      id="fingerPrintModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="fingerPrintModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog basic_background_white_color" role="document">
-        <div class="modal-content">
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-          <div class="modal-header direction_arabic">
-            <h5
-              class="modal-title basic_text_color font-size-18 bold"
-              id="exampleModalLabel"
-            >
-              سحب البصمة
-            </h5>
-          </div>
-          <div class="modal-body">
-            <div class="row direction_arabic">
-              <div class="form-group px-3 w-100 row">
-                <label class="font-size-18 regular col-2">الجهاز</label>
-                <input class="form-control direction_ar col-10" id="text" />
-              </div>
-            </div>
-            <div class="row direction_arabic">
-              <div class="form-group px-3 w-100 row">
-                <label class="font-size-18 regular col-2">الجودة</label>
-                <div
-                  class="position-relative direction_arabic col-10 d-flex align-items-center"
-                >
-                  <input id="multi7" class="multi-range w-100" type="range" />
-                  <span class="span-range">80%</span>
-                </div>
-              </div>
-            </div>
-            <div class="row direction_arabic">
-              <div class="box-print">
-                <div
-                  div
-                  class="form-row align-items-start flex-row-reverse w-100 justify-content-center"
-                >
-                  <div class="col-xl-auto col-md-12">
-                    <div
-                      class="d-flex justify-content-between align-items-center flex-column"
-                    >
-                      <button
-                        class="button_search_tabs basic_background_color text-white font-size-18 regular mt-3"
-                      >
-                        سحب
-                      </button>
-                      <button
-                        class="button_search_tabs basic_background_color text-white font-size-18 regular mt-3"
-                      >
-                        مسح
-                      </button>
-                      <button
-                        class="button_search_tabs basic_background_color text-white font-size-18 regular mt-3"
-                      >
-                        تحقق من البصمة
-                      </button>
-                    </div>
+                    <label for="PercentBill">نسبة من الفاتورة</label>
+                    <input type="text" class="form-control" id="PercentBill" />
                   </div>
-                  <div class="col-xl-auto col-md-12 mt-3">
-                    <img src="./images/fingar-print.png" class="" />
-                  </div>
-                  <div class="col-xl-auto col-md-12 mt-3">
-                    <img src="./images/fingar-print.png" class="" />
-                  </div>
-                  <div class="col-xl-auto col-md-12">
-                    <div
-                      class="d-flex justify-content-between align-items-center flex-column"
-                    >
-                      <button
-                        class="button_search_tabs basic_background_color text-white font-size-18 regular mt-3"
-                      >
-                        اول بصمة
-                      </button>
-                      <button
-                        class="button_search_tabs basic_background_color text-white font-size-18 regular mt-3"
-                      >
-                        <i class="fas fa-plus pl-1"></i>اضافة
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer direction_arabic">
-          <button
-            type="button"
-            class="btn text-white px-5 btn-success font-size-18 regular"
-          >
-            حفظ<i class="fas fa-check pl-1"></i>
-          </button>
-          <button
-            type="button"
-            class="btn basic-back-red-color text-white px-5 font-size-18 regular"
-          >
-            إلغاء<i class="fas fa-trash-alt pl-1"></i>
-          </button>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- edit Modal -->
-    <div class="edit_modal modal" id="editModal"
-    aria-labelledby="editModalLabel" tabindex="-1" role="dialog">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header px-0">
-            <div class="row align-items-center w-100">
-              <div class="col-md-3">
-                <h5 class="modal-title bold">تفعيل \ تعديل تفعيل الخدمة</h5>
-              </div>
-              <div class="col-md-5">
-                <div class="row align-items-center  move_info">
-                  <div class="col p-0">رقم الحركة : 1234</div>
-                  <div class="col p-0">تاريخ الحركة : <input type="date" class="form-control d-inline-block" /></div>
-                </div>
-              </div>
-              <div class="col-md-4">
-                <button type="button" class="btn btn-info">إرفاق</button>
-                <button type="button" class="btn btn-info">طباعة</button>
-                <button type="button" class="btn btn-primary">Log</button>
-              </div>
-            </div>
-          </div>
-          <div class="modal-body">
-            <div class="row m-0 pb-4 border-bottom">
-              <div class="col-md-4">
-                <!-- customer card -->
-                <div class="customer_card_header text-center p-3">
-                  <img src="./images/avatar.png" class="customer_card_img" />
-                  <h1 class="customer_card_name m-0">بيان عدنان هواري</h1>
-                  <button
-                    type="button"
-                    class="btn btn-link customer_card_fingerPrint"
-                    data-toggle="modal"
-                    data-target="#fingerPrintModal"
+                  <div
+                    class="form-group lowest-after col-lg-3 col-md-6 col-sm-12 px-3"
                   >
-                    <i class="fas fa-pen"></i>البصمة
-                  </button>
-                  <a></a>
+                    <label>نسبة من الكوبون</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                    <label>الحد الادني من المشتريات</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <div class="form-row align-items-end no-gutters">
+                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                    <label>من تاريخ </label>
+                    <input
+                      type="date"
+                      data-date=""
+                      data-date-format="DD MMMM YYYY"
+                      value="2021-03-09"
+                      class="form-control date_inputs w-100"
+                    />
+                  </div>
+                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                    <label>إلى تاريخ </label>
+                    <input
+                      type="date"
+                      data-date=""
+                      data-date-format="DD MMMM YYYY"
+                      value="2021-03-09"
+                      class="form-control date_inputs w-100"
+                    />
+                  </div>
+                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                    <label>اجمالي عدد مرات الاستخدام</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                    <label>اجمالي عدد مرات الاستخدام للعميل الواحد</label>
+                    <input type="text" class="form-control" />
+                  </div>
                 </div>
               </div>
-              <div class="col-md-8">
-                <ul class="customer_card_list list-unstyled list-group p-0">
-                  <li class=""><p class="mb-1"><span>ملف واسم العميل </span> 2345 اسم العميل</p></li>
-                  <li class=""><p class="mb-1"><span>رقم الفاتوة وتاريخها </span>1234 \ 22-10-2020</p></li>
-                  <li class=""><p class="mb-1"><span>إسم الخدمة </span>تعريف اسم الخدمة</p></li>
-                  <li class=""><p class="mb-1"><span>الكود </span></i>1234</p></li>
-                  <li class=""><p class="mb-1"><span>التصنيف</span> رئيسي</p></li>
-                  <li class=""><p class="mb-1"><span>الكمية</span>3</p></li>
+            </div>
+          </div>
+        </div>
+
+        <!-- tab 2 -->
+        <div class="card card_index mt-2 border-0">
+          <div class="card-header border-0 p-0">
+            <!-- START TABS DIV -->
+            <div class="single-tab tabbable-responsive overflow-none">
+              <div class="tabbable">
+                <ul class="nav nav-tabs border-0" role="tablist">
+                  <li class="nav-item float-left">
+                    <a
+                      class="nav-link text-center bold active"
+                      href="#marketing"
+                      role="tab"
+                      aria-controls="contact"
+                      aria-selected="false"
+                      >التفعيل التسويقي</a
+                    >
+                  </li>
                 </ul>
               </div>
             </div>
-            <!-- start form -->
-            <form class="service_form border-bottom">
-              <div class="form-row py-3">
-                <div class="form-group mb-0 col-md-4">
-                  <label for="dateStart">تاريخ تفعيل الخدمة</label>
-                  <input type="date" class="form-control" id="dateStart">
-                  <div class="row attachment_btns text-center m-0">
-                    <div class="col-12 py-1 border-bottom"><a href="#"><i class="fas fa-paperclip mx-1"></i>مرفقات</a> </div>
-                    <div class="col border-left py-1"><a href="#">عقد</a></div>
-                    <div class="col py-1"><a href="#">اخرى</a></div>
+          </div>
+          <div class="card-body p-0">
+            <div class="tab-content basic_background_white_color mt--5 p-4">
+              <div
+                class="tab-pane fade show active"
+                id="marketing"
+                role="tabpanel"
+              >
+                <div class="activation mb-4">
+                  <input type="checkbox" checked id="toggle-btn" />
+                  <label class="mx-2">تفعيل تسويقي</label>
+                </div>
+                <div class="form-row no-gutters">
+                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                    <label>اسم المسوق الخارجي</label>
+                    <input type="text" class="form-control" />
+                  </div>
+                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                    <label> رقم الواتس اب</label>
+                    <input type="tel" class="form-control" />
+                  </div>
+                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                    <label>نوع العمولة</label>
+                    <select id="typeOfDiscount2" class="form-control">
+                      <option selected>نسبة / قيمة</option>
+                      <option>نسبة / قيمة</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                    <label>نسبة / قيمة العمولة</label>
+                    <select id="typeOfDiscount3" class="form-control">
+                      <option selected>نسبة / قيمة</option>
+                      <option>نسبة / قيمة</option>
+                    </select>
                   </div>
                 </div>
-                <div class="form-group mb-0 col-md-4">
-                  <label for="inputEmail4">تاريخ بداية الخدمة</label>
-                  <input type="date" class="form-control" id="dateStart">
-                  <label for="inputEmail4">تاريخ بداية الخدمة للعميل</label>
-                  <input type="date" class="form-control" id="dateStart">
-                </div>
-                <div class="form-group mb-0 col-md-4">
-                  <label for="inputEmail4">تاريخ نهاية الخدمة</label>
-                  <input type="date" class="form-control" id="dateStart">
-                  <label for="inputEmail4">تاريخ نهاية الخدمة للعميل</label>
-                  <input type="date" class="form-control" id="dateStart">
-                </div>
               </div>
-            </form>
-
-            <!-- ag-grid tables -->
-            <div class="more_info_table p-3">
-              <h6>معلومات الاشتراك</h6>
-              <div id="infoGrid" class="ag-theme-balham"></div>
-
-              <h6 class="mt-3">العروض على الخدمة</h6>
-              <div id="offersGrid" class="ag-theme-balham"></div>
             </div>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-success"><i class="fas fa-check pl-1"></i>حفظ</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-trash-alt pl-1"></i>إلغاء</button>
+        </div>
+
+        <!-- tab 3 -->
+        <div class="row no-gutters">
+          <div class="col-lg-6">
+            <div class="card card_index mt-2 pr-2 border-0">
+              <div class="card-header border-0 p-0">
+                <!-- START TABS DIV -->
+                <div class="single-tab tabbable-responsive overflow-none">
+                  <div class="tabbable">
+                    <ul class="nav nav-tabs border-0" role="tablist">
+                      <li class="nav-item float-left">
+                        <a
+                          class="nav-link text-center bold active"
+                          role="tab"
+                          aria-controls="contact"
+                          aria-selected="false"
+                          >التطبيق على الخدمات</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="tab-content basic_background_white_color mt--5 p-4">
+                  <div class="tab-pane fade show active" role="tabpanel">
+                    <div class="form-row align-items-end no-gutters">
+                      <div class="form-group col-lg-6 col-md-12 px-3">
+                        <label>نوع التخصيص</label>
+                        <select id="allocation" class="form-control">
+                          <option selected>اعفاء</option>
+                          <option>تطبيق</option>
+                          <option>تطبيق على الكل</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-lg-6 col-md-12 px-3">
+                        <label>التصنيفات</label>
+                        <select
+                          id="categories"
+                          class="select2-selection--multiple"
+                          name="states[]"
+                          multiple="multiple"
+                        >
+                          <option>مالتي سيليكت</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-lg-6 col-md-12 px-3">
+                        <label>الخدمات</label>
+                        <select
+                          id="services"
+                          class="select2-selection--multiple"
+                          name="states[]"
+                          multiple="multiple"
+                        >
+                          <option>مالتي سيليكت</option>
+                          <option>2</option>
+                          <option>3</option>
+                          <option>4</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-lg-6 col-md-12 px-3">
+                        <button
+                          class="btn box-shadow basic_background_color text-white float-right m-0"
+                        >
+                          <i class="fas fa-share mx-2 rotate"></i>
+                          <p class="d-inline m-0">تطبيق على الجدول</p>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="row more_info_table no-gutters">
+                      <h6>الخدمات</h6>
+                      <div
+                        id="servicesGrid"
+                        class="ag-theme-balham"
+                        style="height: 320px"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="card card_index mt-2 pl-2 border-0">
+              <div class="card-header border-0 p-0">
+                <!-- START TABS DIV -->
+                <div class="single-tab tabbable-responsive overflow-none">
+                  <div class="tabbable">
+                    <ul class="nav nav-tabs border-0" role="tablist">
+                      <li class="nav-item float-left">
+                        <a
+                          class="nav-link text-center bold active"
+                          role="tab"
+                          aria-controls="contact"
+                          aria-selected="false"
+                          >احصائيات الكوبون</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="tab-content basic_background_white_color mt--5 p-4">
+                  <div class="tab-pane fade show active" role="tabpanel">
+                    <div class="form-row no-gutters">
+                      <div class="form-group col-lg-6 col-md-12 px-3">
+                        <label>من تاريخ </label>
+                        <input
+                          type="date"
+                          data-date=""
+                          data-date-format="DD MMMM YYYY"
+                          value="2021-03-09"
+                          class="form-control date_inputs w-100"
+                        />
+                      </div>
+                      <div class="form-group col-lg-6 col-md-12 px-3">
+                        <label for="noFrezz">إلى تاريخ </label>
+                        <input
+                          type="date"
+                          data-date=""
+                          data-date-format="DD MMMM YYYY"
+                          value="2021-03-09"
+                          class="form-control date_inputs w-100"
+                        />
+                      </div>
+                    </div>
+                    <div class="row coupon_statis my-4 text-center m-0">
+                      <div class="col-lg-4 col-sm-12">
+                        <label class="d-block">مرات الاستخدام</label>
+                        <span class="d-inline-block py-4 px-3 mb-2">66</span>
+                      </div>
+                      <div class="col-lg-4 col-sm-12">
+                        <label class="d-block">المبيعات</label>
+                        <span class="d-inline-block py-4 px-3 mb-2"
+                          >700.000.20</span
+                        >
+                      </div>
+                      <div class="col-lg-4 col-sm-12">
+                        <label class="d-block">العمولة</label>
+                        <span class="d-inline-block py-4 px-3 mb-2">1500</span>
+                      </div>
+                    </div>
+                    <div class="row more_info_table no-gutters">
+                      <h6>فواتير الكوبون</h6>
+                      <div class="ag-theme-balham w-100" style="height: 170px">
+                        grid
+                      </div>
+                    </div>
+                    <div
+                      class="row flex-colum align-items-end justify-content-end"
+                    >
+                      <div class="col-lg-5">
+                        <button
+                          class="btn box-shadow btn-block w-100 basic_background_color text-white mb-3"
+                        >
+                          ارسال رسالة واتس اب
+                        </button>
+                      </div>
+                      <div class="col-lg-3">
+                        <button
+                          class="btn btn-info box-shadow btn-block w-100 text-white mb-3"
+                        >
+                          <i class="fas fa-print font-size-14 mx-1"></i>
+                          طباعة
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <!-- End services form -->
+    </main>
+
+    <!-- Entering the points of sale Modal -->
+    <div
+      class="modal points_sale_modal fade"
+      id="salePointsModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header basic_background_color text-center">
+            <h5 class="modal-title w-100 text-white">الدخول الى نقطة البيع</h5>
+          </div>
+          <div class="modal-body">
+            <div class="form-group mx-5">
+              <label for="choice">اختر</label>
+              <select id="choice" class="form-control">
+                <option selected>اختر1</option>
+                <option>اختر2</option>
+              </select>
+            </div>
+          </div>
+          <div class="modal-footer justify-content-center pt-0 pb-4 border-0">
+            <button
+              type="button"
+              class="btn basic_background_color text-white text-center"
+            >
+              <i class="fas fa-sign-in-alt mx-1"></i>تسجيل الدخول
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <i class="fas fa-reply-all"></i>خروج للنظام الرئيسي
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-
-    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <!-- <script src="js/jquery-3.4.1.slim.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-toggle.min.js"></script>
@@ -858,6 +962,23 @@
     ></script>
     <script src="js/all.min.js"></script>
     <script src="js/select2.min.js"></script>
+    <script src="js/jstree.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+      $(function () {
+        // 6 create an instance when the DOM is ready
+        $("#jstree").jstree();
+        // 7 bind to events triggered on the tree
+        $("#jstree").on("changed.jstree", function (e, data) {
+          console.log(data.selected);
+        });
+        // 8 interact with the tree - either way is OK
+        $("button").on("click", function () {
+          $("#jstree").jstree(true).select_node("child_node_1");
+          $("#jstree").jstree("select_node", "child_node_1");
+          $.jstree.reference("#jstree").select_node("child_node_1");
+        });
+      });
+    </script>
   </body>
 </html>

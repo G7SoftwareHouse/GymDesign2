@@ -61,6 +61,10 @@
   #fingerPrintModal img {
     margin-bottom: 15px;
   }
+  #salePointsModal .modal-dialog {
+    max-width: 80%;
+    margin: 0 auto;
+  }
 }
 
 /* Landscape phones and portrait tablets */
@@ -155,6 +159,14 @@
     flex-direction: column-reverse !important;
     align-items: flex-start !important;
   }
+  .btn.basic_background_color {
+    line-height: 2.2;
+    font-size: 0.8rem;
+  }
+  #salePointsModal .modal-dialog {
+    max-width: 90%;
+    margin: 0 auto;
+  }
 }
 
 /* Portrait phones and smaller */
@@ -194,5 +206,18 @@
   .card_index .tab-content {
     min-height: auto;
     padding-bottom: 2.2rem !important;
+  }
+  #salePointsModal .modal-dialog {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
   }
 }

@@ -10,8 +10,14 @@ $(document).ready(function () {
   $("#shareBy").select2();
   $("#status").select2();
   $("#bestTime").select2();
+  $("#typeOfDiscount").select2();
+  $("#typeOfDiscount2").select2();
+  $("#typeOfDiscount3").select2();
+  $("#allocation").select2();
+  $("#categories").select2();
+  $("#services").select2();
+  $("#choice").select2();
 });
-
 
 // date inputs format
 $("input")
@@ -31,6 +37,12 @@ $(function () {
     off: "",
     onstyle: "default",
     style: "status_btn",
+    height: 20,
+  });
+  $("#toggle-btn").bootstrapToggle({
+    on: "",
+    off: "",
+    onstyle: "default",
     height: 20,
   });
 });

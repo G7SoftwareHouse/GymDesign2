@@ -39,6 +39,9 @@
 .mt--5 {
   margin-top: -5px !important;
 }
+a {
+  cursor: pointer;
+}
 .svg-inline--fa {
   vertical-align: middle;
 }
@@ -82,15 +85,17 @@ select {
 .toggle-off {
   background-color: #bebebe;
 }
-.status_btn.toggle.btn {
-  position: absolute;
-  left: 10px;
+.toggle.btn {
   min-width: 45px;
   min-height: 22px;
   border-radius: 40px;
   border: 1px solid #707070;
   background-color: white;
   box-shadow: none;
+}
+.status_btn.toggle.btn {
+  position: absolute;
+  left: 10px;
 }
 .pt-1-5 {
   padding-top: 1.5rem;
@@ -496,24 +501,41 @@ select {
 .buttons-container .btn {
   padding: 0.27rem 1rem;
 }
-.day-input {
+.day-input,
+.or-after,
+.lowest-after {
   position: relative;
+}
+.day-input::after,
+.time-input::after,
+.or-after::after,
+.lowest-after::after {
+  position: absolute;
+  bottom: 13px;
+  font-size: 0.8rem;
+  color: #707070;
 }
 .day-input::after {
   content: "يوم";
-  position: absolute;
   left: -7px;
-  bottom: 13px;
-  font-size: 0.8rem;
-  color: #707070;
 }
 .time-input::after {
   content: "ساعة";
-  position: absolute;
   left: -12px;
-  bottom: 13px;
-  font-size: 0.8rem;
-  color: #707070;
+}
+.or-after::after {
+  content: "أو";
+  left: -4px;
+  color: var(--basic-main-color);
+}
+.lowest-after::after {
+  content: "أيهما اقل";
+  left: -14px;
+  bottom: 1px;
+  color: var(--basic-main-color);
+  width: 30px;
+  text-align: center;
+  font-size: 0.7rem;
 }
 .accountant p,
 .form-row a {
@@ -530,9 +552,6 @@ select {
 /* date inputs */
 input.date_inputs {
   position: relative;
-  width: 150px;
-  height: 20px;
-  color: white;
 }
 input.date_inputs:before {
   position: absolute;
@@ -562,4 +581,62 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 /* fingerPrint modal  */
 #fingerPrintModal .modal-dialog {
   max-width: 60%;
+}
+
+/* create coupon */
+.coupon_statis span {
+  width: 80%;
+  color: #646464;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #efefef;
+  box-shadow: 0 3px 6px 0 rgba(182, 53, 148, 0.45);
+}
+
+/* ponits of sale modal */
+#salePointsModal .modal-dialog {
+  margin: 7rem auto;
+  max-width: 45%;
+}
+.modal-footer .btn .svg-inline--fa {
+  font-size: 1rem;
+}
+#salePointsModal .modal-footer .btn {
+  min-width: 183px;
+  font-size: 0.9rem;
+}
+/* points of sale */
+.vertical_tabs .tab {
+  float: right;
+  background-color: #f1f1f1;
+  height: calc(100% - 178px);
+  position: fixed;
+  top: 178px;
+  right: 0;
+}
+.vertical_tabs .tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 15px 7px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: right;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.vertical_tabs .tab button:hover {
+  background-color: #ddd;
+}
+.vertical_tabs .tab button.active {
+  background-color: #ccc;
+}
+.vertical_tabs .tabcontent {
+  float: right;
+  margin-right: 88px;
+  padding: 0px 12px;
+  width: 70%;
+  border: none;
 }
