@@ -7,11 +7,15 @@
       href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/ag-grid.css" />
+    <link rel="stylesheet" href="./css/ag-theme-balham.css" />
+    <link rel="stylesheet" href="./css/custom-ag-grid.css" />
     <style media="only screen">
       html,
       body {
@@ -93,11 +97,11 @@
   </head>
   <body class="py-5">
     <div class="container mb-5">
-      <div class="table table-responsive myTable">
+      <div class="table myTable">
         <thead>
           <div class="card-header">
-            <table class="table table-responsive table-sm mb-0">
-              <tbody>
+            <table class="table table-sm mb-0">
+              <tbody style="width:100%">
                 <tr>
                   <td class="border-0 bold">#</td>
                   <td class="border-0 bold">Mark</td>
@@ -114,8 +118,8 @@
         <tbody id="myTable">
           <tr class="card border-0" id="1">
             <div class="card-header bg-white">
-              <table class="table table-responsive table-sm mb-0">
-                <tbody>
+              <table class="table table-sm mb-0">
+                <tbody style="width:100%">
                   <tr
                     id="headingOne"
                     data-toggle="collapse"
@@ -140,8 +144,8 @@
               data-parent="#accordion"
             >
               <div class="card-body px-5">
-                <table class="table table-responsive border table-sm">
-                  <tbody>
+                <table class="table border table-sm w-100">
+                  <tbody style="width:100%">
                     <tr class="card-header">
                       <td>Mark</td>
                       <td>Otto</td>
@@ -155,9 +159,9 @@
                   </tbody>
                 </table>
                 <table
-                  class="table table-responsive table-hover table-hover border table-sm"
+                  class="table table-hover table-hover border table-sm"
                 >
-                  <tbody>
+                  <tbody style="width:100%">
                     <tr class="card-header">
                       <td>Mark</td>
                       <td>Otto</td>
@@ -171,9 +175,9 @@
                   </tbody>
                 </table>
                 <table
-                  class="table table-responsive table-hover border table-sm"
+                  class="table table-hover border table-sm"
                 >
-                  <tbody>
+                  <tbody style="width:100%">
                     <tr class="card-header">
                       <td>Mark</td>
                       <td>Otto</td>
@@ -187,9 +191,9 @@
                   </tbody>
                 </table>
                 <table
-                  class="table table-responsive table-hover border table-sm"
+                  class="table table-hover border table-sm"
                 >
-                  <tbody>
+                  <tbody style="width:100%">
                     <tr class="card-header">
                       <td>Mark</td>
                       <td>Otto</td>
@@ -207,8 +211,8 @@
           </tr>
           <tr class="card border-0" id="2">
             <div class="card-header bg-white collapsed" role="tab" id="headingTwo">
-              <table class="table table-responsive table-sm mb-0">
-                <tbody>
+              <table class="table table-sm mb-0">
+                <tbody style="width:100%">
                   <tr
                     id="headingTwo"
                     data-toggle="collapse"
@@ -233,8 +237,8 @@
               data-parent="#accordion"
             >
               <div class="card-body">
-                <table class="table table-responsive border table-sm">
-                  <tbody>
+                <table class="table border table-sm">
+                  <tbody style="width:100%">
                     <tr class="card-header bg-white">
                       <td>Mark</td>
                       <td>Otto</td>
@@ -248,9 +252,9 @@
                   </tbody>
                 </table>
                 <table
-                  class="table table-responsive table-hover table-hover border table-sm"
+                  class="table table-hover table-hover border table-sm"
                 >
-                  <tbody>
+                  <tbody style="width:100%">
                     <tr class="card-header">
                       <td>Mark</td>
                       <td>Otto</td>
@@ -264,9 +268,9 @@
                   </tbody>
                 </table>
                 <table
-                  class="table table-responsive table-hover border table-sm"
+                  class="table table-hover border table-sm"
                 >
-                  <tbody>
+                  <tbody style="width:100%">
                     <tr class="card-header">
                       <td>Mark</td>
                       <td>Otto</td>
@@ -280,9 +284,9 @@
                   </tbody>
                 </table>
                 <table
-                  class="table table-responsive table-hover border table-sm"
+                  class="table table-hover border table-sm"
                 >
-                  <tbody>
+                  <tbody style="width:100%">
                     <tr class="card-header">
                       <td>Mark</td>
                       <td>Otto</td>
@@ -300,8 +304,8 @@
           </tr>
           <tr class="card border-0" id="3">
             <div class="card-header bg-white collapsed" role="tab" id="headingThree">
-              <table class="table table-responsive table-sm mb-0">
-                <tbody>
+              <table class="table table-sm mb-0">
+                <tbody style="width:100%">
                   <tr
                     id="headingThree"
                     data-toggle="collapse"
@@ -326,8 +330,8 @@
               data-parent="#accordion"
             >
               <div class="card-body">
-                <table class="table table-responsive border table-sm">
-                  <tbody>
+                <table class="table border table-sm">
+                  <tbody style="width:100%">
                     <tr class="card-header">
                       <td>Mark</td>
                       <td>Otto</td>
@@ -341,9 +345,9 @@
                   </tbody>
                 </table>
                 <table
-                  class="table table-responsive table-hover table-hover border table-sm"
+                  class="table table-hover table-hover border table-sm"
                 >
-                  <tbody>
+                  <tbody style="width:100%">
                     <tr class="card-header">
                       <td>Mark</td>
                       <td>Otto</td>
@@ -357,9 +361,9 @@
                   </tbody>
                 </table>
                 <table
-                  class="table table-responsive table-hover border table-sm"
+                  class="table table-hover border table-sm"
                 >
-                  <tbody>
+                  <tbody style="width:100%">
                     <tr class="card-header">
                       <td>Mark</td>
                       <td>Otto</td>
@@ -373,9 +377,9 @@
                   </tbody>
                 </table>
                 <table
-                  class="table table-responsive table-hover border table-sm"
+                  class="table table-hover border table-sm"
                 >
-                  <tbody>
+                  <tbody style="width:100%">
                     <tr class="card-header">
                       <td>Mark</td>
                       <td>Otto</td>
@@ -408,7 +412,7 @@
                 <th scope="col">Handle</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody style="width:100%">
               <tr id="1">
                 <td class="index">1</td>
                 <td class="indexInput">
@@ -443,11 +447,13 @@
     </div> -->
 
     <!-- AG-GRID -->
-    <div id="myGrid" class="ag-theme-balham" style="height: 100%"></div>
+    <div id="myGrid" class="ag-theme-balham"></div>
+
+    <div class="m-5 p-5"></div>
     <script>
       var __basePath = "./";
     </script>
-    <script src="https://unpkg.com/@ag-grid-enterprise/all-modules@25.1.0/dist/ag-grid-enterprise.min.js"></script>
+    <script src="js/ag-grid-enterprise.min.noStyle.js"></script>
     <script>
       function DetailCellRenderer() {}
 
@@ -455,7 +461,7 @@
         this.eGui = document.createElement("div");
         this.eGui.classList.add("row-overflow");
         this.eGui.innerHTML =
-          '<div class="px-5 py-2"><table class="table table-responsive table-hover border table-sm"><tbody><tr class="card-header"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table><table class="table table-responsive table-hover border table-sm"><tbody><tr class="card-header"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table><table class="table table-responsive table-hover border table-sm"><tbody><tr class="card-header"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table><table class="table table-responsive table-hover border table-sm"><tbody><tr class="card-header"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table></div>';
+          '<div class="px-5 py-2"><table class="table table-hover border table-sm"><tbody style="width:100%"><tr class="card-header"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table><table class="table table-hover border table-sm"><tbody style="width:100%"><tr class="card-header"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table><table class="table table-hover border table-sm"><tbody style="width:100%"><tr class="card-header"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table><table class="table table-hover border table-sm"><tbody style="width:100%"><tr class="card-header"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table></div>';
       };
 
       DetailCellRenderer.prototype.getGui = function () {
@@ -488,7 +494,7 @@
           sortable: true,
           resizable: true,
         },
-        rowHeight: 150,
+        // rowHeight: 150,
         onColumnResized: onColumnResized,
         onColumnVisible: onColumnVisible,
         onFirstDataRendered: onFirstDataRendered,

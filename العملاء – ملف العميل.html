@@ -652,8 +652,7 @@
                         <img src="./images/avatar.png" class="customer_card_img mb-3" />
                         <ul class="take_photo text-center list-unstyled">
                           <li class="mb-2"><a href="#">إدراج صورة العميل</a></li>
-                          <li><a href="" data-toggle="modal"
-                            data-target="#fingerPrintModal">سحب البصمة</a></li>
+                          <li><a href="#">سحب البصمة</a></li>
                         </ul>
                       </div>
                     </div>
@@ -987,6 +986,7 @@
                         >
                           <i class="fas fa-pen"></i>البصمة
                         </button>
+                        <a></a>
                       </div>
                       <ul class="customer_card_list list-group">
                         <li class=""><p>رقم الملف : <span>234567</span></p></li>
@@ -1132,70 +1132,113 @@
       aria-labelledby="fingerPrintModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog basic_background_white_color" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">سحب البصمة</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <div class="modal-header direction_arabic">
+            <h5
+              class="modal-title basic_text_color font-size-18 bold"
+              id="exampleModalLabel"
+            >
+              سحب البصمة
+            </h5>
           </div>
           <div class="modal-body">
-            <div class="row form-group px-2 align-items-center no-gutters">
-              <label class="col-md-1 mb-3">الجهاز</label>
-              <input class="form-control col-md-11 mb-3" id="text" />
+            <div class="row direction_arabic">
+              <div class="form-group px-3 w-100 row">
+                <label class="font-size-18 regular col-2">الجهاز</label>
+                <input class="form-control direction_ar col-10" id="text" />
+              </div>
             </div>
-            <div class="row align-items-center no-gutters">
-              <div class="form-group px-2 w-100 row">
-                <label class="col-md-1">الجودة</label>
+            <div class="row direction_arabic">
+              <div class="form-group px-3 w-100 row">
+                <label class="font-size-18 regular col-2">الجودة</label>
                 <div
-                  class="col-md-11 d-flex align-items-center"
+                  class="position-relative direction_arabic col-10 d-flex align-items-center"
                 >
-                  <input type="range" class="multi-range w-100" min="1" max="100" step="1" value="80"  />
-                  <span class="span-range">80</span>
+                  <input id="multi7" class="multi-range w-100" type="range" />
+                  <span class="span-range">80%</span>
                 </div>
               </div>
             </div>
-            <div class="row customer_card pt-3 mt-3 pb-5 px-3 mx-2">
-              <div class="col-lg-3 col-md-6 col-sm-12">
-                <button
-                  class="btn btn-block btn_add_rec w-100 basic_background_color text-white mb-3"
-                >اول بصمة
-                </button>
-                <button
-                  class="btn btn-block btn_add_rec w-100 basic_background_color text-white mb-3"
-                > اضافة
-                </button>
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-12">
-                <img src="./images/fingar-print.png" class="w-100" />
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-12">
-                <img src="./images/fingar-print.png" class="w-100" />
-              </div>
-              <div class="col-lg-3 col-md-6 col-sm-12">
-                <button
-                  class="btn btn-block btn_add_rec w-100 basic_background_color text-white mb-3"
-                >سحب
-                </button>
-                <button
-                  class="btn btn-block btn_add_rec w-100 basic_background_color text-white mb-3"
-                > مسح
-                </button>
-                <button
-                  class="btn btn-block btn_add_rec w-100 basic_background_color text-white mb-3"
-                > تحقق من البصمة
-                </button>
+            <div class="row direction_arabic">
+              <div class="box-print">
+                <div
+                  div
+                  class="form-row align-items-start flex-row-reverse w-100 justify-content-center"
+                >
+                  <div class="col-xl-auto col-md-12">
+                    <div
+                      class="d-flex justify-content-between align-items-center flex-column"
+                    >
+                      <button
+                        class="button_search_tabs basic_background_color text-white font-size-18 regular mt-3"
+                      >
+                        سحب
+                      </button>
+                      <button
+                        class="button_search_tabs basic_background_color text-white font-size-18 regular mt-3"
+                      >
+                        مسح
+                      </button>
+                      <button
+                        class="button_search_tabs basic_background_color text-white font-size-18 regular mt-3"
+                      >
+                        تحقق من البصمة
+                      </button>
+                    </div>
+                  </div>
+                  <div class="col-xl-auto col-md-12 mt-3">
+                    <img src="./images/fingar-print.png" class="" />
+                  </div>
+                  <div class="col-xl-auto col-md-12 mt-3">
+                    <img src="./images/fingar-print.png" class="" />
+                  </div>
+                  <div class="col-xl-auto col-md-12">
+                    <div
+                      class="d-flex justify-content-between align-items-center flex-column"
+                    >
+                      <button
+                        class="button_search_tabs basic_background_color text-white font-size-18 regular mt-3"
+                      >
+                        اول بصمة
+                      </button>
+                      <button
+                        class="button_search_tabs basic_background_color text-white font-size-18 regular mt-3"
+                      >
+                        <i class="fas fa-plus pl-1"></i>اضافة
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-success"><i class="fas fa-check pl-1"></i>حفظ</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-trash-alt pl-1"></i>إلغاء</button>
-          </div>
-      </div>
+        </div>
+        <div class="modal-footer direction_arabic">
+          <button
+            type="button"
+            class="btn text-white px-5 btn-success font-size-18 regular"
+          >
+            حفظ<i class="fas fa-check pl-1"></i>
+          </button>
+          <button
+            type="button"
+            class="btn basic-back-red-color text-white px-5 font-size-18 regular"
+          >
+            إلغاء<i class="fas fa-trash-alt pl-1"></i>
+          </button>
+        </div>
       </div>
     </div>
+
 
     <!-- edit Modal -->
     <div class="edit_modal modal" id="editModal"

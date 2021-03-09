@@ -51,11 +51,21 @@
   .btn_add_rec p {
     display: none !important;
   }
+  .tabbable-responsive {
+    overflow-x: auto;
+    padding: 10px 6px 0px 6px;
+  }
+  #fingerPrintModal .modal-dialog {
+    max-width: 100%;
+  }
+  #fingerPrintModal img {
+    margin-bottom: 15px;
+  }
 }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 769px) {
-  .billing_section .col-md-9.pr-0 {
+  .customer_section .col-md-9.pr-0 {
     padding-right: 15px !important;
   }
   .customer_card {
@@ -95,8 +105,8 @@
   .edit_modal .modal-dialog {
     max-width: 95%;
   }
-  .billing_section .col-md-3,
-  .billing_section .col-md-9 {
+  .customer_section .col-md-3,
+  .customer_section .col-md-9 {
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
@@ -153,7 +163,7 @@
     border-right: none;
     border-top: 1px solid;
   }
-  .billing_section .nav-tabs .nav-link {
+  .customer_section .nav-tabs .nav-link {
     min-width: 130px;
   }
   .customer_info h6 {

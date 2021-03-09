@@ -22,6 +22,9 @@
   border-color: var(--basic-main-color);
   background-color: var(--basic-main-color);
 }
+.underline {
+  text-decoration: underline;
+}
 .overflow-none {
   overflow-x: visible !important;
   padding: 10px 0 0 !important;
@@ -56,7 +59,14 @@ select {
 .ag-root.ag-layout-auto-height,
 .ag-body-viewport.ag-layout-auto-height,
 .ag-body-viewport-wrapper.ag-layout-auto-height {
-  overflow: visible !important;
+  overflow-y: visible !important;
+}
+/* .ag-theme-balham .ag-cell {
+  text-align: left;
+} */
+.ag-theme-balham .btn {
+  outline: none !important;
+  box-shadow: none !important;
 }
 /* toggle btn */
 .toggle-off.btn,
@@ -86,12 +96,10 @@ select {
   padding-top: 1.5rem;
 }
 
-/* billing_section */
+/* customer_section */
 .tabbable-responsive {
   display: block;
   min-width: 100%;
-  overflow-x: auto;
-  padding: 10px 6px 0px 6px;
 }
 .tabbable {
   min-width: 100%;
@@ -134,12 +142,19 @@ select {
   box-shadow: 5px -5px 6px -3px var(--basic-purpr-color);
 }
 .tab-content {
-  padding-top: 2.2rem !important;
-  background-color: white;
-  box-shadow: 1px 1px 8px 0 rgba(0, 0, 0, 0.19);
+  background-color: #f9f9f9;
+}
+.tab-content .row.box-shadow-gray {
+  padding: 2.2rem 1rem 1rem;
 }
 .nav-tabs .nav-link:hover {
   color: var(--basic-main-color);
+}
+.nav-item.box-shadow-sm {
+  border-radius: 25px 0 0 0;
+}
+.nav-item.box-shadow-sm a {
+  min-width: 225px;
 }
 .customer_card_header {
   position: relative;
@@ -153,8 +168,10 @@ select {
   display: block;
   width: 55px;
   height: 55px;
+  border-radius: 50%;
   margin-top: 4px;
   margin: 5px auto;
+  object-fit: cover;
 }
 .customer_card_name {
   color: #707070;
@@ -286,21 +303,21 @@ select {
 .ag-theme-balham {
   font-family: var(--neo-sans-regular);
 }
-.ag-theme-balham .ag-rtl .ag-cell div,
-.ag-theme-balham .ag-rtl .ag-cell button {
+.ag-theme-balham .ag-cell div,
+.ag-theme-balham .ag-cell button {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
 }
-.ag-theme-balham .ag-rtl .ag-cell button {
+.ag-theme-balham .ag-cell button.dropdown-toggle {
   padding: 0;
   font-size: 0.9rem;
   outline: none !important;
   box-shadow: none !important;
 }
-.ag-theme-balham .ag-rtl .ag-cell button:focus,
-.ag-theme-balham .ag-rtl .ag-cell button:hover {
+.ag-theme-balham .ag-cell button:focus,
+.ag-theme-balham .ag-cell button:hover {
   color: var(--basic-main-color);
 }
 .ag-theme-balham .dropdown-toggle::after {
@@ -324,7 +341,7 @@ select {
   list-style: none;
   margin: 0 !important;
 }
-.ag-theme-balham .ag-rtl .ag-cell .attach-list button {
+.ag-theme-balham .ag-cell .attach-list button {
   display: block;
   height: auto;
   font-size: 0.7rem;
@@ -359,8 +376,18 @@ select {
   color: var(--danger);
 }
 
+/* customer info  */
+#customerInfo .customer_card_img {
+  width: 120px;
+  height: 120px;
+}
+.take_photo a {
+  color: #707070;
+  text-decoration: underline;
+}
+
 /* edit modal */
-.edit_modal .modal-dialog {
+.modal-dialog {
   max-width: 64%;
 }
 .edit_modal .modal-header .row {
@@ -369,6 +396,8 @@ select {
 }
 .edit_modal .modal-title {
   font-size: 0.9rem;
+}
+.modal-title {
   color: var(--basic-main-color);
 }
 .move_info {
@@ -486,7 +515,8 @@ select {
   font-size: 0.8rem;
   color: #707070;
 }
-.accountant p {
+.accountant p,
+.form-row a {
   color: #707070;
 }
 .input-group-prepend .btn {
@@ -496,4 +526,40 @@ select {
   position: absolute;
   left: 5px;
   width: 26px !important;
+}
+/* date inputs */
+input.date_inputs {
+  position: relative;
+  width: 150px;
+  height: 20px;
+  color: white;
+}
+input.date_inputs:before {
+  position: absolute;
+  top: 8px;
+  font-size: 0.9rem;
+  left: auto;
+  right: 0.75rem;
+  content: attr(data-date);
+  display: inline-block;
+}
+input.date_inputs::-webkit-datetime-edit,
+input.date_inputs::-webkit-inner-spin-button,
+input.date_inputs::-webkit-clear-button {
+  display: none;
+}
+input.date_inputs::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 8px;
+  right: auto;
+  left: -0.85rem;
+  opacity: 1;
+}
+.flex_btn {
+  width: calc((100% - 5rem) / 3);
+}
+
+/* fingerPrint modal  */
+#fingerPrintModal .modal-dialog {
+  max-width: 60%;
 }

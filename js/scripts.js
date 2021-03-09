@@ -1,6 +1,29 @@
 $(document).ready(function () {
   $(".single-select").select2({ placeholder: "@General.Choose" });
+  $("#branches").select2();
+  $("#nationality").select2();
+  $("#gender").select2();
+  $("#city").select2();
+  $("#specialest").select2();
+  $("#QStatus").select2();
+  $("#roundK").select2();
+  $("#shareBy").select2();
+  $("#status").select2();
+  $("#bestTime").select2();
 });
+
+
+// date inputs format
+$("input")
+  .on("change", function () {
+    this.setAttribute(
+      "data-date",
+      moment(this.value, "YYYY-MM-DD").format(
+        this.getAttribute("data-date-format")
+      )
+    );
+  })
+  .trigger("change");
 
 $(function () {
   $("#status-toggle").bootstrapToggle({
