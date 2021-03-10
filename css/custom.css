@@ -248,7 +248,7 @@ body {
   box-shadow: 2px -1px 10px -3px rgb(0 0 0 / 19%);
 }
 div.error{
-    color:red;
+    color:var(--basic-main-color)
 }
 .navbar_section .nav-item:not(.custom-nav .nav-item):hover .nav-link {
   color: var(--basic-main-color) !important;
