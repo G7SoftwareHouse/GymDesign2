@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/select2.min.css" />
     <link rel="stylesheet" href="css/jstree.css" />
+    <!-- datetimepicker -->
+    <link rel="stylesheet" href="css/tempusdominus-bootstrap.css" />
     <!-- AG-grid -->
     <link rel="stylesheet" href="./css/ag-grid.css" />
     <link rel="stylesheet" href="./css/ag-theme-balham.css" />
@@ -649,13 +651,26 @@
                   </div>
                   <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
                     <label>إلى تاريخ </label>
-                    <input
-                      type="date"
-                      data-date=""
-                      data-date-format="DD MMMM YYYY"
-                      value="2021-03-09"
-                      class="form-control date_inputs w-100"
-                    />
+                    <div
+                      class="input-group date"
+                      id="datetimepicker"
+                      data-target-input="nearest"
+                    >
+                      <input
+                        type="text"
+                        class="form-control datetimepicker-input"
+                        data-target="#datetimepicker"
+                      />
+                      <div
+                        class="input-group-append"
+                        data-target="#datetimepicker"
+                        data-toggle="datetimepicker"
+                      >
+                        <div class="input-group-text">
+                          <i class="far fa-calendar"></i>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                   <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
                     <label>اجمالي عدد مرات الاستخدام</label>
@@ -950,16 +965,18 @@
       </div>
     </div>
 
-    <!-- <script src="js/jquery-3.4.1.slim.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/moment.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-toggle.min.js"></script>
+    <!-- datetimepicker  -->
+    <script src="js/tempusdominus-bootstrap.js"></script>
     <script
       src="https://kit.fontawesome.com/7f37d9c53b.js"
       crossorigin="anonymous"
     ></script>
+
     <script src="js/all.min.js"></script>
     <script src="js/select2.min.js"></script>
     <script src="js/jstree.min.js"></script>
@@ -977,6 +994,27 @@
           $("#jstree").jstree(true).select_node("child_node_1");
           $("#jstree").jstree("select_node", "child_node_1");
           $.jstree.reference("#jstree").select_node("child_node_1");
+        });
+      });
+    </script>
+
+    <script>
+      // datetimepicker
+      $(function () {
+        $("#datetimepicker").datetimepicker({
+          format: "DD/MM/YYYY",
+          locale: "ar",
+          icons: {
+            time: "fas fa-clock",
+            date: "fas fa-calendar",
+            up: "fas fa-arrow-up",
+            down: "fas fa-arrow-down",
+            previous: "fas fa-chevron-left",
+            next: "fas fa-chevron-right",
+            today: "fas fa-calendar-check-o",
+            clear: "fas fa-trash",
+            close: "fas fa-times",
+          },
         });
       });
     </script>

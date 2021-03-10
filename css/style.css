@@ -598,7 +598,7 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   margin: 7rem auto;
   max-width: 45%;
 }
-.modal-footer .btn .svg-inline--fa {
+#salePointsModal .modal-footer .btn .svg-inline--fa {
   font-size: 1rem;
 }
 #salePointsModal .modal-footer .btn {
@@ -639,4 +639,20 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   padding: 0px 12px;
   width: 70%;
   border: none;
+}
+
+/* datetimepicker */
+.datetimepicker-input.form-control {
+  border-left: none;
+}
+.input-group > .input-group-append > .input-group-text {
+  color: black;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: white;
+  border: 1px solid #707070;
+  border-right: none;
+}
+.bootstrap-datetimepicker-widget .svg-inline--fa {
+  transform: rotate(180deg);
 }
