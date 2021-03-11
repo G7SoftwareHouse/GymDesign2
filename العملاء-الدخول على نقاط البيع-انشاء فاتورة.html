@@ -608,26 +608,84 @@
         <!-- start content of tab -->
         <div id="tab_1" class="tabcontent">
           <div class="row no-gutters">
-            <div class="col-md-8">
+            <div class="col-lg-8 mb-3">
               <div
-                class="row head_box text-center align-items-center no-gutters"
+                class="row head_box text-center align-items-center justify-content-end no-gutters"
               >
-                <div class="col-md-4">
+                <div class="col-md-12 text-left">
                   <p class="m-0">اسم المستخدم - اسم نقاط البيع</p>
                 </div>
                 <div class="col-md-3">
                   <ul class="list-unstyled m-0">
                     <li class="list-inline-item">
-                      <i class="fas fa-globe-americas"></i>
-                      <p class="m-0">لغة</p>
+                      <a href="#">
+                        <i class="fas fa-globe-americas"></i>
+                        <p class="m-0">لغة</p>
+                      </a>
                     </li>
                     <li class="list-inline-item">
-                      <i class="far fa-bell"></i>
-                      <p class="m-0">تنبيهات</p>
+                      <div class="dropdown">
+                        <a
+                          href="#"
+                          id="notification"
+                          data-toggle="dropdown"
+                          aria-haspopup="true"
+                          aria-expanded="false"
+                        >
+                          <i class="far fa-bell"></i>
+                          <p class="m-0">تنبيهات</p>
+                        </a>
+                        <ul
+                          class="dropdown-menu alert_list"
+                          aria-labelledby="notification"
+                        >
+                          <h3 class="popover-title text-center">التنبيهات</h3>
+                          <ul class="popover-content list-unstyled">
+                            <li data-alert_id="1" class="alert_li">
+                              <a href="#" class="alert_message"
+                                >لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا
+                                يسكينج أليايت,سيت دو أيوسمود تيمبور
+                                أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا .
+                                يوت انيم أد مينيم فينايم,كيواس نوستريد أكسير
+                                سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا
+                                كوممودو كونسيكيوات
+                              </a>
+                              <br /><a href="#" class="time_alert">02:13 AM</a>
+                              <div class="clearfix"></div>
+                            </li>
+                            <li data-alert_id="2" class="alert_li">
+                              <a href="#" class="alert_message"
+                                >وريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا
+                                يسكينج أليايت,سيت دو أيوسمود تيمبور
+                                أنكايديديونتيوت</a
+                              >
+                              <br /><a href="#" class="time_alert">02:13 AM</a>
+                              <div class="clearfix"></div>
+                            </li>
+                            <li data-alert_id="3" class="alert_li">
+                              <a href="#" class="alert_message"
+                                >وريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا
+                                يسكينج أليايت,سيت دو أيوسمود تيمبور
+                                أنكايديديونتيوت</a
+                              >
+                              <br /><a href="#" class="time_alert">02:13 AM</a>
+                              <div class="clearfix"></div>
+                            </li>
+                            <li class="mt-2">
+                              <button class="btn btn-primary w-100 m-auto">
+                                عرض المزيد
+                              </button>
+                              <div class="clearfix"></div>
+                            </li>
+                          </ul>
+                        </ul>
+                      </div>
                     </li>
                     <li class="list-inline-item">
-                      <i class="fas fa-calculator"></i>
-                      <p class="m-0">الة حاسبة</p>
+                      <a href="#">
+                        <i class="fas fa-calculator"></i>
+                        <p class="m-0">الة حاسبة</p>
+                      </a>
                     </li>
                   </ul>
                 </div>
@@ -640,9 +698,35 @@
                   </button>
                 </div>
                 <div class="col-md-1 border-right">
-                  <h6>فاتورة</h6>
-                  <h5>01</h5>
+                  <button class="invoice_no active">
+                    <h6>فاتورة</h6>
+                    <h5>01</h5>
+                  </button>
                 </div>
+                <!-- <div class="col-md-1 border-right">
+                  <button class="invoice_no">
+                    <h6>فاتورة</h6>
+                    <h5>02</h5>
+                  </button>
+                </div>
+                <div class="col-md-1 border-right">
+                  <button class="invoice_no">
+                    <h6>فاتورة</h6>
+                    <h5>03</h5>
+                  </button>
+                </div>
+                <div class="col-md-1 border-right">
+                  <button class="invoice_no">
+                    <h6>فاتورة</h6>
+                    <h5>04</h5>
+                  </button>
+                </div>
+                <div class="col-md-1 border-right">
+                  <button class="invoice_no">
+                    <h6>فاتورة</h6>
+                    <h5>05</h5>
+                  </button>
+                </div> -->
               </div>
               <div
                 class="form-row customer_inputs align-items-end mt-3 no-gutters"
@@ -674,10 +758,11 @@
                   </div>
                 </div>
                 <div class="form-group col-lg-6 col-sm-12">
-                  <select id="Bcode" class="form-control">
-                    <option selected disabled>الباركود</option>
-                    <option>...</option>
-                  </select>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="الباركود "
+                  />
                 </div>
               </div>
               <div class="our_services_section p-2">
@@ -724,7 +809,7 @@
                         عدد الأصناف : <span class="basic_text_color">8</span>
                       </p>
                       <select
-                        id="categories"
+                        id="chCategories"
                         class="form-control d-inline-block"
                       >
                         <option selected disabled>اختر اصناف</option>
@@ -734,7 +819,6 @@
                       <div class="btn-group mr-2" role="group">
                         <a
                           href="#"
-                          id="1"
                           class="btn btn_groups btn-outline-primary border-transparent"
                           data-toggle="tooltip"
                           title="List view"
@@ -743,7 +827,6 @@
                         ></a>
                         <a
                           href="#"
-                          id="2"
                           class="btn btn_groups btn-outline-primary border-transparent active"
                           data-toggle="tooltip"
                           title="Grid view"
@@ -757,7 +840,7 @@
                 <!-- all services list -->
                 <div class="row text-center mx-0 mb-5">
                   <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                    <div class="services_card">
+                    <div class="services_card p-3">
                       <span class="like_btn"><i class="fas fa-star"></i></span>
                       <img src="./images/2.png" />
                       <h6>بيانات الخدمة</h6>
@@ -765,7 +848,7 @@
                     </div>
                   </div>
                   <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                    <div class="services_card">
+                    <div class="services_card p-3">
                       <span class="like_btn"><i class="fas fa-star"></i></span>
                       <img src="./images/2.png" />
                       <h6>بيانات الخدمة</h6>
@@ -773,7 +856,7 @@
                     </div>
                   </div>
                   <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                    <div class="services_card">
+                    <div class="services_card p-3">
                       <span class="like_btn"><i class="fas fa-star"></i></span>
                       <img src="./images/2.png" />
                       <h6>بيانات الخدمة</h6>
@@ -781,7 +864,7 @@
                     </div>
                   </div>
                   <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                    <div class="services_card">
+                    <div class="services_card p-3">
                       <span class="like_btn"><i class="fas fa-star"></i></span>
                       <img src="./images/2.png" />
                       <h6>بيانات الخدمة</h6>
@@ -789,7 +872,7 @@
                     </div>
                   </div>
                   <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                    <div class="services_card">
+                    <div class="services_card p-3">
                       <span class="like_btn"><i class="fas fa-star"></i></span>
                       <img src="./images/2.png" />
                       <h6>بيانات الخدمة</h6>
@@ -797,7 +880,7 @@
                     </div>
                   </div>
                   <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                    <div class="services_card">
+                    <div class="services_card p-3">
                       <span class="like_btn"><i class="fas fa-star"></i></span>
                       <img src="./images/2.png" />
                       <h6>بيانات الخدمة</h6>
@@ -805,7 +888,7 @@
                     </div>
                   </div>
                   <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                    <div class="services_card">
+                    <div class="services_card p-3">
                       <span class="like_btn"><i class="fas fa-star"></i></span>
                       <img src="./images/2.png" />
                       <h6>بيانات الخدمة</h6>
@@ -813,7 +896,7 @@
                     </div>
                   </div>
                   <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
-                    <div class="services_card">
+                    <div class="services_card p-3">
                       <span class="like_btn"><i class="fas fa-star"></i></span>
                       <img src="./images/2.png" />
                       <h6>بيانات الخدمة</h6>
@@ -822,8 +905,240 @@
                   </div>
                 </div>
               </div>
+
+              <!-- total  -->
+              <div
+                class="total_sale row text-center align-items-center no-gutters py-3"
+              >
+                <div class="col-2">
+                  <h6>رصيد الإفتتاحي</h6>
+                  <p class="m-0">235677</p>
+                </div>
+                <div class="col border-right px-1">
+                  <h6 class="border-bottom pb-2">مبيعات</h6>
+                  <p class="m-0">0</p>
+                </div>
+                <div class="col border-right px-1">
+                  <h6 class="border-bottom pb-2">مرتجع مبيعات</h6>
+                  <p class="m-0">0</p>
+                </div>
+                <div class="col border-right px-1">
+                  <h6 class="border-bottom pb-2">تجميد مدفوع</h6>
+                  <p class="m-0">0</p>
+                </div>
+                <div class="col border-right px-1">
+                  <h6 class="border-bottom pb-2">ترقية</h6>
+                  <p class="m-0">0</p>
+                </div>
+                <div class="col border-right px-1">
+                  <h6 class="border-bottom pb-2">تحويل</h6>
+                  <p class="m-0">0</p>
+                </div>
+                <div class="col border-right px-1">
+                  <h6 class="border-bottom pb-2">مدفوعات</h6>
+                  <p class="m-0">0</p>
+                </div>
+                <div class="col border-right border-left px-1">
+                  <h6 class="border-bottom pb-2">تحصيلات</h6>
+                  <p class="m-0">0</p>
+                </div>
+                <div class="col-2">
+                  <h6>رصيد الاقفال</h6>
+                  <p class="m-0">235677</p>
+                </div>
+              </div>
             </div>
-            <div class="col-md-4"></div>
+            <div class="col-lg-4 pl-3">
+              <div class="bg-white p-3">
+                <div class="invoices_head row no-gutters">
+                  <div class="col d-flex align-items-center">
+                    <button class="btn btn-danger btn-circle">
+                      <i class="fas fa-trash-alt"></i>
+                    </button>
+                    <div>
+                      <h6>رقم الفاتورة : 1#</h6>
+                      <p>1234</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <button
+                      class="btn box-shadow basic_background_color text-white float-right m-0"
+                    >
+                      <i class="fas fa-plus ml-2"></i>فاتورة جديدة
+                    </button>
+                  </div>
+                </div>
+                <!-- tabs  -->
+                <div
+                  class="pay_tab row border-bottom border-top align-items-center text-center mt-3 no-gutters"
+                >
+                  <div class="col border-left">
+                    <button class="btn btn-link active w-100 m-0 py-2">
+                      <i class="fas fa-hand-holding-usd mr-1"></i>نقدي
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="btn btn-link w-100 m-0 py-2">
+                      <i class="fab fa-creative-commons-nc mr-1"></i>آجــل
+                    </button>
+                  </div>
+                </div>
+
+                <!-- invoices list -->
+                <div class="table-responsive m_h border-bottom mb-3">
+                  <table class="table invoices_table table-borderless">
+                    <tbody>
+                      <tr>
+                        <td width="5%">
+                          <button class="btn btn-danger btn-circle">
+                            <i class="fas fa-trash-alt"></i>
+                          </button>
+                        </td>
+                        <td>
+                          <p class="m-0">بيانات الخدمة</p>
+                        </td>
+                        <td>
+                          <div
+                            class="number-input d-flex align-items-center justify-content-center m-auto"
+                          >
+                            <a
+                              class="plus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                            >
+                              <i class="fas fa-plus"></i>
+                            </a>
+                            <input
+                              class="quantity"
+                              min="0"
+                              name="quantity"
+                              value="1"
+                              type="number"
+                            />
+                            <a
+                              class="minus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                            >
+                              <i class="fas fa-minus"></i>
+                            </a>
+                          </div>
+                        </td>
+                        <td class="text-right"><p class="m-0">120 ريال</p></td>
+                      </tr>
+                      <tr>
+                        <td width="5%">
+                          <button class="btn btn-danger btn-circle">
+                            <i class="fas fa-trash-alt"></i>
+                          </button>
+                        </td>
+                        <td>
+                          <p class="m-0">بيانات الخدمة</p>
+                        </td>
+                        <td>
+                          <div
+                            class="number-input d-flex align-items-center justify-content-center m-auto"
+                          >
+                            <a
+                              class="plus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                            >
+                              <i class="fas fa-plus"></i>
+                            </a>
+                            <input
+                              class="quantity"
+                              min="0"
+                              name="quantity"
+                              value="1"
+                              type="number"
+                            />
+                            <a
+                              class="minus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                            >
+                              <i class="fas fa-minus"></i>
+                            </a>
+                          </div>
+                        </td>
+                        <td class="text-right"><p class="m-0">120 ريال</p></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div class="row no-gutters total_price">
+                  <div class="col-4">
+                    <button type="button" class="btn btn-warning mb-4">
+                      <i class="fas fa-percent ml-1"></i>الخصم
+                    </button>
+                    <button type="button" class="btn btn-primary btn-blue mb-4">
+                      <i class="fas fa-pencil-alt ml-1"></i>الملاحظات
+                    </button>
+                    <div class="row attachment_btns text-center m-0 mb-4">
+                      <div class="col-12 py-1 border-bottom">
+                        <a href="#"
+                          ><i class="fas fa-paperclip ml-1"></i>مرفقات</a
+                        >
+                      </div>
+                      <div class="col border-left py-1">
+                        <a href="#">عقد</a>
+                      </div>
+                      <div class="col py-1"><a href="#">اخرى</a></div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <ul class="list-group mb-4 border-0">
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center border-0"
+                      >
+                        القيمة الكلية
+                        <span class="badge badge-primary badge-pill">35.5</span>
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center border-0"
+                      >
+                        اجمالي الضرائب على الخدمات والاشتراكات
+                        <span class="badge badge-primary badge-pill">5.5</span>
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center border-0"
+                      >
+                        اجمالي الضرائب
+                        <span class="badge badge-primary badge-pill"
+                          >155.5</span
+                        >
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center border-0"
+                      >
+                        إضافات خصومات الفاتورة
+                        <span class="badge badge-primary badge-pill"
+                          >552.5</span
+                        >
+                      </li>
+                      <li
+                        class="list-group-item d-flex justify-content-between align-items-center border-0"
+                      >
+                        اجمالي الفاتورة
+                        <span class="badge badge-primary badge-pill"
+                          >895.5</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="row no-gutters">
+                  <div class="col-4">
+                    <button type="button" class="btn btn-info mb-4">
+                      <i class="fas fa-print ml-1"></i>طباعة العقد
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button type="button" class="btn btn-success w-100 mb-4">
+                      <i class="fas fa-dollar-sign ml-1"></i>الدفع
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -878,9 +1193,8 @@
       </div>
     </div>
 
-    <!-- <script src="js/jquery-3.4.1.slim.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+    <script src="js/moment.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-toggle.min.js"></script>
@@ -917,6 +1231,15 @@
         // toggle active btn
         $(".btn_groups").click(function () {
           $(this).addClass("active").siblings().removeClass("active");
+        });
+
+        $(".invoice_no").click(function () {
+          $(".invoice_no").removeClass("active");
+          $(this).addClass("active");
+        });
+        $(".pay_tab .btn").click(function () {
+          $(".pay_tab .btn").removeClass("active");
+          $(this).addClass("active");
         });
       });
     </script>

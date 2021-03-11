@@ -1,4 +1,12 @@
 $(document).ready(function () {
+  $("[data-toggle=popover]").popover({
+    html: true,
+    trigger: "focus",
+    content: function () {
+      var content = $(this).attr("data-popover-content");
+      return $(content).children(".popover-body").html();
+    },
+  });
   /*navbar scroll*/
   var prevScrollpos = window.pageYOffset,
     bH = $(window).height(),
@@ -11,7 +19,7 @@ $(document).ready(function () {
         document.getElementById("header").style.top = "0";
         $(".vertical_tabs .tab").css("top", header);
         $(".vertical_tabs .tab").css("min-height", bH - header);
-      } else {
+      } else if (header > 100) {
         document.getElementById("header").style.top = "-68px";
         $(".vertical_tabs .tab").css("top", header - 68);
         $(".vertical_tabs .tab").css("min-height", header - 68);
@@ -26,20 +34,23 @@ $(document).ready(function () {
     var bH = $(window).height(),
       bW = $(window).width(),
       tabW = $(".vertical_tabs .tab").innerWidth(),
-      header = $("#header").height();
+      header = $("#header").height(),
+      totalH = $(".total_sale").innerHeight();
 
     $(".vertical_tabs .tab").css("min-height", bH - header);
     $(".vertical_tabs .tab").css("top", header);
     $("main").css("margin-top", header);
     $(".vertical_tabs .tabcontent").css("margin-right", tabW);
     $(".vertical_tabs .tabcontent").css("width", bW - tabW - 48);
+    $(".vertical_tabs .tabcontent#tab_1").css("margin-bottom", totalH + 10);
   });
+
 
   // slick slider
   $(".slick_slider").slick({
     rtl: true,
     slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToScroll: 1,
     infinite: true,
     speed: 500,
     autoplay: true,
@@ -70,6 +81,7 @@ $(document).ready(function () {
   $("#customer").select2();
   $("#responsible").select2();
   $("#Bcode").select2();
+  $("#chCategories").select2();
 });
 
 // date inputs format

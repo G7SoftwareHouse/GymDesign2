@@ -679,7 +679,6 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   border-right: 10px solid var(--basic-main-color);
 }
 .vertical_tabs .tabcontent {
-  float: right;
   border: none;
 }
 .Exit_tab {
@@ -712,10 +711,22 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 .head_box .btn {
   font-size: 0.75rem;
 }
-.head_box h6 {
+.head_box h6,
+.head_box h5 {
   color: #191919;
+  opacity: 0.4;
+}
+.head_box h6 {
   font-size: 0.8rem;
   margin-bottom: 0;
+}
+.invoice_no.active h6,
+.invoice_no.active h5 {
+  opacity: 1;
+}
+.invoice_no {
+  border: none;
+  background-color: transparent;
 }
 .customer_inputs .form-control,
 .customer_inputs .select2 .select2-selection {
@@ -811,12 +822,14 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   background-color: transparent !important;
 }
 .btn-outline-primary.active,
-.btn-outline-primary:hover {
+.btn-outline-primary:hover,
+.pay_tab .btn.active {
   background-color: var(--basic-main-color) !important;
   border-color: var(--basic-main-color) !important;
 }
 .customer_inputs .btn-outline-primary.active .svg-inline--fa,
-.customer_inputs .btn-outline-primary:hover .svg-inline--fa {
+.customer_inputs .btn-outline-primary:hover .svg-inline--fa,
+.pay_tab .btn.active {
   color: white !important;
 }
 .our_services_section .btn-group .btn {
@@ -864,6 +877,163 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   border-radius: 50%;
   color: #919191;
   background-color: #efefef;
+}
+.services_card img {
+  width: 85%;
+  margin-bottom: 0.5rem;
+}
+.services_card h6 {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.total_sale {
+  position: fixed;
+  bottom: 10px;
+  color: white;
+  z-index: 10;
+  -ms-flex: 0 0 60.666667%;
+  flex: 0 0 60.666667%;
+  min-width: 60.666667%;
+  border-radius: 3px;
+  border: 1px solid #707070;
+  background-color: #919191;
+  box-shadow: 0 3px 10px 0 rgba(182, 53, 148, 0.45);
+}
+.total_sale h6,
+.total_sale p {
+  font-size: 0.75rem;
+}
+.invoices_head h6,
+.invoices_head p {
+  font-size: 0.8rem;
+  color: #191919;
+  margin: 0 !important;
+}
+.col-lg-4.pl-3 {
+  padding-left: 0 !important;
+}
+.btn-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 0.95rem;
+  color: white;
+  margin-left: 5px;
+}
+.pay_tab .btn {
+  font-size: 0.9rem;
+  color: var(--basic-main-color);
+}
+.m_h {
+  min-height: 300px;
+}
+.invoices_table {
+  margin: 1rem 0;
+}
+.invoices_table td {
+  padding: 5px 0 !important;
+  text-align: right;
+  vertical-align: middle !important;
+}
+.invoices_table p {
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+.number-input {
+  width: fit-content;
+  width: -moz-fit-content;
+  border-radius: 3px;
+  background: #efefef;
+  border: 1px solid var(--basic-main-color);
+}
+.number-input a {
+  width: 1.8rem;
+  height: 1.8rem;
+  font-size: 0.6rem;
+  line-height: 2.7;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  color: var(--basic-main-color);
+  background: transparent;
+}
+.number-input a:focus {
+  outline: none !important;
+}
+.number-input input[type="number"] {
+  max-width: 1.8rem;
+  height: 1.8rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  color: #495057;
+  text-align: center;
+  background-color: white;
+  border: solid var(--basic-main-color);
+  border-width: 0 1px;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.btn.btn-blue {
+  border-color: #449ffb !important;
+  background-color: #449ffb !important;
+}
+.total_price .badge-primary {
+  color: #191919;
+  background-color: transparent;
+}
+
+/* notification */
+.popover-title {
+  padding: 8px 14px;
+  margin: 0;
+  font-size: 14px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 5px 5px 0 0;
+}
+.popover-content {
+  padding: 9px 14px;
+}
+.alert_list {
+  min-width: 250px;
+  padding: 0;
+  right: 0 !important;
+  top: -9px !important;
+  box-shadow: 0px 0px 10px 0px #ddd;
+}
+li.alert_li {
+  font-size: 11px;
+  color: grey;
+  padding: 10px 0px 2px 0px;
+  border-bottom: thin solid #c0c0c0;
+}
+li.alert_li:hover {
+  background-color: #eee;
+}
+.time_alert {
+  float: left;
+  margin-bottom: 1px;
+}
+a.alert_message {
+  color: grey;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+a.alert_message:hover {
+  color: grey;
 }
 
 /* datetimepicker */
