@@ -531,10 +531,12 @@ select {
 }
 .day-input::after {
   content: "يوم";
+  color: var(--basic-main-color);
   left: -7px;
 }
 .time-input::after {
   content: "ساعة";
+  color: var(--basic-main-color);
   left: -12px;
 }
 .or-after::after {
