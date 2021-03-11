@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="./css/ag-theme-balham.css" />
     <link rel="stylesheet" href="./css/custom-ag-grid.css" />
     <script src="js/ag-grid-enterprise.min.noStyle.js"></script>
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
     <!-- Custom style -->
     <link rel="stylesheet" href="./css/custom.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -28,7 +31,7 @@
     <link rel="apple-touch-icon" href="images/fa-icon.png" />
   </head>
   <body>
-    <header class="navbar_section-1 navbar_section">
+    <header class="navbar_section-1 navbar_section" id="header">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light row p-2 p-lg-0">
           <a class="navbar-brand m-0 d-block d-lg-none" href="#!">
@@ -133,9 +136,9 @@
             id="navbarNavDropdown"
           >
             <div
-              class="top-header d-flex w-100 p-0 p-lg-3 box-shadow-main justify-content-between align-items-center"
+              class="top-header d-flex w-100 p-0 p-lg-2 box-shadow-main justify-content-between align-items-center"
             >
-              <a class="navbar-brand col-2 m-0 d-none d-lg-block" href="#!">
+              <a class="navbar-brand col-2 m-0 d-none d-lg-block p-0" href="#!">
                 <img src="./images/logo.png" alt="logo" class="w-100" />
               </a>
               <!-- Right -->
@@ -295,12 +298,12 @@
                     </div>
                   </li>
                 </ul>
-                <div class="user-img ml-2">
+                <div class="user-img">
                   <img src="./images/Ellipse 1@2x.png" class="w-100" />
                 </div>
 
                 <div class="user-text">
-                  <h5 class="font-size-16 bold basic_text_color">
+                  <h5 class="font-size-15 bold basic_text_color">
                     اسم مستخدم النظام
                   </h5>
                   <h5 class="font-size-14 bold basic_text_color">Gym Admin</h5>
@@ -534,10 +537,11 @@
 
     <main class="p-4">
       <!-- Start -->
-      <div class="vertical_tabs">
+      <div class="vertical_tabs d-inline-block w-100">
+        <!-- sidebar menu -->
         <div class="tab">
           <button
-            class="tablinks text-center"
+            class="tablinks d-block w-100 text-center"
             onclick="openTab(event, 'tab_1')"
             id="defaultOpen"
           >
@@ -545,24 +549,282 @@
             انشاء فاتورة
           </button>
           <button
-            class="tablinks text-center"
+            class="tablinks d-block w-100 text-center"
             onclick="openTab(event, 'tab_2')"
           >
-            <i class="fas fa-file-medical d-block m-auto"></i>
-            انشاء فاتورة
+            <i class="fas fa-copy d-block m-auto"></i>
+            الفواتير
           </button>
           <button
-            class="tablinks text-center"
+            class="tablinks d-block w-100 text-center"
             onclick="openTab(event, 'tab_3')"
           >
-            <i class="fas fa-file-medical d-block m-auto"></i>
-            انشاء فاتورة
+            <i class="fas fa-file-excel d-block m-auto"></i>
+            مرتجع فواتير
           </button>
+          <button
+            class="tablinks d-block w-100 text-center"
+            onclick="openTab(event, 'tab_3')"
+          >
+            <i class="fas fa-sync-alt d-block m-auto"></i>
+            تحويل الاشتراكات
+          </button>
+          <button
+            class="tablinks d-block w-100 text-center"
+            onclick="openTab(event, 'tab_3')"
+          >
+            <i class="fas fa-chart-line d-block m-auto"></i>
+            ترقية الاشتراكات
+          </button>
+          <button
+            class="tablinks d-block w-100 text-center"
+            onclick="openTab(event, 'tab_3')"
+          >
+            <i class="fas fa-pause-circle d-block m-auto"></i>
+            التجميد
+          </button>
+          <button
+            class="tablinks d-block w-100 text-center"
+            onclick="openTab(event, 'tab_3')"
+          >
+            <i class="fas fa-dollar-sign d-block m-auto"></i>
+            مدفوعات
+          </button>
+          <button
+            class="tablinks d-block w-100 text-center"
+            onclick="openTab(event, 'tab_3')"
+          >
+            <i class="fas fa-share d-block m-auto"></i>
+            تحصيلات
+          </button>
+          <div class="Exit_tab">
+            <button class="tablinks d-block w-100 text-center">
+              <i class="fas fa-reply-all d-block m-auto"></i>
+              الخروج للنظام الرئيسي
+            </button>
+          </div>
         </div>
 
+        <!-- start content of tab -->
         <div id="tab_1" class="tabcontent">
-          <h3>createReci</h3>
-          <p>اسم المستخدم - اسم نقاط البيع</p>
+          <div class="row no-gutters">
+            <div class="col-md-8">
+              <div
+                class="row head_box text-center align-items-center no-gutters"
+              >
+                <div class="col-md-4">
+                  <p class="m-0">اسم المستخدم - اسم نقاط البيع</p>
+                </div>
+                <div class="col-md-3">
+                  <ul class="list-unstyled m-0">
+                    <li class="list-inline-item">
+                      <i class="fas fa-globe-americas"></i>
+                      <p class="m-0">لغة</p>
+                    </li>
+                    <li class="list-inline-item">
+                      <i class="far fa-bell"></i>
+                      <p class="m-0">تنبيهات</p>
+                    </li>
+                    <li class="list-inline-item">
+                      <i class="fas fa-calculator"></i>
+                      <p class="m-0">الة حاسبة</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-4">
+                  <button type="button" class="btn btn-warning">
+                    <i class="far fa-pause-circle mx-1"></i>ايقاف
+                  </button>
+                  <button type="button" class="btn btn-danger">
+                    <i class="fas fa-reply-all mx-1"></i>تسجيل خروج
+                  </button>
+                </div>
+                <div class="col-md-1 border-right">
+                  <h6>فاتورة</h6>
+                  <h5>01</h5>
+                </div>
+              </div>
+              <div
+                class="form-row customer_inputs align-items-end mt-3 no-gutters"
+              >
+                <div class="form-group col-lg-6 col-sm-12">
+                  <select id="customer" class="form-control">
+                    <option selected disabled>العميل</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="form-group col-lg-6 col-sm-12">
+                  <select id="responsible" class="form-control">
+                    <option selected disabled>المسئول</option>
+                    <option>...</option>
+                  </select>
+                </div>
+                <div class="form-group col-lg-6 col-sm-12">
+                  <div class="input-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="ابحث "
+                    />
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"
+                        ><i class="fas fa-search"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group col-lg-6 col-sm-12">
+                  <select id="Bcode" class="form-control">
+                    <option selected disabled>الباركود</option>
+                    <option>...</option>
+                  </select>
+                </div>
+              </div>
+              <div class="our_services_section p-2">
+                <!-- The slideshow -->
+                <div class="slick_slider text-center py-2 border-bottom">
+                  <div>
+                    <button class="btn border-transparent font-size-18">
+                      اشتراكات النادي
+                    </button>
+                  </div>
+                  <div>
+                    <button class="btn border-transparent font-size-18">
+                      تدريب شخصي
+                    </button>
+                  </div>
+                  <div>
+                    <button class="btn border-transparent font-size-18">
+                      نادي الصغار
+                    </button>
+                  </div>
+                  <div>
+                    <button class="btn basic-back-closs-color font-size-18">
+                      شركاء النجاح
+                    </button>
+                  </div>
+                  <div>
+                    <button class="btn basic-back-semon-color font-size-18">
+                      المفضلة
+                    </button>
+                  </div>
+                  <div>
+                    <button class="btn basic-back-azure-color font-size-18">
+                      المنتجات
+                    </button>
+                  </div>
+                </div>
+                <!-- list view controls -->
+                <div class="form-inline customer_inputs my-3">
+                  <div class="form-row justify-content-end w-100 no-gutters">
+                    <div
+                      class="col-md-7 col-sm-12 d-flex flex-row justify-content-end align-items-center text-center"
+                    >
+                      <p class="d-inline-block mx-3 mb-0">
+                        عدد الأصناف : <span class="basic_text_color">8</span>
+                      </p>
+                      <select
+                        id="categories"
+                        class="form-control d-inline-block"
+                      >
+                        <option selected disabled>اختر اصناف</option>
+                        <option>الاول</option>
+                        <option>الثاني</option>
+                      </select>
+                      <div class="btn-group mr-2" role="group">
+                        <a
+                          href="#"
+                          id="1"
+                          class="btn btn_groups btn-outline-primary border-transparent"
+                          data-toggle="tooltip"
+                          title="List view"
+                        >
+                          <i class="fa fa-bars"></i
+                        ></a>
+                        <a
+                          href="#"
+                          id="2"
+                          class="btn btn_groups btn-outline-primary border-transparent active"
+                          data-toggle="tooltip"
+                          title="Grid view"
+                        >
+                          <i class="fa fa-th"></i
+                        ></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- all services list -->
+                <div class="row text-center mx-0 mb-5">
+                  <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <div class="services_card">
+                      <span class="like_btn"><i class="fas fa-star"></i></span>
+                      <img src="./images/2.png" />
+                      <h6>بيانات الخدمة</h6>
+                      <h6>سعر الخدمة</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <div class="services_card">
+                      <span class="like_btn"><i class="fas fa-star"></i></span>
+                      <img src="./images/2.png" />
+                      <h6>بيانات الخدمة</h6>
+                      <h6>سعر الخدمة</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <div class="services_card">
+                      <span class="like_btn"><i class="fas fa-star"></i></span>
+                      <img src="./images/2.png" />
+                      <h6>بيانات الخدمة</h6>
+                      <h6>سعر الخدمة</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <div class="services_card">
+                      <span class="like_btn"><i class="fas fa-star"></i></span>
+                      <img src="./images/2.png" />
+                      <h6>بيانات الخدمة</h6>
+                      <h6>سعر الخدمة</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <div class="services_card">
+                      <span class="like_btn"><i class="fas fa-star"></i></span>
+                      <img src="./images/2.png" />
+                      <h6>بيانات الخدمة</h6>
+                      <h6>سعر الخدمة</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <div class="services_card">
+                      <span class="like_btn"><i class="fas fa-star"></i></span>
+                      <img src="./images/2.png" />
+                      <h6>بيانات الخدمة</h6>
+                      <h6>سعر الخدمة</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <div class="services_card">
+                      <span class="like_btn"><i class="fas fa-star"></i></span>
+                      <img src="./images/2.png" />
+                      <h6>بيانات الخدمة</h6>
+                      <h6>سعر الخدمة</h6>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-4 col-sm-6 mb-3">
+                    <div class="services_card">
+                      <span class="like_btn"><i class="fas fa-star"></i></span>
+                      <img src="./images/2.png" />
+                      <h6>بيانات الخدمة</h6>
+                      <h6>سعر الخدمة</h6>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4"></div>
+          </div>
         </div>
 
         <div id="tab_2" class="tabcontent">
@@ -571,7 +833,7 @@
         </div>
 
         <div id="tab_3" class="tabcontent">
-          <h3>اسم المستخدم </h3>
+          <h3>اسم المستخدم</h3>
           <p>اسم المستخدم - اسم نقاط البيع</p>
         </div>
       </div>
@@ -629,23 +891,9 @@
     <script src="js/all.min.js"></script>
     <script src="js/select2.min.js"></script>
     <script src="js/jstree.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script>
-      $(function () {
-        // 6 create an instance when the DOM is ready
-        $("#jstree").jstree();
-        // 7 bind to events triggered on the tree
-        $("#jstree").on("changed.jstree", function (e, data) {
-          console.log(data.selected);
-        });
-        // 8 interact with the tree - either way is OK
-        $("button").on("click", function () {
-          $("#jstree").jstree(true).select_node("child_node_1");
-          $("#jstree").jstree("select_node", "child_node_1");
-          $.jstree.reference("#jstree").select_node("child_node_1");
-        });
-      });
-    </script>
+
     <script>
       function openTab(evt, Name) {
         var i, tabcontent, tablinks;
@@ -663,6 +911,14 @@
 
       // Get the element with id="defaultOpen" and click on it
       document.getElementById("defaultOpen").click();
+    </script>
+    <script>
+      $(document).ready(function () {
+        // toggle active btn
+        $(".btn_groups").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+        });
+      });
     </script>
   </body>
 </html>

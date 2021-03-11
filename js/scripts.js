@@ -1,4 +1,54 @@
 $(document).ready(function () {
+  /*navbar scroll*/
+  var prevScrollpos = window.pageYOffset,
+    bH = $(window).height(),
+    header = $("#header").height();
+  window.onscroll = function () {
+    var currentScrollPos = window.pageYOffset;
+    var $height = $(window).scrollTop();
+    if ($height > 50) {
+      if (prevScrollpos > currentScrollPos) {
+        document.getElementById("header").style.top = "0";
+        $(".vertical_tabs .tab").css("top", header);
+        $(".vertical_tabs .tab").css("min-height", bH - header);
+      } else {
+        document.getElementById("header").style.top = "-68px";
+        $(".vertical_tabs .tab").css("top", header - 68);
+        $(".vertical_tabs .tab").css("min-height", header - 68);
+      }
+      prevScrollpos = currentScrollPos;
+    }
+  };
+
+  // fixed sidebar
+  $(function () {
+    "use strict";
+    var bH = $(window).height(),
+      bW = $(window).width(),
+      tabW = $(".vertical_tabs .tab").innerWidth(),
+      header = $("#header").height();
+
+    $(".vertical_tabs .tab").css("min-height", bH - header);
+    $(".vertical_tabs .tab").css("top", header);
+    $("main").css("margin-top", header);
+    $(".vertical_tabs .tabcontent").css("margin-right", tabW);
+    $(".vertical_tabs .tabcontent").css("width", bW - tabW - 48);
+  });
+
+  // slick slider
+  $(".slick_slider").slick({
+    rtl: true,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    prevArrow: '<button class="slide-arrow prev-arrow"></button>',
+    nextArrow: '<button class="slide-arrow next-arrow"></button>',
+  });
+
+  // select 2 input
   $(".single-select").select2({ placeholder: "@General.Choose" });
   $("#branches").select2();
   $("#nationality").select2();
@@ -17,6 +67,9 @@ $(document).ready(function () {
   $("#categories").select2();
   $("#services").select2();
   $("#choice").select2();
+  $("#customer").select2();
+  $("#responsible").select2();
+  $("#Bcode").select2();
 });
 
 // date inputs format

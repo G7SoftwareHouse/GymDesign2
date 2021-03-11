@@ -121,6 +121,14 @@ body {
   font-size: 16px;
 }
 
+.font-size-15 {
+  font-size: 13px;
+}
+
+.font-size-15 {
+  font-size: 15px;
+}
+
 .font-size-14 {
   font-size: 14px;
 }
@@ -316,11 +324,13 @@ body {
 
 .navbar_section .form-search {
   border: 2px solid var(--basic-main-color) !important;
-  min-height: 60px;
+  min-height: 50px;
   text-align: right;
-  /* New edits */
   border-radius: 10px;
-  text-align: center;
+}
+.navbar_section .navbar-brand img {
+  height: 50px;
+  object-fit: contain;
 }
 
 .w-0 {
@@ -556,8 +566,8 @@ body {
 }
 
 .user-img {
-  width: 60px;
-  height: 60px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   box-shadow: 0px 3px 6px #b6359491;
   border: 3px solid #ffffff;
@@ -688,7 +698,6 @@ label,
 }
 /*************popups********************/
 .select2 {
-  height: 40px;
   width: 100% !important;
 }
 
@@ -851,7 +860,7 @@ label,
   height: auto !important;
   min-height: 40px;
 }
-.select2-container .select2-selection--single .select2-selection__rendered{
+.select2-container .select2-selection--single .select2-selection__rendered {
   padding-right: 0;
 }
 .form-control,
@@ -913,6 +922,10 @@ label,
 
   .font-size-16 {
     font-size: 14px;
+  }
+
+  .font-size-15 {
+    font-size: 13px;
   }
 
   .font-size-14 {
@@ -985,6 +998,10 @@ label,
 
   .font-size-16 {
     font-size: 14px;
+  }
+
+  .font-size-15 {
+    font-size: 13px;
   }
 
   .font-size-14 {
