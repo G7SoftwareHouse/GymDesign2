@@ -854,7 +854,7 @@ label,
   left: 1%;
 }
 .form-control,
-.select2 .select2-selection {
+.select2 .select2-selection, .input-group.date {
   height: 40px !important;
   text-align: right;
 }
