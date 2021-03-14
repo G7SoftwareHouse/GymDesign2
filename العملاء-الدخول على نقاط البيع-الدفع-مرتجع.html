@@ -607,8 +607,9 @@
 
         <!-- start content of tab -->
         <div id="tab_1" class="tabcontent">
+          <!-- Start -->
           <div class="row no-gutters">
-            <div class="col-lg-8 mb-3">
+            <div class="col-md-8 col-sm-12">
               <div
                 class="row head_box text-center align-items-center justify-content-end no-gutters"
               >
@@ -704,222 +705,113 @@
                   </button>
                 </div>
               </div>
-              <!-- End payment method -->
-              <form class="services">
-                <div class="card card_index mt-2 border-0">
-                  <div class="card-header border-0 p-0">
-                    <!-- START TABS DIV -->
-                    <div class="single-tab tabbable-responsive overflow-none">
-                      <div class="tabbable">
-                        <ul class="nav nav-tabs border-0" role="tablist">
-                          <li class="nav-item float-left">
-                            <a
-                              class="nav-link text-center bold active"
-                              role="tab"
-                              aria-controls="contact"
-                              aria-selected="false"
-                              >طرق الدفع</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
+              <div class="card card_index mt-2 border-0">
+                <div class="card-header border-0 p-0">
+                  <!-- START TABS DIV -->
+                  <div class="tabbable-responsive overflow-none">
+                    <div class="tabbable">
+                      <ul class="nav nav-tabs border-0" role="tablist">
+                        <li class="nav-item float-left">
+                          <a
+                            class="nav-link text-center bold active"
+                            role="tab"
+                            aria-controls="contact"
+                            aria-selected="false"
+                            >كود المرتجع</a
+                          >
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                  <div class="payment_method card-body p-0">
-                    <div class="tab-content bg-white min-h mt--5 p-3">
-                      <div
-                        class="tab-pane fade show active"
-                        id="primary"
-                        role="tabpanel"
-                        aria-labelledby="primary-tab"
-                      >
-                        <div class="form-row pb-2 border-b-dash no-gutters">
-                          <div
-                            class="form-group text-center col-md-4 col-sm-12 px-3"
+                </div>
+                <div class="card-body p-0">
+                  <div class="tab-content bg-white mt--5 p-3">
+                    <div class="tab-pane fade show active" role="tabpanel">
+                      <div class="row py-2 mb-5">
+                        <div class="col-md-6">
+                          <ul
+                            class="customer_card_list list-unstyled list-group p-0"
                           >
-                            <label>المتبقي</label>
-                            <input
-                              type="number"
-                              value="0"
-                              class="form-control text-center"
-                            />
-                          </div>
-                          <div
-                            class="form-group text-center col-md-4 col-sm-12 px-3"
-                          >
-                            <label>اجمالي المبلغ المدفوع</label>
-                            <input
-                              type="number"
-                              class="form-control text-center"
-                            />
-                          </div>
-                          <div
-                            class="form-group text-center col-md-4 col-sm-12 px-3"
-                          >
-                            <label>صافي قيمة الفاتورة</label>
-                            <input
-                              type="number"
-                              class="form-control text-center"
-                            />
-                          </div>
+                            <h5 class="mb-3">بيانات العميل</h5>
+                            <li class="">
+                              <p class="mb-1"><span>الكود </span> 1234</p>
+                            </li>
+                            <li class="">
+                              <p class="mb-1">
+                                <span>اسم العميل </span>محمد احمد
+                              </p>
+                            </li>
+                            <li class="">
+                              <p class="mb-1"><span>هاتف </span>012384727</p>
+                            </li>
+                            <li class="">
+                              <p class="mb-1"><span>العنوان </span>الطائف</p>
+                            </li>
+                          </ul>
                         </div>
-
-                        <div
-                          class="form-row py-4 border-b-dash no-gutters align-items-center"
-                        >
-                          <div
-                            class="form-group text-center col-md-4 col-sm-12 px-3"
+                        <div class="col-md-6">
+                          <ul
+                            class="customer_card_list list-unstyled list-group p-0"
                           >
-                            <button
-                              type="button"
-                              data-toggle="modal"
-                              data-target="#payment"
-                              class="btn btn-outline-secondary w-100"
-                            >
-                              Master card
-                            </button>
-                          </div>
-                          <div
-                            class="form-group text-center col-md-4 col-sm-12 px-3"
-                          >
-                            <button
-                              type="button"
-                              class="btn btn-outline-secondary w-100"
-                            >
-                              Mada
-                            </button>
-                          </div>
-                          <div
-                            class="form-group text-center col-md-4 col-sm-12 px-3"
-                          >
-                            <button
-                              type="button"
-                              data-toggle="modal"
-                              data-target="#cashModal"
-                              class="btn btn-outline-secondary w-100"
-                            >
-                              Cash
-                            </button>
-                          </div>
-                          <div
-                            class="form-group text-center col-md-4 col-sm-12 px-3"
-                          >
-                            <button
-                              type="button"
-                              class="btn btn-outline-secondary w-100"
-                            >
-                              Transfer
-                            </button>
-                          </div>
-                          <div
-                            class="form-group text-center col-md-4 col-sm-12 px-3"
-                          >
-                            <button
-                              type="button"
-                              class="btn btn-outline-secondary w-100"
-                            >
-                              Visa
-                            </button>
-                          </div>
-                          <div
-                            class="form-group text-center col-md-4 col-sm-12 px-3"
-                          >
-                            <button
-                              type="button"
-                              class="btn btn-outline-secondary w-100"
-                            >
-                              STC Pay
-                            </button>
-                          </div>
-                          <div
-                            class="form-group text-center col-md-4 col-sm-12 px-3 m-0"
-                          >
-                            <button
-                              type="button"
-                              data-toggle="modal"
-                              data-target="#dWalletModal"
-                              class="btn btn-outline-secondary w-100"
-                            >
-                              Digital wallet
-                            </button>
-                          </div>
-                          <div
-                            class="form-group text-center col-md-4 col-sm-12 px-3 m-0"
-                          >
-                            <button
-                              type="button"
-                              data-toggle="modal"
-                              data-target="#couponModal"
-                              class="btn btn-outline-secondary w-100"
-                            >
-                              Coupon
-                            </button>
-                          </div>
-                          <div
-                            class="form-group text-center col-md-4 col-sm-12 px-3 m-0"
-                          >
-                            <button
-                              type="button"
-                              data-toggle="modal"
-                              data-target="#payModal"
-                              class="btn btn-outline-secondary w-100"
-                            >
-                              FIT
-                            </button>
-                          </div>
-                        </div>
-                        <div
-                          class="payment_list form-row pb-2 border-b-dash no-gutters justify-content-end"
-                        >
-                          <div class="form-group text-center px-3 mt-3">
-                            <span class="d-inline-block"
-                              >Cash-600 R.S<i class="fas fa-times-circle"></i
-                            ></span>
-                            <span class="d-inline-block"
-                              >Mada-100 R.S<i class="fas fa-times-circle"></i
-                            ></span>
-                            <span class="d-inline-block"
-                              >Visa-600 R.S<i class="fas fa-times-circle"></i
-                            ></span>
-                          </div>
-                        </div>
-
-                        <div class="form-row three_btn pb-2 no-gutters">
-                          <div
-                            class="form-group text-center col-md-4 col-sm-12 px-3 mt-3"
-                          >
-                            <a href="./العملاء-الدخول على نقاط البيع-الدفع-مرتجع.html"
-                              class="returns btn box-shadow basic_background_color text-white w-100"
-                            >
-                              <i class="fas fa-long-arrow-alt-left ml-2"></i
-                              >رجوع
-                              </a>
-                          </div>
-                          <div
-                            class="form-group text-center col-md-4 col-sm-12 px-3 mt-3"
-                          >
-                            <button
-                              class="btn box-shadow basic_background_color text-white w-100"
-                            >
-                              <i class="fas fa-plus ml-2"></i>انشاء متابعة مالية
-                            </button>
-                          </div>
-                          <div
-                            class="form-group text-center col-md-4 col-sm-12 px-3 mt-3"
-                          >
-                            <button
-                              class="btn box-shadow basic_background_color text-white w-100"
-                            >
-                              <i class="fas fa-dollar-sign ml-2"></i>دفع
-                            </button>
-                          </div>
+                            <h5 class="mb-3">بيانات المرتجع</h5>
+                            <li class="">
+                              <p class="mb-1">
+                                <span>رقم الفاتورة </span> 1234
+                              </p>
+                            </li>
+                            <li class="">
+                              <p class="mb-1">
+                                <span>التاريخ </span>20-10-2020
+                              </p>
+                            </li>
+                            <li class="">
+                              <p class="mb-1"><span>الوقت </span>10:35 AM</p>
+                            </li>
+                            <li class="">
+                              <p class="mb-1">
+                                <span>الوردية </span>الوردية الرئيسية
+                              </p>
+                            </li>
+                            <li class="">
+                              <p class="mb-1"><span>القيمة </span>1223</p>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </form>
-              <!-- End payment -->
+              </div>
+
+              <div class="card card_index mt-4 border-0">
+                <div class="card-body p-0">
+                  <div class="tab-content bg-white mt--5 p-3">
+                    <div
+                      class="tab-pane fade show active"
+                      role="tabpanel"
+                      aria-labelledby="viewTable-tab"
+                    >
+                      <ul
+                        class="customer_card_list list-unstyled mb-5 list-group p-0"
+                      >
+                        <h5 class="mb-3">معلومات اضافية</h5>
+                        <li class="">
+                          <p class="mb-1"><span>الطريقة </span> مباشر</p>
+                        </li>
+                        <li class="">
+                          <p class="mb-1"><span>الخصم </span>5.0</p>
+                        </li>
+                        <li class="">
+                          <p class="mb-1"><span>قسيمة </span>لا</p>
+                        </li>
+                        <li class="">
+                          <p class="mb-1"><span>ملاحظات </span>لا يوجد</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="col-lg-4 pl-3">
               <div class="bg-white p-3">
@@ -932,59 +824,36 @@
                   </div>
                   <div class="col">
                     <button
-                      class="btn box-shadow basic_background_color text-white float-right m-0"
+                      class="btn btn-danger box-shadow basic_background_color text-white float-right m-0"
                     >
-                      <i class="fas fa-plus ml-2"></i>فاتورة جديدة
-                    </button>
-                  </div>
-                </div>
-                <!-- tabs  -->
-                <div
-                  class="pay_tab row border-bottom border-top align-items-center text-center mt-3 no-gutters"
-                >
-                  <div class="col border-left">
-                    <button class="btn btn-link active w-100 m-0 py-2">
-                      <i class="fas fa-hand-holding-usd mr-1"></i>نقدي
-                    </button>
-                  </div>
-                  <div class="col">
-                    <button class="btn btn-link w-100 m-0 py-2">
-                      <i class="fab fa-creative-commons-nc mr-1"></i>آجــل
+                      <i class="fas fa-trash-alt ml-2"></i>إلغاء
                     </button>
                   </div>
                 </div>
 
                 <!-- invoices list -->
-                <div class="table_list table-responsive m_h border-bottom mb-3">
+                <div
+                  class="table_list table-responsive m_h border-bottom border-top my-3"
+                >
                   <table class="table invoices_table table-borderless">
                     <tbody>
-                      <tr>
-                        <td width="33%">
-                          <p class="m-0">بيانات الخدمة</p>
-                        </td>
-                        <td>
-                          <div
-                            class="number-input d-flex align-items-center justify-content-center ml-auto"
-                          >
-                            <input
-                              class="quantity"
-                              min="0"
-                              name="quantity"
-                              value="1"
-                              type="number"
-                              disabled
-                            />
-                          </div>
-                        </td>
-                        <td class="text-right"><p class="m-0">120 ريال</p></td>
+                      <tr class="border-bottom">
+                        <td colspan="4">اسم الخدمة اسم الخدمة اسم الخدمة</td>
                       </tr>
                       <tr>
-                        <td width="33%">
+                        <td width="5%">
+                          <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" />
+                          </div>
+                        </td>
+                        <td>
                           <p class="m-0">بيانات الخدمة</p>
+                          <p class="m-0">الوحدة: قطعة/200</p>
+                          <p class="m-0">تاريخ الصلاحية: 10-03-2021</p>
                         </td>
                         <td>
                           <div
-                            class="number-input d-flex align-items-center justify-content-center ml-auto"
+                            class="number-input d-flex align-items-center justify-content-center m-auto"
                           >
                             <input
                               class="quantity"
@@ -996,104 +865,581 @@
                             />
                           </div>
                         </td>
-                        <td class="text-right"><p class="m-0">120 ريال</p></td>
+                        <td class="text-right">
+                          <p class="m-0">120 ريال</p>
+                          <p class="m-0 green-color">120 ريال</p>
+                        </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
 
                 <div class="row no-gutters total_price">
-                  <div class="col-4">
-                    <button
-                      type="button"
-                      class="btn btn-warning w-100 py-3 mb-4"
-                    >
-                      <i class="fas fa-percent ml-1"></i>الخصم
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-primary btn-blue w-100 py-3 mb-4"
-                    >
-                      <i class="fas fa-pencil-alt ml-1"></i>الملاحظات
-                    </button>
-                    <div class="row attachment_btns text-center m-0 mb-4">
-                      <div class="col-12 py-1 border-bottom">
-                        <a href="#"
-                          ><i class="fas fa-paperclip ml-1"></i>مرفقات</a
-                        >
-                      </div>
-                      <div class="col border-left py-1">
-                        <a href="#">عقد</a>
-                      </div>
-                      <div class="col py-1"><a href="#">اخرى</a></div>
-                    </div>
-                  </div>
-                  <div class="col">
+                  <div class="col-sm-12">
                     <ul class="list-group mb-4 border-0">
                       <li
                         class="list-group-item d-flex justify-content-between align-items-center border-0"
                       >
-                        القيمة الكلية
+                        الإجمالي قبل الضريبة
                         <span class="badge badge-primary badge-pill">35.5</span>
                       </li>
                       <li
                         class="list-group-item d-flex justify-content-between align-items-center border-0"
                       >
-                        اجمالي الضرائب على الخدمات والاشتراكات
+                        قيمة الخصم
                         <span class="badge badge-primary badge-pill">5.5</span>
                       </li>
                       <li
-                        class="list-group-item d-flex justify-content-between align-items-center border-0"
+                        class="list-group-item bold d-flex justify-content-between align-items-center border-0"
                       >
-                        اجمالي الضرائب
+                        الاجمالي
                         <span class="badge badge-primary badge-pill"
                           >155.5</span
                         >
                       </li>
                       <li
-                        class="list-group-item d-flex justify-content-between align-items-center border-0"
+                        class="list-group-item bold d-flex justify-content-between align-items-center border-0"
                       >
-                        إضافات خصومات الفاتورة
+                        المستحق
                         <span class="badge badge-primary badge-pill"
                           >552.5</span
                         >
                       </li>
-                      <li
-                        class="list-group-item bold d-flex justify-content-between align-items-center border-0"
-                      >
-                        اجمالي الفاتورة
-                        <span class="badge badge-primary badge-pill"
-                          >895.5</span
-                        >
-                      </li>
                     </ul>
-                  </div>
-                </div>
-                <div class="row footer_btn no-gutters">
-                  <div class="col-4">
-                    <button type="button" class="btn btn-info mb-4">
-                      <i class="fas fa-print ml-1"></i>طباعة العقد
-                    </button>
-                  </div>
-                  <div class="col">
-                    <button type="button" class="btn btn-success w-100 mb-4">
-                      <i class="fas fa-dollar-sign ml-1"></i>الدفع
-                    </button>
+                    <a
+                      href="./العملاء-الدخول على نقاط البيع-الدفع.html"
+                      class="btn btn-primary w-100 mb-4"
+                    >
+                      <i class="fas fa-file-excel ml-1"></i>ارجاع
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <!-- End -->
         </div>
 
         <div id="tab_2" class="tabcontent">
-          <h3>اسم المستخدم - اسم نقاط البيع</h3>
-          <p>اسم المستخدم - اسم نقاط البيع</p>
+          <!-- Start services section -->
+          <section class="">
+            <div
+              class="row head_box text-center align-items-center justify-content-end no-gutters"
+            >
+              <div class="col-md-4 text-left">
+                <p class="m-0">اسم المستخدم - اسم نقاط البيع</p>
+              </div>
+              <div class="col-md-3">
+                <ul class="list-unstyled m-0">
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fas fa-globe-americas"></i>
+                      <p class="m-0">لغة</p>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <div class="dropdown">
+                      <a
+                        href="#"
+                        id="notification"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i class="far fa-bell"></i>
+                        <p class="m-0">تنبيهات</p>
+                      </a>
+                      <ul
+                        class="dropdown-menu alert_list"
+                        aria-labelledby="notification"
+                      >
+                        <h3 class="popover-title text-center">التنبيهات</h3>
+                        <ul class="popover-content list-unstyled">
+                          <li data-alert_id="1" class="alert_li">
+                            <a href="#" class="alert_message"
+                              >لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا
+                              يسكينج أليايت,سيت دو أيوسمود تيمبور
+                              أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا .
+                              يوت انيم أد مينيم فينايم,كيواس نوستريد أكسير
+                              سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا
+                              كوممودو كونسيكيوات
+                            </a>
+                            <br /><a href="#" class="time_alert">02:13 AM</a>
+                            <div class="clearfix"></div>
+                          </li>
+                          <li data-alert_id="2" class="alert_li">
+                            <a href="#" class="alert_message"
+                              >وريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا
+                              يسكينج أليايت,سيت دو أيوسمود تيمبور
+                              أنكايديديونتيوت</a
+                            >
+                            <br /><a href="#" class="time_alert">02:13 AM</a>
+                            <div class="clearfix"></div>
+                          </li>
+                          <li data-alert_id="3" class="alert_li">
+                            <a href="#" class="alert_message"
+                              >وريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا
+                              يسكينج أليايت,سيت دو أيوسمود تيمبور
+                              أنكايديديونتيوت</a
+                            >
+                            <br /><a href="#" class="time_alert">02:13 AM</a>
+                            <div class="clearfix"></div>
+                          </li>
+                          <li class="mt-2">
+                            <button class="btn btn-primary w-100 m-auto">
+                              عرض المزيد
+                            </button>
+                            <div class="clearfix"></div>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fas fa-calculator"></i>
+                      <p class="m-0">الة حاسبة</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <button type="button" class="btn btn-warning">
+                  <i class="far fa-pause-circle mx-1"></i>ايقاف
+                </button>
+                <button type="button" class="btn btn-danger">
+                  <i class="fas fa-reply-all mx-1"></i>تسجيل خروج
+                </button>
+              </div>
+              <div class="col-md-1 border-right">
+                <button class="invoice_no active">
+                  <h6>فاتورة</h6>
+                  <h5>01</h5>
+                </button>
+              </div>
+              <!-- <div class="col-md-1 border-right">
+                  <button class="invoice_no">
+                    <h6>فاتورة</h6>
+                    <h5>02</h5>
+                  </button>
+                </div>
+                <div class="col-md-1 border-right">
+                  <button class="invoice_no">
+                    <h6>فاتورة</h6>
+                    <h5>03</h5>
+                  </button>
+                </div>
+                <div class="col-md-1 border-right">
+                  <button class="invoice_no">
+                    <h6>فاتورة</h6>
+                    <h5>04</h5>
+                  </button>
+                </div>
+                <div class="col-md-1 border-right">
+                  <button class="invoice_no">
+                    <h6>فاتورة</h6>
+                    <h5>05</h5>
+                  </button>
+                </div> -->
+            </div>
+            <div class="card card_index mt-2 border-0">
+              <div class="card-header border-0 p-0">
+                <!-- START TABS DIV -->
+                <div class="tabbable-responsive overflow-none">
+                  <div class="tabbable">
+                    <ul class="nav nav-tabs border-0" role="tablist">
+                      <li class="nav-item float-left">
+                        <a
+                          class="nav-link text-center bold active"
+                          href="#search"
+                          role="tab"
+                          aria-controls="contact"
+                          aria-selected="false"
+                          >البحث</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="tab-content bg-white mt--5 p-3">
+                  <div
+                    class="tab-pane fade show active"
+                    id="search"
+                    role="tabpanel"
+                    aria-labelledby="search-tab"
+                  >
+                    <form>
+                      <div class="form-row no-gutters">
+                        <div
+                          class="form-group col-lg-3 col-md-6 col-sm-12 px-3"
+                        >
+                          <label>رقم الفاتورة</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                        <div
+                          class="form-group col-lg-3 col-md-6 col-sm-12 px-3"
+                        >
+                          <label>إسم العميل</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                        <div
+                          class="form-group col-lg-3 col-md-6 col-sm-12 px-3"
+                        >
+                          <label>الحالة</label>
+                          <select id="status" class="form-control">
+                            <option selected disabled>اختر...</option>
+                            <option>نشط</option>
+                            <option>غير نشط</option>
+                          </select>
+                        </div>
+                        <div
+                          class="form-group col-lg-3 col-md-6 col-sm-12 px-3"
+                        >
+                          <label>من تاريخ شراء</label>
+                          <div
+                            class="input-group date"
+                            id="datetimepicker"
+                            data-target-input="nearest"
+                          >
+                            <input
+                              type="text"
+                              class="form-control datetimepicker-input"
+                              data-target="#datetimepicker"
+                            />
+                            <div
+                              class="input-group-append"
+                              data-target="#datetimepicker"
+                              data-toggle="datetimepicker"
+                            >
+                              <div class="input-group-text">
+                                <i class="far fa-calendar"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row align-items-end no-gutters">
+                        <div
+                          class="form-group col-lg-3 col-md-6 col-sm-12 px-3"
+                        >
+                          <label>إلى تاريخ شراء</label>
+                          <input type="date" class="form-control" id="date" />
+                        </div>
+                        <div
+                          class="form-group form-check col-lg-3 col-md-6 col-sm-12 px-3"
+                        >
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="exampleCheck1"
+                          />
+                          <label class="form-check-label" for="exampleCheck1"
+                            >فواتير بدون عقود</label
+                          >
+                        </div>
+                        <div class="form-group col-lg-6 col-sm-12 px-3">
+                          <button
+                            class="btn box-shadow basic_background_color text-white float-right m-0"
+                          >
+                            <i class="fas fa-share mx-2 rotate"></i>
+                            <p class="d-inline m-0">عرض</p>
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card_index mt-2 border-0">
+              <div class="card-header border-0 p-0">
+                <!-- START TABS DIV -->
+                <div class="single-tab tabbable-responsive overflow-none">
+                  <div class="tabbable">
+                    <ul class="nav nav-tabs border-0" role="tablist">
+                      <li class="nav-item float-left">
+                        <a
+                          class="nav-link text-center bold active"
+                          id="Billing-tab"
+                          data-toggle="tab"
+                          href="#viewTable"
+                          role="tab"
+                          aria-controls="contact"
+                          aria-selected="false"
+                          >جدول العرض</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="tab-content bg-white mt--5 p-3">
+                  <div
+                    class="tab-pane fade show active"
+                    id="viewTable"
+                    role="tabpanel"
+                    aria-labelledby="viewTable-tab"
+                  >
+                    <div id="infoGrid" class="ag-theme-balham grid"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- End services section -->
         </div>
 
         <div id="tab_3" class="tabcontent">
-          <h3>اسم المستخدم</h3>
-          <p>اسم المستخدم - اسم نقاط البيع</p>
+          <!-- Start services section -->
+          <section class="">
+            <div
+              class="row head_box text-center align-items-center justify-content-end no-gutters"
+            >
+              <div class="col-md-4 text-left">
+                <p class="m-0">اسم المستخدم - اسم نقاط البيع</p>
+              </div>
+              <div class="col-md-3">
+                <ul class="list-unstyled m-0">
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fas fa-globe-americas"></i>
+                      <p class="m-0">لغة</p>
+                    </a>
+                  </li>
+                  <li class="list-inline-item">
+                    <div class="dropdown">
+                      <a
+                        href="#"
+                        id="notification"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i class="far fa-bell"></i>
+                        <p class="m-0">تنبيهات</p>
+                      </a>
+                      <ul
+                        class="dropdown-menu alert_list"
+                        aria-labelledby="notification"
+                      >
+                        <h3 class="popover-title text-center">التنبيهات</h3>
+                        <ul class="popover-content list-unstyled">
+                          <li data-alert_id="1" class="alert_li">
+                            <a href="#" class="alert_message"
+                              >لوريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا
+                              يسكينج أليايت,سيت دو أيوسمود تيمبور
+                              أنكايديديونتيوت لابوري ات دولار ماجنا أليكيوا .
+                              يوت انيم أد مينيم فينايم,كيواس نوستريد أكسير
+                              سيتاشن يللأمكو لابورأس نيسي يت أليكيوب أكس أيا
+                              كوممودو كونسيكيوات
+                            </a>
+                            <br /><a href="#" class="time_alert">02:13 AM</a>
+                            <div class="clearfix"></div>
+                          </li>
+                          <li data-alert_id="2" class="alert_li">
+                            <a href="#" class="alert_message"
+                              >وريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا
+                              يسكينج أليايت,سيت دو أيوسمود تيمبور
+                              أنكايديديونتيوت</a
+                            >
+                            <br /><a href="#" class="time_alert">02:13 AM</a>
+                            <div class="clearfix"></div>
+                          </li>
+                          <li data-alert_id="3" class="alert_li">
+                            <a href="#" class="alert_message"
+                              >وريم ايبسوم دولار سيت أميت ,كونسيكتيتور أدايبا
+                              يسكينج أليايت,سيت دو أيوسمود تيمبور
+                              أنكايديديونتيوت</a
+                            >
+                            <br /><a href="#" class="time_alert">02:13 AM</a>
+                            <div class="clearfix"></div>
+                          </li>
+                          <li class="mt-2">
+                            <button class="btn btn-primary w-100 m-auto">
+                              عرض المزيد
+                            </button>
+                            <div class="clearfix"></div>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="list-inline-item">
+                    <a href="#">
+                      <i class="fas fa-calculator"></i>
+                      <p class="m-0">الة حاسبة</p>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-4">
+                <button type="button" class="btn btn-warning">
+                  <i class="far fa-pause-circle mx-1"></i>ايقاف
+                </button>
+                <button type="button" class="btn btn-danger">
+                  <i class="fas fa-reply-all mx-1"></i>تسجيل خروج
+                </button>
+              </div>
+              <div class="col-md-1 border-right">
+                <button class="invoice_no active">
+                  <h6>فاتورة</h6>
+                  <h5>01</h5>
+                </button>
+              </div>
+            </div>
+            <div class="card card_index mt-2 border-0">
+              <div class="card-header border-0 p-0">
+                <!-- START TABS DIV -->
+                <div class="tabbable-responsive overflow-none">
+                  <div class="tabbable">
+                    <ul class="nav nav-tabs border-0" role="tablist">
+                      <li class="nav-item float-left">
+                        <a
+                          class="nav-link text-center bold active"
+                          href="#search"
+                          role="tab"
+                          aria-controls="contact"
+                          aria-selected="false"
+                          >البحث</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="tab-content bg-white mt--5 p-3">
+                  <div
+                    class="tab-pane fade show active"
+                    id="search"
+                    role="tabpanel"
+                    aria-labelledby="search-tab"
+                  >
+                    <form>
+                      <div class="form-row no-gutters">
+                        <div
+                          class="form-group col-lg-3 col-md-6 col-sm-12 px-3"
+                        >
+                          <label>رقم الفاتورة</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                        <div
+                          class="form-group col-lg-3 col-md-6 col-sm-12 px-3"
+                        >
+                          <label>إسم العميل</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                        <div
+                          class="form-group col-lg-3 col-md-6 col-sm-12 px-3"
+                        >
+                          <label>الحالة</label>
+                          <select id="status" class="form-control">
+                            <option selected disabled>اختر...</option>
+                            <option>نشط</option>
+                            <option>غير نشط</option>
+                          </select>
+                        </div>
+                        <div
+                          class="form-group col-lg-3 col-md-6 col-sm-12 px-3"
+                        >
+                          <label>من تاريخ شراء</label>
+                          <div
+                            class="input-group date"
+                            id="datetimepicker"
+                            data-target-input="nearest"
+                          >
+                            <input
+                              type="text"
+                              class="form-control datetimepicker-input"
+                              data-target="#datetimepicker"
+                            />
+                            <div
+                              class="input-group-append"
+                              data-target="#datetimepicker"
+                              data-toggle="datetimepicker"
+                            >
+                              <div class="input-group-text">
+                                <i class="far fa-calendar"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row align-items-end no-gutters">
+                        <div
+                          class="form-group col-lg-3 col-md-6 col-sm-12 px-3"
+                        >
+                          <label>إلى تاريخ شراء</label>
+                          <input type="date" class="form-control" id="date" />
+                        </div>
+                        <div
+                          class="form-group form-check col-lg-3 col-md-6 col-sm-12 px-3"
+                        >
+                          <input
+                            type="checkbox"
+                            class="form-check-input"
+                            id="exampleCheck1"
+                          />
+                          <label class="form-check-label" for="exampleCheck1"
+                            >فواتير بدون عقود</label
+                          >
+                        </div>
+                        <div class="form-group col-lg-6 col-sm-12 px-3">
+                          <button
+                            class="btn box-shadow basic_background_color text-white float-right m-0"
+                          >
+                            <i class="fas fa-share mx-2 rotate"></i>
+                            <p class="d-inline m-0">عرض</p>
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card card_index mt-2 border-0">
+              <div class="card-header border-0 p-0">
+                <!-- START TABS DIV -->
+                <div class="single-tab tabbable-responsive overflow-none">
+                  <div class="tabbable">
+                    <ul class="nav nav-tabs border-0" role="tablist">
+                      <li class="nav-item float-left">
+                        <a
+                          class="nav-link text-center bold active"
+                          id="Billing-tab"
+                          data-toggle="tab"
+                          href="#viewTable"
+                          role="tab"
+                          aria-controls="contact"
+                          aria-selected="false"
+                          >جدول العرض</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="tab-content bg-white mt--5 p-3">
+                  <div
+                    class="tab-pane fade show active"
+                    id="viewTable"
+                    role="tabpanel"
+                    aria-labelledby="viewTable-tab"
+                  >
+                    <div id="infoGrid" class="ag-theme-balham grid"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- End services section -->
         </div>
       </div>
       <!-- End -->

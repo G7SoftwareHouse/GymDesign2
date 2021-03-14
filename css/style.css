@@ -473,16 +473,16 @@ select {
   width: 65px;
   height: 65px;
 }
-.edit_modal .customer_card_list li p {
+.customer_card_list li p {
   font-size: 1rem;
 }
-.edit_modal .customer_card_list li p span {
+.customer_card_list li p span {
   min-width: 145px;
   display: inline-block;
   position: relative;
   margin-left: 1rem;
 }
-.edit_modal .customer_card_list li p span::after {
+.customer_card_list li p span::after {
   content: ":";
   position: absolute;
   left: 0;
@@ -1178,6 +1178,11 @@ a.alert_message:hover {
 }
 #color8 + label {
   background-color: #110c5f;
+}
+.customer_card_list h5 {
+  font-size: .9rem;
+  font-weight: bold;
+  color: var(--basic-main-color);
 }
 
 /* datetimepicker */
