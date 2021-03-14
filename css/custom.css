@@ -255,8 +255,8 @@ body {
 .box-shadow-sm {
   box-shadow: 2px -1px 10px -3px rgb(0 0 0 / 19%);
 }
-div.error{
-    color:var(--basic-main-color)
+div.error {
+  color: var(--basic-main-color);
 }
 .navbar_section .nav-item:not(.custom-nav .nav-item):hover .nav-link {
   color: var(--basic-main-color) !important;
@@ -854,9 +854,13 @@ label,
   left: 1%;
 }
 .form-control,
-.select2 .select2-selection, .input-group.date {
+.select2 .select2-selection,
+.input-group.date {
   height: 40px !important;
   text-align: right;
+}
+textarea.form-control {
+  height: auto !important;
 }
 .select2 .select2-selection.select2-selection--multiple {
   height: auto !important;

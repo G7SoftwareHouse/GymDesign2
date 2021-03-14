@@ -947,7 +947,11 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   color: var(--basic-main-color);
 }
 .m_h {
-  min-height: 300px;
+  height: 300px;
+  overflow-y: scroll;
+}
+.table_list {
+  padding: 0 5px;
 }
 .invoices_table {
   margin: 1rem 0;
@@ -1106,6 +1110,74 @@ a.alert_message:hover {
 .services_img {
   height: 180px;
   object-fit: contain;
+}
+.product-info h5 {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 5px;
+  min-width: 70px;
+  margin-bottom: 0;
+}
+.product-info select {
+  margin-left: 0.5rem;
+  background-color: #ebebeb;
+}
+.product-info .form-check-inline {
+  width: 100%;
+  margin: 20px 0;
+}
+.product-info input[type="checkbox"],
+.product-info input[type="radio"] {
+  display: none;
+}
+.product-info input[type="checkbox"] + label,
+.product-info input[type="radio"] + label,
+.color-cart {
+  position: relative;
+  height: 25px;
+  width: 25px;
+  border-radius: 4px;
+  display: inline-block;
+  padding: 0;
+  vertical-align: middle;
+}
+.product-info input[type="checkbox"]:checked + label::after,
+.product-info input[type="radio"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 4px;
+  margin: 0 auto;
+  transform: rotate(45deg);
+  height: 13px;
+  width: 6px;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+}
+#color1 + label {
+  background-color: #6b6b6b;
+}
+#color2 + label {
+  background-color: #f5a43b;
+}
+#color3 + label {
+  background-color: #2ebe76;
+}
+#color4 + label {
+  background-color: #040404;
+}
+#color5 + label {
+  background-color: #c45527;
+}
+#color6 + label {
+  background-color: #196dda;
+}
+#color7 + label {
+  background-color: #af0f0f;
+}
+#color8 + label {
+  background-color: #110c5f;
 }
 
 /* datetimepicker */

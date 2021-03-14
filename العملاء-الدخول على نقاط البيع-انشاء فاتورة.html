@@ -845,8 +845,10 @@
                     >
                       <span class="like_btn"><i class="fas fa-star"></i></span>
                       <img src="./images/2.png" />
-                      <h6>بيانات الخدمة</h6>
-                      <h6>سعر الخدمة</h6>
+                      <div>
+                        <h6>بيانات الخدمة</h6>
+                        <h6>سعر الخدمة</h6>
+                      </div>
                     </div>
                   </div>
                   <div class="colum col-lg-3 col-md-4 col-sm-6 mb-3">
@@ -859,8 +861,10 @@
                         ><i class="fas fa-star"></i
                       ></span>
                       <img src="./images/2.png" />
-                      <h6>بيانات الخدمة</h6>
-                      <h6>سعر الخدمة</h6>
+                      <div>
+                        <h6>بيانات الخدمة</h6>
+                        <h6>سعر الخدمة</h6>
+                      </div>
                     </div>
                   </div>
                   <div class="colum col-lg-3 col-md-4 col-sm-6 mb-3">
@@ -871,8 +875,10 @@
                     >
                       <span class="like_btn"><i class="fas fa-star"></i></span>
                       <img src="./images/2.png" />
-                      <h6>بيانات الخدمة</h6>
-                      <h6>سعر الخدمة</h6>
+                      <div>
+                        <h6>بيانات الخدمة</h6>
+                        <h6>سعر الخدمة</h6>
+                      </div>
                     </div>
                   </div>
                   <div class="colum col-lg-3 col-md-4 col-sm-6 mb-3">
@@ -885,8 +891,10 @@
                         ><i class="fas fa-star"></i
                       ></span>
                       <img src="./images/2.png" />
-                      <h6>بيانات الخدمة</h6>
-                      <h6>سعر الخدمة</h6>
+                      <div>
+                        <h6>بيانات الخدمة</h6>
+                        <h6>سعر الخدمة</h6>
+                      </div>
                     </div>
                   </div>
                   <div class="colum col-lg-3 col-md-4 col-sm-6 mb-3">
@@ -897,8 +905,10 @@
                     >
                       <span class="like_btn"><i class="fas fa-star"></i></span>
                       <img src="./images/2.png" />
-                      <h6>بيانات الخدمة</h6>
-                      <h6>سعر الخدمة</h6>
+                      <div>
+                        <h6>بيانات الخدمة</h6>
+                        <h6>سعر الخدمة</h6>
+                      </div>
                     </div>
                   </div>
                   <div class="colum col-lg-3 col-md-4 col-sm-6 mb-3">
@@ -909,8 +919,10 @@
                     >
                       <span class="like_btn"><i class="fas fa-star"></i></span>
                       <img src="./images/2.png" />
-                      <h6>بيانات الخدمة</h6>
-                      <h6>سعر الخدمة</h6>
+                      <div>
+                        <h6>بيانات الخدمة</h6>
+                        <h6>سعر الخدمة</h6>
+                      </div>
                     </div>
                   </div>
                   <div class="colum col-lg-3 col-md-4 col-sm-6 mb-3">
@@ -921,8 +933,10 @@
                     >
                       <span class="like_btn"><i class="fas fa-star"></i></span>
                       <img src="./images/2.png" />
-                      <h6>بيانات الخدمة</h6>
-                      <h6>سعر الخدمة</h6>
+                      <div>
+                        <h6>بيانات الخدمة</h6>
+                        <h6>سعر الخدمة</h6>
+                      </div>
                     </div>
                   </div>
                   <div class="colum col-lg-3 col-md-4 col-sm-6 mb-3">
@@ -933,8 +947,10 @@
                     >
                       <span class="like_btn"><i class="fas fa-star"></i></span>
                       <img src="./images/2.png" />
-                      <h6>بيانات الخدمة</h6>
-                      <h6>سعر الخدمة</h6>
+                      <div>
+                        <h6>بيانات الخدمة</h6>
+                        <h6>سعر الخدمة</h6>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1019,9 +1035,273 @@
                 </div>
 
                 <!-- invoices list -->
-                <div class="table-responsive m_h border-bottom mb-3">
+                <div class="table_list table-responsive m_h border-bottom mb-3">
                   <table class="table invoices_table table-borderless">
                     <tbody>
+                      <tr class="border-bottom">
+                        <td colspan="4">اسم الخدمة اسم الخدمة اسم الخدمة</td>
+                      </tr>
+                      <tr>
+                        <td width="5%">
+                          <button class="btn btn-danger btn-circle">
+                            <i class="fas fa-trash-alt"></i>
+                          </button>
+                        </td>
+                        <td>
+                          <p class="m-0">بيانات الخدمة</p>
+                          <p class="m-0">الوحدة: قطعة/200</p>
+                          <p class="m-0">تاريخ الصلاحية: 10-03-2021</p>
+                        </td>
+                        <td>
+                          <div
+                            class="number-input d-flex align-items-center justify-content-center m-auto"
+                          >
+                            <a
+                              class="plus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                            >
+                              <i class="fas fa-plus"></i>
+                            </a>
+                            <input
+                              class="quantity"
+                              min="0"
+                              name="quantity"
+                              value="1"
+                              type="number"
+                            />
+                            <a
+                              class="minus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                            >
+                              <i class="fas fa-minus"></i>
+                            </a>
+                          </div>
+                        </td>
+                        <td class="text-right">
+                          <p class="m-0">120 ريال</p>
+                          <p class="m-0 green-color">120 ريال</p>
+                        </td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td colspan="4">اسم الخدمة اسم الخدمة اسم الخدمة</td>
+                      </tr>
+                      <tr>
+                        <td width="5%">
+                          <button class="btn btn-danger btn-circle">
+                            <i class="fas fa-trash-alt"></i>
+                          </button>
+                        </td>
+                        <td>
+                          <p class="m-0">بيانات الخدمة</p>
+                          <p class="m-0">الوحدة: قطعة/200</p>
+                          <p class="m-0">تاريخ الصلاحية: 10-03-2021</p>
+                        </td>
+                        <td>
+                          <div
+                            class="number-input d-flex align-items-center justify-content-center m-auto"
+                          >
+                            <a
+                              class="plus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                            >
+                              <i class="fas fa-plus"></i>
+                            </a>
+                            <input
+                              class="quantity"
+                              min="0"
+                              name="quantity"
+                              value="1"
+                              type="number"
+                            />
+                            <a
+                              class="minus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                            >
+                              <i class="fas fa-minus"></i>
+                            </a>
+                          </div>
+                        </td>
+                        <td class="text-right">
+                          <p class="m-0">120 ريال</p>
+                          <p class="m-0 green-color">120 ريال</p>
+                        </td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td colspan="4">اسم الخدمة اسم الخدمة اسم الخدمة</td>
+                      </tr>
+                      <tr>
+                        <td width="5%">
+                          <button class="btn btn-danger btn-circle">
+                            <i class="fas fa-trash-alt"></i>
+                          </button>
+                        </td>
+                        <td>
+                          <p class="m-0">بيانات الخدمة</p>
+                          <p class="m-0">الوحدة: قطعة/200</p>
+                          <p class="m-0">تاريخ الصلاحية: 10-03-2021</p>
+                        </td>
+                        <td>
+                          <div
+                            class="number-input d-flex align-items-center justify-content-center m-auto"
+                          >
+                            <a
+                              class="plus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                            >
+                              <i class="fas fa-plus"></i>
+                            </a>
+                            <input
+                              class="quantity"
+                              min="0"
+                              name="quantity"
+                              value="1"
+                              type="number"
+                            />
+                            <a
+                              class="minus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                            >
+                              <i class="fas fa-minus"></i>
+                            </a>
+                          </div>
+                        </td>
+                        <td class="text-right">
+                          <p class="m-0">120 ريال</p>
+                          <p class="m-0 green-color">120 ريال</p>
+                        </td>
+                      </tr>
+
+                      <tr class="border-bottom">
+                        <td colspan="4">اسم الخدمة اسم الخدمة اسم الخدمة</td>
+                      </tr>
+                      <tr>
+                        <td width="5%">
+                          <button class="btn btn-danger btn-circle">
+                            <i class="fas fa-trash-alt"></i>
+                          </button>
+                        </td>
+                        <td>
+                          <p class="m-0">بيانات الخدمة</p>
+                          <p class="m-0">الوحدة: قطعة/200</p>
+                          <p class="m-0">تاريخ الصلاحية: 10-03-2021</p>
+                        </td>
+                        <td>
+                          <div
+                            class="number-input d-flex align-items-center justify-content-center m-auto"
+                          >
+                            <a
+                              class="plus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                            >
+                              <i class="fas fa-plus"></i>
+                            </a>
+                            <input
+                              class="quantity"
+                              min="0"
+                              name="quantity"
+                              value="1"
+                              type="number"
+                            />
+                            <a
+                              class="minus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                            >
+                              <i class="fas fa-minus"></i>
+                            </a>
+                          </div>
+                        </td>
+                        <td class="text-right">
+                          <p class="m-0">120 ريال</p>
+                          <p class="m-0 green-color">120 ريال</p>
+                        </td>
+                      </tr><tr class="border-bottom">
+                        <td colspan="4">اسم الخدمة اسم الخدمة اسم الخدمة</td>
+                      </tr>
+                      <tr>
+                        <td width="5%">
+                          <button class="btn btn-danger btn-circle">
+                            <i class="fas fa-trash-alt"></i>
+                          </button>
+                        </td>
+                        <td>
+                          <p class="m-0">بيانات الخدمة</p>
+                          <p class="m-0">الوحدة: قطعة/200</p>
+                          <p class="m-0">تاريخ الصلاحية: 10-03-2021</p>
+                        </td>
+                        <td>
+                          <div
+                            class="number-input d-flex align-items-center justify-content-center m-auto"
+                          >
+                            <a
+                              class="plus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                            >
+                              <i class="fas fa-plus"></i>
+                            </a>
+                            <input
+                              class="quantity"
+                              min="0"
+                              name="quantity"
+                              value="1"
+                              type="number"
+                            />
+                            <a
+                              class="minus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                            >
+                              <i class="fas fa-minus"></i>
+                            </a>
+                          </div>
+                        </td>
+                        <td class="text-right">
+                          <p class="m-0">120 ريال</p>
+                          <p class="m-0 green-color">120 ريال</p>
+                        </td>
+                      </tr>
+                      <tr class="border-bottom">
+                        <td colspan="4">اسم الخدمة اسم الخدمة اسم الخدمة</td>
+                      </tr>
+                      <tr>
+                        <td width="5%">
+                          <button class="btn btn-danger btn-circle">
+                            <i class="fas fa-trash-alt"></i>
+                          </button>
+                        </td>
+                        <td>
+                          <p class="m-0">بيانات الخدمة</p>
+                          <p class="m-0">الوحدة: قطعة/200</p>
+                          <p class="m-0">تاريخ الصلاحية: 10-03-2021</p>
+                        </td>
+                        <td>
+                          <div
+                            class="number-input d-flex align-items-center justify-content-center m-auto"
+                          >
+                            <a
+                              class="plus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+                            >
+                              <i class="fas fa-plus"></i>
+                            </a>
+                            <input
+                              class="quantity"
+                              min="0"
+                              name="quantity"
+                              value="1"
+                              type="number"
+                            />
+                            <a
+                              class="minus"
+                              onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+                            >
+                              <i class="fas fa-minus"></i>
+                            </a>
+                          </div>
+                        </td>
+                        <td class="text-right">
+                          <p class="m-0">120 ريال</p>
+                          <p class="m-0 green-color">120 ريال</p>
+                        </td>
+                      </tr>
                       <tr class="border-bottom">
                         <td colspan="4">اسم الخدمة اسم الخدمة اسم الخدمة</td>
                       </tr>
@@ -1126,6 +1406,8 @@
                     </button>
                     <button
                       type="button"
+                      data-toggle="modal"
+                      data-target="#notesModal"
                       class="btn btn-primary btn-blue w-100 py-3 mb-4"
                     >
                       <i class="fas fa-pencil-alt ml-1"></i>الملاحظات
@@ -1622,6 +1904,154 @@
                     </div>
                   </div>
                 </div>
+                <div class="form-group mb-0 col-md-4">
+                  <label>تاريخ انتهاء الصلاحية</label>
+                  <div
+                    class="input-group date"
+                    id="datetimepicker_2"
+                    data-target-input="nearest"
+                  >
+                    <input
+                      type="text"
+                      class="form-control datetimepicker-input"
+                      data-target="#datetimepicker_2"
+                    />
+                    <div
+                      class="input-group-append"
+                      data-target="#datetimepicker_2"
+                      data-toggle="datetimepicker"
+                    >
+                      <div class="input-group-text">
+                        <i class="far fa-calendar"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group mb-0 col-md-4">
+                  <label>مواصفات الاصناف</label>
+                  <select id="categories" class="form-control">
+                    <option selected>اختر</option>
+                    <option></option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-row product-info">
+                <div class="form-group col-md-6">
+                  <label>اللون :</label>
+                  <ul class="list-unstyled list-inline mb-0">
+                    <li class="list-inline-item">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        id="color1"
+                        value="option1"
+                        name="colors"
+                      />
+                      <label class="form-check-label" for="color1"></label>
+                    </li>
+                    <li class="list-inline-item">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        id="color2"
+                        value="option2"
+                        name="colors"
+                      />
+                      <label class="form-check-label" for="color2"> </label>
+                    </li>
+                    <li class="list-inline-item">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        id="color3"
+                        value="option3"
+                        name="colors"
+                      />
+                      <label class="form-check-label" for="color3"></label>
+                    </li>
+                    <li class="list-inline-item">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        id="color4"
+                        value="option4"
+                        name="colors"
+                      />
+                      <label class="form-check-label" for="color4"> </label>
+                    </li>
+                    <li class="list-inline-item">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        id="color5"
+                        value="option5"
+                        name="colors"
+                      />
+                      <label class="form-check-label" for="color5"></label>
+                    </li>
+                    <li class="list-inline-item">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        id="color6"
+                        value="option6"
+                        name="colors"
+                      />
+                      <label class="form-check-label" for="color6"> </label>
+                    </li>
+                    <li class="list-inline-item">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        id="color7"
+                        value="option7"
+                        name="colors"
+                      />
+                      <label class="form-check-label" for="color7"> </label>
+                    </li>
+                    <li class="list-inline-item">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        id="color8"
+                        value="option8"
+                        name="colors"
+                      />
+                      <label class="form-check-label" for="color8"> </label>
+                    </li>
+                    <li class="list-inline-item">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        id="color8"
+                        value="option8"
+                        name="colors"
+                      />
+                      <label class="form-check-label" for="color8"> </label>
+                    </li>
+                    <li class="list-inline-item">
+                      <input
+                        type="radio"
+                        class="form-check-input"
+                        id="color8"
+                        value="option8"
+                        name="colors"
+                      />
+                      <label class="form-check-label" for="color8"> </label>
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-group col-md-6">
+                  <label>المقاس :</label>
+                  <div class="form-check-inline mt-0">
+                    <select class="form-control" id="sizes">
+                      <option>L</option>
+                      <option>XL</option>
+                      <option>XXL</option>
+                      <option>M</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </form>
 
@@ -1654,7 +2084,7 @@
       tabindex="-1"
       role="dialog"
     >
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog" role="document" style="max-width: 30%">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title bold">إضافة خصم</h5>
@@ -1694,50 +2124,6 @@
       </div>
     </div>
 
-    <!-- cash Modal -->
-    <div
-      class="cash edit_modal modal"
-      id="cashModal"
-      aria-labelledby="cashModalLabel"
-      tabindex="-1"
-      role="dialog"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title bold">الدفع النقدي</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <!-- start form -->
-            <form class="service_form">
-              <div class="form-row py-3">
-                <div class="form-group mb-0 col-md-12">
-                  <label>القيمة</label>
-                  <input type="number" class="form-control" />
-                </div>
-              </div>
-            </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-success">
-              <i class="fas fa-check pl-1"></i>حفظ
-            </button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">
-              <i class="fas fa-trash-alt pl-1"></i>إلغاء
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- points Modal -->
     <div
       class="points edit_modal modal"
@@ -1746,7 +2132,7 @@
       tabindex="-1"
       role="dialog"
     >
-      <div class="modal-dialog" role="document" style="width: 50%">
+      <div class="modal-dialog" role="document" style="max-width: 30%">
         <div class="modal-content text-center">
           <div class="modal-header">
             <h5 class="modal-title bold">النقاط المكتسبة(FIT)</h5>
@@ -1767,11 +2153,11 @@
                   <label>رصيد النقاط المكتسبة (FIT)</label>
                 </div>
                 <div class="form-group mb-0 col-md-4">
-                  <p>محولة</p>
+                  <p class="m-0">محولة</p>
                   <p>20</p>
                 </div>
                 <div class="form-group mb-0 col-md-4">
-                  <p>مكتسبة</p>
+                  <p class="m-0">مكتسبة</p>
                   <p>20</p>
                 </div>
               </div>
@@ -1784,6 +2170,50 @@
                 </div>
                 <div class="form-group mb-0 col-md-4">
                   <input type="number" class="form-control" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">
+              <i class="fas fa-check pl-1"></i>حفظ
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <i class="fas fa-trash-alt pl-1"></i>إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- notes Modal -->
+    <div
+      class="notes edit_modal modal"
+      id="notesModal"
+      aria-labelledby="notesModalLabel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document" style="max-width: 30%">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title bold">الملاحظات</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- start form -->
+            <form class="service_form">
+              <div class="form-row">
+                <div class="form-group mb-0 col-md-12">
+                  <label>اضف ملاحظاتك</label>
+                  <textarea class="form-control" rows="3"></textarea>
                 </div>
               </div>
             </form>

@@ -772,6 +772,8 @@
                           >
                             <button
                               type="button"
+                              data-toggle="modal"
+                              data-target="#payment"
                               class="btn btn-outline-secondary w-100"
                             >
                               Master card
@@ -792,6 +794,8 @@
                           >
                             <button
                               type="button"
+                              data-toggle="modal"
+                              data-target="#cashModal"
                               class="btn btn-outline-secondary w-100"
                             >
                               Cash
@@ -832,6 +836,8 @@
                           >
                             <button
                               type="button"
+                              data-toggle="modal"
+                              data-target="#dWalletModal"
                               class="btn btn-outline-secondary w-100"
                             >
                               Digital wallet
@@ -842,6 +848,8 @@
                           >
                             <button
                               type="button"
+                              data-toggle="modal"
+                              data-target="#couponModal"
                               class="btn btn-outline-secondary w-100"
                             >
                               Coupon
@@ -852,6 +860,8 @@
                           >
                             <button
                               type="button"
+                              data-toggle="modal"
+                              data-target="#payModal"
                               class="btn btn-outline-secondary w-100"
                             >
                               FIT
@@ -861,9 +871,7 @@
                         <div
                           class="payment_list form-row pb-2 border-b-dash no-gutters justify-content-end"
                         >
-                          <div
-                            class="form-group text-center px-3 mt-3"
-                          >
+                          <div class="form-group text-center px-3 mt-3">
                             <span class="d-inline-block"
                               >Cash-600 R.S<i class="fas fa-times-circle"></i
                             ></span>
@@ -947,7 +955,7 @@
                 </div>
 
                 <!-- invoices list -->
-                <div class="table-responsive m_h border-bottom mb-3">
+                <div class="table_list table-responsive m_h border-bottom mb-3">
                   <table class="table invoices_table table-borderless">
                     <tbody>
                       <tr>
@@ -1123,6 +1131,316 @@
             </button>
             <button type="button" class="btn btn-danger" data-dismiss="modal">
               <i class="fas fa-reply-all"></i>خروج للنظام الرئيسي
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- pay Modal -->
+    <div
+      class="pay edit_modal modal"
+      id="payModal"
+      aria-labelledby="payModalLabel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document" style="max-width: 30%">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title bold">التحويل الشبكي - مدى</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- start form -->
+            <form class="service_form">
+              <div class="form-row">
+                <div class="form-group mb-0 col-md-12">
+                  <label>القيمة</label>
+                  <input type="number" class="form-control" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">
+              <i class="fas fa-check pl-1"></i>حفظ
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <i class="fas fa-trash-alt pl-1"></i>إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- cash Modal -->
+    <div
+      class="cash edit_modal modal"
+      id="cashModal"
+      aria-labelledby="cashModalLabel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document" style="max-width: 30%">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title bold">الدفع النقدي</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- start form -->
+            <form class="service_form">
+              <div class="form-row">
+                <div class="form-group mb-0 col-md-12">
+                  <label>القيمة</label>
+                  <input type="number" class="form-control" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">
+              <i class="fas fa-check pl-1"></i>حفظ
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <i class="fas fa-trash-alt pl-1"></i>إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Coupon Modal -->
+    <div
+      class="coupon edit_modal modal"
+      id="couponModal"
+      aria-labelledby="couponModalLabel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document" style="max-width: 30%">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title bold">coupon</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- start form -->
+            <form class="service_form">
+              <div class="form-row">
+                <div class="form-group mb-0 col-md-6">
+                  <label>رقم الكوبون</label>
+                  <select class="form-control">
+                    <option selected>436257</option>
+                    <option></option>
+                  </select>
+                </div>
+                <div class="form-group mb-0 col-md-6">
+                  <label>قيمة الكوبون</label>
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">
+              <i class="fas fa-check pl-1"></i>حفظ
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <i class="fas fa-trash-alt pl-1"></i>إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Digital wallet Modal -->
+    <div
+      class="dWallet edit_modal modal"
+      id="dWalletModal"
+      aria-labelledby="dWalletModalLabel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document" style="max-width: 30%">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title bold">Digital wallet</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- start form -->
+            <form class="service_form">
+              <div class="form-row">
+                <div class="form-group mb-0 col-md-6">
+                  <label>الرصيد</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="form-group mb-0 col-md-6">
+                  <label>القيمة المستخدمة</label>
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">
+              <i class="fas fa-check pl-1"></i>حفظ
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <i class="fas fa-trash-alt pl-1"></i>إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Payment method Modal -->
+    <div
+      class="payment edit_modal modal"
+      id="payment"
+      aria-labelledby="paymentModalLabel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title bold">Payment method</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- End payment method -->
+            <div class="payment_method card-body p-0">
+              <div
+                class="form-row py-4 border-b-dash no-gutters align-items-center"
+              >
+                <div class="form-group text-center col-md-4 col-sm-12 px-3">
+                  <button type="button" class="btn btn-outline-secondary w-100">
+                    Master card
+                  </button>
+                </div>
+                <div class="form-group text-center col-md-4 col-sm-12 px-3">
+                  <button type="button" class="btn btn-outline-secondary w-100">
+                    Mada
+                  </button>
+                </div>
+                <div class="form-group text-center col-md-4 col-sm-12 px-3">
+                  <button
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#cashModal"
+                    class="btn btn-outline-secondary w-100"
+                  >
+                    Cash
+                  </button>
+                </div>
+                <div class="form-group text-center col-md-4 col-sm-12 px-3">
+                  <button type="button" class="btn btn-outline-secondary w-100">
+                    Transfer
+                  </button>
+                </div>
+                <div class="form-group text-center col-md-4 col-sm-12 px-3">
+                  <button type="button" class="btn btn-outline-secondary w-100">
+                    Visa
+                  </button>
+                </div>
+                <div class="form-group text-center col-md-4 col-sm-12 px-3">
+                  <button type="button" class="btn btn-outline-secondary w-100">
+                    STC Pay
+                  </button>
+                </div>
+                <div class="form-group text-center col-md-4 col-sm-12 px-3 m-0">
+                  <button
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#dWalletModal"
+                    class="btn btn-outline-secondary w-100"
+                  >
+                    Digital wallet
+                  </button>
+                </div>
+                <div class="form-group text-center col-md-4 col-sm-12 px-3 m-0">
+                  <button
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#couponModal"
+                    class="btn btn-outline-secondary w-100"
+                  >
+                    Coupon
+                  </button>
+                </div>
+                <div class="form-group text-center col-md-4 col-sm-12 px-3 m-0">
+                  <button
+                    type="button"
+                    data-toggle="modal"
+                    data-target="#payModal"
+                    class="btn btn-outline-secondary w-100"
+                  >
+                    FIT
+                  </button>
+                </div>
+              </div>
+              <div
+                class="payment_list form-row pb-2 border-b-dash no-gutters justify-content-end"
+              >
+                <div class="form-group text-center px-3 mt-3">
+                  <span class="d-inline-block"
+                    >Cash-600 R.S<i class="fas fa-times-circle"></i
+                  ></span>
+                  <span class="d-inline-block"
+                    >Mada-100 R.S<i class="fas fa-times-circle"></i
+                  ></span>
+                  <span class="d-inline-block"
+                    >Visa-600 R.S<i class="fas fa-times-circle"></i
+                  ></span>
+                </div>
+              </div>
+            </div>
+            <!-- End payment -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">
+              <i class="fas fa-check pl-1"></i>حفظ
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <i class="fas fa-trash-alt pl-1"></i>إلغاء
             </button>
           </div>
         </div>

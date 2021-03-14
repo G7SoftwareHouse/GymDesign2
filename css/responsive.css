@@ -241,6 +241,10 @@
   .vertical_tabs .col-md-1.border-right {
     border: none !important;
   }
+  .modal-dialog {
+    max-width: 90% !important;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 450px) {
