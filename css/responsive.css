@@ -167,6 +167,25 @@
     max-width: 90%;
     margin: 0 auto;
   }
+  .list_no {
+    display: none !important;
+  }
+  .alert_list {
+    min-width: 210px;
+    right: -124px !important;
+  }
+  .our_services_section .btn {
+    font-size: 0.6rem;
+    min-width: 80px;
+  }
+  .total_sale {
+    -ms-flex: 0 0 83.666667%;
+    flex: 0 0 83.666667%;
+    min-width: 83.666667%;
+  }
+  .vertical_tabs .col-lg-4.pl-3 {
+    padding-right: 0 !important;
+  }
 }
 
 /* Portrait phones and smaller */
@@ -211,13 +230,27 @@
     max-width: 100%;
     margin: 0 auto;
   }
+  .head_box p,
+  .head_box .list-unstyled {
+    text-align: center;
+    margin-bottom: 0.5rem !important;
+  }
+  .form-inline .customer_inputs {
+    display: flex;
+  }
+  .vertical_tabs .col-md-1.border-right {
+    border: none !important;
+  }
 }
 
-@media screen and (max-height: 450px) {
+@media (max-width: 450px) {
   .sidenav {
     padding-top: 15px;
   }
   .sidenav a {
     font-size: 18px;
+  }
+  .total_sale {
+    display: none;
   }
 }

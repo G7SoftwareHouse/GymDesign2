@@ -873,13 +873,16 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   top: 10px;
   width: 35px;
   height: 35px;
-  line-height: 1.9;
+  line-height: 1.93;
   border-radius: 50%;
   color: #919191;
+  cursor: pointer;
   background-color: #efefef;
 }
 .services_card img {
   width: 85%;
+  height: 100px;
+  object-fit: contain;
   margin-bottom: 0.5rem;
 }
 .services_card h6 {
@@ -992,6 +995,28 @@ input[type="number"] {
   color: #191919;
   background-color: transparent;
 }
+.total_price .btn {
+  font-size: 0.9rem;
+}
+.total_price .list-group-item,
+.total_price .list-group-item .badge,
+.footer_btn .btn-info {
+  font-size: 0.8rem;
+}
+.footer_btn .btn-info {
+  padding: 0 0.7rem;
+  min-height: 38px;
+}
+.list_view img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0;
+  margin-left: 0.5rem;
+}
+.like_btn.liked {
+  color: #ffc115;
+  background-color: #ffeaae;
+}
 
 /* notification */
 .popover-title {
@@ -1034,6 +1059,32 @@ a.alert_message {
 }
 a.alert_message:hover {
   color: grey;
+}
+.border-b-dash {
+  border-bottom: 1px dashed #707070;
+}
+.payment_method .form-control {
+  border: none;
+  background-color: #efefef;
+}
+.three_btn .btn {
+  font-size: 0.8rem;
+  line-height: 2.2;
+}
+.payment_list span {
+  color: #707070;
+  font-size: 0.75rem;
+  padding: 0.5rem 1.3rem;
+  border-radius: 5px;
+  position: relative;
+  margin-right: 5px;
+  background-color: #efefef;
+}
+.payment_list span .svg-inline--fa {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  font-size: 0.7rem;
 }
 
 /* datetimepicker */

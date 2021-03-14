@@ -45,7 +45,6 @@ $(document).ready(function () {
     $(".vertical_tabs .tabcontent#tab_1").css("margin-bottom", totalH + 10);
   });
 
-
   // slick slider
   $(".slick_slider").slick({
     rtl: true,
@@ -57,6 +56,26 @@ $(document).ready(function () {
     autoplaySpeed: 2500,
     prevArrow: '<button class="slide-arrow prev-arrow"></button>',
     nextArrow: '<button class="slide-arrow next-arrow"></button>',
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 
   // select 2 input
