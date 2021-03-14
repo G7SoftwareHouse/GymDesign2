@@ -233,7 +233,7 @@
               </div>
 
               <form class="navbar-search p-0 ml-0 col-lg-6" action="">
-                <div class="input-group mb-0">
+                <div class="input-group mb-0" onclick="openSearch()">
                   <div class="input-group-prepend search-style col-12">
                     <a
                       href="#!"
@@ -246,9 +246,91 @@
                     <input
                       class="form-control form-search white-text rgba-black-light border-0 z-depth-0 pl-5"
                       type="text"
+                      id="form-search"
                       placeholder="ابحث باسم العميل , رقم الجوال , رقم الملف , رقم الهوية , الايميل "
                       aria-label="Search"
                     />
+                  </div>
+                </div>
+                <div id="search-dropdown" class="dropdown-search-content mx-3">
+                  <div class="row no-gutters">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-2 text-center">
+                          <img src="./images/avatar.png" class="m-auto" />
+                        </div>
+                        <div class="col">
+                          <div class="row customer_info no-gutters">
+                            <div class="col-12 d-flex align-items-center px-4 mb-3">
+                              <h6 class="d-inline-block m-0">
+                                بيان عدنان هواري - 234567 -
+                              </h6>
+                              <h6 class="d-inline-block m-0">
+                                <span class="text-success mx-1"
+                                  ><i class="fas fa-circle fa-xs"></i
+                                ></span>
+                                نشط
+                              </h6>
+                              <button
+                                type="button"
+                                class="btn btn-success d-sm-none d-md-block sub-button py-0 mx-2"
+                              >
+                                <span class="sub-title">مشترك</span>
+                              </button>
+                            </div>
+                            <div class="col text-center">
+                              <h6>معلومات الاتصال</h6>
+                              <p>+2345634567</p>
+                            </div>
+                            <div class="col text-center">
+                              <h6>الشخص المسئول</h6>
+                              <p>shahd</p>
+                            </div>
+                            <div class="col text-center">
+                              <h6>تاريخ ووقت الزيارة</h6>
+                              <p>Sat 22 - nov -2020 12:15 PM</p>
+                            </div>
+                            <div class="col text-center">
+                              <h6>تاريخ الاستفسار</h6>
+                              <p>Mon 24 - nov -2020 09:15 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row search-footer no-gutters">
+                        <div class="col">
+                          <a href="#" class="text-center bold">تسجيل جديد</a>
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-success bold"
+                            >مشترك</a
+                          >
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-primary bold"
+                            >مستفسر</a
+                          >
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-danger bold"
+                            >زائر</a
+                          >
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-warning bold"
+                            >مدعو</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-1 d-flex align-items-center flex-column justify-content-center basic_background_color text-white btn"
+                    >
+                      <div class="w-100">
+                        <i class="fas fa-file-medical rotate-90 ml-2"></i>
+                        <p class="rtl-write m-auto rotate font-size-14">انشاء فاتورة</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </form>
@@ -730,7 +812,7 @@
                       <div class="row py-2 mb-5">
                         <div class="col-md-6">
                           <ul
-                            class="customer_card_list list-unstyled list-group p-0"
+                            class="customer_card_list new list-unstyled list-group p-0"
                           >
                             <h5 class="mb-3">بيانات العميل</h5>
                             <li class="">
@@ -751,7 +833,7 @@
                         </div>
                         <div class="col-md-6">
                           <ul
-                            class="customer_card_list list-unstyled list-group p-0"
+                            class="customer_card_list new list-unstyled list-group p-0"
                           >
                             <h5 class="mb-3">بيانات المرتجع</h5>
                             <li class="">
@@ -792,7 +874,7 @@
                       aria-labelledby="viewTable-tab"
                     >
                       <ul
-                        class="customer_card_list list-unstyled mb-5 list-group p-0"
+                        class="customer_card_list new list-unstyled mb-5 list-group p-0"
                       >
                         <h5 class="mb-3">معلومات اضافية</h5>
                         <li class="">
@@ -1853,6 +1935,12 @@
           $(".list_view").hide();
         });
       });
+
+      /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+      function openSearch() {
+        document.getElementById("search-dropdown").classList.toggle("show");
+      }
     </script>
   </body>
 </html>

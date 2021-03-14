@@ -131,6 +131,13 @@ $(function () {
   });
 });
 
+/* When the user clicks on the button,
+        toggle between hiding and showing the dropdown content */
+function openSearch() {
+  document.getElementById("search-dropdown").classList.toggle("show");
+  document.getElementsByClassName("navbar-search").classList.toggle("open_search");
+}
+
 // AG-grid functions
 // specify the columns
 const columnDefs2 = [

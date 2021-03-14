@@ -257,4 +257,14 @@
   .total_sale {
     display: none;
   }
+  .d-sm-none {
+    display: none !important;
+  }
+  .dropdown-search-content a {
+    font-size: 0.5rem;
+  }
+  #search-dropdown .customer_info h6,
+  #search-dropdown .customer_info p {
+    font-size: 0.65rem;
+  }
 }
