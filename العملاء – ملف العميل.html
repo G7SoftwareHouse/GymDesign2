@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/select2.min.css" />
     <link rel="stylesheet" href="./css/select2-bootstrap.min.css">
+    <!-- datetimepicker -->
+    <link rel="stylesheet" href="css/tempusdominus-bootstrap.css" />
 	  <!-- AG-grid -->
     <link rel="stylesheet" href="./css/ag-grid.css" />
     <link rel="stylesheet" href="./css/ag-theme-balham.css" />
@@ -28,7 +30,7 @@
     <link rel="apple-touch-icon" href="images/fa-icon.png" />
   </head>
   <body>
-    <header class="navbar_section-1 navbar_section">
+    <header class="navbar_section-1 navbar_section" id="header">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light row p-2 p-lg-0">
           <a class="navbar-brand m-0 d-block d-lg-none" href="#!">
@@ -722,7 +724,7 @@
                               <h6>العقد</h6> 
                               <p class="m-0">تم تحميل المرفقات</p>
                             </div>
-                            <div class="col-md-2 border-right member_list scrolling">
+                            <div class="col-sm-2 border-right member_list scrolling">
                               <h6 class="m-0 pt-2 basic_text_color">الأعضاء المرشحين :</h6>
                               <ul class="list-unstyled p-0">
                                 <li><a href=""> -فردوس - 23349</a></li>
@@ -737,7 +739,7 @@
                                 <li><a href=""> -علياء - 34678 </a></li>
                               </ul>
                             </div>
-                            <div class="col-md-2 d-flex align-items-center justify-content-center flex-column border-right" data-toggle="modal" data-target="#medicalModal"><h6 class="btn basic_text_color mb-0">التنبيهات الطبية</h6></div>
+                            <div class="col-sm-2 d-flex align-items-center justify-content-center flex-column border-right" data-toggle="modal" data-target="#medicalModal"><h6 class="btn basic_text_color mb-0">التنبيهات الطبية</h6></div>
                             </div>
                       </div>
                     </div>
@@ -1603,6 +1605,437 @@
       </div>
     </div>
 
+    <!-- freez Modal -->
+    <div class="freez_modal edit_modal modal" id="freezModal"
+    aria-labelledby="freezModalLabel" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header px-0">
+            <div class="row align-items-center w-100">
+              <div class="col-lg-4">
+                <h5 class="modal-title bold">التجميد واستخدام الأيام التبادلية</h5>
+              </div>
+              <div class="col-lg-6">
+                <div class="row align-items-center  move_info">
+                  <div class="col p-0">رقم الحركة : 1234</div>
+                  <div class="col p-0">تاريخ الحركة : <input type="date" class="form-control d-inline-block" /></div>
+                </div>
+              </div>
+              <div class="col p-0">
+                <button type="button" class="btn btn-info">إرفاق</button>
+                <button type="button" class="btn btn-info">طباعة</button>
+                <button type="button" class="btn btn-primary">Log</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="row no-gutters">
+              <div class="col-lg-6 p-3 box-shadow-gray">
+                <h6 class="basic_text_color bold mb-3">الخدمة الحالية</h6>
+                <div class="row box-shadow-gray m-0 py-4">
+                  <div class="col-md-4 h-100">
+                    <!-- customer card -->
+                    <div class="customer_card_header h-100 text-center p-3">
+                      <img src="./images/avatar.png" class="customer_card_img" />
+                    </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <ul class="customer_card_list new list-unstyled list-group p-0">
+                      <li class=""><p class="mb-1"><span>ملف واسم العميل </span> 2345 اسم العميل</p></li>
+                      <li class=""><p class="mb-1"><span>رقم الفاتوة وتاريخها </span>1234 \ 22-10-2020</p></li>
+                      <li class=""><p class="mb-1"><span>إسم الخدمة </span>تعريف اسم الخدمة</p></li>
+                      <li class=""><p class="mb-1"><span>الكود </span></i>1234</p></li>
+                      <li class=""><p class="mb-1"><span>التصنيف</span> رئيسي</p></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- start form -->
+                <form class="service_form border-bottom">
+                  <div class="form-row align-items-end py-3">
+                    <div class="form-group mb-0 col-md-4">
+                      <label>تاريخ التفعيل</label>
+                      <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group mb-0 col-md-4">
+                      <label>تاريخ نهاية الخدمة</label>
+                      <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group mb-0 col-md-4">
+                      <label>نهاية الخدمة بعد التجميد/الأيام الاضافية</label>
+                      <input type="date" class="form-control">
+                    </div>
+                  </div>
+                </form>
+    
+                <!-- ag-grid tables -->
+                <div class="more_info_table p-3">
+                  <h6>معلومات الاشتراك</h6>
+                  <div id="infoGrid" class="ag-theme-balham"></div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="freez_info box-shadow-gray p-3">
+                  <h6 class="basic_text_color bold mb-3">بيانات التجميد</h6>
+                  <form class="service_form">
+                    <div class="form-row no-gutters">
+                      <div class="form-group mb-0 col-md-4">
+                        <label>نوع الحركة</label>
+                        <select class="form-control">
+                          <option selected></option>
+                          <option></option>
+                        </select>
+                      </div>
+                      <div class="form-group mb-0 col-md-4">
+                        <label>مدة التجميد/الأيام الاضافية</label>
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="form-group mb-0 col-md-4">
+                        <label>تاريخ بداية التجميد</label>
+                        <input type="date" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-row no-gutters">
+                      <div class="form-group mb-0 col-md-4">
+                        <label>تاريخ نهاية التجميد</label>
+                        <input type="date" class="form-control">
+                      </div>
+                      <div class="form-group mb-0 col-md-4">
+                        <label>اجمالي فترات التجميد</label>
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="form-group mb-0 col-md-4">
+                        <label>اجمالي فترات التجميد الفعلية</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-row no-gutters">
+                      <div class="form-group mb-0 col-md-4">
+                        <label>رصيد الأيام التبادلية</label>
+                        <input type="text" class="form-control">
+                      </div>
+                      <div class="form-group mb-0 col-md-4">
+                        <label>رصيد الأيام التبادلية الفعلي</label>
+                        <input type="text" class="form-control">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn-success"><i class="fas fa-check pl-1"></i>حفظ</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-trash-alt pl-1"></i>إلغاء</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- add freez Modal -->
+    <div class="freez_modal edit_modal modal" id="addFreezModal"
+    aria-labelledby="addFreezModalLabel" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header px-0">
+            <div class="row align-items-center justify-content-end w-100">
+              <div class="col-lg-4">
+                <h5 class="modal-title bold">تجميد اضافي</h5>
+              </div>
+              <div class="col-lg-6">
+                <div class="row align-items-center  move_info">
+                  <div class="col p-0">رقم الحركة : 1234</div>
+                  <div class="col p-0">تاريخ الحركة : <input type="date" class="form-control d-inline-block" /></div>
+                </div>
+              </div>
+              <div class="col p-0">
+                <button type="button" class="btn btn-info">إرفاق</button>
+                <button type="button" class="btn btn-info">طباعة</button>
+                <button type="button" class="btn btn-primary">Log</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="row no-gutters">
+              <div class="col-lg-6 p-3 box-shadow-gray">
+                <h6 class="basic_text_color bold mb-3">الخدمة الحالية</h6>
+                <div class="row box-shadow-gray m-0 py-4">
+                  <div class="col-md-4 h-100">
+                    <!-- customer card -->
+                    <div class="customer_card_header h-100 text-center p-3">
+                      <img src="./images/avatar.png" class="customer_card_img" />
+                    </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <ul class="customer_card_list new list-unstyled list-group p-0">
+                      <li class=""><p class="mb-1"><span>ملف واسم العميل </span> 2345 اسم العميل</p></li>
+                      <li class=""><p class="mb-1"><span>رقم الفاتوة وتاريخها </span>1234 \ 22-10-2020</p></li>
+                      <li class=""><p class="mb-1"><span>إسم الخدمة </span>تعريف اسم الخدمة</p></li>
+                      <li class=""><p class="mb-1"><span>الكود </span></i>1234</p></li>
+                      <li class=""><p class="mb-1"><span>التصنيف</span> رئيسي</p></li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- start form -->
+                <form class="service_form border-bottom">
+                  <div class="form-row align-items-end py-3">
+                    <div class="form-group mb-0 col-md-4">
+                      <label>تاريخ التفعيل</label>
+                      <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group mb-0 col-md-4">
+                      <label>تاريخ نهاية الخدمة</label>
+                      <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group mb-0 col-md-4">
+                      <label>اجمالي مدد التجميد السابقة</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group mb-0 col-md-4">
+                      <label>مدة التجميد الاضافي</label>
+                      <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group mb-0 col-md-4">
+                      <label>تاريخ بداية التجميد الاضافي</label>
+                      <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group mb-0 col-md-4">
+                      <label>تاريخ نهاية التجميد الاضافي</label>
+                      <input type="date" class="form-control">
+                    </div>
+                  </div>
+                </form>
+    
+                <!-- ag-grid tables -->
+                <div class="more_info_table p-3">
+                  <h6>معلومات الاشتراك</h6>
+                  <!-- <div id="infoGrid" class="ag-theme-balham"></div> -->
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="freez_info box-shadow-gray p-3">
+                  <h6 class="basic_text_color bold mb-3">الخدمة مقابل تجميد الاشتراك</h6>
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img src="./images/2.png" />
+                    </div>
+                    <div class="col-md-8">
+                      <!-- Actual search box -->
+                      <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control text-center w-100" placeholder="البحث عن الخدمات">
+                      </div>
+                      <ul class="customer_card_list new list-unstyled list-group p-0">
+                        <li class=""><p class="mb-1"><span>إسم الخدمة </span> تعريف اسم الخدمة</p></li>
+                        <li class=""><p class="mb-1"><span>الكود </span>1234</p></li>
+                        <li class=""><p class="mb-1"><span>التصنيف</span> رئيسي</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <ul class="customer_card_list new mt-3 mb-5 list-unstyled list-group p-0">
+                    <li class=""><p class="mb-1"><span>الكمية </span> 2</p></li>
+                    <li class=""><p class="mb-1"><span>سعر الخدمة </span>155.5</p></li>
+                    <li class=""><p class="mb-1"><span>القيمة </span>155.5</p></li>
+                    <li class=""><p class="mb-1"><span>قيمة الخصم </span></i>5.5</p></li>
+                    <li class=""><p class="mb-1 bold"><span>الاجمالي</span> 895.5</p></li>
+                  </ul>
+                  <div class="row w-100 justify-content-end m-0">
+                    <button type="button" class="btn btn_add_rec basic_background_color mr-3 text-white">تأكيد العملية</button>
+                    <input type="number" placeholder="رقم تأكيد العملية" class="form-control basic_text_color">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn_add_rec basic_background_color text-white">دفع</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">إلغاء</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- unfreez Modal -->
+    <div class="unfreez_modal edit_modal modal" id="unfreezModal"
+    aria-labelledby="unfreezModalLabel" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header px-0">
+            <div class="row align-items-center w-100">
+              <div class="col-md-3">
+                <h5 class="modal-title bold">فك تجميد الخدمة</h5>
+              </div>
+              <div class="col-md-6">
+                <div class="row align-items-center  move_info">
+                  <div class="col p-0">رقم الحركة : 1234</div>
+                  <div class="col p-0">تاريخ الحركة : <input type="date" class="form-control d-inline-block" /></div>
+                </div>
+              </div>
+              <div class="col p-0">
+                <button type="button" class="btn btn-info">إرفاق</button>
+                <button type="button" class="btn btn-info">طباعة</button>
+                <button type="button" class="btn btn-primary">Log</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="row m-0 pb-4 border-bottom">
+              <div class="col-md-4">
+                <!-- customer card -->
+                <div class="customer_card_header text-center p-3">
+                  <img src="./images/avatar.png" class="customer_card_img" />
+                  <h1 class="customer_card_name m-0">بيان عدنان هواري</h1>
+                  <button
+                    type="button"
+                    class="btn btn-link customer_card_fingerPrint"
+                    data-toggle="modal"
+                    data-target="#fingerPrintModal"
+                  >
+                    <i class="fas fa-pen"></i>البصمة
+                  </button>
+                  <a></a>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <ul class="customer_card_list new list-unstyled list-group p-0">
+                  <li class=""><p class="mb-1"><span>ملف واسم العميل </span> 2345 اسم العميل</p></li>
+                  <li class=""><p class="mb-1"><span>رقم الفاتوة وتاريخها </span>1234 \ 22-10-2020</p></li>
+                  <li class=""><p class="mb-1"><span>إسم الخدمة </span>تعريف اسم الخدمة</p></li>
+                  <li class=""><p class="mb-1"><span>الكود </span></i>1234</p></li>
+                  <li class=""><p class="mb-1"><span>التصنيف</span> رئيسي</p></li>
+                  <li class=""><p class="mb-1"><span>الكمية</span>3</p></li>
+                </ul>
+              </div>
+            </div>
+            <!-- start form -->
+            <form class="service_form border-bottom">
+              <div class="form-row py-3">
+                <div class="form-group mb-0 col-md-4">
+                  <label>تاريخ التفعيل</label>
+                  <input type="date" class="form-control">
+                </div>
+                <div class="form-group mb-0 col-md-4">
+                  <label>تاريخ نهاية الخدمة </label>
+                  <input type="date" class="form-control">
+                </div>
+                <div class="form-group mb-0 col-md-4">
+                  <label>مدة التجميد</label>
+                  <input type="date" class="form-control">
+                </div>
+                <div class="form-group mb-0 col-md-4">
+                  <label>تاريخ بداية التجميد</label>
+                  <input type="date" class="form-control">
+                </div>
+                <div class="form-group mb-0 col-md-4">
+                  <label>تاريخ نهاية التجميد </label>
+                  <input type="date" class="form-control">
+                </div>
+                <div class="form-group mb-0 col-md-4">
+                  <label>تاريخ فك التجميد</label>
+                  <input type="date" class="form-control">
+                </div>
+              </div>
+            </form>
+
+            <!-- ag-grid tables -->
+            <div class="more_info_table p-3">
+              <h6>معلومات الاشتراك</h6>
+              <!-- <div id="infoGrid" class="ag-theme-balham"></div> -->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success"><i class="fas fa-check pl-1"></i>حفظ</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-trash-alt pl-1"></i>إلغاء</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- extension Modal -->
+    <div class="extension_modal edit_modal modal" id="extensionModal"
+    aria-labelledby="extensionModalLabel" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header px-0">
+            <div class="row align-items-center w-100">
+              <div class="col-md-3">
+                <h5 class="modal-title bold">تمديد الخدمة</h5>
+              </div>
+              <div class="col-md-6">
+                <div class="row align-items-center  move_info">
+                  <div class="col p-0">رقم الحركة : 1234</div>
+                  <div class="col p-0">تاريخ الحركة : <input type="date" class="form-control d-inline-block" /></div>
+                </div>
+              </div>
+              <div class="col p-0">
+                <button type="button" class="btn btn-info">إرفاق</button>
+                <button type="button" class="btn btn-info">طباعة</button>
+                <button type="button" class="btn btn-primary">Log</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="row m-0 pb-4 border-bottom">
+              <div class="col-md-4">
+                <!-- customer card -->
+                <div class="customer_card_header text-center p-3">
+                  <img src="./images/avatar.png" class="customer_card_img" />
+                  <h1 class="customer_card_name m-0">بيان عدنان هواري</h1>
+                  <button
+                    type="button"
+                    class="btn btn-link customer_card_fingerPrint"
+                    data-toggle="modal"
+                    data-target="#fingerPrintModal"
+                  >
+                    <i class="fas fa-pen"></i>البصمة
+                  </button>
+                  <a></a>
+                </div>
+              </div>
+              <div class="col-md-8">
+                <ul class="customer_card_list new list-unstyled list-group p-0">
+                  <li class=""><p class="mb-1"><span>ملف واسم العميل </span> 2345 اسم العميل</p></li>
+                  <li class=""><p class="mb-1"><span>رقم الفاتوة وتاريخها </span>1234 \ 22-10-2020</p></li>
+                  <li class=""><p class="mb-1"><span>إسم الخدمة </span>تعريف اسم الخدمة</p></li>
+                  <li class=""><p class="mb-1"><span>الكود </span></i>1234</p></li>
+                  <li class=""><p class="mb-1"><span>التصنيف</span> رئيسي</p></li>
+                  <li class=""><p class="mb-1"><span>الكمية</span>3</p></li>
+                </ul>
+              </div>
+            </div>
+            <!-- start form -->
+            <form class="service_form border-bottom">
+              <div class="form-row py-3">
+                <div class="form-group mb-0 col-md-4">
+                  <label>تاريخ التفعيل</label>
+                  <input type="date" class="form-control">
+                </div>
+                <div class="form-group mb-0 col-md-4">
+                  <label>تاريخ نهاية الخدمة </label>
+                  <input type="date" class="form-control">
+                  <label>تاريخ نهاية الخدمة بعد التمديد</label>
+                  <input type="date" class="form-control">
+                </div>
+                <div class="form-group mb-0 col-md-4">
+                  <label>مدة التمديد</label>
+                  <input type="date" class="form-control">
+                </div>
+              </div>
+            </form>
+
+            <!-- ag-grid tables -->
+            <div class="more_info_table p-3">
+              <h6>معلومات الاشتراك</h6>
+              <!-- <div id="infoGrid" class="ag-theme-balham"></div> -->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success"><i class="fas fa-check pl-1"></i>حفظ</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-trash-alt pl-1"></i>إلغاء</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- follow up Modal -->
     <div
       class="follow_up modal"
@@ -1798,12 +2231,16 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-toggle.min.js"></script>
+    <!-- datetimepicker  -->
+    <script src="js/tempusdominus-bootstrap.js"></script>
     <script
       src="https://kit.fontawesome.com/7f37d9c53b.js"
       crossorigin="anonymous"
     ></script>
     <script src="js/all.min.js"></script>
     <script src="js/select2.min.js"></script>
+    <script src="js/jstree.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/scripts.js"></script>
     <script>
       // datetimepicker
@@ -1849,7 +2286,7 @@
                         type="button"
                         class="btn"
                         data-toggle="modal"
-                        data-target="#fingerPrintModal"
+                        data-target="#freezModal"
                         >تجميد</button>
                       </li>
                       <li>
@@ -1857,7 +2294,7 @@
                         type="button"
                         class="btn"
                         data-toggle="modal"
-                        data-target="#fingerPrintModal"
+                        data-target="#addFreezModal"
                         >تجميد اضافي</button>
                       </li>
                       <li>
@@ -1865,7 +2302,7 @@
                         type="button"
                         class="btn"
                         data-toggle="modal"
-                        data-target="#fingerPrintModal"
+                        data-target="#unfreezModal"
                         >فك تجميد</button>
                       </li>
                       <li>
@@ -1873,7 +2310,7 @@
                         type="button"
                         class="btn"
                         data-toggle="modal"
-                        data-target="#fingerPrintModal"
+                        data-target="#extensionModal"
                         >تمديد</button>
                       </li>
                       <li>

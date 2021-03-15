@@ -1265,3 +1265,38 @@ a.alert_message:hover {
 .customer_section .nav-tabs.d-flex.showTab {
   display: flex !important;
 }
+
+/* frezz modal */
+.freez_modal .modal-dialog {
+  max-width: 90%;
+}
+.freez_modal .customer_card_img {
+  margin: 25px auto;
+}
+.freez_modal .freez_info {
+  margin-right: 1rem;
+}
+.has-search {
+  position: relative;
+}
+.has-search .form-control {
+  padding-left: 2.375rem;
+  border: 1px solid var(--basic-main-color) !important;
+}
+.has-search .form-control-feedback {
+  position: absolute;
+  left: 10px;
+  z-index: 2;
+  display: block;
+  width: 1rem;
+  height: 100%;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: var(--basic-main-color);
+}
+.freez_modal .form-control.basic_text_color {
+  width: auto;
+  max-width: 125px;
+  border: 1px solid var(--basic-main-color) !important;
+}
