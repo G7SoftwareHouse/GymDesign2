@@ -28,7 +28,7 @@
     <link rel="apple-touch-icon" href="images/fa-icon.png" />
   </head>
   <body>
-    <header class="navbar_section-1 navbar_section">
+    <header class="navbar_section-1 navbar_section" id="header">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light row p-2 p-lg-0">
           <a class="navbar-brand m-0 d-block d-lg-none" href="#!">
@@ -313,10 +313,8 @@
             >
               <li class="nav-item">
                 <a
-                  href="#!"
+                  href="./لوحة التحكم.html"
                   class="nav-link waves-effect basic-text-lGray-color bold"
-                  data-toggle="modal"
-                  data-target="#login-modal"
                   >لوحة التحكم</a
                 >
               </li>
@@ -509,29 +507,7 @@
 
     <main class="p-4">
       <!-- Start section -->
-      <section class="customer_section">
-        <ul class="nav nav-tabs d-flex justify-content-end border-0 mb-4">
-          <li class="nav-item">
-            <div class="buttons-container">
-              <button type="button" class="btn btn-success m-1">
-                <i class="fas fa-file-medical font-size-14 ml-1"></i>
-                <p class="d-inline m-0">حفظ وانشاء فاتورة</p>
-              </button>
-              <button type="button" class="btn btn-success m-1">
-                <i class="fas fa-check font-size-14 ml-1"></i>
-                <p class="d-inline m-0">حفظ</p>
-              </button>
-              <button type="button" class="btn btn-warning m-1">
-                <i class="fas fa-pen font-size-14 ml-1"></i>
-                <p class="d-inline m-0">تعديل</p>
-              </button>
-              <button type="button" class="btn btn-danger m-1">
-                <i class="fas fa-trash-alt font-size-14 ml-1"></i>
-                <p class="d-inline m-0">إلغاء</p>
-              </button>
-            </div>
-          </li>
-        </ul>
+      <section class="dashboard customer_section">
         <div class="customer_section_card card border-0">
           <div class="customer_section_card_header card-header border-0 p-0">
             <!-- START TABS DIV -->
@@ -544,74 +520,62 @@
                 >
                   <li class="nav-item">
                     <a
-                      class="nav-link text-center bold"
-                      id="summary-tab"
-                      data-toggle="tab"
-                      href="#summary"
-                      role="tab"
-                      aria-controls="home"
-                      aria-selected="true"
-                      >المخلص</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
                       class="nav-link text-center bold active"
-                      id="customerInfo-tab"
+                      id="dashboard-tab"
                       data-toggle="tab"
-                      href="#customerInfo"
-                      role="tab"
-                      aria-controls="profile"
-                      aria-selected="false"
-                      >بيانات العميل</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link text-center bold"
-                      id="Billing-tab"
-                      data-toggle="tab"
-                      href="#Billing"
-                      role="tab"
-                      aria-controls="contact"
-                      aria-selected="false"
-                      >إجراءات الفواتير</a
-                    >
-                  </li>
-                  <li class="nav-item">
-                    <a
-                      class="nav-link text-center bold"
-                      id="nutrition-tab"
-                      data-toggle="tab"
-                      href="#nutrition"
+                      href="#dashboard"
                       role="tab"
                       aria-controls="home"
                       aria-selected="true"
-                      >التغذية والقياسات</a
+                      >لوحة التحكم الرئيسية</a
                     >
                   </li>
                   <li class="nav-item">
                     <a
                       class="nav-link text-center bold"
-                      id="training-tab"
+                      id="sportTable-tab"
                       data-toggle="tab"
-                      href="#training"
+                      href="#sportTable"
                       role="tab"
                       aria-controls="profile"
                       aria-selected="false"
-                      >التدريب</a
+                      >الجدول الرياضي</a
                     >
                   </li>
                   <li class="nav-item">
                     <a
                       class="nav-link text-center bold"
-                      id="entry-tab"
+                      id="marketing-tab"
                       data-toggle="tab"
-                      href="#entry"
+                      href="#marketing"
                       role="tab"
                       aria-controls="contact"
                       aria-selected="false"
-                      >حركة دخول المشترك</a
+                      >الحملات التسويقية</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-center bold"
+                      id="activity-tab"
+                      data-toggle="tab"
+                      href="#activity"
+                      role="tab"
+                      aria-controls="home"
+                      aria-selected="true"
+                      >الفعاليات</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-center bold"
+                      id="letters-tab"
+                      data-toggle="tab"
+                      href="#letters"
+                      role="tab"
+                      aria-controls="profile"
+                      aria-selected="false"
+                      >الخطابات والتعاميم</a
                     >
                   </li>
                 </ul>
@@ -621,434 +585,13 @@
           <div class="card-body p-0">
             <div class="tab-content">
               <div
-                class="tab-pane fade"
-                id="summary"
-                role="tabpanel"
-                aria-labelledby="summary-tab"
-              >
-                ...
-              </div>
-              <div
                 class="tab-pane fade show active"
-                id="customerInfo"
+                id="dashboard"
                 role="tabpanel"
-                aria-labelledby="customerInfo-tab"
-                >
-                <form>
-                  <ul
-                        class="nav nav-tabs basic_background_white_color border-0"
-                        role="tablist"
-                      >
-                      <li class="nav-item box-shadow-sm">
-                        <a
-                          class="nav-link text-center bold">المعلومات الشخصية</a
-                        >
-                      </li>
-                  </ul>
-                  <div class="row box-shadow-gray basic_background_white_color m-0">
-                    <div class="col-md-3 pr-0">
-                      <!-- customer card -->
-                      <div class="customer_card p-3">
-                        <img src="./images/avatar.png" class="customer_card_img mb-3" />
-                        <ul class="take_photo text-center list-unstyled">
-                          <li class="mb-2"><a href="#">إدراج صورة العميل</a></li>
-                          <li><a href="" data-toggle="modal"
-                            data-target="#fingerPrintModal">سحب البصمة</a></li>
-                        </ul>
-                      </div>
-                    </div>
-                    <div class="col-md-9 pl-0">
-                      <!-- customer info inputs -->
-                      <div class="form-row no-gutters">
-                        <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                          <label>الأسم الاول <span>*</span></label>
-                          <input type="text" class="form-control" />
-                        </div>
-                        <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                          <label>إسم الاب <span>*</span></label>
-                          <input type="text" class="form-control" />
-                        </div>
-                        <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                          <label>إسم الجد</label>
-                          <input type="text" class="form-control" />
-                        </div>
-                        <div
-                          class="form-group col-lg-3 col-md-6 col-sm-12 px-3"
-                        >
-                          <label>إسم العائلة</label>
-                          <input type="text" class="form-control" />
-                        </div>
-                      </div>
-                      <div class="form-row no-gutters">
-                        <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                          <label>رقم الملف</label>
-                          <input type="tel" class="form-control" />
-                        </div>
-                        <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                          <label>رقم الجوال <span>*</span></label>
-                          <input type="tel" class="form-control" />
-                        </div>
-                        <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                          <label>رقم جوال اضافي</label>
-                          <input type="tel" class="form-control" />
-                        </div>
-                        <div
-                          class="form-group col-lg-3 col-md-6 col-sm-12 px-3"
-                        >
-                          <label>رقم الهوية</label>
-                          <input type="number" class="form-control" />
-                        </div>
-                      </div>
-                      <div class="form-row no-gutters">
-                        <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                          <label>الفرع</label>
-                          <select class="form-control" id="branches">
-                            <option selected>الفرع الاول</option>
-                            <option>الفرع التاني</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                          <label>الجنسية</label>
-                          <select class="form-control" id="nationality">
-                            <option selected>الجنسية الاول</option>
-                            <option>الجنسية التاني</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                          <label>الجنس</label>
-                          <select class="form-control" id="gender">
-                            <option selected> ذكر</option>
-                            <option> انثي</option>
-                          </select>
-                        </div>
-                        <div
-                          class="form-group col-lg-3 col-md-6 col-sm-12 px-3"
-                        >
-                          <label>تاريخ الميلاد</label>
-                          <input type="date" data-date="" data-date-format="DD MMMM YYYY" value="2021-03-09" class="form-control date_inputs w-100">
-                        </div>
-                      </div>
-                      <div class="form-row no-gutters">
-                        <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                          <label>المدينة</label>
-                          <select class="form-control" id="city">
-                            <option selected> مصر</option>
-                            <option> السعودية</option>
-                          </select>
-                        </div>
-                        <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                          <label>الحي</label>
-                          <input type="text" class="form-control" />
-                        </div>
-                        <div class="form-group col-lg-6 col-sm-12 px-3">
-                          <label>بريد الكتروني</label>
-                          <input type="text" class="form-control" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- data of nearest person -->
-                  <div class="card card_index mt-2 border-0">
-                    <div class="card-header border-0 p-0">
-                      <!-- START TABS DIV -->
-                      <div class="single-tab tabbable-responsive overflow-none">
-                        <div class="tabbable">
-                          <ul class="nav nav-tabs border-0" role="tablist">
-                            <li class="nav-item float-left">
-                              <a class="nav-link text-center bold active">بيانات اقرب شخص</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-body p-0">
-                      <div class="tab-content basic_background_white_color mt--5 p-4">
-                        <div class="tab-pane fade show active" role="tabpanel">
-                          <div class="form-row no-gutters">
-                            <div class="form-group col-lg-12 px-3">
-                              <button class="btn basic_background_color mb-3 text-white">
-                                <i class="fas fa-plus mx-1"></i>
-                                <p class="d-inline m-0">إضافة</p>
-                              </button>
-          
-                              <div
-                                id="servicesGrid"
-                                class="ag-theme-balham"
-                                style="height: 200px"
-                              ></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- marketing data -->
-                  <div class="card card_index mt-2 border-0">
-                    <div class="card-header border-0 p-0">
-                      <!-- START TABS DIV -->
-                      <div class="single-tab tabbable-responsive overflow-none">
-                        <div class="tabbable">
-                          <ul class="nav nav-tabs border-0" role="tablist">
-                            <li class="nav-item float-left">
-                              <a class="nav-link text-center bold active">بيانات تسويقية</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-body p-0">
-                      <div class="tab-content basic_background_white_color mt--5 p-4">
-                        <div class="tab-pane fade show active" role="tabpanel">
-                          <div class="form-row no-gutters">
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>تاريخ الاستفسار</label>
-                              <input type="date" data-date="" data-date-format="DD MMMM YYYY" value="2021-03-09" class="form-control date_inputs w-100" />
-                            </div>
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>تاريخ الزيارة</label>
-                              <input type="date" data-date="" data-date-format="DD MMMM YYYY" value="2021-03-09" class="form-control date_inputs w-100" />
-                            </div>
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>تاريخ المتابعة</label>
-                              <input type="date" data-date="" data-date-format="DD MMMM YYYY" value="2021-03-09" class="form-control date_inputs w-100" />
-                            </div>
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>الاخصائي المسئول</label>
-                              <select id="specialest" class="form-control">
-                                <option selected>one</option>
-                                <option>two</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="form-row align-items-end no-gutters">
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>الهدف من الدعوة</label>
-                              <select class="form-control">
-                                <option selected>مجانية</option>
-                                <option>تسويقية</option>
-                              </select>
-                            </div>
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>حالة الاستفسار</label>
-                              <select class="form-control">
-                                <option selected>مجانية</option>
-                                <option>تسويقية</option>
-                              </select>
-                            </div>
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>تعرف علينا بواسطة <span>*</span></label>
-                              <input type="text" class="form-control" />
-                            </div>
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>الجولة التعريفية</label>
-                              <select class="form-control">
-                                <option selected>مجانية</option>
-                                <option>تسويقية</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="form-row align-items-end no-gutters">
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>اشير بواسطة</label>
-                              <select class="form-control" id="shareBy">
-                                <option selected>مجانية</option>
-                                <option>تسويقية</option>
-                              </select>
-                            </div>
-                            <div class="form-group d-flex justify-content-end col-lg-9 col-md-6 col-sm-12 px-3">
-                              <button
-                                  class="btn btn-block flex_btn btn_add_rec basic_background_color text-white"
-                                >
-                                إضافة متابعة تسويقية
-                              </button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- additional data -->
-                  <div class="card card_index mt-2 border-0">
-                    <div class="card-header border-0 p-0">
-                      <!-- START TABS DIV -->
-                      <div class="single-tab tabbable-responsive overflow-none">
-                        <div class="tabbable">
-                          <ul class="nav nav-tabs border-0" role="tablist">
-                            <li class="nav-item float-left">
-                              <a class="nav-link text-center bold active">بيانات اضافية</a
-                              >
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-body p-0">
-                      <div class="tab-content basic_background_white_color mt--5 p-4">
-                        <div class="tab-pane fade show active" role="tabpanel">
-                          <div class="form-row no-gutters">
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>الخدمة الراغب بها</label>
-                              <input type="text" class="form-control" />
-                            </div>
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>الحالة الاجتماعية</label>
-                              <select id="status" class="form-control">
-                                <option selected></option>
-                                <option></option>
-                              </select>
-                            </div>
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>ما هي المرافق التي تبحثين عنها في النادي</label>
-                              <input type="text" class="form-control" />
-                            </div>
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>أهدافك الرياضية</label>
-                              <input type="text" class="form-control" />
-                            </div>
-                          </div>
-                          <div class="form-row align-items-end no-gutters">
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>الوقت المفضل لأرتياد النادي</label>
-                              <select class="form-control" id="bestTime">
-                                <option selected>مجانية</option>
-                                <option>تسويقية</option>
-                              </select>
-                            </div>
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>سبق اشتركتي بنادي رياضي</label>
-                              <select class="form-control">
-                                <option selected>نعم</option>
-                                <option>لا</option>
-                              </select>
-                            </div>
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>هل لديك اطفال</label>
-                              <select class="form-control">
-                                <option selected>نعم</option>
-                                <option>لا</option>
-                              </select>
-                            </div>
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <label>تفضلي ممارسة الرياضة الحرة ام مع مدرب</label>
-                              <select class="form-control">
-                                <option selected>الحرة</option>
-                                <option>مع مدرب</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div class="form-row align-items-end no-gutters">
-                            <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                              <a href="#" class="underline">اشخاص ترغبين في ترشيحهم للنادي</a>
-                            </div>
-                            <div class="form-group col-lg-12 px-3">
-                              <button class="btn basic_background_color mb-3 text-white">
-                                <i class="fas fa-plus mx-1"></i>
-                                <p class="d-inline m-0">إضافة</p>
-                              </button>
-          
-                              <div
-                                id="servicesGrid"
-                                class="ag-theme-balham"
-                                style="height: 200px"
-                              ></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                </form>
-              </div>
-              <div
-                class="tab-pane fade"
-                id="Billing"
-                role="tabpanel"
-                aria-labelledby="Billing-tab"
+                aria-labelledby="dashboard-tab"
               >
-                <div class="row box-shadow-gray basic_background_white_color m-0">
-                  <div class="col-md-3 pr-0">
-                    <!-- customer card -->
-                    <div class="customer_card p-3">
-                      <div class="customer_card_header text-center p-3">
-                        <input type="checkbox" checked id="status-toggle" />
-                        <img src="./images/avatar.png" class="customer_card_img" />
-                        <h1 class="customer_card_name m-0">بيان عدنان هواري</h1>
-                        <button
-                          type="button"
-                          class="btn btn-link customer_card_fingerPrint"
-                          data-toggle="modal"
-                          data-target="#fingerPrintModal"
-                        >
-                          <i class="fas fa-pen"></i>البصمة
-                        </button>
-                      </div>
-                      <ul class="customer_card_list list-group">
-                        <li class=""><p>رقم الملف : <span>234567</span></p></li>
-                        <li class=""><p>حالة الاشتراك : <span>مشترك</span></p></li>
-                        <li class=""><p>حالة العميل : <span class="disabled">موقوف - منتهي - <span class="green-color">نشط</span></p></li>
-                        <li class=""><p>مرشح عن طريق : <span>صالحة</span></p></li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="col-md-9 pl-0">
-                    <div class="customer_card fst-card pt-1 px-3">
-                      <div class="customer_info">
-                        <h2 class="card_title bold text-center">بيانات اساسية</h2>
-                          <div class="row text-center">
-                          <div class="col-md"><h6>تاريخ الميلاد</h6><p>22-10-1990</p></div>
-                          <div class="col-md"><h6>الاخصائي المسئول</h6><p>shahd</p></div>
-                          <div class="col-md"><h6>الزيارة الاخيرة</h6><p>Sat 22-nov-2020 - 12:30 PM</p></div>
-                          <div class="col-md"><h6>الفرع</h6><p>الشرائع</p></div>
-                          <div class="col-md"><h6>معلومات الاتصال</h6><p>+2345634567</p></div>
-                          <div class="col-md"><h6>الهوية</h6><p>14524573453</p></div>
-                          <div class="col-md"><h6>تاريخ الاستفسار</h6><p>Sat 22-nov-2020 - 12:30 PM</p></div>
-                          </div>
-                      </div>
-                    </div>
-                    <!-- customer balances -->
-                    <div class="customer_card px-3">
-                      <div class="customer_info customer_balances">
-                        
-                          <h2 class="card_title bold text-center">ارصدة العميل</h2>
-                          <div class="row text-center">
-                          <div class="col-md pt-1-5"><h6>رصيد جلسات تغذية</h6> <p>22</p></div>
-                          <div class="col-md pt-1-5"><h6>رصيد جلسات تدريب شخصي</h6> <p>34</p></div>
-                          <div class="col-md pt-1-5"><h6>رصيد جلسات Orientation</h6> <p>21</p></div>
-                          <div class="col-md pt-1-5"><h6>رصيد جلسات مساج </h6> <p>15</p></div>
-                          <div class="col-md pt-1-5"><h6>رصيد دعوات مجانية</h6> <p>30</p></div>
-                          <div class="col-md border-right">
-                            <h6 class="m-0 py-3">رصيد النقاط المكتسبة (FIT)</h6>
-                            <div class="row border-top">
-                              <div class="col-6 px-1"><p class="m-0 pt-1">محولة</p><p class="m-0 pb-1">20</p></div>
-                              <div class="col-6 px-1 border-right"><p class="m-0 pt-1">مكتسبة</p><p class="m-0 pb-1">20</p></div>
-                            </div>
-                          </div>
-                          <div class="col btn-danger d-flex align-items-center justify-content-center flex-column"><h6 class="mb-3">رصيد مستحق</h6><h6>500 R.S</h6></div>
-                          </div>
-                      </div>
-                    </div>
-                    <!-- Movements on subscription -->
-                    <div class="customer_card mt-4 pb-2 px-3">
-                      <div class="customer_info customer_balances">
-                        
-                          <h2 class="card_title bold text-center">حركات على الاشتراك</h2>
-                          <div class="row py-4 text-center">
-                            <div class="col-md-4 pt-1-5">
-                              <button class="button_search_tabs basic_background_color text-white">ترقية اشتراك</button>
-                            </div>
-                            <div class="col-md-4 pt-1-5">
-                              <button class="button_search_tabs basic_background_color text-white">تحويل اشتراك</button>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-                  </div>
+                <div class="row box-shadow-gray bg-white m-0">
+                  
                 </div>
 
                 <div class="card card_index mt-2 border-0">
@@ -1063,56 +606,61 @@
                           <li class="nav-item float-left">
                             <a
                               class="nav-link text-center bold active"
-                              id="Billing-tab"
                               data-toggle="tab"
-                              href="#rec"
                               role="tab"
                               aria-controls="contact"
                               aria-selected="false"
-                              >فواتير المبيعات</a
+                              >المتابعات</a
                             >
-                          </li>
-                          <li class="nav-item float-right">
-                            <button class="btn_add_rec button_search_tabs basic_background_color text-white mt--5"><i class="fas fa-plus mx-2"></i><p class="d-inline m-0">إنشاء فاتورة جديدة</p></button>
                           </li>
                         </ul>
                       </div>
                     </div>
                   </div>
                   <div class="card-body p-0">
-                    <div class="tab-content basic_background_white_color mt--5 p-3">
+                    <div class="tab-content bg-white mt--5 p-3">
                       <div
                         class="tab-pane fade show active"
                         id="rec"
                         role="tabpanel"
                         aria-labelledby="rec-tab"
                       >
-                        <div id="myGrid" class="ag-theme-balham grid"></div>
+                      
+                        <div id="followingGrid" class="dropdownGrid ag-theme-balham"></div>
                       </div>
                     </div>
                   </div>
                 </div>
+
               </div>
               <div
                 class="tab-pane fade"
-                id="nutrition"
+                id="sportTable"
                 role="tabpanel"
-                aria-labelledby="nutrition-tab"
+                aria-labelledby="sportTable-tab"
+                >
+                
+              </div>
+              <div
+                class="tab-pane fade"
+                id="marketing"
+                role="tabpanel"
+                aria-labelledby="marketing-tab"
+              >
+                
+              </div>
+              <div
+                class="tab-pane fade"
+                id="activity"
+                role="tabpanel"
+                aria-labelledby="activity-tab"
               >...
               </div>
               <div
                 class="tab-pane fade"
-                id="training"
+                id="letters"
                 role="tabpanel"
-                aria-labelledby="training-tab"
-              >
-                ...
-              </div>
-              <div
-                class="tab-pane fade"
-                id="entry"
-                role="tabpanel"
-                aria-labelledby="entry-tab"
+                aria-labelledby="letters-tab"
               >
                 ...
               </div>
@@ -1197,6 +745,7 @@
       </div>
     </div>
 
+
     <!-- edit Modal -->
     <div class="edit_modal modal" id="editModal"
     aria-labelledby="editModalLabel" tabindex="-1" role="dialog">
@@ -1239,7 +788,7 @@
                 </div>
               </div>
               <div class="col-md-8">
-                <ul class="customer_card_list list-unstyled list-group p-0">
+                <ul class="customer_card_list new list-unstyled list-group p-0">
                   <li class=""><p class="mb-1"><span>ملف واسم العميل </span> 2345 اسم العميل</p></li>
                   <li class=""><p class="mb-1"><span>رقم الفاتوة وتاريخها </span>1234 \ 22-10-2020</p></li>
                   <li class=""><p class="mb-1"><span>إسم الخدمة </span>تعريف اسم الخدمة</p></li>
@@ -1294,6 +843,7 @@
     </div>
 
 
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="js/jquery-3.4.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -1306,6 +856,7 @@
     <script src="js/all.min.js"></script>
     <script src="js/select2.min.js"></script>
     <script src="js/scripts.js"></script>
+
     <script>
       self.actionCellRenderer = function () {};
       self.actionCellRenderer.prototype = {
@@ -1401,24 +952,77 @@
         init: function (params) {
           this.attachButton = document.createElement("div");
           this.attachButton.innerHTML = `
-          <ul class="attach-list text-center">
-            <li>
-              <button
-              type="button"
-              class="btn green-color"
-              data-toggle="modal"
-              data-target="#fingerPrintModal"
-              ><i class="fas fa-paperclip mx-1"></i>العقد</button>
-            </li>
-            <li>
-              <button
-              type="button"
-              class="btn"
-              data-toggle="modal"
-              data-target="#fingerPrintModal"
-              ><i class="fas fa-paperclip mx-1"></i>مرفقات اخرى</button>
-            </li>
-          </ul>
+          <div class="btn-group">
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  تفعيل <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu">
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#editModal"
+                        >تعديل التفعيل</button>
+                      </li>
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#fingerPrintModal"
+                        >تجميد</button>
+                      </li>
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#fingerPrintModal"
+                        >تجميد اضافي</button>
+                      </li>
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#fingerPrintModal"
+                        >فك تجميد</button>
+                      </li>
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#fingerPrintModal"
+                        >تمديد</button>
+                      </li>
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#fingerPrintModal"
+                        >الغاء</button>
+                      </li>
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#fingerPrintModal"
+                        >ترقية</button>
+                      </li>
+                      <li>
+                        <button
+                        type="button"
+                        class="btn"
+                        data-toggle="modal"
+                        data-target="#fingerPrintModal"
+                        >تحويل</button>
+                      </li>
+                  </ul>
+              </div>
               `;
         },
         getGui: function () {
@@ -1438,9 +1042,7 @@
           this.actionsButton = document.createElement("div");
           this.actionsButton.innerHTML = `
           <ul class="actions-list list-inline">
-              <li class="list-inline-item"><a><i class="fas fa-thumbs-up"></i><p>تنفيذ الاجراء</p></a></li>
-              <li class="list-inline-item"><a><i class="fas fa-dollar-sign"></i><p>تحصيل</p></a></li>
-              <li class="list-inline-item"><a><i class="fas fa-eye"></i><p>عرض</p></a></li>
+              <li class="list-inline-item"><a href="#" title="إضافة"><i class="fas fa-plus mr-1"></i></a></li>
           </ul>
               `;
         },
@@ -1581,7 +1183,7 @@
         resizable: true,
         rowDragManaged: true,
         animateRows: true,
-        rowHeight: 110,
+        rowHeight: 45,
         defaultColDef: {
           flex: 1,
           autoHeight: true,
@@ -1595,7 +1197,7 @@
       };
       // setup the grid after the page has finished loading
       document.addEventListener("DOMContentLoaded", function () {
-        var gridDiv1 = document.querySelector("#myGrid");
+        var gridDiv1 = document.querySelector("#followingGrid");
         new agGrid.Grid(gridDiv1, gridOptions);
       });
     </script>

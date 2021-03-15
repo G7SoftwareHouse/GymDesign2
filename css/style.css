@@ -61,7 +61,7 @@ select {
   font-size: 0.9rem !important;
 }
 /* ag-grid */
-/* .ag-cell,
+.ag-cell,
 .ag-row {
   overflow: visible !important;
 }
@@ -74,11 +74,13 @@ select {
 .ag-root.ag-layout-auto-height,
 .ag-body-viewport.ag-layout-auto-height,
 .ag-body-viewport-wrapper.ag-layout-auto-height {
-  overflow: visible !important;
-} */
-/* .ag-theme-balham .ag-cell {
-  text-align: left;
-} */
+  overflow-y: visible !important;
+}
+.dropdownGrid .ag-root.ag-layout-auto-height,
+.dropdownGrid .ag-body-viewport.ag-layout-auto-height,
+.dropdownGrid .ag-body-viewport-wrapper.ag-layout-auto-height {
+  min-height: 320px;
+}
 .ag-theme-balham .btn {
   outline: none !important;
   box-shadow: none !important;
@@ -338,17 +340,21 @@ select {
   font-family: var(--neo-sans-regular);
 }
 .ag-theme-balham .ag-cell div,
-.ag-theme-balham .ag-cell button {
+.ag-theme-balham .ag-cell button,
+.ag-theme-balham .ag-cell {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 .ag-theme-balham .ag-cell button.dropdown-toggle {
   padding: 0;
   font-size: 0.9rem;
+  direction: rtl;
   outline: none !important;
   box-shadow: none !important;
+  justify-content: flex-start;
 }
 .ag-theme-balham .ag-cell button:focus,
 .ag-theme-balham .ag-cell button:hover {
@@ -366,6 +372,9 @@ select {
   padding: 0.5rem 0.2rem;
   background-color: #efefef;
 }
+.ag-theme-balham .dropdown-menu button {
+  justify-content: flex-end !important;
+}
 .ag-theme-balham .dropdown-menu a {
   color: #707070;
 }
@@ -381,6 +390,7 @@ select {
   font-size: 0.7rem;
 }
 .actions-list .list-inline-item {
+  font-size: 0.9rem;
   margin: 7px 2px 0 !important;
 }
 .actions-list .svg-inline--fa {
@@ -1238,4 +1248,20 @@ a.alert_message:hover {
 }
 .bootstrap-datetimepicker-widget .svg-inline--fa {
   transform: rotate(180deg);
+}
+
+/* sumarry page */
+.scrolling {
+  height: 150px;
+  overflow-y: scroll;
+}
+.member_list a {
+  color: #707070;
+  font-size: 0.7rem;
+}
+.customer_section .nav-tabs.d-flex {
+  display: none !important;
+}
+.customer_section .nav-tabs.d-flex.showTab {
+  display: flex !important;
 }

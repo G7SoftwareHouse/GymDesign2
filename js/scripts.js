@@ -123,6 +123,13 @@ $(function () {
     style: "status_btn",
     height: 20,
   });
+  $("#status-toggle-2").bootstrapToggle({
+    on: "",
+    off: "",
+    onstyle: "default",
+    style: "status_btn",
+    height: 20,
+  });
   $("#toggle-btn").bootstrapToggle({
     on: "",
     off: "",
@@ -135,8 +142,18 @@ $(function () {
         toggle between hiding and showing the dropdown content */
 function openSearch() {
   document.getElementById("search-dropdown").classList.toggle("show");
-  document.getElementsByClassName("navbar-search").classList.toggle("open_search");
+  document
+    .getElementsByClassName("navbar-search")
+    .classList.toggle("open_search");
 }
+
+$(".tabbable .nav-tabs .nav-item .nav-link").click(function () {
+  $(".customer_section .nav-tabs.d-flex").removeClass("showTab");
+});
+
+$("#customerInfo-tab").click(function () {
+  $(".customer_section .nav-tabs.d-flex").addClass("showTab");
+});
 
 // AG-grid functions
 // specify the columns

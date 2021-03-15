@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
   <head>
     <title>ملف العملاء</title>
     <meta charset="UTF-8" />
@@ -313,10 +313,8 @@
             >
               <li class="nav-item">
                 <a
-                  href="#!"
+                  href="./لوحة التحكم.html"
                   class="nav-link waves-effect basic-text-lGray-color bold"
-                  data-toggle="modal"
-                  data-target="#login-modal"
                   >لوحة التحكم</a
                 >
               </li>
@@ -544,7 +542,7 @@
                 >
                   <li class="nav-item">
                     <a
-                      class="nav-link text-center bold"
+                      class="nav-link text-center bold active"
                       id="summary-tab"
                       data-toggle="tab"
                       href="#summary"
@@ -556,13 +554,14 @@
                   </li>
                   <li class="nav-item">
                     <a
-                      class="nav-link text-center bold active"
+                      class="nav-link text-center bold"
                       id="customerInfo-tab"
                       data-toggle="tab"
                       href="#customerInfo"
                       role="tab"
                       aria-controls="profile"
                       aria-selected="false"
+                      onclick="showOnTab()"
                       >بيانات العميل</a
                     >
                   </li>
@@ -621,22 +620,331 @@
           <div class="card-body p-0">
             <div class="tab-content">
               <div
-                class="tab-pane fade"
+                class="tab-pane fade show active"
                 id="summary"
                 role="tabpanel"
                 aria-labelledby="summary-tab"
               >
-                ...
+                <div class="row box-shadow-gray bg-white m-0">
+                  <div class="col-md-3 pr-0">
+                    <!-- customer card -->
+                    <div class="customer_card h-100 p-3">
+                      <div class="customer_card_header text-center p-3">
+                        <input type="checkbox" checked id="status-toggle-2" />
+                        <img src="./images/avatar.png" class="customer_card_img" />
+                        <h1 class="customer_card_name m-0">بيان عدنان هواري</h1>
+                        <button
+                          type="button"
+                          class="btn btn-link customer_card_fingerPrint"
+                          data-toggle="modal"
+                          data-target="#fingerPrintModal"
+                        >
+                          <i class="fas fa-pen"></i>البصمة
+                        </button>
+                        <a></a>
+                      </div>
+                      <ul class="customer_card_list list-group">
+                        <li class=""><p>رقم الملف : <span>234567</span></p></li>
+                        <li class=""><p>حالة الاشتراك : <span>مشترك</span></p></li>
+                        <li class=""><p>حالة العميل : <span class="disabled">موقوف - منتهي - <span class="green-color">نشط</span></p></li>
+                        <li class=""><p>مرشح عن طريق : <span>صالحة</span></p></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-9 pl-0">
+                    <div class="customer_card fst-card pt-1 px-3">
+                      <div class="customer_info">
+                        <h2 class="card_title bold text-center">بيانات اساسية</h2>
+                          <div class="row text-center">
+                          <div class="col-md"><h6>تاريخ الميلاد</h6><p>22-10-1990</p></div>
+                          <div class="col-md"><h6>الاخصائي المسئول</h6><p>shahd</p></div>
+                          <div class="col-md"><h6>الزيارة الاخيرة</h6><p>Sat 22-nov-2020 - 12:30 PM</p></div>
+                          <div class="col-md"><h6>الفرع</h6><p>الشرائع</p></div>
+                          <div class="col-md"><h6>معلومات الاتصال</h6><p>+2345634567</p></div>
+                          <div class="col-md"><h6>الهوية</h6><p>14524573453</p></div>
+                          <div class="col-md"><h6>تاريخ الاستفسار</h6><p>Sat 22-nov-2020 - 12:30 PM</p></div>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- customer balances -->
+                    <div class="customer_card px-3">
+                      <div class="customer_info customer_balances">
+                        
+                          <h2 class="card_title bold text-center">ارصدة العميل</h2>
+                          <div class="row text-center">
+                            <div class="col-md pt-1-5"><h6>رصيد جلسات تغذية</h6> <p>22</p></div>
+                            <div class="col-md pt-1-5"><h6>رصيد جلسات تدريب شخصي</h6> <p>34</p></div>
+                            <div class="col-md pt-1-5"><h6>رصيد جلسات Orientation</h6> <p>21</p></div>
+                            <div class="col-md pt-1-5"><h6>رصيد جلسات مساج </h6> <p>15</p></div>
+                            <div class="col-md pt-1-5"><h6>رصيد دعوات مجانية</h6> <p>30</p></div>
+                            <div class="col-md border-right">
+                              <h6 class="m-0 py-3">رصيد النقاط المكتسبة (FIT)</h6>
+                              <div class="row border-top">
+                                <div class="col-6 px-1"><p class="m-0 pt-1">محولة</p><p class="m-0 pb-1">20</p></div>
+                                <div class="col-6 px-1 border-right"><p class="m-0 pt-1">مكتسبة</p><p class="m-0 pb-1">20</p></div>
+                              </div>
+                            </div>
+                            <div class="col btn-danger d-flex align-items-center justify-content-center flex-column"><h6 class="mb-3">رصيد مستحق</h6><h6>500 R.S</h6></div>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- start -->
+                    <div class="customer_card mt-4 px-3">
+                      <div class="customer_info customer_balances">
+                        
+                          <h2 class="card_title bold text-center">معلومات الخدمات</h2>
+                          <div class="row align-item-center text-center">
+                            <div class="col-md py-5">
+                              <h6>إسم الخدمة</h6>
+                              <p class="m-0">3- Months Membership</p>
+                            </div>
+                            <div class="col-md py-5">
+                              <h6>مدة الخدمة</h6>
+                              <p class="m-0">45 days</p>
+                            </div>
+                            <div class="col-md py-5">
+                              <h6>تاريخ الشراء</h6>
+                              <p class="m-0">20-Oct-2020</p>
+                            </div>
+                            <div class="col-md py-5">
+                              <h6>تاريخ التفعيل </h6>
+                              <p class="m-0">20-Nov-2020</p>
+                            </div>
+                            <div class="col-md py-5">
+                              <h6>تاريخ الانتهاء</h6>
+                              <p class="m-0">20-Dec-2020</p>
+                            </div>
+                            <div class="col-md py-5">
+                              <h6>حالة الاشتراك</h6>
+                              <p class="m-0">نشط</p>
+                            </div>
+                            <div class="col-md py-5">
+                              <h6>العقد</h6> 
+                              <p class="m-0">تم تحميل المرفقات</p>
+                            </div>
+                            <div class="col-md-2 border-right member_list scrolling">
+                              <h6 class="m-0 pt-2 basic_text_color">الأعضاء المرشحين :</h6>
+                              <ul class="list-unstyled p-0">
+                                <li><a href=""> -فردوس - 23349</a></li>
+                                <li><a href=""> -آثار - 45678</a></li>
+                                <li><a href=""> -نور - 34678</a></li>
+                                <li><a href=""> -ايمان - 46553</a></li>
+                                <li><a href=""> -علياء - 34678 </a></li>
+                                <li><a href=""> -فردوس - 23349</a></li>
+                                <li><a href=""> -آثار - 45678</a></li>
+                                <li><a href=""> -نور - 34678</a></li>
+                                <li><a href=""> -ايمان - 46553</a></li>
+                                <li><a href=""> -علياء - 34678 </a></li>
+                              </ul>
+                            </div>
+                            <div class="col-md-2 d-flex align-items-center justify-content-center flex-column border-right" data-toggle="modal" data-target="#medicalModal"><h6 class="btn basic_text_color mb-0">التنبيهات الطبية</h6></div>
+                            </div>
+                      </div>
+                    </div>
+                    <!-- end -->
+                  </div>
+                </div>
+
+                <!-- buttons  -->
+                <div class="row mt-3 mx-0 py-3 bg-white box-shadow-gray align-items-center justify-content-center">
+                  <div class="col">
+                    <button class="btn_add_rec button_search_tabs basic_background_color text-white mt--5">
+                      حجز مواعيد الاستشارات
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="btn_add_rec button_search_tabs basic_background_color text-white mt--5">
+                      حجز تدريب شخصي تسويقي
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="btn_add_rec button_search_tabs basic_background_color text-white mt--5">
+                      حجز Orientaion Class
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="btn_add_rec button_search_tabs basic_background_color text-white mt--5">
+                      حجز جلسات مساج
+                    </button>
+                  </div>
+                  <div class="col">
+                    <button class="btn_add_rec button_search_tabs basic_background_color text-white mt--5">
+                      تحويل نقاط
+                    </button>
+                  </div>
+                </div>
+
+                <div class="card card_index mt-2 border-0">
+                  <div class="card-header border-0 p-0">
+                    <!-- START TABS DIV -->
+                    <div class="tabbable-responsive overflow-none">
+                      <div class="tabbable">
+                        <ul
+                          class="nav nav-tabs border-0"
+                          role="tablist"
+                        >
+                          <li class="nav-item float-left">
+                            <a
+                              class="nav-link text-center bold active"
+                              id="Billing-tab"
+                              data-toggle="tab"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                              >المواعيد النشطة (الحجوزات)</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="tab-content bg-white mt--5 p-3">
+                      <div
+                        class="tab-pane fade show active"
+                        id="rec"
+                        role="tabpanel"
+                        aria-labelledby="rec-tab"
+                      >
+                        <div id="myGrid" class="dropdownGrid ag-theme-balham"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- start -->
+                <div class="card card_index mt-2 border-0">
+                  <div class="card-header border-0 p-0">
+                    <!-- START TABS DIV -->
+                    <div class="tabbable-responsive overflow-none">
+                      <div class="tabbable">
+                        <ul
+                          class="nav nav-tabs border-0"
+                          role="tablist"
+                        >
+                          <li class="nav-item float-left">
+                            <a
+                              class="nav-link text-center bold active"
+                              id="Billing-tab"
+                              data-toggle="tab"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                              >متابعة تسويقية</a
+                            >
+                          </li>
+                          <li class="nav-item float-right">
+                            <button class="btn_add_rec button_search_tabs basic_background_color text-white mt--5" data-toggle="modal" data-target="#followUpModal"><i class="fas fa-plus mx-2"></i><p class="d-inline m-0">إضافة متابعة جديدة</p></button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="tab-content bg-white mt--5 p-3">
+                      <div
+                        class="tab-pane fade show active"
+                        id="rec"
+                        role="tabpanel"
+                        aria-labelledby="rec-tab"
+                      >
+                        <!-- <div id="myGrid" class="dropdownGrid ag-theme-balham"></div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- start -->
+                <div class="card card_index mt-2 border-0">
+                  <div class="card-header border-0 p-0">
+                    <!-- START TABS DIV -->
+                    <div class="tabbable-responsive overflow-none">
+                      <div class="tabbable">
+                        <ul
+                          class="nav nav-tabs border-0"
+                          role="tablist"
+                        >
+                          <li class="nav-item float-left">
+                            <a
+                              class="nav-link text-center bold active"
+                              id="Billing-tab"
+                              data-toggle="tab"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                              >متابعة خدمة عملاء</a
+                            >
+                          </li>
+                          <li class="nav-item float-right">
+                            <button class="btn_add_rec button_search_tabs basic_background_color text-white mt--5"><i class="fas fa-plus mx-2"></i><p class="d-inline m-0">إضافة متابعة جديدة</p></button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="tab-content bg-white mt--5 p-3">
+                      <div
+                        class="tab-pane fade show active"
+                        id="rec"
+                        role="tabpanel"
+                        aria-labelledby="rec-tab"
+                      >
+                        <!-- <div id="myGrid" class="ag-theme-balham"></div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- start -->
+                <div class="card card_index mt-2 border-0">
+                  <div class="card-header border-0 p-0">
+                    <!-- START TABS DIV -->
+                    <div class="tabbable-responsive overflow-none">
+                      <div class="tabbable">
+                        <ul
+                          class="nav nav-tabs border-0"
+                          role="tablist"
+                        >
+                          <li class="nav-item float-left">
+                            <a
+                              class="nav-link text-center bold active"
+                              id="Billing-tab"
+                              data-toggle="tab"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                              >متابعة مالية</a
+                            >
+                          </li>
+                          <li class="nav-item float-right">
+                            <button class="btn_add_rec button_search_tabs basic_background_color text-white mt--5"><i class="fas fa-plus mx-2"></i><p class="d-inline m-0">إضافة متابعة جديدة</p></button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="tab-content bg-white mt--5 p-3">
+                      <div
+                        class="tab-pane fade show active"
+                        id="rec"
+                        role="tabpanel"
+                        aria-labelledby="rec-tab"
+                      >
+                        <!-- <div id="myGrid" class="ag-theme-balham"></div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div
-                class="tab-pane fade show active"
+                class="tab-pane fade"
                 id="customerInfo"
                 role="tabpanel"
                 aria-labelledby="customerInfo-tab"
                 >
                 <form>
                   <ul
-                        class="nav nav-tabs basic_background_white_color border-0"
+                        class="nav nav-tabs bg-white border-0"
                         role="tablist"
                       >
                       <li class="nav-item box-shadow-sm">
@@ -645,7 +953,7 @@
                         >
                       </li>
                   </ul>
-                  <div class="row box-shadow-gray basic_background_white_color m-0">
+                  <div class="row box-shadow-gray bg-white m-0">
                     <div class="col-md-3 pr-0">
                       <!-- customer card -->
                       <div class="customer_card p-3">
@@ -764,7 +1072,7 @@
                       </div>
                     </div>
                     <div class="card-body p-0">
-                      <div class="tab-content basic_background_white_color mt--5 p-4">
+                      <div class="tab-content bg-white mt--5 p-4">
                         <div class="tab-pane fade show active" role="tabpanel">
                           <div class="form-row no-gutters">
                             <div class="form-group col-lg-12 px-3">
@@ -801,7 +1109,7 @@
                       </div>
                     </div>
                     <div class="card-body p-0">
-                      <div class="tab-content basic_background_white_color mt--5 p-4">
+                      <div class="tab-content bg-white mt--5 p-4">
                         <div class="tab-pane fade show active" role="tabpanel">
                           <div class="form-row no-gutters">
                             <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
@@ -888,7 +1196,7 @@
                       </div>
                     </div>
                     <div class="card-body p-0">
-                      <div class="tab-content basic_background_white_color mt--5 p-4">
+                      <div class="tab-content bg-white mt--5 p-4">
                         <div class="tab-pane fade show active" role="tabpanel">
                           <div class="form-row no-gutters">
                             <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
@@ -971,7 +1279,7 @@
                 role="tabpanel"
                 aria-labelledby="Billing-tab"
               >
-                <div class="row box-shadow-gray basic_background_white_color m-0">
+                <div class="row box-shadow-gray bg-white m-0">
                   <div class="col-md-3 pr-0">
                     <!-- customer card -->
                     <div class="customer_card p-3">
@@ -1081,14 +1389,14 @@
                     </div>
                   </div>
                   <div class="card-body p-0">
-                    <div class="tab-content basic_background_white_color mt--5 p-3">
+                    <div class="tab-content bg-white mt--5 p-3">
                       <div
                         class="tab-pane fade show active"
                         id="rec"
                         role="tabpanel"
                         aria-labelledby="rec-tab"
                       >
-                        <div id="myGrid" class="ag-theme-balham"></div>
+                        <div id="myGrid" class="ag-theme-balham dropdownGrid"></div>
                       </div>
                     </div>
                   </div>
@@ -1241,7 +1549,7 @@
                 </div>
               </div>
               <div class="col-md-8">
-                <ul class="customer_card_list list-unstyled list-group p-0">
+                <ul class="customer_card_list new list-unstyled list-group p-0">
                   <li class=""><p class="mb-1"><span>ملف واسم العميل </span> 2345 اسم العميل</p></li>
                   <li class=""><p class="mb-1"><span>رقم الفاتوة وتاريخها </span>1234 \ 22-10-2020</p></li>
                   <li class=""><p class="mb-1"><span>إسم الخدمة </span>تعريف اسم الخدمة</p></li>
@@ -1295,6 +1603,195 @@
       </div>
     </div>
 
+    <!-- follow up Modal -->
+    <div
+      class="follow_up modal"
+      id="followUpModal"
+      aria-labelledby="followUpModalLabel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">متابعة تسويقية </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- start form -->
+            <form class="service_form">
+              <div class="form-row pt-3">
+                <div class="form-group mb-0 col-md-3">
+                  <label>المستخدم</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="form-group mb-0 col-md-3">
+                  <label>العميل</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="form-group mb-0 col-md-3">
+                  <label>رقم المتابعة</label>
+                  <input type="number" class="form-control" />
+                </div>
+                <div class="form-group mb-0 col-md-3">
+                  <label>تاريخ ووقت المتابعة القادم</label>
+                  <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                    <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
+                    <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                        <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                    </div>
+                </div>
+                </div>
+                <div class="form-group mb-0 col-md-3">
+                  <label>استجابة العميل</label>
+                  <select class="form-control mb-2">
+                    <option selected>مهتم</option>
+                    <option>غير مهتم</option>
+                  </select>
+                </div>
+                <div class="form-group mb-0 col-md-3">
+                  <label>مصدر المتابعة</label>
+                  <select class="form-control mb-2">
+                    <option selected>مباشر</option>
+                    <option>غير مباشر</option>
+                  </select>
+                </div>
+                <div class="form-group mb-0 col-md-3">
+                  <label>حالة المتابعة</label>
+                  <select class="form-control mb-2">
+                    <option selected>تمت</option>
+                    <option> تمت</option>
+                  </select>
+                </div>
+                <div class="form-group mb-0 col-md-3">
+                  <label>المتابعة رئيسية \ ثانوية</label>
+                  <select class="form-control mb-2">
+                    <option selected>رئيسية</option>
+                    <option> ثانوية</option>
+                  </select>
+                </div>
+                <div class="form-group mb-0 col-md-3">
+                  <label>متابعة مع مسئول</label>
+                  <input type="text" class="form-control mb-2" />
+                </div>
+                <div class="form-group mb-0 col-md-3">
+                  <label>متابعة مع الادارة</label>
+                  <input type="text" class="form-control mb-2" />
+                </div>
+              </div>
+              <div class="form-row align-items-end mt-2 pb-3">
+                <div class="form-group mb-0 col-md-10">
+                  <textarea rows="3" class="form-control" placeholder="كتابة تعليق"></textarea>
+                </div>
+                <div class="col">
+                  <button type="button" class="btn btn-info"><i class="fas fa-paperclip font-size-14 ml-1"></i>إرفاق</button>
+                </div>
+              </div>
+            </form>
+
+            <!-- ag-grid tables -->
+            <div class="more_info_table p-3">
+              <h6>المتابعات التسويقية</h6>
+              <div id="infoGrid" class="ag-theme-balham grid"></div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">
+              <i class="fas fa-check pl-1"></i>حفظ
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <i class="fas fa-trash-alt pl-1"></i>إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- medical Modal -->
+    <div
+      class="modal"
+      id="medicalModal"
+      aria-labelledby="medicalModalLabel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">التنبيهات الطبية </h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="card card_index border-0">
+              <div class="card-header border-0 p-0">
+                <!-- START TABS DIV -->
+                <div class="tabbable-responsive overflow-none">
+                  <div class="tabbable">
+                    <ul
+                      class="nav nav-tabs border-0"
+                      role="tablist"
+                    >
+                      <li class="nav-item float-left">
+                        <a
+                          class="nav-link text-center bold active"
+                          id="Billing-tab"
+                          data-toggle="tab"
+                          role="tab"
+                          aria-controls="contact"
+                          aria-selected="false"
+                          >رقم ملف العميل واسمه</a
+                        >
+                      </li>
+                      <li class="nav-item float-right">
+                        <button class="btn_add_rec button_search_tabs basic_background_color text-white mt--5"><i class="fas fa-plus mx-2"></i><p class="d-inline m-0">إضافة صف</p></button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body p-0">
+                <div class="tab-content bg-white mt--5 p-3">
+                  <div
+                    class="tab-pane fade show active"
+                    role="tabpanel"
+                    aria-labelledby="rec-tab"
+                  >
+                  <ul class="actions-list list-inline">
+                    <li class="list-inline-item"><a href="#" title="حفظ"><i class="fas fa-check font-size-20 pl-1 text-success"></i></a></li>
+                    <li class="list-inline-item"><a href="#" title="الغاء "><i class="fas fa-trash-alt font-size-20 pl-1 text-danger"></i></a></li>
+                  </ul>
+                    <div id="myGrid" class="ag-theme-balham dropdownGrid"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">
+              <i class="fas fa-check pl-1"></i>حفظ
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <i class="fas fa-trash-alt pl-1"></i>إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="js/jquery-3.4.1.slim.min.js"></script>
@@ -1308,6 +1805,26 @@
     <script src="js/all.min.js"></script>
     <script src="js/select2.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+      // datetimepicker
+      $(function () {
+                $('#datetimepicker1').datetimepicker({
+          format: "DD/MM/YYYY",
+          locale: "ar",
+          icons: {
+            time: "fas fa-clock",
+            date: "fas fa-calendar",
+            up: "fas fa-arrow-up",
+            down: "fas fa-arrow-down",
+            previous: "fas fa-chevron-left",
+            next: "fas fa-chevron-right",
+            today: "fas fa-calendar-check-o",
+            clear: "fas fa-trash",
+            close: "fas fa-times",
+          },
+        });
+            });
+    </script>
     <script>
       self.actionCellRenderer = function () {};
       self.actionCellRenderer.prototype = {
@@ -1440,9 +1957,9 @@
           this.actionsButton = document.createElement("div");
           this.actionsButton.innerHTML = `
           <ul class="actions-list list-inline">
-              <li class="list-inline-item"><a><i class="fas fa-thumbs-up"></i><p>تنفيذ الاجراء</p></a></li>
-              <li class="list-inline-item"><a><i class="fas fa-dollar-sign"></i><p>تحصيل</p></a></li>
-              <li class="list-inline-item"><a><i class="fas fa-eye"></i><p>عرض</p></a></li>
+              <li class="list-inline-item"><a href="#" title="تنفيذ الاجراء"><i class="fas fa-thumbs-up mr-1"></i></a></li>
+              <li class="list-inline-item"><a href="#" title="تحصيل"><i class="fas fa-dollar-sign mr-1"></i></a></li>
+              <li class="list-inline-item"><a href="#" title="عرض"><i class="fas fa-eye mr-1"></i></a></li>
           </ul>
               `;
         },
@@ -1583,7 +2100,7 @@
         resizable: true,
         rowDragManaged: true,
         animateRows: true,
-        rowHeight: 110,
+        rowHeight: 45,
         defaultColDef: {
           flex: 1,
           autoHeight: true,
