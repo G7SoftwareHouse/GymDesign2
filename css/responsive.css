@@ -186,6 +186,14 @@
   .vertical_tabs .col-lg-4.pl-3 {
     padding-right: 0 !important;
   }
+  #summary .col .btn_add_rec {
+    font-size: 0.6rem !important;
+    width: 100% !important;
+  }
+  #summary .col-md-9.pl-0,
+  .customer_section .col-md-9.pl-0 {
+    padding-left: 15px !important;
+  }
 }
 
 /* Portrait phones and smaller */
@@ -266,5 +274,9 @@
   #search-dropdown .customer_info h6,
   #search-dropdown .customer_info p {
     font-size: 0.65rem;
+  }
+  #summary .col .btn_add_rec {
+    font-size: 0.55rem !important;
+    margin-bottom: 15px;
   }
 }
