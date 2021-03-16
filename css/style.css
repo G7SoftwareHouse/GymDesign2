@@ -1398,33 +1398,35 @@ a.alert_message:hover {
   color: #a9a9a9;
 }
 .class-timetable table {
-  border: 1px solid #363636;
+  border: 2px solid #363636;
   text-align: center;
 }
 .class-timetable table thead {
-  border-bottom: 1px solid #363636;
+  border-bottom: 2px solid #363636;
 }
 .class-timetable .table td,
 .class-timetable .table th {
   border-color: #363636;
+  vertical-align: middle;
 }
 .class-timetable table thead tr th {
   font-size: 14px;
-  border-right: 1px solid #363636;
-  padding: 15px 0;
+  border-right: 2px solid #363636;
+  padding: 0;
   font-weight: 400;
 }
 .class-timetable table tbody tr td {
   width: 146px;
-  padding: 35px 0;
+  padding: 10px 5px;
   border-top: none;
-  border-right: 1px solid #363636;
-  border-bottom: 1px solid #363636;
+  border-right: 2px solid #363636;
+  border-bottom: 2px solid #363636;
 }
 .class-timetable table tbody tr td.class-time {
   font-size: 12px;
-  color: var(--basic-main-color);
-  border: 1px solid #363636;
+  color: #020202;
+  font-weight: bold;
+  border: 2px solid #363636;
 }
 .class-timetable table tbody tr td.hover-bg {
   -webkit-transition: all 0.3s;
@@ -1460,4 +1462,33 @@ a.alert_message:hover {
   display: block;
   font-size: 12px;
   color: #a9a9a9;
+}
+.class-timetable .custom_table tr th {
+  border-right: none;
+}
+.class-timetable .custom_table tr td {
+  border-bottom: none;
+}
+.class-timetable .custom_table tr th {
+  padding: 5px 0 10px;
+}
+.class-timetable .custom_table tr td {
+  padding: 5px 0;
+}
+.class-timetable .custom_table {
+  border-collapse: separate;
+  border-spacing: 5px;
+}
+.class-timetable .custom_table,
+.class-timetable .classes_table {
+  margin-bottom: 0;
+}
+.class-timetable .classes_table {
+  border-width: 1px;
+}
+.class-timetable .classes_table tr td {
+  border-bottom: 0;
+  border-width: 1px;
+  padding: 5px;
+  font-size: 13px;
 }
