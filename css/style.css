@@ -635,14 +635,14 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 }
 
 /* ponits of sale modal */
-#salePointsModal .modal-dialog {
+.points_sale_modal .modal-dialog {
   margin: 7rem auto;
   max-width: 45%;
 }
-#salePointsModal .modal-footer .btn .svg-inline--fa {
+.points_sale_modal .modal-footer .btn .svg-inline--fa {
   font-size: 1rem;
 }
-#salePointsModal .modal-footer .btn {
+.points_sale_modal .modal-footer .btn {
   min-width: 183px;
   font-size: 0.9rem;
 }
