@@ -81,6 +81,8 @@ $(document).ready(function () {
   // select 2 input
   $(".single-select").select2({ placeholder: "@General.Choose" });
   $("#branches").select2();
+  $("#branch").select2();
+  $("#duration").select2();
   $("#nationality").select2();
   $("#gender").select2();
   $("#city").select2();

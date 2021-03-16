@@ -1022,6 +1022,10 @@ input[type="number"] {
   border-color: #449ffb !important;
   background-color: #449ffb !important;
 }
+.btn.btn-blue-dark {
+  border-color: #025ca0 !important;
+  background-color: #025ca0 !important;
+}
 .total_price .badge-primary {
   color: #191919;
   background-color: transparent;
@@ -1205,7 +1209,7 @@ a.alert_message:hover {
   min-width: calc(100% - 2rem);
   overflow: auto;
   z-index: 100;
-  min-height: 160px;
+  max-height: 540px;
 }
 
 .dropdown-search-content a {
@@ -1225,9 +1229,15 @@ a.alert_message:hover {
 }
 #search-dropdown .col-1.btn {
   border-radius: 0;
+  border-left: 1px solid;
+  border-right: 1px solid;
 }
 #search-dropdown img {
   width: 75%;
+}
+.main_row + .main_row {
+  margin-top: 1px;
+  border-top: 1px solid var(--basic-main-color);
 }
 
 /* datetimepicker */
@@ -1304,198 +1314,150 @@ a.alert_message:hover {
 /*---------------------
   Class Timetable Section
 -----------------------*/
-
-.class-timetable-section {
-	background: #151515;
-}
-
 .class-timetable-section.class-details-timetable {
-	padding-top: 0;
+  padding-top: 0;
 }
-
-.class-timetable-section .section-title {
-	text-align: left;
-}
-
 .class-details-timetable_title {
-	margin-bottom: 35px;
+  margin-bottom: 35px;
 }
-
 .class-details-timetable_title h5 {
-	font-size: 20px;
-	color: #ffffff;
-	font-weight: 600;
+  font-size: 20px;
+  font-weight: 600;
 }
-
 .table-controls {
-	text-align: right;
-	margin-top: 14px;
-	margin-bottom: 50px;
+  text-align: right;
+  margin-top: 14px;
+  margin-bottom: 50px;
 }
-
 .table-controls ul {
-	background: #000000;
-	padding: 12px 30px 15px;
-	display: inline-block;
+  padding: 12px 30px 15px;
+  display: inline-block;
 }
-
 .table-controls ul li {
-	list-style: none;
-	font-size: 14px;
-	color: #aaaaaa;
-	list-style: none;
-	display: inline-block;
-	margin-right: 35px;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
-	cursor: pointer;
-	position: relative;
+  list-style: none;
+  font-size: 14px;
+  color: #aaaaaa;
+  list-style: none;
+  display: inline-block;
+  margin-right: 35px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+  position: relative;
 }
-
 .table-controls ul li:after {
-	position: absolute;
-	right: -22px;
-	top: 0;
-	content: "/";
+  position: absolute;
+  right: -22px;
+  top: 0;
+  content: "/";
 }
-
 .table-controls ul li.active {
-	color: #ffffff;
+  color: #ffffff;
 }
-
 .table-controls ul li.active:after {
-	color: #aaaaaa;
+  color: #aaaaaa;
 }
-
 .table-controls ul li:last-child {
-	margin-right: 0;
+  margin-right: 0;
 }
-
 .table-controls ul li:last-child:after {
-	display: none;
+  display: none;
 }
-
 .class-timetable .ts-meta h5,
 .class-timetable .ts-meta span {
-	-webkit-transition: all 0.4s;
-	-o-transition: all 0.4s;
-	transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
-
 .class-timetable.filtering .ts-meta h5,
 .class-timetable.filtering .ts-meta span {
-	opacity: 0;
+  opacity: 0;
 }
-
 .class-timetable.filtering .ts-meta.show h5,
 .class-timetable.filtering .ts-meta.show span {
-	opacity: 1;
+  opacity: 1;
 }
-
 .class-timetable.details-timetable td h5 {
-	color: #ffffff1a;
+  color: black;
 }
-
 .class-timetable.details-timetable td span {
-	color: #363636;
+  color: #363636;
 }
-
 .class-timetable.details-timetable td.hover-dp h5 {
-	-webkit-transition: all 0.4s;
-	-o-transition: all 0.4s;
-	transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
-
 .class-timetable.details-timetable td.hover-dp span {
-	-webkit-transition: all 0.4s;
-	-o-transition: all 0.4s;
-	transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
-
-.class-timetable.details-timetable td.hover-dp:hover h5 {
-	color: #ffffff;
-}
-
 .class-timetable.details-timetable td.hover-dp:hover span {
-	color: #a9a9a9;
+  color: #a9a9a9;
 }
-
-.class-timetable.details-timetable td.dark-bg {
-	background: #0a0a0a;
-}
-
 .class-timetable table {
-	border: 1px solid #363636;
-	text-align: center;
+  border: 1px solid #363636;
+  text-align: center;
 }
-
 .class-timetable table thead {
-	border-bottom: 1px solid #363636;
+  border-bottom: 1px solid #363636;
 }
-
+.class-timetable .table td,
+.class-timetable .table th {
+  border-color: #363636;
+}
 .class-timetable table thead tr th {
-	font-size: 14px;
-	color: #ffffff;
-	background: #f36100;
-	border-right: 1px solid #363636;
-	padding: 15px 0;
-	font-weight: 400;
+  font-size: 14px;
+  border-right: 1px solid #363636;
+  padding: 15px 0;
+  font-weight: 400;
 }
-
 .class-timetable table tbody tr td {
-	width: 146px;
-	padding: 35px 0;
+  width: 146px;
+  padding: 35px 0;
+  border-top: none;
+  border-right: 1px solid #363636;
+  border-bottom: 1px solid #363636;
 }
-
 .class-timetable table tbody tr td.class-time {
-	font-size: 12px;
-	color: #f36100;
-	background: #000000;
-	border: 1px solid #363636;
+  font-size: 12px;
+  color: var(--basic-main-color);
+  border: 1px solid #363636;
 }
-
-.class-timetable table tbody tr td.dark-bg {
-	background: #090909;
-}
-
 .class-timetable table tbody tr td.hover-bg {
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
 }
-
 .class-timetable table tbody tr td.hover-bg:hover {
-	background: #f36100;
+  background: var(--basic-main-color);
 }
-
 .class-timetable table tbody tr td.blank-td {
-	position: relative;
-	overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
-
 .class-timetable table tbody tr td.blank-td:after {
-	position: absolute;
-	left: -47px;
-	top: 59px;
-	width: 237px;
-	height: 1px;
-	background: #363636;
-	content: "";
-	-webkit-transform: rotate(-40deg);
-	-ms-transform: rotate(-40deg);
-	transform: rotate(-40deg);
+  position: absolute;
+  left: -47px;
+  top: 59px;
+  width: 237px;
+  height: 1px;
+  background: #363636;
+  content: "";
+  -webkit-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+  transform: rotate(-40deg);
 }
-
 .class-timetable table tbody tr td h5 {
-	color: #ffffff;
-	font-weight: 600;
-	text-transform: uppercase;
-	margin-bottom: 10px;
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
-
 .class-timetable table tbody tr td span {
-	display: block;
-	font-size: 12px;
-	color: #a9a9a9;
+  display: block;
+  font-size: 12px;
+  color: #a9a9a9;
 }
