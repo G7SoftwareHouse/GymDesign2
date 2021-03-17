@@ -85,6 +85,10 @@ select {
   outline: none !important;
   box-shadow: none !important;
 }
+.ag-theme-balham .ag-cell .form-check-input {
+  margin: 0;
+  right: 20px;
+}
 /* toggle btn */
 .toggle-off.btn,
 .toggle-on.btn {
@@ -1416,7 +1420,7 @@ a.alert_message:hover {
   font-weight: 400;
 }
 .class-timetable table tbody tr td {
-  width: 146px;
+  min-width: 163px;
   padding: 10px 5px;
   border-top: none;
   border-right: 2px solid #363636;
@@ -1427,6 +1431,7 @@ a.alert_message:hover {
   color: #020202;
   font-weight: bold;
   border: 2px solid #363636;
+  min-width: auto;
 }
 .class-timetable table tbody tr td.hover-bg {
   -webkit-transition: all 0.3s;
@@ -1468,6 +1473,8 @@ a.alert_message:hover {
 }
 .class-timetable .custom_table tr td {
   border-bottom: none;
+  min-width: auto;
+  width: 145px;
 }
 .class-timetable .custom_table tr th {
   padding: 5px 0 10px;
@@ -1485,10 +1492,12 @@ a.alert_message:hover {
 }
 .class-timetable .classes_table {
   border-width: 1px;
+  cursor: pointer;
 }
 .class-timetable .classes_table tr td {
   border-bottom: 0;
   border-width: 1px;
   padding: 5px;
   font-size: 13px;
+  min-width: auto;
 }

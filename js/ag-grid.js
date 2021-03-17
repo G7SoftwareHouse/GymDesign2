@@ -1,3 +1,17 @@
+$(function () {
+  // 6 create an instance when the DOM is ready
+  $("#jstree_2").jstree();
+  // 7 bind to events triggered on the tree
+  $("#jstree_2").on("changed.jstree", function (e, data) {
+    console.log(data.selected);
+  });
+  // 8 interact with the tree - either way is OK
+  $("button").on("click", function () {
+    $("#jstree_2").jstree(true).select_node("child_node_1");
+    $("#jstree_2").jstree("select_node", "child_node_1");
+    $.jstree.reference("#jstree_2").select_node("child_node_1");
+  });
+});
 // AG-grid functions
 
 self.actionCellRenderer = function () {};
@@ -131,9 +145,9 @@ self.actions.prototype = {
     this.actionsButton = document.createElement("div");
     this.actionsButton.innerHTML = `
     <ul class="actions-list list-inline">
-        <li class="list-inline-item"><a><i class="fas fa-thumbs-up"></i><p>تنفيذ الاجراء</p></a></li>
-        <li class="list-inline-item"><a><i class="fas fa-dollar-sign"></i><p>تحصيل</p></a></li>
-        <li class="list-inline-item"><a><i class="fas fa-eye"></i><p>عرض</p></a></li>
+      <li class="list-inline-item"><a href="#" title="تنفيذ الاجراء"><i class="fas fa-thumbs-up mr-1"></i></a></li>
+      <li class="list-inline-item"><a href="#" title="تحصيل"><i class="fas fa-dollar-sign mr-1"></i></a></li>
+      <li class="list-inline-item"><a href="#" title="عرض"><i class="fas fa-eye mr-1"></i></a></li>
     </ul>
         `;
   },
@@ -152,14 +166,14 @@ self.code = function () {};
 self.code.prototype = {
   init: function (params) {
     this.codeButton = document.createElement("div");
-    this.codeButton.innerHTML = `12342
-    <button
-        type="button"
-        class="btn"
-        data-toggle="modal"
-        data-target="#editModal"
-        ><i class="fas fa-file-alt" style="font-size: 1.2rem;
-        margin: 0 5px;"></i></button>`;
+    this.codeButton.innerHTML = `<input readonly type="text" style="color: black" class="form-control col openPop" /> <button
+      type="button"
+      class="btn code-icon-btn"
+      data-toggle="modal"
+      data-target="#codeModal"
+      ><i class="fas fa-file-alt basic_text_color" style="font-size: 1.2rem;
+      margin: 0 5px;"></i></button>
+    `;
   },
   getGui: function () {
     return this.codeButton;
@@ -169,6 +183,24 @@ self.code.prototype = {
   },
   destroy: function () {
     $(this.codeButton).remove();
+  },
+};
+
+self.checkBox = function () {};
+self.checkBox.prototype = {
+  init: function (params) {
+    this.checkBoxButton = document.createElement("div");
+    this.checkBoxButton.innerHTML =
+      '<div class="form-group form-check m-0"><input type="checkbox" class="form-check-input" id="exampleCheck1"><label class="form-check-label" for="exampleCheck1">Check out</label></div>';
+  },
+  getGui: function () {
+    return this.checkBoxButton;
+  },
+  refresh: function () {
+    return true;
+  },
+  destroy: function () {
+    $(this.checkBoxButton).remove();
   },
 };
 
@@ -199,6 +231,7 @@ const columnDefs = [
   {
     headerName: "النوع",
     field: "gender",
+    minWidth: 120,
     cellRenderer: "genderCellRenderer",
     cellEditor: "agRichSelectCellEditor",
     cellEditorParams: {
@@ -223,7 +256,13 @@ const columnDefs = [
     cellRenderer: actionCellRenderer,
     suppressSorting: true,
   },
-  { headerName: "الحالة", field: "status", resizable: true, minWidth: 100 },
+  {
+    headerName: "الحالة",
+    field: "status",
+    resizable: true,
+    minWidth: 160,
+    cellRenderer: checkBox,
+  },
   {
     headerName: "المرفقات",
     field: "attach",
@@ -321,18 +360,27 @@ var gridOptions = {
   enableFilter: true,
   enableRtl: true,
   suppressRowTransform: true,
-  editable: true,
+  domLayout: "autoHeight",
+  wrapText: true,
+  sortable: true,
+  resizable: true,
+  rowDragManaged: true,
+  animateRows: true,
+  rowHeight: 45,
   defaultColDef: {
     flex: 1,
-    minWidth: 130,
-    editable: true,
+    autoHeight: true,
+    wrapText: true,
+    sortable: true,
     resizable: true,
+  },
+  onGridReady: function (params) {
+    params.api.sizeColumnsToFit();
   },
   components: {
     genderCellRenderer: GenderCellRenderer,
   },
   onCellValueChanged: onCellValueChanged,
-  // domLayout: "autoHeight",
   onGridReady: function (params) {
     params.api.sizeColumnsToFit();
   },

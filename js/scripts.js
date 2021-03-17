@@ -82,6 +82,9 @@ $(document).ready(function () {
   $(".single-select").select2({ placeholder: "@General.Choose" });
   $("#branches").select2();
   $("#branch").select2();
+  $("#class").select2();
+  $("#captin").select2();
+  $("#place").select2();
   $("#duration").select2();
   $("#nationality").select2();
   $("#gender").select2();
@@ -103,6 +106,10 @@ $(document).ready(function () {
   $("#responsible").select2();
   $("#Bcode").select2();
   $("#chCategories").select2();
+
+  $(".ag-root.ag-layout-auto-height").scrollRight(0);
+  $(".ag-body-viewport.ag-layout-auto-height").scrollRight(0);
+  $(".ag-body-viewport-wrapper.ag-layout-auto-height").scrollRight(0);
 });
 
 // date inputs format
@@ -211,6 +218,19 @@ var gridOptions2 = {
   enableRtl: true,
   suppressRowTransform: true,
   domLayout: "autoHeight",
+  wrapText: true,
+  sortable: true,
+  resizable: true,
+  rowDragManaged: true,
+  animateRows: true,
+  rowHeight: 45,
+  defaultColDef: {
+    flex: 1,
+    autoHeight: true,
+    wrapText: true,
+    sortable: true,
+    resizable: true,
+  },
   onGridReady: function (params) {
     params.api.sizeColumnsToFit();
   },

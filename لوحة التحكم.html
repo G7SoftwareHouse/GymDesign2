@@ -590,8 +590,189 @@
                 role="tabpanel"
                 aria-labelledby="dashboard-tab"
               >
-                <div class="row box-shadow-gray bg-white m-0">
-                  
+                <div class="box-shadow-gray more_info_table bg-white p-3">
+                  <!-- daiy report -->
+                  <h6>التقرير اليومي</h6>
+                  <div class="row mb-3 no-gutters">
+                    <div class="col-lg-10">
+                      grid
+                      <div id="dailyReportGrid" class="dropdownGrid ag-theme-balham"></div>
+                    </div>
+                    <div class="col">
+                      <button type="button" class="btn btn-success"><i class="fas fa-check font-size-20 pl-1" aria-hidden="true"></i> حفظ</button>
+                    </div>
+                  </div>
+
+                  <!-- monthly goals -->
+                  <div class="row no-gutters">
+                    <div class="col-lg-6">
+                      <h6>الهدف الشهري</h6>
+                      <form>
+                        <div class="form-row no-gutters">
+                          <div class="form-group col-md-6 col-sm-12 px-3">
+                            <label>الهدف الشهري لشهر</label>
+                            <select id="status" class="form-control">
+                              <option selected disabled>اختر...</option>
+                              <option></option>
+                              <option> </option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-6 col-sm-12 px-3">
+                            <label>تقسيم الشهر</label>
+                            <select class="form-control" disabled>
+                              <option selected disabled>اختر...</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-6 col-sm-12 px-3">
+                            <label>عرض الهدف الشهري</label>
+                            <select id="status" class="form-control">
+                              <option selected disabled>اختر...</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-6 col-sm-12 px-3">
+                            <label>الموظف المسئول</label>
+                            <select id="status" class="form-control">
+                              <option selected disabled>اختر...</option>
+                            </select>
+                          </div>
+                        </div>
+                      </form>
+                      <h6>الهدف الشهري لشهر يناير</h6>
+                      grid
+                      <div id="monthlyGoalsGrid" class="ag-theme-balham"></div>
+                    </div>
+                    <div class="col-lg-6">
+                      <canvas id="pieChart" width="300" height="300"></canvas>
+                      <canvas id="Chart" style="width:100%!important;height: 260px!important"></canvas>
+                    </div>
+                  </div>
+
+                  <!-- money achived -->
+                  <h6>المبلغ المحقق</h6>
+                  grid
+                  <div id="moneyGrid" class="ag-theme-balham"></div>
+                </div>
+
+                <div class="card card_index mt-2 border-0">
+                  <div class="card-header border-0 p-0">
+                    <!-- START TABS DIV -->
+                    <div class="tabbable-responsive overflow-none">
+                      <div class="tabbable">
+                        <ul
+                          class="nav nav-tabs border-0"
+                          role="tablist"
+                        >
+                          <li class="nav-item float-left">
+                            <a
+                              class="nav-link text-center bold active"
+                              data-toggle="tab"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                              >المواعيد النشطة (الحجوزات)</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="tab-content bg-white mt--5 p-3">
+                      <div
+                        class="tab-pane fade show active"
+                        id="rec"
+                        role="tabpanel"
+                        aria-labelledby="rec-tab"
+                      >
+                      <form>
+                        <div class="form-row no-gutters">
+                          <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                            <label>رقم الحجز</label>
+                            <input type="number" class="form-control" />
+                          </div>
+                          <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                            <label>العميل</label>
+                            <input type="text" class="form-control" />
+                          </div>
+                          <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                            <label>المدرب / الأخصائية</label>
+                            <select class="form-control">
+                              <option selected disabled>اختر...</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                            <label>الحالة</label>
+                            <select id="status" class="form-control">
+                              <option selected disabled>اختر...</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                            <label>من تاريخ حجز</label>
+                            <input type="date" class="form-control" />
+                          </div>
+                          <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                            <label>إلى تاريخ حجز</label>
+                            <input type="date" class="form-control" />
+                          </div>
+                          <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                            <label>رقم الفاتورة</label>
+                            <input type="number" class="form-control" />
+                          </div>
+                          <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                            <label>الفروع</label>
+                            <select id="status" class="form-control">
+                              <option selected disabled>اختر...</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-12 px-3">
+                            <button class="btn box-shadow basic_background_color text-white float-right m-0">
+                              <i class="fas fa-share mx-2 rotate" aria-hidden="true"></i>
+                              <p class="d-inline m-0">عرض</p>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                        <div id="followingGrid" class="dropdownGrid ag-theme-balham"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card card_index mt-2 border-0">
+                  <div class="card-header border-0 p-0">
+                    <!-- START TABS DIV -->
+                    <div class="tabbable-responsive overflow-none">
+                      <div class="tabbable">
+                        <ul
+                          class="nav nav-tabs border-0"
+                          role="tablist"
+                        >
+                          <li class="nav-item float-left">
+                            <a
+                              class="nav-link text-center bold active"
+                              data-toggle="tab"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                              >مواعيد التدريب الشخصيPT</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="tab-content bg-white mt--5 p-3">
+                      <div
+                        class="tab-pane fade show active"
+                        id="rec"
+                        role="tabpanel"
+                        aria-labelledby="rec-tab"
+                      >
+                        <div id="followingGrid" class="dropdownGrid ag-theme-balham"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div class="card card_index mt-2 border-0">
@@ -632,6 +813,82 @@
                   </div>
                 </div>
 
+                <div class="card card_index mt-2 border-0">
+                  <div class="card-header border-0 p-0">
+                    <!-- START TABS DIV -->
+                    <div class="tabbable-responsive overflow-none">
+                      <div class="tabbable">
+                        <ul
+                          class="nav nav-tabs border-0"
+                          role="tablist"
+                        >
+                          <li class="nav-item float-left">
+                            <a
+                              class="nav-link text-center bold active"
+                              data-toggle="tab"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                              >أوامر تشغيل الصيانة</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="tab-content bg-white mt--5 p-3">
+                      <div
+                        class="tab-pane fade show active"
+                        id="rec"
+                        role="tabpanel"
+                        aria-labelledby="rec-tab"
+                      >
+                      
+                        <div id="followingGrid" class="dropdownGrid ag-theme-balham"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card card_index mt-2 border-0">
+                  <div class="card-header border-0 p-0">
+                    <!-- START TABS DIV -->
+                    <div class="tabbable-responsive overflow-none">
+                      <div class="tabbable">
+                        <ul
+                          class="nav nav-tabs border-0"
+                          role="tablist"
+                        >
+                          <li class="nav-item float-left">
+                            <a
+                              class="nav-link text-center bold active"
+                              data-toggle="tab"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                              >متابعة الصيانة</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="tab-content bg-white mt--5 p-3">
+                      <div
+                        class="tab-pane fade show active"
+                        id="rec"
+                        role="tabpanel"
+                        aria-labelledby="rec-tab"
+                      >
+                      
+                        <div id="followingGrid" class="dropdownGrid ag-theme-balham"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
               </div>
               <div
                 class="tab-pane fade"
@@ -639,7 +896,416 @@
                 role="tabpanel"
                 aria-labelledby="sportTable-tab"
                 >
-               
+                <div class="more_info_table p-3">
+                  <form>
+                    <div class="form-row align-items-end my-3 no-gutters">
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12">
+                        <label>الفرع</label>
+                        <select id="branch" class="form-control">
+                          <option selected>الفرع</option>
+                          <option>الفرع</option>
+                        </select>
+                      </div>
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12">
+                        <label>الشهر</label>
+                        <input type="date" class="form-control" />
+                      </div>
+                      <div class="form-group col-lg-6 col-sm-12">
+                        <button
+                          class="btn box-shadow basic_background_color text-white float-right m-0"
+                        >
+                          <i class="fas fa-share mx-2 rotate"></i>
+                          <p class="d-inline m-0">عرض الجدول</p>
+                        </button>
+                      </div>
+                    </div>
+                  </form>
+                  <!-- table -->
+                  <h6 class="mb-3">الجدول الرياضي</h6>
+                  <div
+                    class="class-timetable table-responsive w-100 details-timetable"
+                  >
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th>
+                            <table
+                              class="table table-sm custom_table table-borderless border-0"
+                              cellspacing="3"
+                            >
+                              <tr>
+                                <th colspan="2">الوقت</th>
+                              </tr>
+                              <tr>
+                                <td class="border-0">من</td>
+                                <td>الي</td>
+                              </tr>
+                            </table>
+                          </th>
+                          <th>السبت</th>
+                          <th>الأحد</th>
+                          <th>الاثنين</th>
+                          <th>الثلاثاء</th>
+                          <th>الاربعاء</th>
+                          <th>الخميس</th>
+                          <th>الجمعة</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="class-time">
+                            <table
+                              class="table table-sm custom_table table-borderless border-0"
+                              cellspacing="3"
+                            >
+                              <tr>
+                                <td class="border-0">6.00am</td>
+                                <td>8.00am</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td
+                            class="dark-bg hover-dp ts-meta"
+                            data-tsmeta="workout"
+                          >
+                            <table
+                              class="table classes_table"
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <tr>
+                                <td class="text-info">الكلاس</td>
+                                <td>الكلاس</td>
+                                <td>الكلاس</td>
+                              </tr>
+                              <tr>
+                                <td class="text-info">المدرب</td>
+                                <td>المدرب</td>
+                                <td>المدرب</td>
+                              </tr>
+                              <tr>
+                                <td class="text-info">الصالة</td>
+                                <td>الصالة</td>
+                                <td>الصالة</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="hover-dp ts-meta" data-tsmeta="fitness">
+                            <table
+                              class="table classes_table"
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <tr>
+                                <td class="text-info">الكلاس</td>
+                                <td>الكلاس</td>
+                                <td>الكلاس</td>
+                              </tr>
+                              <tr>
+                                <td class="text-info">المدرب</td>
+                                <td>المدرب</td>
+                                <td>المدرب</td>
+                              </tr>
+                              <tr>
+                                <td class="text-info">الصالة</td>
+                                <td>الصالة</td>
+                                <td>الصالة</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td
+                            class="dark-bg hover-dp ts-meta"
+                            data-tsmeta="workout"
+                          >
+                            <table
+                              class="table classes_table"
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <tr>
+                                <td class="text-info">الكلاس</td>
+                                <td>الكلاس</td>
+                                <td>الكلاس</td>
+                              </tr>
+                              <tr>
+                                <td class="text-info">المدرب</td>
+                                <td>المدرب</td>
+                                <td>المدرب</td>
+                              </tr>
+                              <tr>
+                                <td class="text-info">الصالة</td>
+                                <td>الصالة</td>
+                                <td>الصالة</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="hover-dp ts-meta" data-tsmeta="fitness">
+                            <table class="table classes_table">
+                              <tr>
+                                <td class="text-info">الكلاس</td>
+                                <td>الكلاس</td>
+                                <td>الكلاس</td>
+                              </tr>
+                              <tr>
+                                <td class="text-info">المدرب</td>
+                                <td>المدرب</td>
+                                <td>المدرب</td>
+                              </tr>
+                              <tr>
+                                <td class="text-info">الصالة</td>
+                                <td>الصالة</td>
+                                <td>الصالة</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="hover-dp ts-meta">
+                            <table class="table classes_table">
+                              <tr>
+                                <td class="text-info">الكلاس</td>
+                                <td>الكلاس</td>
+                                <td>الكلاس</td>
+                              </tr>
+                              <tr>
+                                <td class="text-info">المدرب</td>
+                                <td>المدرب</td>
+                                <td>المدرب</td>
+                              </tr>
+                              <tr>
+                                <td class="text-info">الصالة</td>
+                                <td>الصالة</td>
+                                <td>الصالة</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="hover-dp ts-meta" data-tsmeta="motivation">
+                            <table class="table classes_table">
+                              <tr>
+                                <td>الكلاس</td>
+                                <td class="text-info">الكلاس</td>
+                                <td>الكلاس</td>
+                              </tr>
+                              <tr>
+                                <td>المدرب</td>
+                                <td class="text-info">المدرب</td>
+                                <td>المدرب</td>
+                              </tr>
+                              <tr>
+                                <td>الصالة</td>
+                                <td class="text-info">الصالة</td>
+                                <td>الصالة</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td
+                            class="dark-bg hover-dp ts-meta"
+                            data-tsmeta="workout"
+                          >
+                            <table class="table classes_table">
+                              <tr>
+                                <td>الكلاس</td>
+                                <td>الكلاس</td>
+                                <td class="text-info">الكلاس</td>
+                              </tr>
+                              <tr>
+                                <td>المدرب</td>
+                                <td>المدرب</td>
+                                <td class="text-info">المدرب</td>
+                              </tr>
+                              <tr>
+                                <td>الصالة</td>
+                                <td>الصالة</td>
+                                <td class="text-info">الصالة</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="class-time">
+                            <table
+                              class="table table-sm custom_table table-borderless border-0"
+                              cellspacing="3"
+                            >
+                              <tr>
+                                <td class="border-0">6.00am</td>
+                                <td>8.00am</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td
+                            class="dark-bg hover-dp ts-meta"
+                            data-tsmeta="workout"
+                          >
+                            <table
+                              class="table classes_table"
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <tr>
+                                <td>الكلاس</td>
+                                <td>الكلاس</td>
+                                <td class="text-info">الكلاس</td>
+                              </tr>
+                              <tr>
+                                <td>المدرب</td>
+                                <td>المدرب</td>
+                                <td class="text-info">المدرب</td>
+                              </tr>
+                              <tr>
+                                <td>الصالة</td>
+                                <td>الصالة</td>
+                                <td class="text-info">الصالة</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="hover-dp ts-meta" data-tsmeta="fitness">
+                            <table
+                              class="table classes_table"
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <tr>
+                                <td class="text-info">الكلاس</td>
+                                <td>الكلاس</td>
+                                <td>الكلاس</td>
+                              </tr>
+                              <tr>
+                                <td class="text-info">المدرب</td>
+                                <td>المدرب</td>
+                                <td>المدرب</td>
+                              </tr>
+                              <tr>
+                                <td class="text-info">الصالة</td>
+                                <td>الصالة</td>
+                                <td>الصالة</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td
+                            class="dark-bg hover-dp ts-meta"
+                            data-tsmeta="workout"
+                          >
+                            <table
+                              class="table classes_table"
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <tr>
+                                <td>الكلاس</td>
+                                <td>الكلاس</td>
+                                <td class="text-info">الكلاس</td>
+                              </tr>
+                              <tr>
+                                <td>المدرب</td>
+                                <td>المدرب</td>
+                                <td class="text-info">المدرب</td>
+                              </tr>
+                              <tr>
+                                <td>الصالة</td>
+                                <td>الصالة</td>
+                                <td class="text-info">الصالة</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="hover-dp ts-meta" data-tsmeta="fitness">
+                            <table class="table classes_table">
+                              <tr>
+                                <td>الكلاس</td>
+                                <td class="text-info">الكلاس</td>
+                                <td>الكلاس</td>
+                              </tr>
+                              <tr>
+                                <td>المدرب</td>
+                                <td class="text-info">المدرب</td>
+                                <td>المدرب</td>
+                              </tr>
+                              <tr>
+                                <td>الصالة</td>
+                                <td class="text-info">الصالة</td>
+                                <td>الصالة</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td class="blank-td"></td>
+                          <td class="hover-dp ts-meta" data-tsmeta="motivation">
+                            <table class="table classes_table">
+                              <tr>
+                                <td class="text-info">الكلاس</td>
+                                <td>الكلاس</td>
+                                <td>الكلاس</td>
+                              </tr>
+                              <tr>
+                                <td class="text-info">المدرب</td>
+                                <td>المدرب</td>
+                                <td>المدرب</td>
+                              </tr>
+                              <tr>
+                                <td class="text-info">الصالة</td>
+                                <td>الصالة</td>
+                                <td>الصالة</td>
+                              </tr>
+                            </table>
+                          </td>
+                          <td
+                            class="dark-bg hover-dp ts-meta"
+                            data-tsmeta="workout"
+                          >
+                            <table class="table classes_table">
+                              <tr>
+                                <td>الكلاس</td>
+                                <td>الكلاس</td>
+                                <td>الكلاس</td>
+                              </tr>
+                              <tr>
+                                <td>المدرب</td>
+                                <td>المدرب</td>
+                                <td>المدرب</td>
+                              </tr>
+                              <tr>
+                                <td>الصالة</td>
+                                <td>الصالة</td>
+                                <td>الصالة</td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td class="class-time">7.00pm - 9.00pm</td>
+                          <td class="hover-dp ts-meta" data-tsmeta="motivation">
+                            <h5>Cardio</h5>
+                            <span>RLefew D. Loee</span>
+                          </td>
+                          <td class="dark-bg blank-td"></td>
+                          <td class="hover-dp ts-meta" data-tsmeta="fitness">
+                            <h5>Boxing</h5>
+                            <span>Rachel Adam</span>
+                          </td>
+                          <td
+                            class="dark-bg hover-dp ts-meta"
+                            data-tsmeta="workout"
+                          >
+                            <h5>Yoga</h5>
+                            <span>Keaf Shen</span>
+                          </td>
+                          <td class="hover-dp ts-meta" data-tsmeta="motivation">
+                            <h5>Karate</h5>
+                            <span>Donald Grey</span>
+                          </td>
+                          <td
+                            class="dark-bg hover-dp ts-meta"
+                            data-tsmeta="fitness"
+                          >
+                            <h5>Boxing</h5>
+                            <span>Rachel Adam</span>
+                          </td>
+                          <td class="hover-dp ts-meta" data-tsmeta="workout">
+                            <h5>WEIGHT LOOSE</h5>
+                            <span>RLefew D. Loee</span>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
               <div
                 class="tab-pane fade"
@@ -1023,7 +1689,92 @@
     <script src="js/select2.min.js"></script>
     <script src="js/jstree.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/Chart.js"></script>
     <script src="js/scripts.js"></script>
+
+    <script>
+      var ctx = document.getElementById('Chart').getContext('2d');
+      var ctxP = $('#pieChart');
+      var Chart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونيو' ,'يوليو', 'اغسطس' ,'سبتمبر','اكتوبر', 'نوفمبر' ,'ديسمبر'],
+              datasets: [{
+                lineWidth: 10,
+                  label: 'رسم بياني لنسبة التحقيق  مع توضيح الهدف الشهري ونسبة التحقق والمبلغ المحقق',
+                  data: [150000, 200000, 250000, 300000, 50000, 100000,150000,200000,250000,300000,50000,150000],
+                  backgroundColor: [
+                      'rgba(182, 53, 148, 1)',
+                      'rgba(182, 53, 148, 1)',
+                      'rgba(182, 53, 148, 1)',
+                      'rgba(182, 53, 148, 1)',
+                      'rgba(182, 53, 148, 1)',
+                      'rgba(182, 53, 148, 1)',
+                      'rgba(182, 53, 148, 1)',
+                      'rgba(182, 53, 148, 1)',
+                      'rgba(182, 53, 148, 1)',
+                      'rgba(182, 53, 148, 1)',
+                      'rgba(182, 53, 148, 1)',
+                      'rgba(182, 53, 148, 1)'
+                  ],
+              }]
+          },
+          options: {
+            responsive:true,
+            aspectRatio: 2,
+            animation: {
+            duration: 0 // general animation time
+            },
+            hover: {
+                animationDuration: 0 // duration of animations when hovering an item
+            },
+            responsiveAnimationDuration: 0,
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero: true
+                      }
+                  }]
+              }
+          }
+      });
+      
+      var pieChart = new Chart(ctxP, {
+        type: 'pie',
+        data: {labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+              datasets: [{
+                  label: '# of Votes',
+                  data: [12, 19, 3, 5, 2, 3],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)'
+                  ],
+                  borderColor: [
+                      'rgba(255, 99, 132, 1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(255, 159, 64, 1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+        options: {
+          color: [
+    'red',    // color for data at index 0
+    'blue',   // color for data at index 1
+    'green',  // color for data at index 2
+    'black',  // color for data at index 3
+    //...
+]
+        }
+      });
+      </script>
 
     <script>
       self.actionCellRenderer = function () {};

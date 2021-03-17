@@ -727,7 +727,11 @@
                           class="dark-bg hover-dp ts-meta"
                           data-tsmeta="workout"
                         >
-                          <table class="table classes_table">
+                          <table
+                            class="table classes_table"
+                            data-toggle="modal"
+                            data-target="#addClassModal"
+                          >
                             <tr>
                               <td>الكلاس</td>
                               <td>الكلاس</td>
@@ -746,7 +750,11 @@
                           </table>
                         </td>
                         <td class="hover-dp ts-meta" data-tsmeta="fitness">
-                          <table class="table classes_table">
+                          <table
+                            class="table classes_table"
+                            data-toggle="modal"
+                            data-target="#addClassModal"
+                          >
                             <tr>
                               <td>الكلاس</td>
                               <td>الكلاس</td>
@@ -768,7 +776,11 @@
                           class="dark-bg hover-dp ts-meta"
                           data-tsmeta="workout"
                         >
-                          <table class="table classes_table">
+                          <table
+                            class="table classes_table"
+                            data-toggle="modal"
+                            data-target="#addClassModal"
+                          >
                             <tr>
                               <td>الكلاس</td>
                               <td>الكلاس</td>
@@ -867,7 +879,17 @@
                         </td>
                       </tr>
                       <tr>
-                        <td class="class-time">10.00am - 12.00am</td>
+                        <td class="class-time">
+                          <table
+                            class="table table-sm custom_table table-borderless border-0"
+                            cellspacing="3"
+                          >
+                            <tr>
+                              <td class="border-0">10.00am</td>
+                              <td>12.00am</td>
+                            </tr>
+                          </table>
+                        </td>
                         <td class="blank-td"></td>
                         <td
                           class="dark-bg hover-dp ts-meta"
@@ -985,6 +1007,59 @@
       <!-- End services section -->
     </main>
 
+    <!-- add class Modal -->
+    <div
+      class="add_class edit_modal modal"
+      id="addClassModal"
+      aria-labelledby="addClassModalLabel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <!-- start form -->
+            <form class="service_form">
+              <div class="form-row">
+                <div class="form-group mb-0 col-md-6">
+                  <label>الكلاس</label>
+                  <select id="class" class="form-control">
+                    <option selected>الكلاس</option>
+                    <option>الكلاس</option>
+                  </select>
+                </div>
+                <div class="form-group mb-0 col-md-6">
+                  <label>المدرب</label>
+                  <select id="captin" class="form-control">
+                    <option selected>المدرب</option>
+                    <option>المدرب</option>
+                  </select>
+                </div>
+                <div class="form-group mb-0 col-md-6">
+                  <label>الصالة</label>
+                  <select id="place" class="form-control">
+                    <option selected>الصالة</option>
+                    <option>الصالة</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">
+              <i class="fas fa-check pl-1"></i>حفظ
+            </button>
+            <button type="button" class="btn btn-warning ml-2">
+              <i class="fas fa-pen pl-1"></i>تعديل
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <i class="fas fa-trash-alt pl-1"></i>إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="js/jquery-3.4.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -1004,12 +1079,12 @@
         init: function (params) {
           this.actions2Button = document.createElement("div");
           this.actions2Button.innerHTML = `
-    <ul class="actions-list list-inline">
-        <li class="list-inline-item info-color"><a href="#" title="مرفقات"><i class="fas fa-paperclip mx-1"></i></a></li>
-        <li class="list-inline-item"><a href="#" title="عرض"><i class="fas fa-eye mx-1"></i></a></li>
-        <li class="list-inline-item warning-color"><a href="#" title="تعديل"><i class="fas fa-pen mx-1"></i></a></li>
-        <li class="list-inline-item danger-color"><a href="#" title="الغاء"><i class="fas fa-trash-alt mx-1"></i></a></li>
-    </ul>
+            <ul class="actions-list list-inline">
+                <li class="list-inline-item info-color"><a href="#" title="مرفقات"><i class="fas fa-paperclip mx-1"></i></a></li>
+                <li class="list-inline-item"><a href="#" title="عرض"><i class="fas fa-eye mx-1"></i></a></li>
+                <li class="list-inline-item warning-color"><a href="#" title="تعديل"><i class="fas fa-pen mx-1"></i></a></li>
+                <li class="list-inline-item danger-color"><a href="#" title="الغاء"><i class="fas fa-trash-alt mx-1"></i></a></li>
+            </ul>
         `;
         },
         getGui: function () {
