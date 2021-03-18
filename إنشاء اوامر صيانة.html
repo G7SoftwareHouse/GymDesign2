@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
-    <title>اضافة تصنيف رئيسي</title>
+    <title>إنشاء اوامر صيانة</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -12,16 +12,17 @@
     <link href="./css/solid.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/select2.min.css" />
+    <link rel="stylesheet" href="css/jstree.css" />
+    <!-- datetimepicker -->
+    <link rel="stylesheet" href="css/tempusdominus-bootstrap.css" />
     <!-- AG-grid -->
-    <script src="https://unpkg.com/ag-grid-enterprise/dist/ag-grid-enterprise.min.noStyle.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/ag-grid-community/dist/styles/ag-grid.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/ag-grid-community/dist/styles/ag-theme-alpine.css"
-    />
+    <link rel="stylesheet" href="./css/ag-grid.css" />
+    <link rel="stylesheet" href="./css/ag-theme-balham.css" />
+    <link rel="stylesheet" href="./css/custom-ag-grid.css" />
+    <script src="js/ag-grid-enterprise.min.noStyle.js"></script>
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
     <!-- Custom style -->
     <link rel="stylesheet" href="./css/custom.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -74,11 +75,10 @@
                               href="#!"
                               class="input-icon d-flex align-items-center"
                               type="button"
-                            >
-                              <i
+                              ><i
                                 class="fas fa-search text-white mx-3 basic_fill_color"
-                              ></i>
-                            </a>
+                              ></i
+                            ></a>
                             <input
                               class="form-control form-search white-text rgba-black-light border-0 z-depth-0 pl-5"
                               type="text"
@@ -189,11 +189,10 @@
                                   href="#!"
                                   class="input-icon d-flex align-items-center"
                                   type="button"
-                                >
-                                  <i
+                                  ><i
                                     class="fas fa-search text-white mx-3 basic_fill_color"
-                                  ></i>
-                                </a>
+                                  ></i
+                                ></a>
                                 <input
                                   class="form-control form-search white-text rgba-black-light border-0 z-depth-0 pl-5"
                                   type="text"
@@ -242,11 +241,10 @@
                       href="#!"
                       class="input-icon d-flex align-items-center"
                       type="button"
-                    >
-                      <i
+                      ><i
                         class="fas fa-search text-white mx-3 basic_fill_color"
-                      ></i>
-                    </a>
+                      ></i
+                    ></a>
                     <input
                       class="form-control form-search white-text rgba-black-light border-0 z-depth-0 pl-5"
                       type="text"
@@ -320,10 +318,8 @@
             >
               <li class="nav-item">
                 <a
-                  href="#!"
+                  href="./لوحة التحكم.html"
                   class="nav-link waves-effect basic-text-lGray-color bold"
-                  data-toggle="modal"
-                  data-target="#login-modal"
                   >لوحة التحكم</a
                 >
               </li>
@@ -546,8 +542,8 @@
     </header>
 
     <main class="p-4">
-      <!-- Start services form -->
-      <form class="services">
+      <!-- Start section -->
+      <section class="services_index">
         <div class="card card_index mt-2 border-0">
           <div class="card-header border-0 p-0">
             <!-- START TABS DIV -->
@@ -557,26 +553,28 @@
                   <li class="nav-item float-left">
                     <a
                       class="nav-link text-center bold active"
-                      href="#primary"
                       role="tab"
                       aria-controls="contact"
                       aria-selected="false"
-                      >تصنيف رئيسي</a
+                      >أمر تشغيل</a
                     >
                   </li>
                   <li class="nav-item float-right">
                     <div class="buttons-container">
-                      <button type="button" class="btn btn-info m-1">
-                        <i class="fas fa-paperclip font-size-14 ml-1"></i>
-                        <p class="d-inline m-0">إرفاق</p>
-                      </button>
-                      <button type="button" class="btn btn-warning m-1">
-                        <i class="fas fa-pen font-size-14 ml-1"></i>
-                        <p class="d-inline m-0">تعديل</p>
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-blue-dark m-1"
+                      >
+                        <i class="fas fa-sign-in-alt font-size-14 ml-1"></i>
+                        <p class="d-inline m-0">log</p>
                       </button>
                       <button type="button" class="btn btn-success m-1">
                         <i class="fas fa-check font-size-14 ml-1"></i>
                         <p class="d-inline m-0">حفظ</p>
+                      </button>
+                      <button type="button" class="btn btn-warning m-1">
+                        <i class="fas fa-pen font-size-14 ml-1"></i>
+                        <p class="d-inline m-0">تعديل</p>
                       </button>
                       <button type="button" class="btn btn-danger m-1">
                         <i class="fas fa-trash-alt font-size-14 ml-1"></i>
@@ -589,71 +587,187 @@
             </div>
           </div>
           <div class="card-body p-0">
-            <div class="tab-content min-h mt--5 p-3">
+            <div class="tab-content basic_background_white_color mt--5 p-3">
               <div
                 class="tab-pane fade show active"
-                id="primary"
                 role="tabpanel"
-                aria-labelledby="primary-tab"
+                aria-labelledby="search-tab"
               >
-                <div class="form-row no-gutters">
-                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                    <label for="codeNo">كود التصنيف</label>
-                    <input type="text" class="form-control" id="codeNo" />
+                <div class="row more_info_table no-gutters">
+                  <div class="col-md-6">
+                    <form>
+                      <div class="form-row no-gutters">
+                        <div class="form-group col-lg-6 col-sm-12 px-3">
+                          <label>الرقم</label>
+                          <input type="number" class="form-control" />
+                        </div>
+                        <div class="form-group col-lg-6 col-sm-12 px-3">
+                          <label>تحديد القسم</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                      </div>
+                      <div class="form-row align-items-end no-gutters">
+                        <div class="form-group col-lg-6 col-sm-12 px-3">
+                          <label>التاريخ</label>
+                          <input
+                            type="date"
+                            class="form-control border-0"
+                            disabled
+                          />
+                        </div>
+                        <div class="form-group col-lg-6 col-sm-12 px-3">
+                          <label>الحالة</label>
+                          <select id="status" class="form-control">
+                            <option selected>الحالة</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-row align-items-end no-gutters">
+                        <div class="form-group col-lg-12 px-3">
+                          <label>ملاحظات</label>
+                          <textarea rows="8" class="form-control"></textarea>
+                        </div>
+                      </div>
+                      <div
+                        class="form-row align-items-end justify-content-end pr-3"
+                      >
+                        <button
+                          class="btn btn-success btn_add_rec button_search_tabs send_whatsapp mr-3"
+                        >
+                          <span class="send-text">ارسال رسالة واتس اب</span>
+                          <span class="finish-send-text"
+                            >تم ارسال رسالة واتس اب</span
+                          >
+                        </button>
+                        <button
+                          class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5"
+                        >
+                          <i class="fas fa-paperclip mx-2"></i>
+                          <p class="d-inline m-0">إرفاق</p>
+                        </button>
+                      </div>
+                    </form>
                   </div>
-                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                    <label for="categoryName">إسم التصنيف</label>
-                    <input type="text" class="form-control" id="categoryName" />
-                  </div>
-                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                    <label for="categoryType">نوع التصنيف</label>
-                    <select id="categoryType" class="form-control">
-                      <option selected disabled>اختر...</option>
-                      <option>تغذية</option>
-                      <option>تدريب شخصي</option>
-                      <option>مساج</option>
-                      <option>استشارة رياضية</option>
-                      <option>خدمات اضافية</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                    <label for="status">الحالة</label>
-                    <select id="status" class="form-control">
-                      <option selected disabled>اختر...</option>
-                      <option></option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-row no-gutters">
-                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                    <label for="date">التاريخ</label>
-                    <input type="date" class="form-control" id="date" />
-                  </div>
-                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                    <label for="activeDate">تاريخ التفعيل</label>
-                    <input type="date" class="form-control" id="activeDate" />
-                  </div>
-                </div>
-                <div class="form-row no-gutters">
-                  <div class="form-group col-lg-6 col-md-6 col-sm-12 px-3">
-                    <label class="" for="clients"> الهدف من البرنامج </label>
-                    <textarea
-                      class="w-100"
-                      name=""
-                      id=""
-                      cols=""
-                      rows="6"
-                      placeholder=""
-                    ></textarea>
+                  <div class="col-md-6">
+                    <form>
+                      <div class="form-row no-gutters">
+                        <div class="form-group col-lg-6 col-sm-12 px-3">
+                          <label>العطل</label>
+                          <input type="text" class="form-control" />
+                        </div>
+                        <div class="form-group col-lg-6 col-sm-12 px-3">
+                          <label>المشرف</label>
+                          <input
+                            type="text"
+                            class="form-control border-0"
+                            disabled
+                          />
+                        </div>
+                      </div>
+                      <div class="form-row align-items-end no-gutters">
+                        <div class="form-group col-lg-6 col-sm-12 px-3">
+                          <label>مسئول المتابعة</label>
+                          <select class="form-control">
+                            <option selected></option>
+                            <option></option>
+                          </select>
+                        </div>
+                        <div class="form-group col-lg-6 col-sm-12 px-3">
+                          <label>الأصل الثابت / الجهاز</label>
+                          <select class="form-control">
+                            <option selected></option>
+                            <option></option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-row align-items-end no-gutters">
+                        <div class="form-group col-lg-6 col-sm-12 px-3">
+                          <label>الحالة وقت مراجعة امر التشغيل</label>
+                          <select class="form-control">
+                            <option selected>تم الانتهاء من امر التشغيل</option>
+                            <option>يوجد ملاحظات اثناء المراجعة</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-row align-items-end no-gutters">
+                        <div class="form-group col-lg-12 px-3">
+                          <label>ملاحظات اثناء المراجعة</label>
+                          <textarea rows="4" class="form-control"></textarea>
+                        </div>
+                      </div>
+                      <div
+                        class="form-row align-items-end justify-content-end pr-3"
+                      >
+                        <button
+                          class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5"
+                        >
+                          <i class="fas fa-check mx-2"></i>
+                          <p class="d-inline m-0">Confirm</p>
+                        </button>
+                      </div>
+                    </form>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </form>
-      <!-- End services form -->
+      </section>
+      <!-- End section -->
     </main>
+
+    <!-- add class Modal -->
+    <div
+      class="add_class edit_modal modal"
+      id="addClassModal"
+      aria-labelledby="addClassModalLabel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <!-- start form -->
+            <form class="service_form">
+              <div class="form-row">
+                <div class="form-group mb-0 col-md-6">
+                  <label>الكلاس</label>
+                  <select id="class" class="form-control">
+                    <option selected>الكلاس</option>
+                    <option>الكلاس</option>
+                  </select>
+                </div>
+                <div class="form-group mb-0 col-md-6">
+                  <label>المدرب</label>
+                  <select id="captin" class="form-control">
+                    <option selected>المدرب</option>
+                    <option>المدرب</option>
+                  </select>
+                </div>
+                <div class="form-group mb-0 col-md-6">
+                  <label>الصالة</label>
+                  <select id="place" class="form-control">
+                    <option selected>الصالة</option>
+                    <option>الصالة</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">
+              <i class="fas fa-check pl-1"></i>حفظ
+            </button>
+            <button type="button" class="btn btn-warning ml-2">
+              <i class="fas fa-pen pl-1"></i>تعديل
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <i class="fas fa-trash-alt pl-1"></i>إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="js/jquery-3.4.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -670,5 +784,118 @@
     <script src="js/jstree.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+      // services index grid
+      self.actions2 = function () {};
+      self.actions2.prototype = {
+        init: function (params) {
+          this.actions2Button = document.createElement("div");
+          this.actions2Button.innerHTML = `
+            <ul class="actions-list list-inline">
+                <li class="list-inline-item info-color"><a href="#" title="مرفقات"><i class="fas fa-paperclip mx-1"></i></a></li>
+                <li class="list-inline-item"><a href="#" title="عرض"><i class="fas fa-eye mx-1"></i></a></li>
+                <li class="list-inline-item warning-color"><a href="#" title="تعديل"><i class="fas fa-pen mx-1"></i></a></li>
+                <li class="list-inline-item danger-color"><a href="#" title="الغاء"><i class="fas fa-trash-alt mx-1"></i></a></li>
+            </ul>
+        `;
+        },
+        getGui: function () {
+          return this.actions2Button;
+        },
+        refresh: function () {
+          return true;
+        },
+        destroy: function () {
+          $(this.actions2Button).remove();
+        },
+      };
+
+      // specify the columns
+      const columnDefs3 = [
+        {
+          headerName: "م",
+          field: "id",
+          resizable: true,
+          minWidth: 50,
+          sortable: true,
+        },
+        {
+          headerName: "الكود",
+          field: "branch",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "إسم التصنيف",
+          field: "recpNo",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "نوع التصنيف",
+          field: "serviceNo",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "الحالة",
+          field: "status",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "تاريخ التفعيل",
+          field: "serviceNo",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "اجراءات",
+          field: "actions",
+          resizable: true,
+          minWidth: 200,
+          cellRenderer: actions2,
+          sortable: true,
+        },
+      ];
+
+      // specify the data
+      const dataSource3 = [
+        {
+          id: "1",
+          branch: "",
+          recpNo: "A-12342",
+          serviceNo: "302",
+          service: "12-month gym mem",
+          datePurchase: "12-2-2020",
+          height: 100,
+        },
+      ];
+      var gridOptions3 = {
+        columnDefs: columnDefs3,
+        rowData: dataSource3,
+        enableRowGroup: true,
+        enableColResize: true,
+        enableFilter: true,
+        enableSorting: true,
+        enableFilter: true,
+        enableRtl: true,
+        suppressRowTransform: true,
+        domLayout: "autoHeight",
+        onGridReady: function (params) {
+          params.api.sizeColumnsToFit();
+        },
+      };
+      // setup the grid after the page has finished loading
+      document.addEventListener("DOMContentLoaded", function () {
+        var gridDiv3 = document.querySelector("#servicesGrid");
+        new agGrid.Grid(gridDiv3, gridOptions3);
+      });
+    </script>
   </body>
 </html>

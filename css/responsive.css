@@ -69,6 +69,9 @@
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 769px) {
+  .modal-dialog {
+    max-width: 85%;
+  }
   .customer_section .col-md-9.pr-0 {
     padding-right: 15px !important;
   }

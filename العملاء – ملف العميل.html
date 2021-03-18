@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/select2.min.css" />
     <link rel="stylesheet" href="./css/select2-bootstrap.min.css">
+    <link rel="stylesheet" href="css/jstree.css" />
     <!-- datetimepicker -->
     <link rel="stylesheet" href="css/tempusdominus-bootstrap.css" />
 	  <!-- AG-grid -->
@@ -441,7 +442,7 @@
                   >التشغيل والصيانة</a
                 >
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a class="dropdown-item" href="#">انشاء امر تشغيل</a>
+                  <a class="dropdown-item" href="./الصيانه-انشاء امر تشغيل.html">انشاء امر تشغيل</a>
                   <a class="dropdown-item" href="#">طلب اصناف</a>
                 </div>
               </li>
@@ -458,7 +459,7 @@
                 >
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" href="#">الحملات التسويقية</a>
-                  <a class="dropdown-item" href="#">ادخال الهدف الشهري</a>
+                  <a class="dropdown-item" href="./التسويق-ادخال هدف شهري.html">ادخال الهدف الشهري</a>
                   <a class="dropdown-item" href="#"
                     >التقرير التسويقي التفصيلي</a
                   >
@@ -2060,19 +2061,19 @@
             <!-- start form -->
             <form class="service_form">
               <div class="form-row pt-3">
-                <div class="form-group mb-0 col-md-3">
+                <div class="form-group mb-0 col-lg-3 col-md-6">
                   <label>المستخدم</label>
                   <input type="text" class="form-control" />
                 </div>
-                <div class="form-group mb-0 col-md-3">
+                <div class="form-group mb-0 col-lg-3 col-md-6">
                   <label>العميل</label>
                   <input type="text" class="form-control" />
                 </div>
-                <div class="form-group mb-0 col-md-3">
+                <div class="form-group mb-0 col-lg-3 col-md-6">
                   <label>رقم المتابعة</label>
                   <input type="number" class="form-control" />
                 </div>
-                <div class="form-group mb-0 col-md-3">
+                <div class="form-group mb-0 col-lg-3 col-md-6">
                   <label>تاريخ ووقت المتابعة القادم</label>
                   <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
                     <input type="text" class="form-control datetimepicker-input" data-target="#datetimepicker1"/>
@@ -2081,39 +2082,39 @@
                     </div>
                 </div>
                 </div>
-                <div class="form-group mb-0 col-md-3">
+                <div class="form-group mb-0 col-lg-3 col-md-6">
                   <label>استجابة العميل</label>
                   <select class="form-control mb-2">
                     <option selected>مهتم</option>
                     <option>غير مهتم</option>
                   </select>
                 </div>
-                <div class="form-group mb-0 col-md-3">
+                <div class="form-group mb-0 col-lg-3 col-md-6">
                   <label>مصدر المتابعة</label>
                   <select class="form-control mb-2">
                     <option selected>مباشر</option>
                     <option>غير مباشر</option>
                   </select>
                 </div>
-                <div class="form-group mb-0 col-md-3">
+                <div class="form-group mb-0 col-lg-3 col-md-6">
                   <label>حالة المتابعة</label>
                   <select class="form-control mb-2">
                     <option selected>تمت</option>
                     <option> تمت</option>
                   </select>
                 </div>
-                <div class="form-group mb-0 col-md-3">
+                <div class="form-group mb-0 col-lg-3 col-md-6">
                   <label>المتابعة رئيسية \ ثانوية</label>
                   <select class="form-control mb-2">
                     <option selected>رئيسية</option>
                     <option> ثانوية</option>
                   </select>
                 </div>
-                <div class="form-group mb-0 col-md-3">
+                <div class="form-group mb-0 col-lg-3 col-md-6">
                   <label>متابعة مع مسئول</label>
                   <input type="text" class="form-control mb-2" />
                 </div>
-                <div class="form-group mb-0 col-md-3">
+                <div class="form-group mb-0 col-lg-3 col-md-6">
                   <label>متابعة مع الادارة</label>
                   <input type="text" class="form-control mb-2" />
                 </div>
@@ -2131,7 +2132,7 @@
             <!-- ag-grid tables -->
             <div class="more_info_table p-3">
               <h6>المتابعات التسويقية</h6>
-              <div id="infoGrid" class="ag-theme-balham grid"></div>
+              <div id="infoGrid" class="ag-theme-balham"></div>
             </div>
           </div>
           <div class="modal-footer">

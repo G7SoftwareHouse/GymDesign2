@@ -164,6 +164,25 @@ $("#customerInfo-tab").click(function () {
   $(".customer_section .nav-tabs.d-flex").addClass("showTab");
 });
 
+$(".in_follows").hide();
+$("#cardOrder-tab").click(function () {
+  $(".not_follows").show();
+  $(".in_follows").hide();
+});
+$("#follows-tab").click(function () {
+  $(".in_follows").show();
+  $(".not_follows").hide();
+});
+
+// send whatsUp
+$(".send-text").show();
+$(".finish-send-text").hide();
+$(".send_whatsapp").click(function () {
+  $(this).toggleClass("send text-danger");
+  $(".send-text").toggle();
+  $(".finish-send-text").toggle();
+});
+
 // AG-grid functions
 // specify the columns
 const columnDefs2 = [

@@ -1501,3 +1501,15 @@ a.alert_message:hover {
   font-size: 13px;
   min-width: auto;
 }
+
+/* monthly goals */
+.btn.send {
+  border-color: #b8c2c8 !important;
+  background-color: #b8c2c8 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.order_card label {
+  font-size: 0.8rem;
+}

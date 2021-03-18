@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
   <head>
     <title>البحث</title>
     <meta charset="UTF-8" />
@@ -12,6 +12,9 @@
     <link href="./css/solid.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/all.css" />
     <link rel="stylesheet" href="./css/select2.min.css" />
+    <link rel="stylesheet" href="css/jstree.css" />
+    <!-- datetimepicker -->
+    <link rel="stylesheet" href="css/tempusdominus-bootstrap.css" />
     <!-- AG-grid -->
     <link rel="stylesheet" href="./css/ag-grid.css" />
     <link rel="stylesheet" href="./css/ag-theme-balham.css" />
@@ -334,8 +337,12 @@
                     href="./الاعدادات - افتراضات النادي الرياضي.html"
                     >افتراضات النادي الرياضي</a
                   >
-                  <a class="dropdown-item" href="./الاعدادات-المواظفين.html">مديرين</a>
-                  <a class="dropdown-item" href="./الاعدادات-المواظفين.html">موظفين</a>
+                  <a class="dropdown-item" href="./الاعدادات-المواظفين.html"
+                    >مديرين</a
+                  >
+                  <a class="dropdown-item" href="./الاعدادات-المواظفين.html"
+                    >موظفين</a
+                  >
                   <a class="dropdown-item" href="#">التنبيهات الطبية</a>
                   <a class="dropdown-item" href="#">أنواع الضرائب</a>
                   <a class="dropdown-item" href="#">نسب وشرائح الضرائب</a>
@@ -380,12 +387,15 @@
                   >العملاء</a
                 >
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                  <a
-                    class="dropdown-item"
-                    href="./العملاء – ملف العميل.html"
+                  <a class="dropdown-item" href="./العملاء – ملف العميل.html"
                     >ملف العملاء</a
                   >
-                  <a class="dropdown-item" data-toggle="modal" data-target="#salePointsModal">الدخول على نقاط البيع</a>
+                  <a
+                    class="dropdown-item"
+                    data-toggle="modal"
+                    data-target="#salePointsModal"
+                    >الدخول على نقاط البيع</a
+                  >
                   <a class="dropdown-item" href="#">فواتير المبيعات</a>
                   <a class="dropdown-item" href="#">مرتجع مبيعات</a>
                   <a class="dropdown-item" href="#">التجميد</a>
@@ -439,7 +449,9 @@
                   <a class="dropdown-item" href="#">الاستشارة الرياضية</a>
                   <a class="dropdown-item" href="#">التدريب الشخصي التسويقي</a>
                   <a class="dropdown-item" href="#">التدريب الشخصي المدفوعPT</a>
-                  <a class="dropdown-item" href="./إنشاء الجدول الرياضي.html">انشاء الجدول الرياضي</a>
+                  <a class="dropdown-item" href="./إنشاء الجدول الرياضي.html"
+                    >انشاء الجدول الرياضي</a
+                  >
                 </div>
               </li>
               <li class="nav-item dropdown">
@@ -471,7 +483,9 @@
                 >
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                   <a class="dropdown-item" href="#">الحملات التسويقية</a>
-                  <a class="dropdown-item" href="#">ادخال الهدف الشهري</a>
+                  <a class="dropdown-item" href="./التسويق-ادخال هدف شهري.html"
+                    >ادخال الهدف الشهري</a
+                  >
                   <a class="dropdown-item" href="#"
                     >التقرير التسويقي التفصيلي</a
                   >
@@ -484,7 +498,9 @@
                   <a class="dropdown-item" href="#"
                     >تقرير العمولات الشهرية للتدريب الشخصي</a
                   >
-                  <a class="dropdown-item" href="./التسويق-انشاء كوبون.html">انشاء كوبون</a>
+                  <a class="dropdown-item" href="./التسويق-انشاء كوبون.html"
+                    >انشاء كوبون</a
+                  >
                 </div>
               </li>
               <li class="nav-item dropdown">
@@ -541,10 +557,10 @@
                   </li>
                   <li class="nav-item float-right">
                     <a
-                      href="./الخدمات-اضافة تصنيف رئيسي.html"
+                      href="./إنشاء اوامر صيانة.html"
                       class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5"
                       ><i class="fas fa-plus mx-2"></i>
-                      <p class="d-inline m-0">إضافة تصنيف رئيسي</p></a
+                      <p class="d-inline m-0">إنشاء أمر تشغيل</p></a
                     >
                   </li>
                 </ul>
@@ -562,30 +578,15 @@
                 <form>
                   <div class="form-row no-gutters">
                     <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                      <label for="codeNo">كود التصنيف</label>
-                      <input type="text" class="form-control" id="codeNo" />
+                      <label>الرقم</label>
+                      <input type="number" class="form-control" />
                     </div>
                     <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                      <label for="categoryName">إسم التصنيف</label>
-                      <input
-                        type="text"
-                        class="form-control"
-                        id="categoryName"
-                      />
+                      <label>العطل</label>
+                      <input type="text" class="form-control" />
                     </div>
                     <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                      <label for="categoryType">التصنيف</label>
-                      <select id="categoryType" class="form-control">
-                        <option selected disabled>اختر...</option>
-                        <option>تغذية</option>
-                        <option>تدريب شخصي</option>
-                        <option>مساج</option>
-                        <option>استشارة رياضية</option>
-                        <option>خدمات اضافية</option>
-                      </select>
-                    </div>
-                    <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                      <label for="status">الحالة</label>
+                      <label>الحالة</label>
                       <select id="status" class="form-control">
                         <option selected disabled>اختر...</option>
                         <option></option>
@@ -594,12 +595,12 @@
                   </div>
                   <div class="form-row align-items-end no-gutters">
                     <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                      <label for="date">من تاريخ تفعيل</label>
-                      <input type="date" class="form-control" id="date" />
+                      <label>من تاريخ </label>
+                      <input type="date" class="form-control" />
                     </div>
                     <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                      <label for="activeDate">إلى تاريخ تفعيل</label>
-                      <input type="date" class="form-control" id="activeDate" />
+                      <label>إلى تاريخ</label>
+                      <input type="date" class="form-control" />
                     </div>
                     <div class="form-group col-lg-6 col-sm-12 px-3">
                       <button
@@ -663,12 +664,16 @@
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-toggle.min.js"></script>
+    <!-- datetimepicker  -->
+    <script src="js/tempusdominus-bootstrap.js"></script>
     <script
       src="https://kit.fontawesome.com/7f37d9c53b.js"
       crossorigin="anonymous"
     ></script>
     <script src="js/all.min.js"></script>
     <script src="js/select2.min.js"></script>
+    <script src="js/jstree.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/scripts.js"></script>
     <script>
       // services index grid
@@ -678,6 +683,9 @@
           this.actions2Button = document.createElement("div");
           this.actions2Button.innerHTML = `
           <ul class="actions-list list-inline">
+            <li class="list-inline-item"><a href="./إنشاء اوامر صيانة-بطاقة امر تشغيل.html" title="بدء التنفيذ"><i class="fas fa-wrench mx-1"></i></a></li>
+              <li class="list-inline-item"><a href="#" title="مراجعة"><i class="fas fa-check-double mx-1"></i></a></li>
+              <li class="list-inline-item"><a href="#" title="انشاء متابعة"><i class="fas fa-plus mx-1"></i></a></li>
               <li class="list-inline-item info-color"><a href="#" title="مرفقات"><i class="fas fa-paperclip mx-1"></i></a></li>
               <li class="list-inline-item"><a href="#" title="عرض"><i class="fas fa-eye mx-1"></i></a></li>
               <li class="list-inline-item warning-color"><a href="#" title="تعديل"><i class="fas fa-pen mx-1"></i></a></li>
