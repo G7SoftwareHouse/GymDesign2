@@ -106,10 +106,6 @@ $(document).ready(function () {
   $("#responsible").select2();
   $("#Bcode").select2();
   $("#chCategories").select2();
-
-  $(".ag-root.ag-layout-auto-height").scrollRight(0);
-  $(".ag-body-viewport.ag-layout-auto-height").scrollRight(0);
-  $(".ag-body-viewport-wrapper.ag-layout-auto-height").scrollRight(0);
 });
 
 // date inputs format
@@ -151,9 +147,6 @@ $(function () {
         toggle between hiding and showing the dropdown content */
 function openSearch() {
   document.getElementById("search-dropdown").classList.toggle("show");
-  document
-    .getElementsByClassName("navbar-search")
-    .classList.toggle("open_search");
 }
 
 $(".tabbable .nav-tabs .nav-item .nav-link").click(function () {
