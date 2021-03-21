@@ -146,8 +146,19 @@ $(function () {
 /* When the user clicks on the button,
         toggle between hiding and showing the dropdown content */
 function openSearch() {
-  document.getElementById("search-dropdown").classList.toggle("show");
+  document.getElementById("search-dropdown").addClass("show");
 }
+
+$(document).mouseup(function(e) 
+{
+    var container = $("#search-dropdown");
+
+    // if the target of the click isn't the container nor a descendant of the container
+    if (!container.is(e.target) && container.has(e.target).length === 0) 
+    {
+        container.removeClass("show");
+    }
+});
 
 $(".tabbable .nav-tabs .nav-item .nav-link").click(function () {
   $(".customer_section .nav-tabs.d-flex").removeClass("showTab");
