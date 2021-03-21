@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <title>بيانات الفاتورة</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/bootstraprtl.css" />
+    <link href="./css/bootstrap-toggle.min.css" rel="stylesheet" />
+    <link href="./css/fontawesome.css" rel="stylesheet" />
+    <link href="./css/brands.min.css" rel="stylesheet" />
+    <link href="./css/solid.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/select2.min.css" />
+    <link rel="stylesheet" href="css/jstree.css" />
+    <!-- datetimepicker -->
+    <link rel="stylesheet" href="css/tempusdominus-bootstrap.css" />
+    <!-- AG-grid -->
+    <link rel="stylesheet" href="./css/ag-grid.css" />
+    <link rel="stylesheet" href="./css/ag-theme-balham.css" />
+    <link rel="stylesheet" href="./css/custom-ag-grid.css" />
+    <script src="js/ag-grid-enterprise.min.noStyle.js"></script>
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <!-- Custom style -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/fa-icon.png" />
+    <link rel="apple-touch-icon" href="images/fa-icon.png" />
+  </head>
+  <body>
+    <header class="navbar_section-1 navbar_section" id="header">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light row p-2 p-lg-0">
+          <a class="navbar-brand m-0 d-block d-lg-none" href="#!">
+            <img src="./images/logo.png" alt="logo" class="w-100" />
+          </a>
+          <div class="d-block d-lg-none lang-noti-mb">
+            <ul
+              class="navbar-nav p-0 d-flex justify-content-center align-items-center custom-nav"
+            >
+              <li class="nav-item">
+                <a href="#!" class="nav-link navbar-link-2 waves-effect">
+                  <i
+                    class="fas fa-globe-asia basic_text_color font-size-25"
+                  ></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <button
+                    class="dropdown-toggle arrow_style"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="fas fa-bell basic_text_color font-size-25"></i>
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <div>
+                      <h4 class="text-center basic_text_color">الاشعارات</h4>
+                      <form class="navbar-search px-0 ml-0 col-12" action="">
+                        <div class="input-group mb-0">
+                          <div class="input-group-prepend search-style col-12">
+                            <a
+                              href="#!"
+                              class="input-icon d-flex align-items-center"
+                              type="button"
+                              ><i
+                                class="fas fa-search text-white mx-3 basic_fill_color"
+                              ></i
+                            ></a>
+                            <input
+                              class="form-control form-search white-text rgba-black-light border-0 z-depth-0 pl-5"
+                              type="text"
+                              placeholder="ابحث باسم العميل , رقم الجوال , رقم الملف , رقم الهوية , الايميل "
+                              aria-label="Search"
+                            />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="text-center">
+                              <i
+                                class="fas fa-briefcase text-white basic_fill_color"
+                              ></i>
+                            </th>
+                            <th scope="col">مبيعات مباشرة لم تعتمد</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row" class="text-center">
+                              <i
+                                class="fas fa-shopping-cart text-white basic_fill_color"
+                              ></i>
+                            </th>
+                            <td scope="col">دفعات مستحقه الدفع</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <a class="dropdown-item" href="#">عرض المزيد</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- Collapse button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Breadcrumbs -->
+          <!-- Links -->
+          <div
+            class="collapse navbar-collapse flex-wrap"
+            id="navbarNavDropdown"
+          >
+            <div
+              class="top-header d-flex w-100 p-0 p-lg-2 box-shadow-main justify-content-between align-items-center"
+            >
+              <a class="navbar-brand col-2 m-0 d-none d-lg-block p-0" href="#!">
+                <img src="./images/logo.png" alt="logo" class="w-100" />
+              </a>
+              <!-- Right -->
+              <div class="d-none d-lg-block">
+                <ul
+                  class="navbar-nav p-0 d-flex justify-content-center align-items-center custom-nav"
+                >
+                  <li class="nav-item">
+                    <a href="#!" class="nav-link navbar-link-2 waves-effect">
+                      <i
+                        class="fas fa-globe-asia basic_text_color font-size-25"
+                      ></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="dropdown">
+                      <button
+                        class="dropdown-toggle arrow_style"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i
+                          class="fas fa-bell basic_text_color font-size-25"
+                        ></i>
+                      </button>
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <div>
+                          <h4 class="text-center basic_text_color">
+                            الاشعارات
+                          </h4>
+                          <form
+                            class="navbar-search px-0 ml-0 col-12"
+                            action=""
+                          >
+                            <div class="input-group mb-0">
+                              <div
+                                class="input-group-prepend search-style col-12"
+                              >
+                                <a
+                                  href="#!"
+                                  class="input-icon d-flex align-items-center"
+                                  type="button"
+                                  ><i
+                                    class="fas fa-search text-white mx-3 basic_fill_color"
+                                  ></i
+                                ></a>
+                                <input
+                                  class="form-control form-search white-text rgba-black-light border-0 z-depth-0 pl-5"
+                                  type="text"
+                                  placeholder="ابحث باسم العميل , رقم الجوال , رقم الملف , رقم الهوية , الايميل "
+                                  aria-label="Search"
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div>
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col" class="text-center">
+                                  <i
+                                    class="fas fa-briefcase text-white basic_fill_color"
+                                  ></i>
+                                </th>
+                                <th scope="col">مبيعات مباشرة لم تعتمد</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" class="text-center">
+                                  <i
+                                    class="fas fa-shopping-cart text-white basic_fill_color"
+                                  ></i>
+                                </th>
+                                <td scope="col">دفعات مستحقه الدفع</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <a class="dropdown-item" href="#">عرض المزيد</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <form class="navbar-search p-0 ml-0 col-lg-6" action="">
+                <div class="input-group mb-0" onclick="openSearch()">
+                  <div class="input-group-prepend search-style col-12">
+                    <a
+                      href="#!"
+                      class="input-icon d-flex align-items-center"
+                      type="button"
+                      ><i
+                        class="fas fa-search text-white mx-3 basic_fill_color"
+                      ></i
+                    ></a>
+                    <input
+                      class="form-control form-search white-text rgba-black-light border-0 z-depth-0 pl-5"
+                      type="text"
+                      id="form-search"
+                      placeholder="ابحث باسم العميل , رقم الجوال , رقم الملف , رقم الهوية , الايميل "
+                      aria-label="Search"
+                    />
+                  </div>
+                </div>
+                <div id="search-dropdown" class="dropdown-search-content mx-3">
+                  <!-- data one -->
+                  <div class="row main_row no-gutters">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-2 text-center">
+                          <img src="./images/avatar.png" class="m-auto" />
+                        </div>
+                        <div class="col">
+                          <div class="row customer_info no-gutters">
+                            <div
+                              class="col-12 d-flex align-items-center px-4 mb-3"
+                            >
+                              <h6 class="d-inline-block m-0">
+                                بيان عدنان هواري - 234567 -
+                              </h6>
+                              <h6 class="d-inline-block m-0">
+                                <span class="text-success mx-1"
+                                  ><i class="fas fa-circle fa-xs"></i
+                                ></span>
+                                نشط
+                              </h6>
+                              <button
+                                type="button"
+                                class="btn btn-success d-sm-none d-md-block sub-button py-0 mx-2"
+                              >
+                                <span class="sub-title">مشترك</span>
+                              </button>
+                            </div>
+                            <div class="col text-center">
+                              <h6>معلومات الاتصال</h6>
+                              <p>+2345634567</p>
+                            </div>
+                            <div class="col text-center">
+                              <h6>الشخص المسئول</h6>
+                              <p>shahd</p>
+                            </div>
+                            <div class="col text-center">
+                              <h6>تاريخ ووقت الزيارة</h6>
+                              <p>Sat 22 - nov -2020 12:15 PM</p>
+                            </div>
+                            <div class="col text-center">
+                              <h6>تاريخ الاستفسار</h6>
+                              <p>Mon 24 - nov -2020 09:15 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row search-footer no-gutters">
+                        <div class="col">
+                          <a href="#" class="text-center bold">تسجيل جديد</a>
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-success bold"
+                            >مشترك</a
+                          >
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-primary bold"
+                            >مستفسر</a
+                          >
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-danger bold"
+                            >زائر</a
+                          >
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-warning bold"
+                            >مدعو</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-1 d-flex align-items-center flex-column justify-content-center basic_text_color btn"
+                    >
+                      <div class="w-100">
+                        <i class="fas fa-file-medical rotate-90 ml-2"></i>
+                        <p class="rtl-write m-auto rotate font-size-14">
+                          انشاء فاتورة
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row main_row no-gutters">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-2 text-center">
+                          <img src="./images/avatar.png" class="m-auto" />
+                        </div>
+                        <div class="col">
+                          <div class="row customer_info no-gutters">
+                            <div
+                              class="col-12 d-flex align-items-center px-4 mb-3"
+                            >
+                              <h6 class="d-inline-block m-0">
+                                بيان عدنان هواري - 234567 -
+                              </h6>
+                              <h6 class="d-inline-block m-0">
+                                <span class="text-success mx-1"
+                                  ><i class="fas fa-circle fa-xs"></i
+                                ></span>
+                                نشط
+                              </h6>
+                              <button
+                                type="button"
+                                class="btn btn-warning d-sm-none d-md-block sub-button py-0 mx-2"
+                              >
+                                <span class="sub-title">مدعو</span>
+                              </button>
+                            </div>
+                            <div class="col text-center">
+                              <h6>معلومات الاتصال</h6>
+                              <p>+2345634567</p>
+                            </div>
+                            <div class="col text-center">
+                              <h6>الشخص المسئول</h6>
+                              <p>shahd</p>
+                            </div>
+                            <div class="col text-center">
+                              <h6>تاريخ ووقت الزيارة</h6>
+                              <p>Sat 22 - nov -2020 12:15 PM</p>
+                            </div>
+                            <div class="col text-center">
+                              <h6>تاريخ الاستفسار</h6>
+                              <p>Mon 24 - nov -2020 09:15 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row search-footer no-gutters">
+                        <div class="col">
+                          <a href="#" class="text-center bold">تسجيل جديد</a>
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-success bold"
+                            >مشترك</a
+                          >
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-primary bold"
+                            >مستفسر</a
+                          >
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-danger bold"
+                            >زائر</a
+                          >
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-warning bold"
+                            >مدعو</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-1 d-flex align-items-center flex-column justify-content-center basic_text_color btn"
+                    >
+                      <div class="w-100">
+                        <i class="fas fa-file-medical rotate-90 ml-2"></i>
+                        <p class="rtl-write m-auto rotate font-size-14">
+                          انشاء فاتورة
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row main_row no-gutters">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-2 text-center">
+                          <img src="./images/avatar.png" class="m-auto" />
+                        </div>
+                        <div class="col">
+                          <div class="row customer_info no-gutters">
+                            <div
+                              class="col-12 d-flex align-items-center px-4 mb-3"
+                            >
+                              <h6 class="d-inline-block m-0">
+                                بيان عدنان هواري - 234567 -
+                              </h6>
+                              <h6 class="d-inline-block m-0">
+                                <span class="text-success mx-1"
+                                  ><i class="fas fa-circle fa-xs"></i
+                                ></span>
+                                نشط
+                              </h6>
+                              <button
+                                type="button"
+                                class="btn btn-primary btn-blue-dark d-sm-none d-md-block sub-button py-0 mx-2"
+                              >
+                                <span class="sub-title">مستفسر</span>
+                              </button>
+                            </div>
+                            <div class="col text-center">
+                              <h6>معلومات الاتصال</h6>
+                              <p>+2345634567</p>
+                            </div>
+                            <div class="col text-center">
+                              <h6>الشخص المسئول</h6>
+                              <p>shahd</p>
+                            </div>
+                            <div class="col text-center">
+                              <h6>تاريخ ووقت الزيارة</h6>
+                              <p>Sat 22 - nov -2020 12:15 PM</p>
+                            </div>
+                            <div class="col text-center">
+                              <h6>تاريخ الاستفسار</h6>
+                              <p>Mon 24 - nov -2020 09:15 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row search-footer no-gutters">
+                        <div class="col">
+                          <a href="#" class="text-center bold">تسجيل جديد</a>
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-success bold"
+                            >مشترك</a
+                          >
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-primary bold"
+                            >مستفسر</a
+                          >
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-danger bold"
+                            >زائر</a
+                          >
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-warning bold"
+                            >مدعو</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-1 d-flex align-items-center flex-column justify-content-center basic_text_color btn"
+                    >
+                      <div class="w-100">
+                        <i class="fas fa-file-medical rotate-90 ml-2"></i>
+                        <p class="rtl-write m-auto rotate font-size-14">
+                          انشاء فاتورة
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row main_row no-gutters">
+                    <div class="col">
+                      <div class="row align-items-center no-gutters">
+                        <div class="col-2 text-center">
+                          <img src="./images/avatar.png" class="m-auto" />
+                        </div>
+                        <div class="col">
+                          <div class="row customer_info no-gutters">
+                            <div
+                              class="col-12 d-flex align-items-center px-4 mb-3"
+                            >
+                              <h6 class="d-inline-block m-0">
+                                بيان عدنان هواري - 234567 -
+                              </h6>
+                              <h6 class="d-inline-block m-0">
+                                <span class="text-success mx-1"
+                                  ><i class="fas fa-circle fa-xs"></i
+                                ></span>
+                                نشط
+                              </h6>
+                              <button
+                                type="button"
+                                class="btn btn-danger d-sm-none d-md-block sub-button py-0 mx-2"
+                              >
+                                <span class="sub-title">زائر</span>
+                              </button>
+                            </div>
+                            <div class="col text-center">
+                              <h6>معلومات الاتصال</h6>
+                              <p>+2345634567</p>
+                            </div>
+                            <div class="col text-center">
+                              <h6>الشخص المسئول</h6>
+                              <p>shahd</p>
+                            </div>
+                            <div class="col text-center">
+                              <h6>تاريخ ووقت الزيارة</h6>
+                              <p>Sat 22 - nov -2020 12:15 PM</p>
+                            </div>
+                            <div class="col text-center">
+                              <h6>تاريخ الاستفسار</h6>
+                              <p>Mon 24 - nov -2020 09:15 AM</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row search-footer no-gutters">
+                        <div class="col">
+                          <a href="#" class="text-center bold">تسجيل جديد</a>
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-success bold"
+                            >مشترك</a
+                          >
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-primary bold"
+                            >مستفسر</a
+                          >
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-danger bold"
+                            >زائر</a
+                          >
+                        </div>
+                        <div class="col">
+                          <a href="#" class="text-center text-warning bold"
+                            >مدعو</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="col-1 d-flex align-items-center flex-column justify-content-center basic_text_color btn"
+                    >
+                      <div class="w-100">
+                        <i class="fas fa-file-medical rotate-90 ml-2"></i>
+                        <p class="rtl-write m-auto rotate font-size-14">
+                          انشاء فاتورة
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- data not found -->
+                  <!-- <div class="not-found">
+                    <div class="row customer_info w-100 no-gutters">
+                      <div
+                        class="col-12 d-flex align-items-center justify-content-center p-4 mb-3"
+                      >
+                        <h6>لايوجد نتيجة للبحث</h6>
+                      </div>
+                    </div>
+                    <div class="row search-footer no-gutters">
+                      <div class="col">
+                        <a href="#" class="text-center bold">تسجيل جديد</a>
+                      </div>
+                      <div class="col">
+                        <a href="#" class="text-center text-success bold"
+                          >مشترك</a
+                        >
+                      </div>
+                      <div class="col">
+                        <a href="#" class="text-center text-primary bold"
+                          >مستفسر</a
+                        >
+                      </div>
+                      <div class="col">
+                        <a href="#" class="text-center text-danger bold"
+                          >زائر</a
+                        >
+                      </div>
+                      <div class="col">
+                        <a href="#" class="text-center text-warning bold"
+                          >مدعو</a
+                        >
+                      </div>
+                    </div>
+                  </div> -->
+                </div>
+              </form>
+
+              <div class="pl-1 d-flex flex-wrap date-time">
+                <span
+                  class="d-flex justify-content-around align-items-center flex-column"
+                >
+                  <span class="font-size-20 basic_text_color">2020 Feb 17</span>
+                  <span class="font-size-18 basic_text_color">
+                    <i
+                      class="far fa-moon font-size-16 basic_text_color pl-1"
+                    ></i>
+                    <i
+                      class="fas fa-sun font-size-16 basic_text_color pl-1 d-none"
+                    ></i>
+                    14 : 12 : 02
+                  </span>
+                </span>
+              </div>
+
+              <div class="line-divider"></div>
+
+              <div class="d-flex align-items-center user-account">
+                <ul class="navbar-nav custom-nav p-0">
+                  <li class="nav-item">
+                    <div class="dropdown">
+                      <button
+                        class="dropdown-toggle arrow_style"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i
+                          class="fas fa-angle-down font-size-35 basic_text_color px-1"
+                        ></i>
+                      </button>
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <a class="dropdown-item" href="#">تعديل كلمه المرور</a>
+                        <a class="dropdown-item" href="#">تسجيل الخروج</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="user-img">
+                  <img src="./images/Ellipse 1@2x.png" class="w-100" />
+                </div>
+
+                <div class="user-text">
+                  <h5 class="font-size-15 bold basic_text_color">
+                    اسم مستخدم النظام
+                  </h5>
+                  <h5 class="font-size-14 bold basic_text_color">Gym Admin</h5>
+                </div>
+              </div>
+            </div>
+
+            <ul
+              class="navbar-nav justify-content-around p-0 p-lg-3 w-100 main-menu"
+            >
+              <li class="nav-item">
+                <a
+                  href="./لوحة التحكم.html"
+                  class="nav-link waves-effect basic-text-lGray-color bold"
+                  >لوحة التحكم</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >الإعدادات</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a
+                    class="dropdown-item"
+                    href="./الاعدادات - افتراضات النادي الرياضي.html"
+                    >افتراضات النادي الرياضي</a
+                  >
+                  <a class="dropdown-item" href="./الاعدادات-المواظفين.html"
+                    >مديرين</a
+                  >
+                  <a class="dropdown-item" href="./الاعدادات-المواظفين.html"
+                    >موظفين</a
+                  >
+                  <a class="dropdown-item" href="#">التنبيهات الطبية</a>
+                  <a class="dropdown-item" href="#">أنواع الضرائب</a>
+                  <a class="dropdown-item" href="#">نسب وشرائح الضرائب</a>
+                  <a class="dropdown-item" href="#">اعدادات نقاط البيع</a>
+                  <a class="dropdown-item" href="#">إجراءات الحركات(Log)</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >الخدمات</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="./البحث-اندكس.html"
+                    >اضافة تصنيف رئيسي</a
+                  >
+                  <a class="dropdown-item" href="./البحث-اندكس.html"
+                    >اضافة تصنيف ثانوي</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    href="./الخدمات-انشاء خدمة او اشتراك.html"
+                    >اضافة خدمة او اشتراك</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >العملاء</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="./العملاء – ملف العميل.html"
+                    >ملف العملاء</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-toggle="modal"
+                    data-target="#salePointsModal"
+                    >الدخول على نقاط البيع</a
+                  >
+                  <a class="dropdown-item" href="#">فواتير المبيعات</a>
+                  <a class="dropdown-item" href="#">مرتجع مبيعات</a>
+                  <a class="dropdown-item" href="#">التجميد</a>
+                  <a class="dropdown-item" href="#">ترقية الاشتراكات</a>
+                  <a class="dropdown-item" href="#">تحويل الاشتراكات</a>
+                  <a class="dropdown-item" href="#">تمديد الاشتراكات</a>
+                  <a class="dropdown-item" href="#">تحويل النقاط</a>
+                  <a class="dropdown-item" href="#"
+                    >المواعيد النشطة (الحجوزات)</a
+                  >
+                  <a class="dropdown-item" href="#">المدفوعات </a>
+                  <a class="dropdown-item" href="#">المتحصلات</a>
+                  <a class="dropdown-item" href="#">ارصدة العملاء</a>
+                  <a class="dropdown-item" href="#"
+                    >تقرير مدعوين تحولوا الى مشتركين</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >التغذية</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">البرامج الغذائية</a>
+                  <a class="dropdown-item" href="#">جلسات التغذية</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >التدريب</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">البرامج الرياضية</a>
+                  <a class="dropdown-item" href="#">الكلاسات</a>
+                  <a class="dropdown-item" href="#">التمارين</a>
+                  <a class="dropdown-item" href="#">الصالات</a>
+                  <a class="dropdown-item" href="#">الاستشارة الرياضية</a>
+                  <a class="dropdown-item" href="#">التدريب الشخصي التسويقي</a>
+                  <a class="dropdown-item" href="#">التدريب الشخصي المدفوعPT</a>
+                  <a class="dropdown-item" href="./إنشاء الجدول الرياضي.html"
+                    >انشاء الجدول الرياضي</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >التشغيل والصيانة</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="./الصيانه-انشاء امر تشغيل.html"
+                    >انشاء امر تشغيل</a
+                  >
+                  <a class="dropdown-item" href="#">طلب اصناف</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >التسويق</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">الحملات التسويقية</a>
+                  <a class="dropdown-item" href="./التسويق-ادخال هدف شهري.html"
+                    >ادخال الهدف الشهري</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    >التقرير التسويقي التفصيلي</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    >التقرير التسويقي الاجمالي</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    >تقرير العمولات الشهرية للتسويق</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    >تقرير العمولات الشهرية للتدريب الشخصي</a
+                  >
+                  <a class="dropdown-item" href="./التسويق-انشاء كوبون.html"
+                    >انشاء كوبون</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >العلاقات العامة</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">شركاء النجاح</a>
+                  <a class="dropdown-item" href="#">الفعاليات</a>
+                  <a class="dropdown-item" href="#">الخطابات والتعاميم</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#!"
+                  class="nav-link waves-effect basic-text-lGray-color bold active"
+                  data-toggle="modal"
+                  data-target="#login-modal"
+                  >أجهزة البصمة</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Links -->
+        </nav>
+      </div>
+    </header>
+
+    <main class="p-4">
+      <!-- Start -->
+      <div class="row no-gutters">
+        <div class="col-lg-8 col-sm-12">
+          <div class="card card_index mt-2 border-0">
+            <div class="card-header border-0 p-0">
+              <!-- START TABS DIV -->
+              <div class="tabbable-responsive overflow-none">
+                <div class="tabbable">
+                  <ul class="nav nav-tabs border-0" role="tablist">
+                    <li class="nav-item float-left">
+                      <a
+                        class="nav-link text-center bold active"
+                        role="tab"
+                        aria-controls="contact"
+                        aria-selected="false"
+                        >بيانات الفاتورة</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="card-body p-0">
+              <div class="tab-content bg-white mt--5 p-3">
+                <div class="tab-pane fade show active" role="tabpanel">
+                  <div class="row py-2 mb-5">
+                    <div class="col-md-6">
+                      <ul
+                        class="customer_card_list new list-unstyled list-group p-0"
+                      >
+                        <h5 class="mb-3">بيانات العميل</h5>
+                        <li class="">
+                          <p class="mb-1"><span>الكود </span> 1234</p>
+                        </li>
+                        <li class="">
+                          <p class="mb-1">
+                            <span>اسم العميل </span>محمد احمد
+                          </p>
+                        </li>
+                        <li class="">
+                          <p class="mb-1"><span>هاتف </span>012384727</p>
+                        </li>
+                        <li class="">
+                          <p class="mb-1"><span>العنوان </span>الطائف</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-md-6">
+                      <ul
+                        class="customer_card_list new list-unstyled list-group p-0"
+                      >
+                        <h5 class="mb-3">بيانات الفاتورة </h5>
+                        <li class="">
+                          <p class="mb-1">
+                            <span>رقم الفاتورة </span> 1234
+                          </p>
+                        </li>
+                        <li class="">
+                          <p class="mb-1">
+                            <span>التاريخ </span>20-10-2020
+                          </p>
+                        </li>
+                        <li class="">
+                          <p class="mb-1"><span>الوقت </span>10:35 AM</p>
+                        </li>
+                        <li class="">
+                          <p class="mb-1">
+                            <span>الوردية </span>الوردية الرئيسية
+                          </p>
+                        </li>
+                        <li class="">
+                          <p class="mb-1"><span>القيمة </span>1223</p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card card_index mt-4 border-0">
+            <div class="card-body p-0">
+              <div class="tab-content bg-white mt--5 p-3">
+                <div
+                  class="tab-pane fade show active"
+                  role="tabpanel"
+                  aria-labelledby="viewTable-tab"
+                >
+                  <ul
+                    class="customer_card_list new list-unstyled mb-5 list-group p-0"
+                  >
+                    <h5 class="mb-3">معلومات اضافية</h5>
+                    <li class="">
+                      <p class="mb-1"><span>الطريقة </span> مباشر</p>
+                    </li>
+                    <li class="">
+                      <p class="mb-1"><span>الخصم </span>5.0</p>
+                    </li>
+                    <li class="">
+                      <p class="mb-1"><span>قسيمة </span>لا</p>
+                    </li>
+                    <li class="">
+                      <p class="mb-1"><span>ملاحظات </span>لا يوجد</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 pl-3">
+          <div class="bg-white p-3">
+            <div class="invoices_head row no-gutters">
+              <div class="col d-flex align-items-center">
+                <div>
+                  <h6>رقم الفاتورة : 1#</h6>
+                  <p>1234</p>
+                </div>
+              </div>
+              <div class="col">
+                <button
+                  class="btn btn-danger box-shadow basic_background_color text-white float-right m-0"
+                >
+                  <i class="fas fa-trash-alt ml-2"></i>إلغاء
+                </button>
+              </div>
+            </div>
+
+            <!-- invoices list -->
+            <div
+              class="table_list table-responsive m_h border-bottom border-top my-3"
+            >
+              <table class="table invoices_table table-borderless">
+                <tbody>
+                  <tr class="border-bottom">
+                    <td colspan="4">اسم الخدمة اسم الخدمة اسم الخدمة</td>
+                  </tr>
+                  <tr>
+                    <td width="5%">
+                      <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" />
+                      </div>
+                    </td>
+                    <td>
+                      <p class="m-0">خدمة رقم 1</p>
+                      <p class="m-0">تاريخ تفعيل الخدمة</p>
+                      <p class="m-0">تاريخ نهاية الخدمة</p>
+                    </td>
+                    <td>
+                      <div
+                        class="number-input d-flex align-items-center justify-content-center m-auto"
+                      >
+                        <input
+                          class="quantity"
+                          min="0"
+                          name="quantity"
+                          value="1"
+                          type="number"
+                          disabled
+                        />
+                      </div>
+                    </td>
+                    <td class="text-right">
+                      <p class="m-0">120 ريال</p>
+                      <p class="m-0 green-color">120 ريال</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="row no-gutters total_price">
+              <div class="col-sm-12">
+                <ul class="list-group border-0">
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center border-0"
+                  >
+                    الإجمالي قبل الضريبة
+                    <span class="badge badge-primary badge-pill">35.5</span>
+                  </li>
+                  <li
+                    class="list-group-item d-flex justify-content-between align-items-center border-0"
+                  >
+                    قيمة الخصم
+                    <span class="badge badge-primary badge-pill">5.5</span>
+                  </li>
+                  <li
+                    class="list-group-item bold d-flex justify-content-between align-items-center border-0"
+                  >
+                    الاجمالي
+                    <span class="badge badge-primary badge-pill"
+                      >155.5</span
+                    >
+                  </li>
+                  <li
+                    class="list-group-item bold d-flex justify-content-between align-items-center border-0"
+                  >
+                    المستحق
+                    <span class="badge badge-primary badge-pill"
+                      >552.5</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card card_index border-0">
+        <div class="card-header border-0 p-0">
+          <!-- START TABS DIV -->
+          <div class="tabbable-responsive overflow-none">
+            <div class="tabbable">
+              <ul class="nav nav-tabs border-0" role="tablist">
+                <li class="nav-item float-left">
+                  <a
+                    class="nav-link text-center bold active"
+                    role="tab"
+                    aria-controls="contact"
+                    aria-selected="false"
+                    >حركات تمت على الفاتورة</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div class="tab-content bg-white mt--5 p-3">
+            <div class="tab-pane fade show active" role="tabpanel">
+              <b>grid</b>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End -->
+    </main>
+
+    <script src="js/moment.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-toggle.min.js"></script>
+    <!-- datetimepicker  -->
+    <script src="js/tempusdominus-bootstrap.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7f37d9c53b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/jstree.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script>
+      function openTab(evt, Name) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(Name).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
+
+      // Get the element with id="defaultOpen" and click on it
+      document.getElementById("defaultOpen").click();
+    </script>
+    <script>
+      $(document).ready(function () {
+        // toggle active btn
+        $(".btn_groups").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+        });
+
+        $(".invoice_no").click(function () {
+          $(".invoice_no").removeClass("active");
+          $(this).addClass("active");
+        });
+        $(".pay_tab .btn").click(function () {
+          $(".pay_tab .btn").removeClass("active");
+          $(this).addClass("active");
+        });
+
+        // list view
+        $(".list_view").hide();
+        $(".list_btn").click(function () {
+          $(".grid_view").hide();
+          $(".list_view").show();
+        });
+        $(".grid_btn").click(function () {
+          $(".grid_view").show();
+          $(".list_view").hide();
+        });
+      });
+
+      /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+      function openSearch() {
+        document.getElementById("search-dropdown").classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>

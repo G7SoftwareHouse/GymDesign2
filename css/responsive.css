@@ -65,6 +65,13 @@
     max-width: 80%;
     margin: 0 auto;
   }
+  .row{
+    margin: 0 !important;
+  }
+  .col-lg-4.pl-3{
+    padding: 0 !important;
+    margin: 1.5rem 0;
+  }
 }
 
 /* Landscape phones and portrait tablets */

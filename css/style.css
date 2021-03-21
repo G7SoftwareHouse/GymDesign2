@@ -538,6 +538,9 @@ select {
 .card_index .tab-content {
   box-shadow: 1px 5px 11px -3px rgb(0 0 0 / 19%);
 }
+.card_index .customer_card_list.new li p {
+  font-weight: normal;
+}
 .min-h {
   min-height: 360px;
 }
@@ -626,6 +629,7 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 /* fingerPrint modal  */
 #fingerPrintModal .modal-dialog {
   max-width: 60%;
+  z-index: 10000000;
 }
 
 /* create coupon */
@@ -1313,6 +1317,14 @@ a.alert_message:hover {
   width: auto;
   max-width: 125px;
   border: 1px solid var(--basic-main-color) !important;
+}
+.customer_card_list input[type="number"] {
+  max-width: 5rem;
+  height: 1.8rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  border: 1px solid #707070;
+  border-radius: 2px;
 }
 
 /*---------------------

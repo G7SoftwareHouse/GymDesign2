@@ -1516,10 +1516,10 @@
         <div class="modal-content">
           <div class="modal-header px-0">
             <div class="row align-items-center w-100">
-              <div class="col-md-3">
+              <div class="col-lg-3">
                 <h5 class="modal-title bold">تفعيل \ تعديل تفعيل الخدمة</h5>
               </div>
-              <div class="col-md-6">
+              <div class="col-lg-6">
                 <div class="row align-items-center  move_info">
                   <div class="col p-0">رقم الحركة : 1234</div>
                   <div class="col p-0">تاريخ الحركة : <input type="date" class="form-control d-inline-block" /></div>
@@ -1816,7 +1816,7 @@
                   <h6 class="basic_text_color bold mb-3">الخدمة مقابل تجميد الاشتراك</h6>
                   <div class="row no-gutters">
                     <div class="col-md-4">
-                      <img src="./images/2.png" />
+                      <img src="./images/2.png" width="130px" />
                     </div>
                     <div class="col-md-8">
                       <!-- Actual search box -->
@@ -1861,10 +1861,10 @@
         <div class="modal-content">
           <div class="modal-header px-0">
             <div class="row align-items-center w-100">
-              <div class="col-md-3">
+              <div class="col-lg-3">
                 <h5 class="modal-title bold">فك تجميد الخدمة</h5>
               </div>
-              <div class="col-md-6">
+              <div class="col-lg-6">
                 <div class="row align-items-center  move_info">
                   <div class="col p-0">رقم الحركة : 1234</div>
                   <div class="col p-0">تاريخ الحركة : <input type="date" class="form-control d-inline-block" /></div>
@@ -1945,6 +1945,308 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-success"><i class="fas fa-check pl-1"></i>حفظ</button>
             <button type="button" class="btn btn-danger" data-dismiss="modal"><i class="fas fa-trash-alt pl-1"></i>إلغاء</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- change subscription Modal -->
+    <div class="subscription_modal freez_modal edit_modal modal" id="subscriptionModal"
+    aria-labelledby="subscriptionModalLabel" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header px-0">
+            <div class="row align-items-center justify-content-end w-100">
+              <div class="col-lg-4">
+                <h5 class="modal-title bold">تحويل الاشتراك</h5>
+              </div>
+              <div class="col-lg-6">
+                <div class="row align-items-center  move_info">
+                  <div class="col p-0">رقم الحركة : 1234</div>
+                  <div class="col p-0">تاريخ الحركة : <input type="date" class="form-control d-inline-block" /></div>
+                </div>
+              </div>
+              <div class="col p-0">
+                <button type="button" class="btn btn-info">إرفاق</button>
+                <button type="button" class="btn btn-info">طباعة</button>
+                <button type="button" class="btn btn-primary">Log</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="row no-gutters">
+              <div class="col-lg-6 p-3 box-shadow-gray">
+                <div class="p-2 box-shadow-gray">
+                  <h6 class="basic_text_color bold mb-3">العميل الحالي</h6>
+                  <div class="row align-items-center m-0 pb-4">
+                    <div class="col-lg-4 h-100">
+                      <!-- customer card -->
+                      <div class="customer_card_header h-100 text-center p-1">
+                        <img src="./images/avatar.png" class="customer_card_img" />
+                      </div>
+                    </div>
+                    <div class="col-lg-8">
+                      <ul class="customer_card_list new list-unstyled list-group p-0">
+                        <li class=""><p class="mb-1"><span>ملف واسم العميل </span> 2345 اسم العميل</p></li>
+                        <li class=""><p class="mb-1"><span>رقم الفاتورة </span>1234 </p></li>
+                        <li class=""><p class="mb-1"><span>تاريخ الفاتورة </span>22-10-2020</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <h6 class="basic_text_color bold mb-3">الخدمة الحالية</h6>
+                  <div class="row align-items-center m-0">
+                    <div class="col-lg-4 h-100">
+                      <!-- customer card -->
+                      <div class="h-100 text-center p-1">
+                        <img src="./images/2.png" width="130px" />
+                      </div>
+                    </div>
+                    <div class="col-lg-8">
+                      <ul class="customer_card_list new list-unstyled list-group p-0">
+                        <li class=""><p class="mb-1"><span>إسم الخدمة </span> تعريف اسم الخدمة</p></li>
+                        <li class=""><p class="mb-1"><span>الكود </span>1234 </p></li>
+                        <li class=""><p class="mb-1"><span>التصنيف </span>رئيسي</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- ag-grid tables -->
+                <div class="more_info_table p-3">
+                  <h6>معلومات الاشتراك</h6>
+                  <b>grid</b>
+                  <!-- <div id="infoGrid" class="ag-theme-balham"></div> -->
+                  <h6>العروض على الخدمة</h6>
+                  <b>grid</b>
+                  <!-- <div id="infoGrid" class="ag-theme-balham"></div> -->
+
+                  <ul class="customer_card_list new list-unstyled list-group p-0 mt-4">
+                    <li class=""><p class="mb-1"><span>الكمية </span> 3</p></li>
+                    <li class=""><p class="mb-1"><span>سعر الخدمة </span>155.5 </p></li>
+                    <li class=""><p class="mb-1"><span>القيمة </span>155.5</p></li>
+                    <li class=""><p class="mb-1"><span>قيمة الخصم </span>5.5 </p></li>
+                    <li class=""><p class="mb-1 bold"><span>الاجمالي </span>895.5</p></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="freez_info box-shadow-gray p-3 pb-5 mb-3">
+                  <h6 class="basic_text_color bold mb-3">تحويل إلى</h6>
+                  <div class="row m-0">
+                    <div class="col-md-4">
+                      <div class="customer_card_header h-100 text-center p-1">
+                        <img src="./images/avatar.png" class="customer_card_img" />
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <!-- Actual search box -->
+                      <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control text-center w-100" placeholder="ابحث باسم العميل , رقم الجوال , رقم الملف , رقم الهوية , الايميل">
+                      </div>
+                      <ul class="customer_card_list new list-unstyled list-group p-0">
+                        <li class=""><p class="mb-1"><span>ملف واسم العميل </span> 1214 اسم العميل</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="freez_info box-shadow-gray p-3">
+                  <h6 class="basic_text_color bold mb-3">الخدمة مقابل تجميد الاشتراك</h6>
+                  <div class="row no-gutters">
+                    <div class="col-md-4">
+                      <img src="./images/2.png" width="130px" />
+                    </div>
+                    <div class="col-md-8">
+                      <!-- Actual search box -->
+                      <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control text-center w-100" placeholder="البحث عن الخدمات">
+                      </div>
+                      <ul class="customer_card_list new list-unstyled list-group p-0">
+                        <li class=""><p class="mb-1"><span>إسم الخدمة </span> تعريف اسم الخدمة</p></li>
+                        <li class=""><p class="mb-1"><span>الكود </span>1234</p></li>
+                        <li class=""><p class="mb-1"><span>التصنيف</span> رئيسي</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <ul class="customer_card_list new mt-3 mb-5 list-unstyled list-group p-0">
+                    <li class=""><p class="mb-1"><span>الكمية </span> 2</p></li>
+                    <li class=""><p class="mb-1"><span>سعر الخدمة </span>155.5</p></li>
+                    <li class=""><p class="mb-1"><span>القيمة </span>155.5</p></li>
+                    <li class=""><p class="mb-1"><span>الإجمالي قبل الضريبة </span>155.5</p></li>
+                    <li class=""><p class="mb-1"><span>قيمة الخصم </span></i>5.5</p></li>
+                    <li class=""><p class="mb-1 bold"><span>الاجمالي</span> 895.5</p></li>
+                  </ul>
+                  <div class="row w-100 justify-content-end m-0">
+                    <button type="button" class="btn btn_add_rec basic_background_color mr-3 text-white">تأكيد العملية</button>
+                    <input type="number" placeholder="رقم تأكيد العملية" class="form-control basic_text_color">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn_add_rec basic_background_color text-white">دفع</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">إلغاء</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Upgrade subscription Modal -->
+    <div class="subscription_modal freez_modal edit_modal modal" id="upgradeModal"
+    aria-labelledby="upgradeModalLabel" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header px-0">
+            <div class="row align-items-center justify-content-end w-100">
+              <div class="col-lg-4">
+                <h5 class="modal-title bold">ترقية الاشتراك</h5>
+              </div>
+              <div class="col-lg-6">
+                <div class="row align-items-center  move_info">
+                  <div class="col p-0">رقم الحركة : 1234</div>
+                  <div class="col p-0">تاريخ الحركة : <input type="date" class="form-control d-inline-block" /></div>
+                </div>
+              </div>
+              <div class="col p-0">
+                <button type="button" class="btn btn-info">إرفاق</button>
+                <button type="button" class="btn btn-info">طباعة</button>
+                <button type="button" class="btn btn-primary">Log</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="row no-gutters">
+              <div class="col-lg-6 p-3 box-shadow-gray">
+                <div class="p-2 box-shadow-gray">
+                  <h6 class="basic_text_color bold mb-3">العميل الحالي</h6>
+                  <div class="row align-items-center m-0 pb-4">
+                    <div class="col-lg-5">
+                      <!-- customer card -->
+                      <div class="customer_card_header text-center py-3 px-2">
+                        <img src="./images/avatar.png" class="customer_card_img m-0 m-auto" />
+                        <h1 class="customer_card_name mb-0 mt-2">بيان عدنان هواري</h1>
+                        <button
+                          type="button"
+                          class="btn btn-link customer_card_fingerPrint"
+                          data-dismiss="modal"
+                          data-toggle="modal"
+                          data-target="#fingerPrintModal"
+                        >
+                          <i class="fas fa-pen"></i>البصمة
+                        </button>
+                        <a></a>
+                      </div>
+                    </div>
+                    <div class="col-lg-7">
+                      <ul class="customer_card_list new list-unstyled list-group p-0">
+                        <li class=""><p class="mb-1"><span>ملف واسم العميل </span> 2345 اسم العميل</p></li>
+                        <li class=""><p class="mb-1"><span>رقم الفاتوة </span>1234</p></li>
+                        <li class=""><p class="mb-1"><span>تاريخ الفاتوة </span>22-10-2020</p></li>
+                        <li class=""><p class="mb-1"><span>إسم الخدمة </span>تعريف اسم الخدمة</p></li>
+                        <li class=""><p class="mb-1"><span>الكود </span></i>1234</p></li>
+                        <li class=""><p class="mb-1"><span>التصنيف</span> رئيسي</p></li>
+                        <li class=""><p class="mb-1"><span>الكمية</span>3</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- start form -->
+                <form class="service_form">
+                  <div class="form-row align-items-end pt-3">
+                    <div class="form-group mb-0 col-md-4">
+                      <label>تاريخ تفعيل الخدمة</label>
+                      <input type="date" class="form-control border-0" disabled>
+                    </div>
+                    <div class="form-group mb-0 col-md-4">
+                      <label>تاريخ نهاية الخدمة</label>
+                      <input type="date" class="form-control border-0" disabled>
+                    </div>
+                  </div>
+                </form>
+                <!-- ag-grid tables -->
+                <div class="more_info_table p-3">
+                  <h6>معلومات الاشتراك</h6>
+                  <b>grid</b>
+                  <!-- <div id="infoGrid" class="ag-theme-balham"></div> -->
+                  <h6 class="mt-3">العروض على الخدمة</h6>
+                  <b>grid</b>
+                  <!-- <div id="infoGrid" class="ag-theme-balham"></div> -->
+
+                  <ul class="customer_card_list new list-unstyled list-group p-0 mt-4">
+                    <li class=""><p class="mb-1"><span>الكمية </span> 3</p></li>
+                    <li class=""><p class="mb-1"><span>سعر الخدمة </span>155.5 </p></li>
+                    <li class=""><p class="mb-1"><span>القيمة </span>155.5</p></li>
+                    <li class=""><p class="mb-1"><span>الإجمالي قبل الضريبة </span>155.5</p></li>
+                    <li class=""><p class="mb-1"><span>قيمة الخصم </span>5.5 </p></li>
+                    <li class=""><p class="mb-1 bold"><span>الاجمالي </span>895.5</p></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="freez_info box-shadow-gray p-3">
+                  <h6 class="basic_text_color bold mb-3">ترقية إلى</h6>
+                  <div class="row pb-5 mb-4 no-gutters">
+                    <div class="col-md-4">
+                      <img src="./images/2.png" width="130px" />
+                    </div>
+                    <div class="col-md-8">
+                      <!-- Actual search box -->
+                      <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control text-center w-100" placeholder="البحث عن الخدمات">
+                      </div>
+                      <ul class="customer_card_list new list-unstyled list-group p-0">
+                        <li class=""><p class="mb-1"><span>إسم الخدمة </span> تعريف اسم الخدمة</p></li>
+                        <li class=""><p class="mb-1"><span>الكود </span>1234</p></li>
+                        <li class=""><p class="mb-1"><span>التصنيف</span> رئيسي</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- start form -->
+                <form class="service_form">
+                  <div class="form-row align-items-end pt-3">
+                    <div class="form-group mb-0 col-md-4">
+                      <label>سعر الخدمة</label>
+                      <input type="number" class="form-control border-0" disabled>
+                    </div>
+                    <div class="form-group mb-0 col-md-4">
+                      <label>تاريخ بداية الخدمة</label>
+                      <input type="date" class="form-control">
+                    </div>
+                    <div class="form-group mb-0 col-md-4">
+                      <label>تاريخ نهاية الخدمة</label>
+                      <input type="date" class="form-control border-0" disabled>
+                    </div>
+                  </div>
+                </form>
+
+                <!-- ag-grid tables -->
+                <div class="more_info_table p-3">
+                  <h6>معلومات الاشتراك</h6>
+                  <b>grid</b>
+                  <!-- <div id="infoGrid" class="ag-theme-balham"></div> -->
+                  <h6 class="mt-3">العروض على الخدمة</h6>
+                  <b>grid</b>
+                  <!-- <div id="infoGrid" class="ag-theme-balham"></div> -->
+
+                  <ul class="customer_card_list new mt-3 mb-5 list-unstyled list-group p-0">
+                    <li class=""><p class="mb-1"><span>الكمية </span> <input type="number" value="2" class="text-center" /></p></li>
+                    <li class=""><p class="mb-1"><span>سعر الخدمة </span>155.5</p></li>
+                    <li class=""><p class="mb-1"><span>القيمة </span>155.5</p></li>
+                    <li class=""><p class="mb-1"><span>الإجمالي قبل الضريبة </span>155.5</p></li>
+                    <li class=""><p class="mb-1"><span>قيمة الخصم </span></i>5.5</p></li>
+                    <li class=""><p class="mb-1 bold"><span>الاجمالي</span> 895.5</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn_add_rec basic_background_color text-white">دفع</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">إلغاء</button>
           </div>
         </div>
       </div>
@@ -2318,7 +2620,7 @@
                         type="button"
                         class="btn"
                         data-toggle="modal"
-                        data-target="#fingerPrintModal"
+                        data-target="#"
                         >الغاء</button>
                       </li>
                       <li>
@@ -2326,7 +2628,7 @@
                         type="button"
                         class="btn"
                         data-toggle="modal"
-                        data-target="#fingerPrintModal"
+                        data-target="#upgradeModal"
                         >ترقية</button>
                       </li>
                       <li>
@@ -2334,7 +2636,7 @@
                         type="button"
                         class="btn"
                         data-toggle="modal"
-                        data-target="#fingerPrintModal"
+                        data-target="#subscriptionModal"
                         >تحويل</button>
                       </li>
                   </ul>
@@ -2396,7 +2698,7 @@
           <ul class="actions-list list-inline">
               <li class="list-inline-item"><a href="#" title="تنفيذ الاجراء"><i class="fas fa-thumbs-up mr-1"></i></a></li>
               <li class="list-inline-item"><a href="#" title="تحصيل"><i class="fas fa-dollar-sign mr-1"></i></a></li>
-              <li class="list-inline-item"><a href="#" title="عرض"><i class="fas fa-eye mr-1"></i></a></li>
+              <li class="list-inline-item"><a href="./العملاء-ملف العميل-بيانات الفاتوره.html" title="عرض"><i class="fas fa-eye mr-1"></i></a></li>
           </ul>
               `;
         },
