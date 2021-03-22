@@ -1283,12 +1283,23 @@ a.alert_message:hover {
 .customer_section .nav-tabs.d-flex.showTab {
   display: flex !important;
 }
+.customer_balances .col.btn-danger,
+.customers_balances div {
+  cursor: pointer;
+}
+.balance_no .badge-pill {
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+}
 
 /* frezz modal */
-.freez_modal .modal-dialog {
+.freez_modal .modal-dialog,
+.follow_up .modal-dialog,
+.convert_modal .modal-dialog {
   max-width: 90%;
 }
-.freez_modal .customer_card_img {
+.freez_modal .customer_card_img,
+.convert_modal .customer_card_img {
   margin: 25px auto;
 }
 .freez_modal .freez_info {
@@ -1313,9 +1324,12 @@ a.alert_message:hover {
   pointer-events: none;
   color: var(--basic-main-color);
 }
-.freez_modal .form-control.basic_text_color {
+.freez_modal .form-control.basic_text_color,
+.convert_modal .form-control.basic_text_color {
   width: auto;
   max-width: 125px;
+  color: #707070;
+  text-align: center;
   border: 1px solid var(--basic-main-color) !important;
 }
 .customer_card_list input[type="number"] {
@@ -1325,6 +1339,27 @@ a.alert_message:hover {
   font-size: 0.8rem;
   border: 1px solid #707070;
   border-radius: 2px;
+}
+.points_balance {
+  color: var(--basic-main-color);
+  background-color: #efefef;
+}
+.points_balance h6 {
+  font-size: 0.85rem;
+}
+.points_balance p {
+  font-size: 0.9rem;
+}
+.points_balance .border-top,
+.points_balance .border-right {
+  border-color: var(--basic-main-color) !important;
+}
+.pr-3 {
+  padding-right: 1rem !important;
+  padding-left: 0 !important;
+}
+.active_modal .modal-dialog {
+  max-width: 25%;
 }
 
 /*---------------------

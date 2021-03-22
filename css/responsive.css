@@ -34,6 +34,10 @@
   .edit_modal .modal-header .col.p-0,
   .edit_modal .modal-header .btn {
     margin-bottom: 10px;
+    text-align: center;
+  }
+  .edit_modal .modal-header .col.p-0 .btn {
+    margin-bottom: 0;
   }
   .edit_modal .modal-header .col-md-4 {
     text-align: center;
@@ -65,12 +69,15 @@
     max-width: 80%;
     margin: 0 auto;
   }
-  .row{
+  .row {
     margin: 0 !important;
   }
-  .col-lg-4.pl-3{
+  .col-lg-4.pl-3 {
     padding: 0 !important;
     margin: 1.5rem 0;
+  }
+  .points_balance {
+    margin-bottom: 1rem;
   }
 }
 

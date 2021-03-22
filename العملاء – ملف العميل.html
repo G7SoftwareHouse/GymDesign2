@@ -619,6 +619,7 @@
               </div>
             </div>
           </div>
+          <!-- الملخص -->
           <div class="card-body p-0">
             <div class="tab-content">
               <div
@@ -670,30 +671,43 @@
                     </div>
                     <!-- customer balances -->
                     <div class="customer_card px-3">
-                      <div class="customer_info customer_balances">
-                        
+                      <div class="customer_info customers_balances p-0">
                           <h2 class="card_title bold text-center">ارصدة العميل</h2>
-                          <div class="row text-center">
-                            <div class="col-md pt-1-5"><h6>رصيد جلسات تغذية</h6> <p>22</p></div>
-                            <div class="col-md pt-1-5"><h6>رصيد جلسات تدريب شخصي</h6> <p>34</p></div>
-                            <div class="col-md pt-1-5"><h6>رصيد جلسات Orientation</h6> <p>21</p></div>
-                            <div class="col-md pt-1-5"><h6>رصيد جلسات مساج </h6> <p>15</p></div>
-                            <div class="col-md pt-1-5"><h6>رصيد دعوات مجانية</h6> <p>30</p></div>
+                          <div class="row customer_balances text-center">
+                            <div class="col-md pt-1-5" data-toggle="modal" data-target="#balancesModal">
+                              <h6>رصيد جلسات تغذية</h6>
+                              <p>22</p>
+                            </div>
+                            <div class="col-md pt-1-5" data-toggle="modal" data-target="#balancesModal">
+                              <h6>رصيد جلسات تدريب شخصي</h6>
+                              <p>34</p>
+                            </div>
+                            <div class="col-md pt-1-5" data-toggle="modal" data-target="#balancesModal">
+                              <h6>رصيد جلسات Orientation</h6>
+                              <p>21</p>
+                            </div>
+                            <div class="col-md pt-1-5" data-toggle="modal" data-target="#balancesModal">
+                              <h6>رصيد جلسات مساج </h6>
+                              <p>15</p>
+                            </div>
+                            <div class="col-md pt-1-5" data-toggle="modal" data-target="#balancesModal">
+                              <h6>رصيد دعوات مجانية</h6>
+                              <p>30</p>
+                            </div>
                             <div class="col-md border-right">
-                              <h6 class="m-0 py-3">رصيد النقاط المكتسبة (FIT)</h6>
-                              <div class="row border-top">
+                              <h6 class="m-0 py-3" data-toggle="modal" data-target="#earnedbalancesModal">رصيد النقاط المكتسبة (FIT)</h6>
+                              <div class="row border-top" data-toggle="modal" data-target="#convertedbalancesModal">
                                 <div class="col-6 px-1"><p class="m-0 pt-1">محولة</p><p class="m-0 pb-1">20</p></div>
                                 <div class="col-6 px-1 border-right"><p class="m-0 pt-1">مكتسبة</p><p class="m-0 pb-1">20</p></div>
                               </div>
                             </div>
-                            <div class="col btn-danger d-flex align-items-center justify-content-center flex-column"><h6 class="mb-3">رصيد مستحق</h6><h6>500 R.S</h6></div>
+                            <div class="col btn-danger d-flex align-items-center justify-content-center flex-column" data-toggle="modal" data-target="#balanceModal"><h6 class="mb-3">رصيد مستحق</h6><h6>500 R.S</h6></div>
                           </div>
                       </div>
                     </div>
                     <!-- start -->
                     <div class="customer_card mt-4 px-3">
                       <div class="customer_info customer_balances">
-                        
                           <h2 class="card_title bold text-center">معلومات الخدمات</h2>
                           <div class="row align-item-center text-center">
                             <div class="col-md py-5">
@@ -721,7 +735,7 @@
                               <p class="m-0">نشط</p>
                             </div>
                             <div class="col-md py-5">
-                              <h6>العقد</h6> 
+                              <h6>العقد</h6>
                               <p class="m-0">تم تحميل المرفقات</p>
                             </div>
                             <div class="col-sm-2 border-right member_list scrolling">
@@ -750,27 +764,27 @@
                 <!-- buttons  -->
                 <div class="row mt-3 mx-0 py-3 bg-white box-shadow-gray align-items-center justify-content-center">
                   <div class="col">
-                    <button class="btn_add_rec button_search_tabs basic_background_color text-white mt--5">
+                    <a href="./العملاء-ملخص-حجز مواعيد الإستشارات.html" class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5">
                       حجز مواعيد الاستشارات
-                    </button>
+                    </a>
                   </div>
                   <div class="col">
-                    <button class="btn_add_rec button_search_tabs basic_background_color text-white mt--5">
+                    <a href="./العملاء-ملخص-حجز تدريب شخصي تسويقي.html" class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5">
                       حجز تدريب شخصي تسويقي
-                    </button>
+                    </a>
                   </div>
                   <div class="col">
-                    <button class="btn_add_rec button_search_tabs basic_background_color text-white mt--5">
+                    <a href="./العملاء-ملخص-حجز اورينتاشن.html" class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5">
                       حجز Orientaion Class
-                    </button>
+                    </a>
                   </div>
                   <div class="col">
-                    <button class="btn_add_rec button_search_tabs basic_background_color text-white mt--5">
+                    <a href="./العملاء-ملخص-حجز مواعيد الإستشارات.html" class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5">
                       حجز جلسات مساج
-                    </button>
+                    </a>
                   </div>
                   <div class="col">
-                    <button class="btn_add_rec button_search_tabs basic_background_color text-white mt--5">
+                    <button class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5" data-toggle="modal" data-target="#convertPointModal">
                       تحويل نقاط
                     </button>
                   </div>
@@ -938,6 +952,7 @@
                   </div>
                 </div>
               </div>
+              <!-- بيانات العميل -->
               <div
                 class="tab-pane fade"
                 id="customerInfo"
@@ -1275,6 +1290,7 @@
 
                 </form>
               </div>
+              <!-- إجرائات الفواتير -->
               <div
                 class="tab-pane fade"
                 id="Billing"
@@ -1508,7 +1524,6 @@
       </div>
     </div>
 
-
     <!-- edit Modal -->
     <div class="edit_modal modal" id="editModal"
     aria-labelledby="editModalLabel" tabindex="-1" role="dialog">
@@ -1666,7 +1681,6 @@
                     </div>
                   </div>
                 </form>
-    
                 <!-- ag-grid tables -->
                 <div class="more_info_table p-3">
                   <h6>معلومات الاشتراك</h6>
@@ -1804,7 +1818,6 @@
                     </div>
                   </div>
                 </form>
-    
                 <!-- ag-grid tables -->
                 <div class="more_info_table p-3">
                   <h6>معلومات الاشتراك</h6>
@@ -2010,7 +2023,6 @@
                     </div>
                   </div>
                 </div>
-                
                 <!-- ag-grid tables -->
                 <div class="more_info_table p-3">
                   <h6>معلومات الاشتراك</h6>
@@ -2527,6 +2539,291 @@
       </div>
     </div>
 
+    <!-- The balance due Modal -->
+    <div
+      class="modal"
+      id="balanceModal"
+      aria-labelledby="balanceModalLabel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">الرصيد المستحق</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <b>grid</b>
+            <div class="row balance_no justify-content-end no-gutters pt-3">
+              <ul class="d-inline-block">
+                <li class="list-group-item d-flex justify-content-between align-items-center p-0 border-0">
+                  <label>الرصيد المستحق</label>
+                  <span class="badge badge-danger badge-pill mr-4">200</span>
+                </li>
+                <ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">
+              اغلاق
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- convert points Modal -->
+    <div class="convert_modal edit_modal modal" id="convertPointModal"
+    aria-labelledby="convertPointModalLabel" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header px-0">
+            <div class="row align-items-center justify-content-end w-100">
+              <div class="col-lg-4">
+                <h5 class="modal-title bold">تحويل نقاط</h5>
+              </div>
+              <div class="col-lg-6">
+                <div class="row align-items-center  move_info">
+                  <div class="col p-0">رقم الحركة : 1234</div>
+                  <div class="col p-0">تاريخ الحركة : <input type="date" class="form-control d-inline-block" /></div>
+                </div>
+              </div>
+              <div class="col p-0">
+                <button type="button" class="btn btn-info">إرفاق</button>
+                <button type="button" class="btn btn-info">طباعة</button>
+                <button type="button" class="btn btn-primary">Log</button>
+              </div>
+            </div>
+          </div>
+          <div class="modal-body">
+            <div class="row no-gutters">
+              <div class="col-lg-6">
+                <div class="freez_info box-shadow-gray p-3 mb-3">
+                  <div class="row align-items-center m-0 pb-4">
+                    <div class="col-md-4 p-0">
+                      <!-- customer card -->
+                      <div class="customer_card_header text-center p-1">
+                        <img src="./images/avatar.png" class="customer_card_img" />
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <ul class="customer_card_list new list-unstyled list-group p-0">
+                        <li class=""><p class="mb-1"><span>ملف واسم العميل </span> 2345 اسم العميل</p></li>
+                        <li class=""><p class="mb-1"><span>رقم الفاتورة </span>1234 </p></li>
+                        <li class=""><p class="mb-1"><span>تاريخ الفاتورة </span>22-10-2020</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row align-items-center m-0">
+                    <div class="points_balance text-center col-md-4">
+                      <h6 class="bold m-0 py-2">رصيد النقاط المكتسبة (FIT)</h6>
+                        <div class="row border-top">
+                          <div class="col-6 px-1"><p class="m-0 pt-1">محولة</p><p class="m-0 pb-1">20</p></div>
+                          <div class="col-6 px-1 border-right"><p class="m-0 pt-1">مكتسبة</p><p class="m-0 pb-1">20</p></div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 p-0">
+                      <div class="row w-100 justify-content-end align-items-center m-0">
+                        <label class="mx-4">النقاط المحولة</label>
+                        <input type="number" value="20" class="form-control basic_text_color">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 pr-3">
+                <div class="freez_info box-shadow-gray p-3 mb-3">
+                  <div class="row m-0 pb-4">
+                    <div class="col-md-4">
+                      <div class="customer_card_header text-center p-1">
+                        <img src="./images/avatar.png" class="customer_card_img" />
+                      </div>
+                    </div>
+                    <div class="col-md-8">
+                      <!-- Actual search box -->
+                      <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control text-center w-100" placeholder="ابحث باسم العميل , رقم الجوال , رقم الملف , رقم الهوية , الايميل">
+                      </div>
+                      <ul class="customer_card_list new list-unstyled list-group p-0">
+                        <li class=""><p class="mb-1"><span>ملف واسم العميل </span> 1214 اسم العميل</p></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="row align-items-center m-0">
+                    <div class="points_balance text-center col-md-4">
+                      <h6 class="bold m-0 py-2">رصيد النقاط المكتسبة (FIT)</h6>
+                        <div class="row border-top">
+                          <div class="col-6 px-1"><p class="m-0 pt-1">محولة</p><p class="m-0 pb-1">20</p></div>
+                          <div class="col-6 px-1 border-right"><p class="m-0 pt-1">مكتسبة</p><p class="m-0 pb-1">20</p></div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 p-0">
+                      <div class="row w-100 justify-content-end align-items-center m-0">
+                        <button type="button" class="btn btn_add_rec basic_background_color mr-3 text-white">تأكيد العملية</button>
+                          <input type="number" placeholder="رقم تأكيد العملية" class="form-control basic_text_color">
+                      </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <button type="button" class="btn btn_add_rec basic_background_color text-white">دفع</button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">إلغاء</button>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <!-- balances Modal -->
+    <div
+    class="modal"
+    id="balancesModal"
+    aria-labelledby="balancesModalLabel"
+    tabindex="-1"
+    role="dialog"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h6 class="modal-title bold">رصيد جلسات تغذية / تدريب شخصي / اوريانتاشن /  مساج /دعوات مجانية </h6>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <b>grid</b>
+          <!-- <div id="myGrid" class="ag-theme-balham dropdownGrid"></div> -->
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">
+            اغلاق
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- earned balances Modal -->
+    <div
+    class="modal"
+    id="earnedbalancesModal"
+    aria-labelledby="earnedbalancesModalLabel"
+    tabindex="-1"
+    role="dialog"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h6 class="modal-title bold">رصيد نقاط مكتسبة </h6>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <b>grid</b>
+          <!-- <div id="myGrid" class="ag-theme-balham dropdownGrid"></div> -->
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">
+            اغلاق
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- converted balances Modal -->
+    <div
+    class="modal"
+    id="convertedbalancesModal"
+    aria-labelledby="convertedbalancesModalLabel"
+    tabindex="-1"
+    role="dialog"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <h6 class="modal-title bold">رصيد نقاط محولة </h6>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <b>grid</b>
+          <!-- <div id="myGrid" class="ag-theme-balham dropdownGrid"></div> -->
+        </div>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">
+            اغلاق
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <!-- customer activation Modal -->
+    <div
+    class="active_modal modal"
+    id="activeModal"
+    aria-labelledby="activeModalLabel"
+    tabindex="-1"
+    role="dialog"
+  >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center border-0">
+          <h6 class="modal-title bold">تأكيد إيقاف العميل/ تأكيد فك إيقاف العميل </h6>
+        </div>
+        <div class="modal-body py-0 px-3">
+          <form>
+            <div class="form-row no-gutters">
+              <div class="form-group col-lg-12 px-3">
+                <label>ادخل رقم التأكيد</label>
+                <input
+                  type="number"
+                  class="form-control"
+                />
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer justify-content-center border-0">
+          <button type="button" class="btn btn-success">
+            ايقاف / فك العميل
+          </button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            خروج
+          </button>
+        </div>
+      </div>
+    </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="js/jquery-3.4.1.slim.min.js"></script>

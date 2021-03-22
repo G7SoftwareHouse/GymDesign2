@@ -106,6 +106,8 @@ $(document).ready(function () {
   $("#responsible").select2();
   $("#Bcode").select2();
   $("#chCategories").select2();
+  $("#reservType").select2();
+  $("#infoType").select2();
 });
 
 // date inputs format
@@ -135,6 +137,12 @@ $(function () {
     style: "status_btn",
     height: 20,
   });
+  $('#status-toggle').change(function() {
+    $('#activeModal').modal('show');
+  })
+  $('#status-toggle-2').change(function() {
+    $('#activeModal').modal('show');
+  })
   $("#toggle-btn").bootstrapToggle({
     on: "",
     off: "",
@@ -146,13 +154,12 @@ $(function () {
 /* When the user clicks on the button,
         toggle between hiding and showing the dropdown content */
 function openSearch() {
-  document.getElementById("search-dropdown").addClass("show");
+  document.getElementById("search-dropdown").classList.add("show");
 }
 
 $(document).mouseup(function(e) 
 {
     var container = $("#search-dropdown");
-
     // if the target of the click isn't the container nor a descendant of the container
     if (!container.is(e.target) && container.has(e.target).length === 0) 
     {
