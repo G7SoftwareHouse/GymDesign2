@@ -220,10 +220,22 @@ select {
 .customer_card_fingerPrint {
   color: var(--basic-green-color);
 }
+.customer_card_fingerPrintD {
+  color: var(--basic-red-color);
+}
+
 .customer_card_name,
-.customer_card_fingerPrint,
+.customer_card_fingerPrint , .customer_card_fingerPrintD,
 .customer_card_list li p {
   font-weight: bolder;
+}
+.customer_card_fingerPrintD:hover {
+  color: var(--basic-red-color);
+}
+.customer_card_fingerPrintD .svg-inline--fa {
+  margin: 0 5px;
+  font-size: 0.85rem;
+  color: var(--basic-main-color);
 }
 .customer_card_fingerPrint:hover {
   color: var(--basic-green-color);
@@ -480,6 +492,7 @@ select {
 }
 .edit_modal .modal-body .customer_card_name,
 .edit_modal .modal-body .customer_card_fingerPrint,
+.edit_modal .modal-body .customer_card_fingerPrintD,
 .edit_modal .modal-body .customer_card_list li p {
   font-weight: normal;
 }
