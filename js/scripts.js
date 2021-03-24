@@ -22,7 +22,7 @@ $(document).ready(function () {
       } else if (header > 100) {
         document.getElementById("header").style.top = "-68px";
         $(".vertical_tabs .tab").css("top", header - 68);
-        $(".vertical_tabs .tab").css("min-height", header - 68);
+        $(".vertical_tabs .tab").css("min-height", bH - (header - 68));
       }
       prevScrollpos = currentScrollPos;
     }
@@ -43,6 +43,7 @@ $(document).ready(function () {
     $(".vertical_tabs .tabcontent").css("margin-right", tabW);
     $(".vertical_tabs .tabcontent").css("width", bW - tabW - 48);
     $(".vertical_tabs .tabcontent#tab_1").css("margin-bottom", totalH + 10);
+    $(".vertical_tabs .tab button").css("min-height", bH / 11);
   });
 
   // slick slider
@@ -137,12 +138,32 @@ $(function () {
     style: "status_btn",
     height: 20,
   });
-  $('#status-toggle').change(function() {
-    $('#activeModal').modal('show');
-  })
-  $('#status-toggle-2').change(function() {
-    $('#activeModal').modal('show');
-  })
+  $("#status-toggle-3").bootstrapToggle({
+    on: "",
+    off: "",
+    onstyle: "default",
+    style: "status_btn",
+    height: 20,
+  });
+  $("#status-toggle-4").bootstrapToggle({
+    on: "",
+    off: "",
+    onstyle: "default",
+    style: "status_btn",
+    height: 20,
+  });
+  $("#status-toggle").change(function () {
+    $("#activeModal").modal("show");
+  });
+  $("#status-toggle-2").change(function () {
+    $("#activeModal").modal("show");
+  });
+  $("#status-toggle-3").change(function () {
+    $("#activeModal").modal("show");
+  });
+  $("#status-toggle-4").change(function () {
+    $("#activeModal").modal("show");
+  });
   $("#toggle-btn").bootstrapToggle({
     on: "",
     off: "",
@@ -157,14 +178,12 @@ function openSearch() {
   document.getElementById("search-dropdown").classList.add("show");
 }
 
-$(document).mouseup(function(e) 
-{
-    var container = $("#search-dropdown");
-    // if the target of the click isn't the container nor a descendant of the container
-    if (!container.is(e.target) && container.has(e.target).length === 0) 
-    {
-        container.removeClass("show");
-    }
+$(document).mouseup(function (e) {
+  var container = $("#search-dropdown");
+  // if the target of the click isn't the container nor a descendant of the container
+  if (!container.is(e.target) && container.has(e.target).length === 0) {
+    container.removeClass("show");
+  }
 });
 
 $(".tabbable .nav-tabs .nav-item .nav-link").click(function () {

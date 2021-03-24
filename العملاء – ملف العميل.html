@@ -619,9 +619,10 @@
               </div>
             </div>
           </div>
-          <!-- الملخص -->
+          
           <div class="card-body p-0">
             <div class="tab-content">
+              <!-- الملخص -->
               <div
                 class="tab-pane fade show active"
                 id="summary"
@@ -763,28 +764,28 @@
 
                 <!-- buttons  -->
                 <div class="row mt-3 mx-0 py-3 bg-white box-shadow-gray align-items-center justify-content-center">
-                  <div class="col">
-                    <a href="./العملاء-ملخص-حجز مواعيد الإستشارات.html" class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5">
+                  <div class="col-sm">
+                    <a href="./العملاء-ملخص-حجز مواعيد الإستشارات.html" class="btn w-100 btn_add_rec button_search_tabs basic_background_color text-white">
                       حجز مواعيد الاستشارات
                     </a>
                   </div>
-                  <div class="col">
-                    <a href="./العملاء-ملخص-حجز تدريب شخصي تسويقي.html" class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5">
+                  <div class="col-sm">
+                    <a href="./العملاء-ملخص-حجز تدريب شخصي تسويقي.html" class="btn w-100 btn_add_rec button_search_tabs basic_background_color text-white">
                       حجز تدريب شخصي تسويقي
                     </a>
                   </div>
-                  <div class="col">
-                    <a href="./العملاء-ملخص-حجز اورينتاشن.html" class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5">
+                  <div class="col-sm">
+                    <a href="./العملاء-ملخص-حجز اورينتاشن.html" class="btn w-100 btn_add_rec button_search_tabs basic_background_color text-white">
                       حجز Orientaion Class
                     </a>
                   </div>
-                  <div class="col">
-                    <a href="./العملاء-ملخص-حجز مواعيد الإستشارات.html" class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5">
+                  <div class="col-sm">
+                    <a href="./العملاء-ملخص-حجز مواعيد الإستشارات.html" class="btn w-100 btn_add_rec button_search_tabs basic_background_color text-white mt--5">
                       حجز جلسات مساج
                     </a>
                   </div>
-                  <div class="col">
-                    <button class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5" data-toggle="modal" data-target="#convertPointModal">
+                  <div class="col-sm">
+                    <button class="btn w-100 btn_add_rec button_search_tabs basic_background_color text-white mt--5" data-toggle="modal" data-target="#convertPointModal">
                       تحويل نقاط
                     </button>
                   </div>
@@ -1420,20 +1421,667 @@
                   </div>
                 </div>
               </div>
+              <!-- التغذية و القياسات -->
               <div
                 class="tab-pane fade"
                 id="nutrition"
                 role="tabpanel"
                 aria-labelledby="nutrition-tab"
-              >...
+              >
+                <div class="row box-shadow-gray bg-white m-0">
+                  <div class="col-md-3 pr-0">
+                    <!-- customer card -->
+                    <div class="customer_card h-100 p-3">
+                      <div class="customer_card_header text-center p-3">
+                        <input type="checkbox" checked id="status-toggle-3" />
+                        <img src="./images/avatar.png" class="customer_card_img" />
+                        <h1 class="customer_card_name m-0">بيان عدنان هواري</h1>
+                        <button
+                          type="button"
+                          class="btn btn-link customer_card_fingerPrint"
+                          data-toggle="modal"
+                          data-target="#fingerPrintModal"
+                        >
+                          <i class="fas fa-pen"></i>البصمة
+                        </button>
+                        <a></a>
+                      </div>
+                      <ul class="customer_card_list list-group">
+                        <li class=""><p>رقم الملف : <span>234567</span></p></li>
+                        <li class=""><p>حالة الاشتراك : <span>مشترك</span></p></li>
+                        <li class=""><p>حالة العميل : <span class="disabled">موقوف - منتهي - <span class="green-color">نشط</span></p></li>
+                        <li class=""><p>مرشح عن طريق : <span>صالحة</span></p></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-9 pl-0">
+                    <div class="customer_card fst-card pt-1 px-3">
+                      <div class="customer_info">
+                        <h2 class="card_title bold text-center">بيانات اساسية</h2>
+                          <div class="row text-center">
+                          <div class="col-md"><h6>تاريخ الميلاد</h6><p>22-10-1990</p></div>
+                          <div class="col-md"><h6>الاخصائي المسئول</h6><p>shahd</p></div>
+                          <div class="col-md"><h6>الزيارة الاخيرة</h6><p>Sat 22-nov-2020 - 12:30 PM</p></div>
+                          <div class="col-md"><h6>الفرع</h6><p>الشرائع</p></div>
+                          <div class="col-md"><h6>معلومات الاتصال</h6><p>+2345634567</p></div>
+                          <div class="col-md"><h6>الهوية</h6><p>14524573453</p></div>
+                          <div class="col-md"><h6>تاريخ الاستفسار</h6><p>Sat 22-nov-2020 - 12:30 PM</p></div>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- customer balances -->
+                    <div class="customer_card px-3">
+                      <div class="customer_info customers_balances p-0">
+                          <h2 class="card_title bold text-center">ارصدة العميل</h2>
+                          <div class="row customer_balances text-center">
+                            <div class="col-md pt-1-5" data-toggle="modal" data-target="#balancesModal">
+                              <h6>رصيد جلسات تغذية</h6>
+                              <p>22</p>
+                            </div>
+                            <div class="col-md pt-1-5" data-toggle="modal" data-target="#balancesModal">
+                              <h6>رصيد جلسات تدريب شخصي</h6>
+                              <p>34</p>
+                            </div>
+                            <div class="col-md pt-1-5" data-toggle="modal" data-target="#balancesModal">
+                              <h6>رصيد جلسات Orientation</h6>
+                              <p>21</p>
+                            </div>
+                            <div class="col-md pt-1-5" data-toggle="modal" data-target="#balancesModal">
+                              <h6>رصيد جلسات مساج </h6>
+                              <p>15</p>
+                            </div>
+                            <div class="col-md pt-1-5" data-toggle="modal" data-target="#balancesModal">
+                              <h6>رصيد دعوات مجانية</h6>
+                              <p>30</p>
+                            </div>
+                            <div class="col-md border-right">
+                              <h6 class="m-0 py-3" data-toggle="modal" data-target="#earnedbalancesModal">رصيد النقاط المكتسبة (FIT)</h6>
+                              <div class="row border-top" data-toggle="modal" data-target="#convertedbalancesModal">
+                                <div class="col-6 px-1"><p class="m-0 pt-1">محولة</p><p class="m-0 pb-1">20</p></div>
+                                <div class="col-6 px-1 border-right"><p class="m-0 pt-1">مكتسبة</p><p class="m-0 pb-1">20</p></div>
+                              </div>
+                            </div>
+                            <div class="col btn-danger d-flex align-items-center justify-content-center flex-column" data-toggle="modal" data-target="#balanceModal"><h6 class="mb-3">رصيد مستحق</h6><h6>500 R.S</h6></div>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- start -->
+                    <div class="customer_card mt-4 px-3">
+                      <div class="customer_info customer_balances">
+                          <h2 class="card_title bold text-center">معلومات التغذية</h2>
+                          <div class="row align-item-center text-center">
+                            <div class="col-md py-5">
+                              <h6>الطول</h6>
+                              <p class="m-0">170</p>
+                            </div>
+                            <div class="col-md py-5">
+                              <h6>الوزن</h6>
+                              <p class="m-0">80</p>
+                            </div>
+                            <div class="col-md py-5">
+                              <h6>نسبة الدهون</h6>
+                              <p class="m-0">80%</p>
+                            </div>
+                            <div class="col-md py-5">
+                              <h6>كتلة الجسم  </h6>
+                              <p class="m-0">140</p>
+                            </div>
+                            <div class="col-md py-5">
+                              <h6>العمر</h6>
+                              <p class="m-0">35</p>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- end -->
+                  </div>
+                </div>
+
+                <!-- buttons  -->
+                <div class="row mt-3 mx-0 py-3 bg-white box-shadow-gray align-items-center justify-content-center">
+                  <div class="col">
+                    <a href="./العملاء-انشاء جلسة تغذية جديدة.html" class="btn btn_add_rec button_search_tabs basic_background_color text-white">
+                      انشاء جلسة تغذية
+                    </a>
+                  </div>
+                </div>
+
+                <div class="card card_index mt-2 border-0">
+                  <div class="card-header border-0 p-0">
+                    <!-- START TABS DIV -->
+                    <div class="tabbable-responsive overflow-none">
+                      <div class="tabbable">
+                        <ul
+                          class="nav nav-tabs border-0"
+                          role="tablist"
+                        >
+                          <li class="nav-item float-left mb-1">
+                            <a
+                              class="nav-link text-center bold active"
+                              id="Billing-tab"
+                              data-toggle="tab"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                              >تسجيل المعلومات الصحية للعميل</a
+                            >
+                          </li>
+                          <li class="nav-item m-0 d-flex justify-content-end mt--5 d-s-none">
+                            <div class="row font-size-14 align-items-center no-gutters">
+                              <div class="col-md-4 basic_text_color">
+                                نوع الحركة :
+                                <input
+                                  type="text"
+                                  class="form-control border-0 d-inline-block dis_date_input"
+                                  value="مباشر"
+                                  disabled
+                                />
+                              </div>
+                              <div class="col-md-4 basic_text_color text-center">
+                                رقم الحركة : 1234
+                              </div>
+                              <div class="col-md-4 basic_text_color">
+                                تاريخ الحركة :
+                                <input
+                                  type="date"
+                                  class="form-control border-0 d-inline-block dis_date_input"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="tab-content bg-white mt--5 p-3">
+                      <div
+                        class="tab-pane fade show active"
+                        id="rec"
+                        role="tabpanel"
+                        aria-labelledby="rec-tab"
+                      >
+                        <div class="row no-gutters">
+                          <div class="col-lg-7">
+                            <div class="medical_table table-responsive">
+                              <table class="table text-center">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">
+                                      <h6><img src="./images/Artboard 7.png" width="40" class="mr-2" />الامراض المزمنة</h6>
+                                    </th>
+                                    <th scope="col" class="border-right">
+                                      <h6><img src="./images/Artboard 6.png" width="40" class="mr-2" />المشاكل الصحية</h6>
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      <ul class="list-group text-left mb-4">
+                                        <li class="list-group-item">
+                                          <div class="form-group form-check m-0">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck1">سكر</label>
+                                          </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <div class="form-group form-check m-0">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                            <label class="form-check-label" for="exampleCheck2">ضغط الدم</label>
+                                          </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <div class="form-group form-check m-0">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck3">
+                                            <label class="form-check-label" for="exampleCheck3">ربو</label>
+                                          </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <div class="form-group form-check m-0">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck4">
+                                            <label class="form-check-label" for="exampleCheck4">أمراض القلب</label>
+                                          </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <div class="form-group form-check m-0">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck5">
+                                            <label class="form-check-label" for="exampleCheck5">فقر دم</label>
+                                          </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <div class="form-group form-check m-0">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck6">
+                                            <label class="form-check-label" for="exampleCheck6">فيتامين د</label>
+                                          </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <div class="form-group form-check m-0">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck7">
+                                            <label class="form-check-label" for="exampleCheck7">عدم انتظام هرمونات</label>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="form-row align-items-center m-0 no-gutters">
+                                        <div class="form-group form-check m-0 col-md-2 col-sm-12 px-3">
+                                          <input type="checkbox" class="form-check-input" id="exampleCheck8">
+                                          <label class="form-check-label" for="exampleCheck8">اخرى</label>
+                                        </div>
+                                        <div class="form-group m-0 col-md-10 col-sm-12 px-3">
+                                          <input type="text" class="form-control" placeholder="اكتب هنا">
+                                        </div>
+                                      </div>
+                                    </td>
+                                    <td class="border-right">
+                                      <ul class="list-group text-left mb-4">
+                                        <li class="list-group-item">
+                                          <div class="form-group form-check m-0">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                            <label class="form-check-label" for="exampleCheck11">انزلاق غضروفي</label>
+                                          </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <div class="form-group form-check m-0">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck2">
+                                            <label class="form-check-label" for="exampleCheck22">خشونة في الركبة</label>
+                                          </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <div class="form-group form-check m-0">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck3">
+                                            <label class="form-check-label" for="exampleCheck33">استبدال مفاصل</label>
+                                          </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <div class="form-group form-check m-0">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck4">
+                                            <label class="form-check-label" for="exampleCheck44">تدخين</label>
+                                          </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <div class="form-group form-check m-0">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck5">
+                                            <label class="form-check-label" for="exampleCheck55">أنواع الادوية المستخدمة</label>
+                                          </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <div class="form-group form-check m-0">
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck6">
+                                            <label class="form-check-label" for="exampleCheck6">عملية جراحية خلال سنة</label>
+                                          </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                          <div class="form-group form-check m-0">
+                                            <label class="form-check-label"></label>
+                                          </div>
+                                        </li>
+                                      </ul>
+                                      <div class="form-row align-items-center m-0 no-gutters">
+                                        <div class="form-group form-check m-0 col-md-2 col-sm-12 px-3">
+                                          <input type="checkbox" class="form-check-input" id="exampleCheck8">
+                                          <label class="form-check-label" for="exampleCheck8">اخرى</label>
+                                        </div>
+                                        <div class="form-group m-0 col-md-10 col-sm-12 px-3">
+                                          <input type="text" class="form-control" placeholder="اكتب هنا">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="more_info_table">
+                          <h6 class="my-3">جدول تسجيل المعلومات الصحية</h6>
+                          <b>grid</b>
+                          <!-- <div id="myGrid" class="dropdownGrid ag-theme-balham"></div> -->
+                          <div class="row justify-content-end no-gutters">
+                            <button
+                              class="btn box-shadow basic_background_color text-white m-0"
+                            >
+                            <i class="fas fa-sync-alt font-size-14 ml-1"></i>
+                            تحديث واضافة
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- start -->
+                <div class="card card_index mt-2 border-0">
+                  <div class="card-header border-0 p-0">
+                    <!-- START TABS DIV -->
+                    <div class="tabbable-responsive overflow-none">
+                      <div class="tabbable">
+                        <ul
+                          class="nav nav-tabs border-0"
+                          role="tablist"
+                        >
+                          <li class="nav-item float-left">
+                            <a
+                              class="nav-link text-center bold active"
+                              id="Billing-tab"
+                              data-toggle="tab"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                              >ملخص جلسات التغذية </a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="tab-content bg-white mt--5 p-3">
+                      <div
+                        class="tab-pane fade show active"
+                        id="rec"
+                        role="tabpanel"
+                        aria-labelledby="rec-tab"
+                      >
+                      <b>grid</b>
+                        <!-- <div id="myGrid" class="dropdownGrid ag-theme-balham"></div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+              <!-- التدريب -->
               <div
                 class="tab-pane fade"
                 id="training"
                 role="tabpanel"
                 aria-labelledby="training-tab"
               >
-                ...
+                <div class="row box-shadow-gray bg-white m-0">
+                  <div class="col-md-3 pr-0">
+                    <!-- customer card -->
+                    <div class="customer_card h-100 p-3">
+                      <div class="customer_card_header text-center p-3">
+                        <input type="checkbox" checked id="status-toggle-4" />
+                        <img src="./images/avatar.png" class="customer_card_img" />
+                        <h1 class="customer_card_name m-0">بيان عدنان هواري</h1>
+                        <button
+                          type="button"
+                          class="btn btn-link customer_card_fingerPrint"
+                          data-toggle="modal"
+                          data-target="#fingerPrintModal"
+                        >
+                          <i class="fas fa-pen"></i>البصمة
+                        </button>
+                        <a></a>
+                      </div>
+                      <ul class="customer_card_list list-group">
+                        <li class=""><p>رقم الملف : <span>234567</span></p></li>
+                        <li class=""><p>حالة الاشتراك : <span>مشترك</span></p></li>
+                        <li class=""><p>حالة العميل : <span class="disabled">موقوف - منتهي - <span class="green-color">نشط</span></p></li>
+                        <li class=""><p>مرشح عن طريق : <span>صالحة</span></p></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-9 pl-0">
+                    <div class="customer_card fst-card pt-1 px-3">
+                      <div class="customer_info">
+                        <h2 class="card_title bold text-center">بيانات اساسية</h2>
+                          <div class="row text-center">
+                          <div class="col-md"><h6>تاريخ الميلاد</h6><p>22-10-1990</p></div>
+                          <div class="col-md"><h6>الاخصائي المسئول</h6><p>shahd</p></div>
+                          <div class="col-md"><h6>الزيارة الاخيرة</h6><p>Sat 22-nov-2020 - 12:30 PM</p></div>
+                          <div class="col-md"><h6>الفرع</h6><p>الشرائع</p></div>
+                          <div class="col-md"><h6>معلومات الاتصال</h6><p>+2345634567</p></div>
+                          <div class="col-md"><h6>الهوية</h6><p>14524573453</p></div>
+                          <div class="col-md"><h6>تاريخ الاستفسار</h6><p>Sat 22-nov-2020 - 12:30 PM</p></div>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- customer balances -->
+                    <div class="customer_card px-3">
+                      <div class="customer_info customers_balances p-0">
+                          <h2 class="card_title bold text-center">ارصدة العميل</h2>
+                          <div class="row customer_balances text-center">
+                            <div class="col-md pt-1-5" data-toggle="modal" data-target="#balancesModal">
+                              <h6>رصيد جلسات تغذية</h6>
+                              <p>22</p>
+                            </div>
+                            <div class="col-md pt-1-5" data-toggle="modal" data-target="#balancesModal">
+                              <h6>رصيد جلسات تدريب شخصي</h6>
+                              <p>34</p>
+                            </div>
+                            <div class="col-md pt-1-5" data-toggle="modal" data-target="#balancesModal">
+                              <h6>رصيد جلسات Orientation</h6>
+                              <p>21</p>
+                            </div>
+                            <div class="col-md pt-1-5" data-toggle="modal" data-target="#balancesModal">
+                              <h6>رصيد جلسات مساج </h6>
+                              <p>15</p>
+                            </div>
+                            <div class="col-md pt-1-5" data-toggle="modal" data-target="#balancesModal">
+                              <h6>رصيد دعوات مجانية</h6>
+                              <p>30</p>
+                            </div>
+                            <div class="col-md border-right">
+                              <h6 class="m-0 py-3" data-toggle="modal" data-target="#earnedbalancesModal">رصيد النقاط المكتسبة (FIT)</h6>
+                              <div class="row border-top" data-toggle="modal" data-target="#convertedbalancesModal">
+                                <div class="col-6 px-1"><p class="m-0 pt-1">محولة</p><p class="m-0 pb-1">20</p></div>
+                                <div class="col-6 px-1 border-right"><p class="m-0 pt-1">مكتسبة</p><p class="m-0 pb-1">20</p></div>
+                              </div>
+                            </div>
+                            <div class="col btn-danger d-flex align-items-center justify-content-center flex-column" data-toggle="modal" data-target="#balanceModal"><h6 class="mb-3">رصيد مستحق</h6><h6>500 R.S</h6></div>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- start -->
+                    <div class="customer_card mt-4 px-3">
+                      <div class="customer_info customer_balances">
+                          <h2 class="card_title bold text-center">معلومات التغذية</h2>
+                          <div class="row align-item-center text-center">
+                            <div class="col-md py-5">
+                              <h6>الطول</h6>
+                              <p class="m-0">170</p>
+                            </div>
+                            <div class="col-md py-5">
+                              <h6>الوزن</h6>
+                              <p class="m-0">80</p>
+                            </div>
+                            <div class="col-md py-5">
+                              <h6>نسبة الدهون</h6>
+                              <p class="m-0">80%</p>
+                            </div>
+                            <div class="col-md py-5">
+                              <h6>كتلة الجسم  </h6>
+                              <p class="m-0">140</p>
+                            </div>
+                            <div class="col-md py-5">
+                              <h6>العمر</h6>
+                              <p class="m-0">35</p>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- end -->
+                  </div>
+                </div>
+
+                <!-- buttons  -->
+                <div class="row mt-3 mx-0 py-3 bg-white box-shadow-gray align-items-center justify-content-center">
+                  <div class="col-sm">
+                    <a href="./العملاء-التدريب-حجز تدريب شخصي.html" class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5">
+                      حجز تدريب شخصي PT
+                    </a>
+                  </div>
+                </div>
+
+                <div class="card card_index mt-2 border-0">
+                  <div class="card-header border-0 p-0">
+                    <!-- START TABS DIV -->
+                    <div class="tabbable-responsive overflow-none">
+                      <div class="tabbable">
+                        <ul
+                          class="nav nav-tabs border-0"
+                          role="tablist"
+                        >
+                          <li class="nav-item float-left mb-1">
+                            <a
+                              class="nav-link text-center bold active"
+                              data-toggle="tab"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                              >مواعيد التدريب الشخصيPT</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="tab-content bg-white mt--5 p-3">
+                      <div
+                        class="tab-pane fade show active"
+                        role="tabpanel"
+                      >
+                        <div class="more_info_table">
+                          <b>grid</b>
+                          <!-- <div id="myGrid" class="dropdownGrid ag-theme-balham"></div> -->
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- buttons  -->
+                <div class="row mt-3 mx-0 py-3 bg-white box-shadow-gray align-items-center">
+                  <div class="col-sm-3">
+                    <a href="./العملاء-انشاء استشاره رياضية.html" class="btn w-100 btn_add_rec button_search_tabs basic_background_color text-white">
+                      انشاء استشارة رياضية
+                    </a>
+                  </div>
+                  <div class="col-sm-3">
+                    <a href="./العملاء-انشاء جلسة تدريب تسويقي.html" class="btn w-100 btn_add_rec button_search_tabs basic_background_color text-white ">
+                      انشاء جلسة تدريب شخصي تسويقي
+                    </a>
+                  </div>
+                  <div class="col-sm-3">
+                    <a href="./العملاء-حجز تدريب شخصي مدفوع.html" class="btn w-100 btn_add_rec button_search_tabs basic_background_color text-white ">
+                      انشاء جلسة تدريب شخصيPT
+                    </a>
+                  </div>
+                </div>
+
+                <!-- start -->
+                <div class="card card_index mt-2 border-0">
+                  <div class="card-header border-0 p-0">
+                    <!-- START TABS DIV -->
+                    <div class="tabbable-responsive overflow-none">
+                      <div class="tabbable">
+                        <ul
+                          class="nav nav-tabs border-0"
+                          role="tablist"
+                        >
+                          <li class="nav-item float-left">
+                            <a
+                              class="nav-link text-center bold active"
+                              data-toggle="tab"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                              >جلسات الاستشارة الرياضية </a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="tab-content bg-white mt--5 p-3">
+                      <div
+                        class="tab-pane fade show active"
+                        role="tabpanel"
+                      >
+                        <b>grid</b>
+                        <!-- <div id="myGrid" class="dropdownGrid ag-theme-balham"></div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- start -->
+                <div class="card card_index mt-2 border-0">
+                  <div class="card-header border-0 p-0">
+                    <!-- START TABS DIV -->
+                    <div class="tabbable-responsive overflow-none">
+                      <div class="tabbable">
+                        <ul
+                          class="nav nav-tabs border-0"
+                          role="tablist"
+                        >
+                          <li class="nav-item float-left">
+                            <a
+                              class="nav-link text-center bold active"
+                              data-toggle="tab"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                              >جلسات تدريب شخصي تسويقي </a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="tab-content bg-white mt--5 p-3">
+                      <div
+                        class="tab-pane fade show active"
+                        role="tabpanel"
+                      >
+                        <b>grid</b>
+                        <!-- <div id="myGrid" class="dropdownGrid ag-theme-balham"></div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- start -->
+                <div class="card card_index mt-2 border-0">
+                  <div class="card-header border-0 p-0">
+                    <!-- START TABS DIV -->
+                    <div class="tabbable-responsive overflow-none">
+                      <div class="tabbable">
+                        <ul
+                          class="nav nav-tabs border-0"
+                          role="tablist"
+                        >
+                          <li class="nav-item float-left">
+                            <a
+                              class="nav-link text-center bold active"
+                              data-toggle="tab"
+                              role="tab"
+                              aria-controls="contact"
+                              aria-selected="false"
+                              >جلسات التدريب الشخصيPT</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body p-0">
+                    <div class="tab-content bg-white mt--5 p-3">
+                      <div
+                        class="tab-pane fade show active"
+                        role="tabpanel"
+                        aria-labelledby="rec-tab"
+                      >
+                        <b>grid</b>
+                        <!-- <div id="myGrid" class="dropdownGrid ag-theme-balham"></div> -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div
                 class="tab-pane fade"

@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <title>انشاء استشارة رياضية</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/bootstraprtl.css" />
+    <link href="./css/bootstrap-toggle.min.css" rel="stylesheet" />
+    <link href="./css/fontawesome.css" rel="stylesheet" />
+    <link href="./css/brands.min.css" rel="stylesheet" />
+    <link href="./css/solid.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/select2.min.css" />
+    <link rel="stylesheet" href="css/jstree.css" />
+    <!-- datetimepicker -->
+    <link rel="stylesheet" href="css/tempusdominus-bootstrap.css" />
+    <!-- AG-grid -->
+    <link rel="stylesheet" href="./css/ag-grid.css" />
+    <link rel="stylesheet" href="./css/ag-theme-balham.css" />
+    <link rel="stylesheet" href="./css/custom-ag-grid.css" />
+    <script src="js/ag-grid-enterprise.min.noStyle.js"></script>
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="css/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
+    <!-- Custom style -->
+    <link rel="stylesheet" href="./css/custom.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="images/fa-icon.png" />
+    <link rel="apple-touch-icon" href="images/fa-icon.png" />
+  </head>
+  <body>
+    <header class="navbar_section-1 navbar_section" id="header">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light row p-2 p-lg-0">
+          <a class="navbar-brand m-0 d-block d-lg-none" href="#!">
+            <img src="./images/logo.png" alt="logo" class="w-100" />
+          </a>
+          <div class="d-block d-lg-none lang-noti-mb">
+            <ul
+              class="navbar-nav p-0 d-flex justify-content-center align-items-center custom-nav"
+            >
+              <li class="nav-item">
+                <a href="#!" class="nav-link navbar-link-2 waves-effect">
+                  <i
+                    class="fas fa-globe-asia basic_text_color font-size-25"
+                  ></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <button
+                    class="dropdown-toggle arrow_style"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-toggle="dropdown"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                  >
+                    <i class="fas fa-bell basic_text_color font-size-25"></i>
+                  </button>
+                  <div
+                    class="dropdown-menu"
+                    aria-labelledby="dropdownMenuButton"
+                  >
+                    <div>
+                      <h4 class="text-center basic_text_color">الاشعارات</h4>
+                      <form class="navbar-search px-0 ml-0 col-12" action="">
+                        <div class="input-group mb-0">
+                          <div class="input-group-prepend search-style col-12">
+                            <a
+                              href="#!"
+                              class="input-icon d-flex align-items-center"
+                              type="button"
+                              ><i
+                                class="fas fa-search text-white mx-3 basic_fill_color"
+                              ></i
+                            ></a>
+                            <input
+                              class="form-control form-search white-text rgba-black-light border-0 z-depth-0 pl-5"
+                              type="text"
+                              placeholder="ابحث باسم العميل , رقم الجوال , رقم الملف , رقم الهوية , الايميل "
+                              aria-label="Search"
+                            />
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div>
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="text-center">
+                              <i
+                                class="fas fa-briefcase text-white basic_fill_color"
+                              ></i>
+                            </th>
+                            <th scope="col">مبيعات مباشرة لم تعتمد</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row" class="text-center">
+                              <i
+                                class="fas fa-shopping-cart text-white basic_fill_color"
+                              ></i>
+                            </th>
+                            <td scope="col">دفعات مستحقه الدفع</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <a class="dropdown-item" href="#">عرض المزيد</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!-- Collapse button -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Breadcrumbs -->
+          <!-- Links -->
+          <div
+            class="collapse navbar-collapse flex-wrap"
+            id="navbarNavDropdown"
+          >
+            <div
+              class="top-header d-flex w-100 p-0 p-lg-3 box-shadow-main justify-content-between align-items-center"
+            >
+              <a class="navbar-brand col-2 m-0 d-none d-lg-block" href="#!">
+                <img src="./images/logo.png" alt="logo" class="w-100" />
+              </a>
+              <!-- Right -->
+              <div class="d-none d-lg-block">
+                <ul
+                  class="navbar-nav p-0 d-flex justify-content-center align-items-center custom-nav"
+                >
+                  <li class="nav-item">
+                    <a href="#!" class="nav-link navbar-link-2 waves-effect">
+                      <i
+                        class="fas fa-globe-asia basic_text_color font-size-25"
+                      ></i>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <div class="dropdown">
+                      <button
+                        class="dropdown-toggle arrow_style"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i
+                          class="fas fa-bell basic_text_color font-size-25"
+                        ></i>
+                      </button>
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <div>
+                          <h4 class="text-center basic_text_color">
+                            الاشعارات
+                          </h4>
+                          <form
+                            class="navbar-search px-0 ml-0 col-12"
+                            action=""
+                          >
+                            <div class="input-group mb-0">
+                              <div
+                                class="input-group-prepend search-style col-12"
+                              >
+                                <a
+                                  href="#!"
+                                  class="input-icon d-flex align-items-center"
+                                  type="button"
+                                  ><i
+                                    class="fas fa-search text-white mx-3 basic_fill_color"
+                                  ></i
+                                ></a>
+                                <input
+                                  class="form-control form-search white-text rgba-black-light border-0 z-depth-0 pl-5"
+                                  type="text"
+                                  placeholder="ابحث باسم العميل , رقم الجوال , رقم الملف , رقم الهوية , الايميل "
+                                  aria-label="Search"
+                                />
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div>
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col" class="text-center">
+                                  <i
+                                    class="fas fa-briefcase text-white basic_fill_color"
+                                  ></i>
+                                </th>
+                                <th scope="col">مبيعات مباشرة لم تعتمد</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row" class="text-center">
+                                  <i
+                                    class="fas fa-shopping-cart text-white basic_fill_color"
+                                  ></i>
+                                </th>
+                                <td scope="col">دفعات مستحقه الدفع</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <a class="dropdown-item" href="#">عرض المزيد</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <form class="navbar-search p-0 ml-0 col-lg-6" action="">
+                <div class="input-group mb-0">
+                  <div class="input-group-prepend search-style col-12">
+                    <a
+                      href="#!"
+                      class="input-icon d-flex align-items-center"
+                      type="button"
+                      ><i
+                        class="fas fa-search text-white mx-3 basic_fill_color"
+                      ></i
+                    ></a>
+                    <input
+                      class="form-control form-search white-text rgba-black-light border-0 z-depth-0 pl-5"
+                      type="text"
+                      placeholder="ابحث باسم العميل , رقم الجوال , رقم الملف , رقم الهوية , الايميل "
+                      aria-label="Search"
+                    />
+                  </div>
+                </div>
+              </form>
+
+              <div class="pl-1 d-flex flex-wrap date-time">
+                <span
+                  class="d-flex justify-content-around align-items-center flex-column"
+                >
+                  <span class="font-size-20 basic_text_color">2020 Feb 17</span>
+                  <span class="font-size-18 basic_text_color">
+                    <i
+                      class="far fa-moon font-size-16 basic_text_color pl-1"
+                    ></i>
+                    <i
+                      class="fas fa-sun font-size-16 basic_text_color pl-1 d-none"
+                    ></i>
+                    14 : 12 : 02
+                  </span>
+                </span>
+              </div>
+
+              <div class="line-divider"></div>
+
+              <div class="d-flex align-items-center user-account">
+                <ul class="navbar-nav custom-nav p-0">
+                  <li class="nav-item">
+                    <div class="dropdown">
+                      <button
+                        class="dropdown-toggle arrow_style"
+                        type="button"
+                        id="dropdownMenuButton"
+                        data-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i
+                          class="fas fa-angle-down font-size-35 basic_text_color px-1"
+                        ></i>
+                      </button>
+                      <div
+                        class="dropdown-menu"
+                        aria-labelledby="dropdownMenuButton"
+                      >
+                        <a class="dropdown-item" href="#">تعديل كلمه المرور</a>
+                        <a class="dropdown-item" href="#">تسجيل الخروج</a>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <div class="user-img ml-2">
+                  <img src="./images/Ellipse 1@2x.png" class="w-100" />
+                </div>
+
+                <div class="user-text">
+                  <h5 class="font-size-16 bold basic_text_color">
+                    اسم مستخدم النظام
+                  </h5>
+                  <h5 class="font-size-14 bold basic_text_color">Gym Admin</h5>
+                </div>
+              </div>
+            </div>
+
+            <ul
+              class="navbar-nav justify-content-around p-0 p-lg-3 w-100 main-menu"
+            >
+              <li class="nav-item">
+                <a
+                  href="./لوحة التحكم.html"
+                  class="nav-link waves-effect basic-text-lGray-color bold"
+                  >لوحة التحكم</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >الإعدادات</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a
+                    class="dropdown-item"
+                    href="./الاعدادات - افتراضات النادي الرياضي.html"
+                    >افتراضات النادي الرياضي</a
+                  >
+                  <a class="dropdown-item" href="./الاعدادات-المواظفين.html"
+                    >مديرين</a
+                  >
+                  <a class="dropdown-item" href="./الاعدادات-المواظفين.html"
+                    >موظفين</a
+                  >
+                  <a class="dropdown-item" href="#">التنبيهات الطبية</a>
+                  <a class="dropdown-item" href="#">أنواع الضرائب</a>
+                  <a class="dropdown-item" href="#">نسب وشرائح الضرائب</a>
+                  <a class="dropdown-item" href="#">اعدادات نقاط البيع</a>
+                  <a class="dropdown-item" href="#">إجراءات الحركات(Log)</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >الخدمات</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="./البحث-اندكس.html"
+                    >اضافة تصنيف رئيسي</a
+                  >
+                  <a class="dropdown-item" href="./البحث-اندكس.html"
+                    >اضافة تصنيف ثانوي</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    href="./الخدمات-انشاء خدمة او اشتراك.html"
+                    >اضافة خدمة او اشتراك</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >العملاء</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="./العملاء – ملف العميل.html"
+                    >ملف العملاء</a
+                  >
+                  <a
+                    class="dropdown-item"
+                    data-toggle="modal"
+                    data-target="#salePointsModal"
+                    >الدخول على نقاط البيع</a
+                  >
+                  <a class="dropdown-item" href="#">فواتير المبيعات</a>
+                  <a class="dropdown-item" href="#">مرتجع مبيعات</a>
+                  <a class="dropdown-item" href="#">التجميد</a>
+                  <a class="dropdown-item" href="#">ترقية الاشتراكات</a>
+                  <a class="dropdown-item" href="#">تحويل الاشتراكات</a>
+                  <a class="dropdown-item" href="#">تمديد الاشتراكات</a>
+                  <a class="dropdown-item" href="#">تحويل النقاط</a>
+                  <a class="dropdown-item" href="#"
+                    >المواعيد النشطة (الحجوزات)</a
+                  >
+                  <a class="dropdown-item" href="#">المدفوعات </a>
+                  <a class="dropdown-item" href="#">المتحصلات</a>
+                  <a class="dropdown-item" href="#">ارصدة العملاء</a>
+                  <a class="dropdown-item" href="#"
+                    >تقرير مدعوين تحولوا الى مشتركين</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >التغذية</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">البرامج الغذائية</a>
+                  <a class="dropdown-item" href="#">جلسات التغذية</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >التدريب</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">البرامج الرياضية</a>
+                  <a class="dropdown-item" href="#">الكلاسات</a>
+                  <a class="dropdown-item" href="#">التمارين</a>
+                  <a class="dropdown-item" href="#">الصالات</a>
+                  <a class="dropdown-item" href="#">الاستشارة الرياضية</a>
+                  <a class="dropdown-item" href="#">التدريب الشخصي التسويقي</a>
+                  <a class="dropdown-item" href="#">التدريب الشخصي المدفوعPT</a>
+                  <a class="dropdown-item" href="./إنشاء الجدول الرياضي.html"
+                    >انشاء الجدول الرياضي</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >التشغيل والصيانة</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="./الصيانه-انشاء امر تشغيل.html"
+                    >انشاء امر تشغيل</a
+                  >
+                  <a class="dropdown-item" href="#">طلب اصناف</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >التسويق</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">الحملات التسويقية</a>
+                  <a class="dropdown-item" href="./التسويق-ادخال هدف شهري.html"
+                    >ادخال الهدف الشهري</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    >التقرير التسويقي التفصيلي</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    >التقرير التسويقي الاجمالي</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    >تقرير العمولات الشهرية للتسويق</a
+                  >
+                  <a class="dropdown-item" href="#"
+                    >تقرير العمولات الشهرية للتدريب الشخصي</a
+                  >
+                  <a class="dropdown-item" href="./التسويق-انشاء كوبون.html"
+                    >انشاء كوبون</a
+                  >
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  href="#"
+                  class="nav-link dropdown-toggle waves-effect basic-text-lGray-color bold"
+                  type="button"
+                  id="dropdownMenuButton"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  >العلاقات العامة</a
+                >
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#">شركاء النجاح</a>
+                  <a class="dropdown-item" href="#">الفعاليات</a>
+                  <a class="dropdown-item" href="#">الخطابات والتعاميم</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a
+                  href="#!"
+                  class="nav-link waves-effect basic-text-lGray-color bold active"
+                  data-toggle="modal"
+                  data-target="#login-modal"
+                  >أجهزة البصمة</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- Links -->
+        </nav>
+      </div>
+    </header>
+
+    <main class="p-4">
+      <!-- Start section -->
+      <section class="services_index">
+        <div class="card card_index mt-2 border-0">
+          <div class="card-header border-0 p-0">
+            <!-- START TABS DIV -->
+            <div class="single-tab tabbable-responsive overflow-none">
+              <div class="tabbable">
+                <ul class="nav nav-tabs border-0" role="tablist">
+                  <li class="nav-item float-left">
+                    <a
+                      class="nav-link text-center bold active"
+                      role="tab"
+                      aria-controls="contact"
+                      aria-selected="false"
+                      >بيانات الاستشارة الرياضية
+                    </a>
+                  </li>
+                  <li class="nav-item d-md-block d-s-none float-left">
+                    <div class="row font-size-14 align-items-center mx-4">
+                      <div class="col-md-4 basic_text_color">
+                        نوع الحركة :
+                        <input
+                          type="text"
+                          class="form-control border-0 d-inline-block dis_date_input"
+                          value="مباشر"
+                          disabled
+                        />
+                      </div>
+                      <div class="col-md-4 basic_text_color text-center">
+                        رقم الحركة : 1234
+                      </div>
+                      <div class="col-md-4 basic_text_color">
+                        تاريخ الحركة :
+                        <input
+                          type="date"
+                          class="form-control border-0 d-inline-block dis_date_input"
+                          disabled
+                        />
+                      </div>
+                    </div>
+                  </li>
+                  <li class="nav-item float-right">
+                    <div class="buttons-container">
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-blue-dark m-1"
+                      >
+                        <i class="fas fa-sign-in-alt font-size-14 ml-1"></i>
+                        <p class="d-inline m-0">log</p>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-body p-0">
+            <div class="tab-content basic_background_white_color mt--5 p-3">
+              <div
+                class="tab-pane fade show active"
+                role="tabpanel"
+                aria-labelledby="search-tab"
+              >
+                <div class="more_info_table">
+                  <form class="mb-4">
+                    <div class="form-row no-gutters">
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <label>رقم الحجز</label>
+                        <input
+                          type="number"
+                          class="form-control border-0"
+                          disabled
+                        />
+                      </div>
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <label>رقم الفاتورة</label>
+                        <input
+                          type="number"
+                          class="form-control border-0"
+                          disabled
+                        />
+                      </div>
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <label>الخدمة</label>
+                        <input
+                          type="text"
+                          class="form-control border-0"
+                          disabled
+                        />
+                      </div>
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <div class="form-row no-gutters">
+                          <div class="col-6">
+                            <label>ترتيب الحجز</label>
+                            <input
+                              type="text"
+                              class="form-control border-0"
+                              disabled
+                            />
+                          </div>
+                          <div class="col-6">
+                            <label>من</label>
+                            <input
+                              type="text"
+                              class="form-control border-0"
+                              disabled
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-row align-items-end no-gutters">
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <label>اسم العميل</label>
+                        <input
+                          type="text"
+                          class="form-control border-0"
+                          disabled
+                        />
+                      </div>
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <label>تاريخ ووقت الحجز</label>
+                        <input
+                          type="date"
+                          class="form-control border-0"
+                          disabled
+                        />
+                      </div>
+                      <div
+                        class="form-group col-lg-3 col-md-6 col-sm-12 px-3"
+                      ></div>
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <label>مسمى الجلسة</label>
+                        <input
+                          type="text"
+                          class="form-control border-0"
+                          disabled
+                        />
+                      </div>
+                    </div>
+                    <div class="form-row align-items-end no-gutters">
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <label>العمر</label>
+                        <input type="number" class="form-control" />
+                      </div>
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <label>تاريخ ووقت الجلسة الفعلي</label>
+                        <input type="date" class="form-control" />
+                      </div>
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <label>تاريخ ووقت الجلسة القادمة</label>
+                        <input type="date" class="form-control" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_index card border-0 mt-4">
+          <div class="card-header border-0 p-0">
+            <!-- START TABS DIV -->
+            <div class="tabbable-responsive mb-1">
+              <div class="tabbable">
+                <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-center bold active"
+                      id="consultation-tab"
+                      data-toggle="tab"
+                      href="#consultation"
+                      role="tab"
+                      aria-selected="true"
+                      >استشارة التغذية</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-body p-0">
+            <div class="tab-content basic_background_white_color mt--5 p-3">
+              <!-- استشارات تغذية -->
+              <div
+                class="tab-pane fade show active"
+                role="tabpanel"
+                id="consultation"
+                aria-labelledby="consultation-tab"
+              >
+                <div
+                  class="customer_sizing_table medical_table table-responsive"
+                >
+                  <table class="table text-center">
+                    <thead>
+                      <tr>
+                        <th scope="col">
+                          <h6>
+                            <img
+                              src="./images/Artboard 10.png"
+                              width="40"
+                              class="mr-2"
+                            />الطول
+                          </h6>
+                        </th>
+                        <th scope="col" class="border-right">
+                          <h6>
+                            <img
+                              src="./images/Artboard 11.png"
+                              width="40"
+                              class="mr-2"
+                            />الوزن
+                          </h6>
+                        </th>
+                        <th scope="col" class="border-right">
+                          <h6>
+                            <img
+                              src="./images/Artboard 12.png"
+                              width="40"
+                              class="mr-2"
+                            />نسبة الدهون
+                          </h6>
+                        </th>
+                        <th scope="col" class="border-right">
+                          <h6>
+                            <img
+                              src="./images/Artboard 13.png"
+                              width="40"
+                              class="mr-2"
+                            />كتلة الجسم
+                          </h6>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><div class="td_content"></div></td>
+                        <td class="border-right">
+                          <div class="td_content"></div>
+                        </td>
+                        <td class="border-right">
+                          <div class="td_content"></div>
+                        </td>
+                        <td class="border-right">
+                          <div class="td_content"></div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2">
+                          <h6>
+                            <img
+                              src="./images/Artboard 15.png"
+                              width="40"
+                              class="mr-2"
+                            />هدف قصير المدى
+                          </h6>
+                        </td>
+                        <td class="border-right" colspan="2">
+                          <h6>
+                            <img
+                              src="./images/Artboard 14.png"
+                              width="40"
+                              class="mr-2"
+                            />هدف بعيد المدى
+                          </h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="2"><div class="td_content"></div></td>
+                        <td class="border-right" colspan="2">
+                          <div class="td_content"></div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="medical_table table-responsive">
+                  <table class="table text-center">
+                    <thead>
+                      <tr>
+                        <th scope="col">
+                          <h6>
+                            <img
+                              src="./images/Artboard 7.png"
+                              width="40"
+                              class="mr-2"
+                            />الامراض المزمنة
+                          </h6>
+                        </th>
+                        <th scope="col" class="border-right">
+                          <h6>
+                            <img
+                              src="./images/Artboard 6.png"
+                              width="40"
+                              class="mr-2"
+                            />المشاكل الصحية
+                          </h6>
+                        </th>
+                        <th scope="col" class="border-right">
+                          <h6>
+                            <img
+                              src="./images/Artboard 8.png"
+                              width="40"
+                              class="mr-2"
+                            />الاحتياج اليومي
+                          </h6>
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <ul class="list-group text-left mb-4">
+                            <li class="list-group-item">
+                              <div class="form-group form-check m-0">
+                                <input
+                                  type="checkbox"
+                                  class="form-check-input"
+                                  id="exampleCheck1"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="exampleCheck1"
+                                  >سكر</label
+                                >
+                              </div>
+                            </li>
+                            <li class="list-group-item">
+                              <div class="form-group form-check m-0">
+                                <input
+                                  type="checkbox"
+                                  class="form-check-input"
+                                  id="exampleCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="exampleCheck2"
+                                  >ضغط الدم</label
+                                >
+                              </div>
+                            </li>
+                            <li class="list-group-item">
+                              <div class="form-group form-check m-0">
+                                <input
+                                  type="checkbox"
+                                  class="form-check-input"
+                                  id="exampleCheck3"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="exampleCheck3"
+                                  >ربو</label
+                                >
+                              </div>
+                            </li>
+                            <li class="list-group-item">
+                              <div class="form-group form-check m-0">
+                                <input
+                                  type="checkbox"
+                                  class="form-check-input"
+                                  id="exampleCheck4"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="exampleCheck4"
+                                  >أمراض القلب</label
+                                >
+                              </div>
+                            </li>
+                            <li class="list-group-item">
+                              <div class="form-group form-check m-0">
+                                <input
+                                  type="checkbox"
+                                  class="form-check-input"
+                                  id="exampleCheck5"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="exampleCheck5"
+                                  >فقر دم</label
+                                >
+                              </div>
+                            </li>
+                            <li class="list-group-item">
+                              <div class="form-group form-check m-0">
+                                <input
+                                  type="checkbox"
+                                  class="form-check-input"
+                                  id="exampleCheck6"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="exampleCheck6"
+                                  >فيتامين د</label
+                                >
+                              </div>
+                            </li>
+                            <li class="list-group-item">
+                              <div class="form-group form-check m-0">
+                                <input
+                                  type="checkbox"
+                                  class="form-check-input"
+                                  id="exampleCheck7"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="exampleCheck7"
+                                  >عدم انتظام هرمونات</label
+                                >
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="border-right">
+                          <ul class="list-group text-left mb-4">
+                            <li class="list-group-item">
+                              <div class="form-group form-check m-0">
+                                <input
+                                  type="checkbox"
+                                  class="form-check-input"
+                                  id="exampleCheck1"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="exampleCheck11"
+                                  >انزلاق غضروفي</label
+                                >
+                              </div>
+                            </li>
+                            <li class="list-group-item">
+                              <div class="form-group form-check m-0">
+                                <input
+                                  type="checkbox"
+                                  class="form-check-input"
+                                  id="exampleCheck2"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="exampleCheck22"
+                                  >خشونة في الركبة</label
+                                >
+                              </div>
+                            </li>
+                            <li class="list-group-item">
+                              <div class="form-group form-check m-0">
+                                <input
+                                  type="checkbox"
+                                  class="form-check-input"
+                                  id="exampleCheck3"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="exampleCheck33"
+                                  >استبدال مفاصل</label
+                                >
+                              </div>
+                            </li>
+                            <li class="list-group-item">
+                              <div class="form-group form-check m-0">
+                                <input
+                                  type="checkbox"
+                                  class="form-check-input"
+                                  id="exampleCheck4"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="exampleCheck44"
+                                  >تدخين</label
+                                >
+                              </div>
+                            </li>
+                            <li class="list-group-item">
+                              <div class="form-group form-check m-0">
+                                <input
+                                  type="checkbox"
+                                  class="form-check-input"
+                                  id="exampleCheck5"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="exampleCheck55"
+                                  >أنواع الادوية المستخدمة</label
+                                >
+                              </div>
+                            </li>
+                            <li class="list-group-item">
+                              <div class="form-group form-check m-0">
+                                <input
+                                  type="checkbox"
+                                  class="form-check-input"
+                                  id="exampleCheck6"
+                                />
+                                <label
+                                  class="form-check-label"
+                                  for="exampleCheck6"
+                                  >عملية جراحية خلال سنة</label
+                                >
+                              </div>
+                            </li>
+                            <li class="list-group-item">
+                              <div class="form-group form-check m-0">
+                                <label class="form-check-label"></label>
+                              </div>
+                            </li>
+                          </ul>
+                        </td>
+                        <td class="border-right border-top-0 p-0">
+                          <table class="table table-borderless border-0 m-0">
+                            <tr>
+                              <th class="border-top-0"><h6>الماء</h6></th>
+                              <th class="border-right border-top-0">
+                                <h6>السعرات الحرارية</h6>
+                              </th>
+                            </tr>
+                            <tr>
+                              <td>
+                                <img
+                                  src="./images/glasses.png"
+                                  class="glasses-imgs"
+                                />
+                                <img
+                                  src="./images/glasses.png"
+                                  class="glasses-imgs"
+                                />
+                                <img
+                                  src="./images/glasses.png"
+                                  class="glasses-imgs"
+                                />
+                                <img
+                                  src="./images/glasses.png"
+                                  class="glasses-imgs"
+                                />
+                                <img
+                                  src="./images/glasses.png"
+                                  class="glasses-imgs"
+                                />
+                                <img
+                                  src="./images/glasses.png"
+                                  class="glasses-imgs"
+                                />
+                                <img
+                                  src="./images/glasses.png"
+                                  class="glasses-imgs"
+                                />
+                                <img
+                                  src="./images/glasses.png"
+                                  class="glasses-imgs"
+                                />
+                                <img
+                                  src="./images/glasses.png"
+                                  class="glasses-imgs"
+                                />
+                                <img
+                                  src="./images/glasses.png"
+                                  class="glasses-imgs"
+                                />
+                                <img
+                                  src="./images/glasses.png"
+                                  class="glasses-imgs"
+                                />
+                                <img
+                                  src="./images/glasses.png"
+                                  class="glasses-imgs"
+                                />
+                              </td>
+                              <td class="border-right"></td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="border-top-0">
+                          <div
+                            class="form-row align-items-center m-0 no-gutters"
+                          >
+                            <div
+                              class="form-group form-check m-0 col-md-2 col-sm-12 px-3"
+                            >
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck8"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck8"
+                                >اخرى</label
+                              >
+                            </div>
+                            <div
+                              class="form-group m-0 col-md-10 col-sm-12 px-3"
+                            >
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="اكتب هنا"
+                              />
+                            </div>
+                          </div>
+                        </td>
+                        <td class="border-top-0 border-right">
+                          <div
+                            class="form-row align-items-center m-0 no-gutters"
+                          >
+                            <div
+                              class="form-group form-check m-0 col-md-2 col-sm-12 px-3"
+                            >
+                              <input
+                                type="checkbox"
+                                class="form-check-input"
+                                id="exampleCheck8"
+                              />
+                              <label
+                                class="form-check-label"
+                                for="exampleCheck8"
+                                >اخرى</label
+                              >
+                            </div>
+                            <div
+                              class="form-group m-0 col-md-10 col-sm-12 px-3"
+                            >
+                              <input
+                                type="text"
+                                class="form-control"
+                                placeholder="اكتب هنا"
+                              />
+                            </div>
+                          </div>
+                        </td>
+                        <td class="p-0 border-top-0 border-right">
+                          <table class="table table-borderless border-0 m-0">
+                            <tr>
+                              <td class="border-top-0">
+                                <div class="form-group text-left m-0">
+                                  <label>كوب ماء</label>
+                                  <input type="number" class="form-control" />
+                                </div>
+                              </td>
+                              <td class="border-top-0 border-right">
+                                <div class="form-group text-left m-0">
+                                  <label>سعرات حرارية</label>
+                                  <input type="number" class="form-control" />
+                                </div>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <!-- القياسات -->
+                <div class="row more_info_table no-gutters">
+                  <div class="col mt-3">
+                    <h6>
+                      <img src="./images/Artboard 9.png" width="40" />القياسات
+                    </h6>
+                  </div>
+                  <div class="col mt-3 text-right">
+                    <button
+                      class="btn btn_add_rec button_search_tabs basic_background_color text-white mt--5"
+                    >
+                      <i class="fas fa-paperclip"></i>
+                      <p class="d-inline m-0">ارفاق بيانات الـInbody</p>
+                    </button>
+                  </div>
+                </div>
+                <form>
+                  <div class="inbody_table medical_table table-responsive">
+                    <table class="table text-center">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >الصدر</label
+                              >
+                              <div class="col-sm-7">
+                                <input type="number" class="form-control" />
+                              </div>
+                            </div>
+                          </td>
+                          <td class="border-right">
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >Fat %</label
+                              >
+                              <div class="col-sm-7">
+                                <input type="number" class="form-control" />
+                              </div>
+                            </div>
+                          </td>
+                          <td class="border-right">
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >معدل البطن للخصر</label
+                              >
+                              <div class="col-sm-7">
+                                <input
+                                  type="number"
+                                  class="form-control border-0"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >الوسط</label
+                              >
+                              <div class="col-sm-7">
+                                <input type="number" class="form-control" />
+                              </div>
+                            </div>
+                          </td>
+                          <td class="border-right">
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >وزن الدهون</label
+                              >
+                              <div class="col-sm-7">
+                                <input type="number" class="form-control" />
+                              </div>
+                            </div>
+                          </td>
+                          <td class="border-right">
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >الوزن المثالي</label
+                              >
+                              <div class="col-sm-7">
+                                <input
+                                  type="number"
+                                  class="form-control border-0"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >البطن</label
+                              >
+                              <div class="col-sm-7">
+                                <input type="number" class="form-control" />
+                              </div>
+                            </div>
+                          </td>
+                          <td class="border-right">
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >الوزن بدون دهون</label
+                              >
+                              <div class="col-sm-7">
+                                <input type="number" class="form-control" />
+                              </div>
+                            </div>
+                          </td>
+                          <td class="border-right">
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label">BMR</label>
+                              <div class="col-sm-7">
+                                <input
+                                  type="number"
+                                  class="form-control border-0"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >الارداف</label
+                              >
+                              <div class="col-sm-7">
+                                <input type="number" class="form-control" />
+                              </div>
+                            </div>
+                          </td>
+                          <td class="border-right">
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >وزن العضل</label
+                              >
+                              <div class="col-sm-7">
+                                <input type="number" class="form-control" />
+                              </div>
+                            </div>
+                          </td>
+                          <td class="border-right">
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label">PA</label>
+                              <div class="col-sm-7">
+                                <input
+                                  type="number"
+                                  class="form-control border-0"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >الفخد</label
+                              >
+                              <div class="col-sm-7">
+                                <input type="number" class="form-control" />
+                              </div>
+                            </div>
+                          </td>
+                          <td class="border-right"></td>
+                          <td class="border-right">
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >For WT Loss</label
+                              >
+                              <div class="col-sm-7">
+                                <input
+                                  type="number"
+                                  class="form-control border-0"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >الذراع</label
+                              >
+                              <div class="col-sm-7">
+                                <input type="number" class="form-control" />
+                              </div>
+                            </div>
+                          </td>
+                          <td class="border-right"></td>
+                          <td class="border-right">
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >For WT again</label
+                              >
+                              <div class="col-sm-7">
+                                <input
+                                  type="number"
+                                  class="form-control border-0"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td class="border-right"></td>
+                          <td class="border-right">
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >الطول بلأنش</label
+                              >
+                              <div class="col-sm-7">
+                                <input
+                                  type="number"
+                                  class="form-control border-0"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td class="border-right"></td>
+                          <td class="border-right">
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >الطول بالسم</label
+                              >
+                              <div class="col-sm-7">
+                                <input
+                                  type="number"
+                                  class="form-control border-0"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td class="border-right"></td>
+                          <td class="border-right">
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label"
+                                >السوائل</label
+                              >
+                              <div class="col-sm-7">
+                                <input
+                                  type="number"
+                                  class="form-control border-0"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td></td>
+                          <td class="border-right"></td>
+                          <td class="border-right">
+                            <div class="form-group row align-items-center m-0">
+                              <label class="col-sm-5 col-form-label">BMI</label>
+                              <div class="col-sm-7">
+                                <input
+                                  type="number"
+                                  class="form-control border-0"
+                                  disabled
+                                />
+                              </div>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_index card border-0 mt-4">
+          <div class="card-header border-0 p-0">
+            <!-- START TABS DIV -->
+            <div class="tabbable-responsive mb-1">
+              <div class="tabbable">
+                <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-center bold active"
+                      id="consultation-tab"
+                      data-toggle="tab"
+                      role="tab"
+                      aria-selected="true"
+                      >الاستشارة الرياضية</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-body p-0">
+            <div class="tab-content basic_background_white_color mt--5 p-3">
+              <!-- الاستشارة الرياضية -->
+              <div
+                class="tab-pane fade show active"
+                role="tabpanel"
+                aria-labelledby="consultation-tab"
+              >
+                <div class="more_info_table">
+                  grid
+                  <div class="row justify-content-end no-gutters">
+                    <button
+                      class="btn box-shadow basic_background_color text-white m-0"
+                    >
+                      <i class="fas fa-plus font-size-20 pl-1"></i>إضافة صف
+                    </button>
+                  </div>
+                </div>
+                <!-- تقرير المدرب -->
+                <form>
+                  <div class="form-row more_info_table mt-3">
+                    <h6 class="col-12">تقرير المدرب</h6>
+                    <div class="col-md-9">
+                      <textarea class="form-control" rows="4"></textarea>
+                    </div>
+                    <div class="col">
+                      <div class="form-group m-0">
+                        <label>إضافة برنامج غذائي</label>
+                        <select class="form-control">
+                          <option selected></option>
+                          <option></option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+                <!-- buttons -->
+                <div class="modal-footer mt-3 border-0">
+                  <button
+                    class="btn btn_add_rec button_search_tabs btn-success send_whatsapp mr-2"
+                  >
+                    <span class="send-text">ارسال رسالة واتس اب</span>
+                    <span class="finish-send-text">تم ارسال رسالة واتس اب</span>
+                  </button>
+                  <button
+                    class="btn btn_add_rec button_search_tabs basic_background_color text-white"
+                  >
+                    <i class="fas fa-plus pl-1"></i>انشاء متابعة
+                  </button>
+                  <button
+                    class="btn btn_add_rec button_search_tabs basic_background_color text-white"
+                  >
+                    <i class="fas fa-check pl-1"></i>حفظ وانهاء الجلسة
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End section -->
+    </main>
+
+    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-toggle.min.js"></script>
+    <!-- datetimepicker  -->
+    <script src="js/tempusdominus-bootstrap.js"></script>
+    <script
+      src="https://kit.fontawesome.com/7f37d9c53b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/jstree.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/Chart.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <script>
+      var chartColors = {
+        red: "rgb(255, 99, 132)",
+        orange: "rgb(255, 159, 64)",
+        yellow: "rgb(255, 205, 86)",
+        green: "rgb(75, 192, 192)",
+        blue: "rgb(54, 162, 235)",
+        purple: "rgba(255, 99, 132, 0.2)",
+        grey: "rgb(231,233,237)",
+      };
+
+      var randomScalingFactor = function () {
+        return (
+          (Math.random() > 0.5 ? 1.0 : 1.0) * Math.round(Math.random() * 100)
+        );
+      };
+
+      var ctx = $(".sectionChart");
+      var Chart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          xLabels: [
+            "الجلسة الاولى",
+            "الجلسة الثانية",
+            "الجلسة الثالثة",
+            "الجلسة الرابعة",
+            "الجلسة الخامسة",
+            "الجلسة السادسة",
+            "الجلسة السابعة",
+            "الجلسة الثامنة",
+            "الجلسة التاسعة",
+          ],
+          yLabels: [
+            "قياس الصدر",
+            "قياس الوسط",
+            "قياس البطن",
+            "قياس الارداف",
+            "قياس الفخد",
+            "قياس الذراع",
+          ],
+          datasets: [
+            {
+              label: "",
+              data: [],
+              fill: false,
+              showLine: false,
+              borderColor: chartColors.purple,
+              backgroundColor: chartColors.purple,
+            },
+            {
+              label: "",
+              data: [],
+              fill: false,
+              showLine: false,
+              borderColor: chartColors.purple,
+              backgroundColor: chartColors.purple,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          title: {
+            display: true,
+            text: "",
+          },
+          legend: {
+            display: false,
+          },
+          scales: {
+            xAxes: [
+              {
+                display: true,
+                scaleLabel: {
+                  display: true,
+                  labelString: "",
+                },
+              },
+            ],
+            yAxes: [
+              {
+                type: "category",
+                position: "left",
+                display: true,
+                scaleLabel: {
+                  display: true,
+                  labelString: "",
+                },
+                ticks: {
+                  reverse: true,
+                },
+              },
+            ],
+          },
+        },
+      });
+    </script>
+
+    <script>
+      // services index grid
+      self.actions2 = function () {};
+      self.actions2.prototype = {
+        init: function (params) {
+          this.actions2Button = document.createElement("div");
+          this.actions2Button.innerHTML = `
+            <ul class="actions-list list-inline">
+                <li class="list-inline-item info-color"><a href="#" title="مرفقات"><i class="fas fa-paperclip mx-1"></i></a></li>
+                <li class="list-inline-item"><a href="#" title="عرض"><i class="fas fa-eye mx-1"></i></a></li>
+                <li class="list-inline-item warning-color"><a href="#" title="تعديل"><i class="fas fa-pen mx-1"></i></a></li>
+                <li class="list-inline-item danger-color"><a href="#" title="الغاء"><i class="fas fa-trash-alt mx-1"></i></a></li>
+            </ul>
+        `;
+        },
+        getGui: function () {
+          return this.actions2Button;
+        },
+        refresh: function () {
+          return true;
+        },
+        destroy: function () {
+          $(this.actions2Button).remove();
+        },
+      };
+
+      // specify the columns
+      const columnDefs3 = [
+        {
+          headerName: "م",
+          field: "id",
+          resizable: true,
+          minWidth: 50,
+          sortable: true,
+        },
+        {
+          headerName: "الكود",
+          field: "branch",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "إسم التصنيف",
+          field: "recpNo",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "نوع التصنيف",
+          field: "serviceNo",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "الحالة",
+          field: "status",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "تاريخ التفعيل",
+          field: "serviceNo",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "اجراءات",
+          field: "actions",
+          resizable: true,
+          minWidth: 200,
+          cellRenderer: actions2,
+          sortable: true,
+        },
+      ];
+
+      // specify the data
+      const dataSource3 = [
+        {
+          id: "1",
+          branch: "",
+          recpNo: "A-12342",
+          serviceNo: "302",
+          service: "12-month gym mem",
+          datePurchase: "12-2-2020",
+          height: 100,
+        },
+      ];
+      var gridOptions3 = {
+        columnDefs: columnDefs3,
+        rowData: dataSource3,
+        enableRowGroup: true,
+        enableColResize: true,
+        enableFilter: true,
+        enableSorting: true,
+        enableFilter: true,
+        enableRtl: true,
+        suppressRowTransform: true,
+        domLayout: "autoHeight",
+        onGridReady: function (params) {
+          params.api.sizeColumnsToFit();
+        },
+      };
+      // setup the grid after the page has finished loading
+      document.addEventListener("DOMContentLoaded", function () {
+        var gridDiv3 = document.querySelector("#servicesGrid");
+        new agGrid.Grid(gridDiv3, gridOptions3);
+      });
+    </script>
+  </body>
+</html>

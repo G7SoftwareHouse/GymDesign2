@@ -2,6 +2,7 @@
 /* scrollbar */
 html,
 body {
+  height: 100%;
   scrollbar-width: thin;
   scrollbar-color: var(--basic-main-color) #f1f1f1;
 }
@@ -350,7 +351,7 @@ select {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .ag-theme-balham .ag-cell button.dropdown-toggle {
   padding: 0;
@@ -674,9 +675,12 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 .vertical_tabs .tab::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.4);
 }
+.vertical_tabs .tab {
+  min-height: calc(100% - 145px);
+}
 .vertical_tabs .tab button {
   color: black;
-  padding: 8px 7px;
+  padding: 5px 7px;
   border: none;
   outline: none;
   cursor: pointer;
@@ -687,6 +691,7 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   background-color: transparent;
   transition: all 0.3s;
   position: relative;
+  min-height: calc(100% / 10);
 }
 .vertical_tabs .tab button .svg-inline--fa {
   font-size: 1rem;
@@ -1559,4 +1564,74 @@ a.alert_message:hover {
 
 .order_card label {
   font-size: 0.8rem;
+}
+
+/* feeding & sizing */
+.dis_date_input {
+  max-width: 60%;
+}
+.medical_table .table,
+.medical_table .table .table-borderless th {
+  border-bottom: 2px solid #dee2e6;
+}
+.medical_table .table th,
+.medical_table .table td {
+  border-top: 2px solid #dee2e6;
+}
+.medical_table .table th.border-right,
+.medical_table .table td.border-right {
+  border-right: 2px solid #dee2e6 !important;
+}
+.medical_table .list-group-item {
+  border-radius: 0;
+  border: none;
+  padding: 0 0 0.3rem;
+}
+.border-top-0 {
+  border-top: 0 !important;
+}
+.medical_table .table th,
+.inbody_table td {
+  width: calc(100% / 3);
+}
+.medical_table .table td {
+  vertical-align: bottom;
+}
+.medical_table .table .table-borderless th {
+  padding: 1.2rem 0.7rem;
+}
+.medical_table .table .table-borderless th,
+.medical_table .table .table-borderless td {
+  width: 50%;
+}
+.medical_table .table th h6,
+.medical_table .table th,
+.customer_sizing_table td h6 {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: #646464;
+  vertical-align: middle;
+}
+.glasses-imgs {
+  width: calc(100% / 5);
+  height: 65px;
+  object-fit: contain;
+}
+.customer_sizing_table.medical_table .table th {
+  width: calc(100% / 4);
+}
+.td_content {
+  min-height: 40px;
+}
+.inbody_table .col-form-label,
+.medical_table label {
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+.inbody_table .col-form-label {
+  padding: 0;
+}
+.inbody_table  .form-control {
+  height: 30px !important;
 }

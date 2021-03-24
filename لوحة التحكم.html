@@ -622,7 +622,7 @@
                           </div>
                           <div class="form-group col-md-6 col-sm-12 px-3">
                             <label>تقسيم الشهر</label>
-                            <select class="form-control" disabled>
+                            <select class="form-control border-0" disabled>
                               <option selected disabled>اختر...</option>
                             </select>
                           </div>
@@ -1713,12 +1713,14 @@
       var Chart = new Chart(ctx, {
           type: 'bar',
           data: {
-              labels: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونيو' ,'يوليو', 'اغسطس' ,'سبتمبر','اكتوبر', 'نوفمبر' ,'ديسمبر'],
-              datasets: [{
-                lineWidth: 10,
-                  label: 'رسم بياني لنسبة التحقيق  مع توضيح الهدف الشهري ونسبة التحقق والمبلغ المحقق',
-                  data: [150000, 200000, 250000, 300000, 50000, 100000,150000,200000,250000,300000,50000,150000],
-                  backgroundColor: [
+            xLabels: ['يناير', 'فبراير', 'مارس', 'ابريل', 'مايو', 'يونيو' ,'يوليو', 'اغسطس' ,'سبتمبر','اكتوبر', 'نوفمبر' ,'ديسمبر'],
+            yLabels: ['150000 ', '200000', '250000', '300000'],
+            datasets: [{
+              label: "رسم بياني لنسبة التحقيق  مع توضيح الهدف الشهري ونسبة التحقق والمبلغ المحقق",
+              data: ['200000','230000','150000','150000 ', '200000', '250000', '300000','150000','150000 ', '200000', '250000', '300000'],
+              fill: false,
+              showLine: false,
+              backgroundColor: [
                       'rgba(182, 53, 148, 1)',
                       'rgba(182, 53, 148, 1)',
                       'rgba(182, 53, 148, 1)',
@@ -1731,8 +1733,8 @@
                       'rgba(182, 53, 148, 1)',
                       'rgba(182, 53, 148, 1)',
                       'rgba(182, 53, 148, 1)'
-                  ],
-              }]
+                ],
+            }]
           },
           options: {
             responsive:true,
@@ -1779,15 +1781,7 @@
                   borderWidth: 1
               }]
           },
-        options: {
-          color: [
-    'red',    // color for data at index 0
-    'blue',   // color for data at index 1
-    'green',  // color for data at index 2
-    'black',  // color for data at index 3
-    //...
-]
-        }
+        options: {}
       });
       </script>
 

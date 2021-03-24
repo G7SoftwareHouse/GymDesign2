@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
-    <title>حجز مواعيد الاستشارات</title>
+    <title>انشاء جلسة تدريب تسويقي</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -556,19 +556,28 @@
                       role="tab"
                       aria-controls="contact"
                       aria-selected="false"
-                      >حجز مواعيد الاستشارات</a
-                    >
+                      >تدريب شخصي تسويقي
+                    </a>
                   </li>
                   <li class="nav-item d-md-block d-s-none float-left">
                     <div class="row font-size-14 align-items-center mx-4">
-                      <div class="col-md-6 basic_text_color">
+                      <div class="col-md-4 basic_text_color">
+                        نوع الحركة :
+                        <input
+                          type="text"
+                          class="form-control border-0 d-inline-block dis_date_input"
+                          value="مباشر"
+                          disabled
+                        />
+                      </div>
+                      <div class="col-md-4 basic_text_color text-center">
                         رقم الحركة : 1234
                       </div>
-                      <div class="col-md-6 basic_text_color">
+                      <div class="col-md-4 basic_text_color">
                         تاريخ الحركة :
                         <input
                           type="date"
-                          class="form-control border-0 d-inline-block"
+                          class="form-control border-0 d-inline-block dis_date_input"
                           disabled
                         />
                       </div>
@@ -576,14 +585,6 @@
                   </li>
                   <li class="nav-item float-right">
                     <div class="buttons-container">
-                      <button type="button" class="btn btn-info m-1">
-                        <i class="fas fa-paperclip font-size-14 ml-1"></i>
-                        <p class="d-inline m-0">إرفاق</p>
-                      </button>
-                      <button type="button" class="btn btn-info m-1">
-                        <i class="fas fa-print font-size-14 ml-1"></i>
-                        <p class="d-inline m-0">طباعة</p>
-                      </button>
                       <button
                         type="button"
                         class="btn btn-primary btn-blue-dark m-1"
@@ -608,7 +609,23 @@
                   <form class="mb-4">
                     <div class="form-row no-gutters">
                       <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                        <label>العميل</label>
+                        <label>رقم الحجز</label>
+                        <input
+                          type="number"
+                          class="form-control border-0"
+                          disabled
+                        />
+                      </div>
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <label>رقم الفاتورة</label>
+                        <input
+                          type="number"
+                          class="form-control border-0"
+                          disabled
+                        />
+                      </div>
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <label>الخدمة</label>
                         <input
                           type="text"
                           class="form-control border-0"
@@ -616,65 +633,131 @@
                         />
                       </div>
                       <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                        <label>نوع الحجز</label>
-                        <select id="reservType" class="form-control">
-                          <option selected>مجاني</option>
-                          <option>مدفوع</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                        <label>نوع الاستشارة</label>
-                        <select id="infoType" class="form-control">
-                          <option selected>استشارة التغذية</option>
-                          <option>استشارة رياضية</option>
-                        </select>
-                      </div>
-                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                        <label>المدرب /الاخصائي</label>
-                        <input type="text" class="form-control" />
+                        <div class="form-row no-gutters">
+                          <div class="col-6">
+                            <label>ترتيب الحجز</label>
+                            <input
+                              type="text"
+                              class="form-control border-0"
+                              disabled
+                            />
+                          </div>
+                          <div class="col-6">
+                            <label>من</label>
+                            <input
+                              type="text"
+                              class="form-control border-0"
+                              disabled
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <div class="form-row align-items-end no-gutters">
                       <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                        <label>رصيد جلسات تغذية</label>
-                        <input type="number" class="form-control" />
+                        <label>اسم العميل</label>
+                        <input
+                          type="text"
+                          class="form-control border-0"
+                          disabled
+                        />
                       </div>
                       <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
                         <label>تاريخ ووقت الحجز</label>
+                        <input
+                          type="date"
+                          class="form-control border-0"
+                          disabled
+                        />
+                      </div>
+                      <div
+                        class="form-group col-lg-3 col-md-6 col-sm-12 px-3"
+                      ></div>
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <label>مسمى الجلسة</label>
+                        <input
+                          type="text"
+                          class="form-control border-0"
+                          disabled
+                        />
+                      </div>
+                    </div>
+                    <div class="form-row align-items-end no-gutters">
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <label>العمر</label>
+                        <input type="number" class="form-control" />
+                      </div>
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <label>تاريخ ووقت الجلسة الفعلي</label>
+                        <input type="date" class="form-control" />
+                      </div>
+                      <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                        <label>تاريخ ووقت الجلسة القادمة</label>
                         <input type="date" class="form-control" />
                       </div>
                     </div>
                   </form>
-
-                  <h6 class="mb-3">فواتير رصيد الجلسات المجانية</h6>
-                  grid
-
-                  <h6 class="my-3">فواتير رصيد الجلسات المدفوعة</h6>
-                  grid
-                  <div class="row justify-content-end no-gutters">
-                    <button
-                      class="btn box-shadow basic_background_color text-white m-0"
-                    >
-                      احجز
-                    </button>
-                  </div>
-                  <h6 class="mb-3">حجز استشارة</h6>
-                  grid
                 </div>
-                <div class="modal-footer border-0">
-                  <button class="btn btn-success send_whatsapp mr-3">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card_index card border-0 mt-4">
+          <div class="card-header border-0 p-0">
+            <!-- START TABS DIV -->
+            <div class="tabbable-responsive mb-1">
+              <div class="tabbable">
+                <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link text-center bold active"
+                      id="consultation-tab"
+                      data-toggle="tab"
+                      role="tab"
+                      aria-selected="true"
+                      >التدريب</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-body p-0">
+            <div class="tab-content basic_background_white_color mt--5 p-3">
+              <!-- التدريب   -->
+              <div
+                class="tab-pane fade show active"
+                role="tabpanel"
+                aria-labelledby="consultation-tab"
+              >
+                <!-- تقرير المدرب -->
+                <form>
+                  <div class="form-row more_info_table mt-3">
+                    <h6 class="col-12">تقرير المدرب</h6>
+                    <div class="col-md-9">
+                      <textarea class="form-control" rows="4"></textarea>
+                    </div>
+                    <div class="col"></div>
+                  </div>
+                </form>
+                <!-- buttons -->
+                <div class="modal-footer mt-3 border-0">
+                  <button
+                    class="btn btn_add_rec button_search_tabs btn-success send_whatsapp mr-2"
+                  >
                     <span class="send-text">ارسال رسالة واتس اب</span>
                     <span class="finish-send-text">تم ارسال رسالة واتس اب</span>
                   </button>
-                  <button type="button" class="btn btn-success">
-                    <i class="fas fa-check pl-1"></i>حفظ
+                  <button
+                    class="btn btn_add_rec button_search_tabs basic_background_color text-white"
+                  >
+                    <i class="fas fa-plus pl-1"></i>انشاء متابعة
                   </button>
                   <button
-                    type="button"
-                    class="btn btn-danger"
-                    data-dismiss="modal"
+                    class="btn btn_add_rec button_search_tabs basic_background_color text-white"
                   >
-                    <i class="fas fa-trash-alt pl-1"></i>إلغاء
+                    <i class="fas fa-check pl-1"></i>حفظ وانهاء الجلسة
                   </button>
                 </div>
               </div>
@@ -699,7 +782,106 @@
     <script src="js/select2.min.js"></script>
     <script src="js/jstree.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/Chart.js"></script>
     <script src="js/scripts.js"></script>
+
+    <script>
+      var chartColors = {
+        red: "rgb(255, 99, 132)",
+        orange: "rgb(255, 159, 64)",
+        yellow: "rgb(255, 205, 86)",
+        green: "rgb(75, 192, 192)",
+        blue: "rgb(54, 162, 235)",
+        purple: "rgba(255, 99, 132, 0.2)",
+        grey: "rgb(231,233,237)",
+      };
+
+      var randomScalingFactor = function () {
+        return (
+          (Math.random() > 0.5 ? 1.0 : 1.0) * Math.round(Math.random() * 100)
+        );
+      };
+
+      var ctx = $(".sectionChart");
+      var Chart = new Chart(ctx, {
+        type: "bar",
+        data: {
+          xLabels: [
+            "الجلسة الاولى",
+            "الجلسة الثانية",
+            "الجلسة الثالثة",
+            "الجلسة الرابعة",
+            "الجلسة الخامسة",
+            "الجلسة السادسة",
+            "الجلسة السابعة",
+            "الجلسة الثامنة",
+            "الجلسة التاسعة",
+          ],
+          yLabels: [
+            "قياس الصدر",
+            "قياس الوسط",
+            "قياس البطن",
+            "قياس الارداف",
+            "قياس الفخد",
+            "قياس الذراع",
+          ],
+          datasets: [
+            {
+              label: "",
+              data: [],
+              fill: false,
+              showLine: false,
+              borderColor: chartColors.purple,
+              backgroundColor: chartColors.purple,
+            },
+            {
+              label: "",
+              data: [],
+              fill: false,
+              showLine: false,
+              borderColor: chartColors.purple,
+              backgroundColor: chartColors.purple,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          title: {
+            display: true,
+            text: "",
+          },
+          legend: {
+            display: false,
+          },
+          scales: {
+            xAxes: [
+              {
+                display: true,
+                scaleLabel: {
+                  display: true,
+                  labelString: "",
+                },
+              },
+            ],
+            yAxes: [
+              {
+                type: "category",
+                position: "left",
+                display: true,
+                scaleLabel: {
+                  display: true,
+                  labelString: "",
+                },
+                ticks: {
+                  reverse: true,
+                },
+              },
+            ],
+          },
+        },
+      });
+    </script>
+
     <script>
       // services index grid
       self.actions2 = function () {};
