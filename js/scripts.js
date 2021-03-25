@@ -43,7 +43,7 @@ $(document).ready(function () {
     $(".vertical_tabs .tabcontent").css("margin-right", tabW);
     $(".vertical_tabs .tabcontent").css("width", bW - tabW - 48);
     $(".vertical_tabs .tabcontent#tab_1").css("margin-bottom", totalH + 10);
-    $(".vertical_tabs .tab button").css("min-height", bH / 11);
+    $(".vertical_tabs .tab button").css("min-height", bH / 13);
   });
 
   // slick slider
@@ -59,12 +59,21 @@ $(document).ready(function () {
     nextArrow: '<button class="slide-arrow next-arrow"></button>',
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1025,
         settings: {
           arrows: false,
           centerMode: true,
           centerPadding: "40px",
           slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 760,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "40px",
+          slidesToShow: 2,
         },
       },
       {

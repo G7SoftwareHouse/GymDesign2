@@ -813,8 +813,8 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   color: var(--basic-main-color) !important;
 }
 .our_services_section .btn {
-  font-size: 0.75rem;
-  min-width: 114px;
+  font-size: 0.9rem;
+  min-width: 155px;
 }
 .our_services_section .btn.border-transparent,
 .services_card {
@@ -991,6 +991,9 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 }
 .table_list {
   padding: 0 5px;
+}
+.table_list.m_h {
+  height: 117px;
 }
 .invoices_table {
   margin: 1rem 0;
