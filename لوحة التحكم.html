@@ -594,7 +594,8 @@
                 aria-labelledby="dashboard-tab"
               >
                 <div class="box-shadow-gray more_info_table bg-white p-3">
-                  <!-- daiy report -->
+                  <div class="px-3">
+                    <!-- daiy report -->
                   <h6>التقرير اليومي</h6>
                   <div class="row mb-3 no-gutters">
                     <div class="col-lg-10">
@@ -605,11 +606,12 @@
                       <button type="button" class="btn btn-success"><i class="fas fa-check font-size-20 pl-1" aria-hidden="true"></i> حفظ</button>
                     </div>
                   </div>
+                  </div>
 
                   <!-- monthly goals -->
                   <div class="row no-gutters">
                     <div class="col-lg-6">
-                      <h6>الهدف الشهري</h6>
+                      <h6 class="px-3">الهدف الشهري</h6>
                       <form>
                         <div class="form-row no-gutters">
                           <div class="form-group col-md-6 col-sm-12 px-3">
@@ -640,9 +642,15 @@
                           </div>
                         </div>
                       </form>
-                      <h6>الهدف الشهري لشهر يناير</h6>
-                      grid
-                      <div id="monthlyGoalsGrid" class="ag-theme-balham"></div>
+                      <div class="px-3">
+                        <h6>الهدف الشهري لشهر يناير</h6>
+                        grid
+                        <div id="monthlyGoalsGrid" class="ag-theme-balham"></div>
+                        <!-- money achived -->
+                        <h6 class="mt-3">المبلغ المحقق</h6>
+                        grid
+                        <div id="moneyGrid" class="ag-theme-balham"></div>
+                      </div>
                     </div>
                     <div class="col-lg-6">
                       <!-- Chart -->
@@ -658,11 +666,6 @@
                       </div>
                     </div>
                   </div>
-
-                  <!-- money achived -->
-                  <h6>المبلغ المحقق</h6>
-                  grid
-                  <div id="moneyGrid" class="ag-theme-balham"></div>
                 </div>
 
                 <div class="card card_index mt-2 border-0">
@@ -744,8 +747,10 @@
                           </div>
                         </div>
                       </form>
-                      <b class="my-4">grid</b>
+                      <div class="px-3">
+                        <b class="my-4">grid</b>
                         <!-- <div id="followingGrid" class="dropdownGrid ag-theme-balham"></div> -->
+                      </div>
                       </div>
                     </div>
                   </div>
@@ -778,12 +783,12 @@
                     <div class="tab-content bg-white mt--5 p-3">
                       <div
                         class="tab-pane fade show active"
-                        id="rec"
                         role="tabpanel"
-                        aria-labelledby="rec-tab"
                       >
-                      <b class="my-4">grid</b>
+                      <div class="px-3">
+                        <b class="my-4">grid</b>
                         <!-- <div id="followingGrid" class="dropdownGrid ag-theme-balham"></div> -->
+                      </div>
                       </div>
                     </div>
                   </div>
@@ -816,11 +821,12 @@
                     <div class="tab-content bg-white mt--5 p-3">
                       <div
                         class="tab-pane fade show active"
-                        id="rec"
                         role="tabpanel"
                         aria-labelledby="rec-tab"
                       >
+                      <div class="px-3">
                         <div id="followingGrid" class="dropdownGrid ag-theme-balham"></div>
+                      </div>
                       </div>
                     </div>
                   </div>
@@ -853,12 +859,12 @@
                     <div class="tab-content bg-white mt--5 p-3">
                       <div
                         class="tab-pane fade show active"
-                        id="rec"
                         role="tabpanel"
-                        aria-labelledby="rec-tab"
                       >
-                      <b class="my-4">grid</b>
+                      <div class="px-3">
+                        <b class="my-4">grid</b>
                         <!-- <div id="followingGrid" class="dropdownGrid ag-theme-balham"></div> -->
+                      </div>
                       </div>
                     </div>
                   </div>
@@ -891,12 +897,12 @@
                     <div class="tab-content bg-white mt--5 p-3">
                       <div
                         class="tab-pane fade show active"
-                        id="rec"
                         role="tabpanel"
-                        aria-labelledby="rec-tab"
                       >
-                      <b class="my-4">grid</b>
+                      <div class="px-3">
+                        <b class="my-4">grid</b>
                         <!-- <div id="followingGrid" class="dropdownGrid ag-theme-balham"></div> -->
+                      </div>
                       </div>
                     </div>
                   </div>
@@ -1687,6 +1693,111 @@
       </div>
     </div>
 
+    <!-- تأجيل الحجز كوقت  data-toggle="modal" data-target="#DelayModal" -->
+    <div
+      class="Delay edit_modal modal"
+      id="DelayModal"
+      aria-labelledby="DelayModalLabel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title bold">تأجيل الجلسة</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- start form -->
+            <form class="service_form">
+              <div class="form-row">
+                <div class="form-group mb-0 col-lg-4 col-md-6">
+                  <label>اليوم</label>
+                  <input type="date" class="form-control border-0" disabled />
+                </div>
+                <div class="form-group mb-0 col-lg-4 col-md-6">
+                  <label>التاريخ</label>
+                  <input type="date" class="form-control border-0" disabled />
+                </div>
+                <div class="form-group mb-0 col-lg-4 col-md-6">
+                  <label>الوقت</label>
+                  <input type="date" class="form-control border-0" disabled />
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group mb-0 col-lg-4 col-md-6">
+                  <label>اليوم</label>
+                  <input type="date" class="form-control" />
+                </div>
+                <div class="form-group mb-0 col-lg-4 col-md-6">
+                  <label>التاريخ</label>
+                  <input type="date" class="form-control" />
+                </div>
+                <div class="form-group mb-0 col-lg-4 col-md-6">
+                  <label>الوقت</label>
+                  <input type="date" class="form-control" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">
+              <i class="fas fa-check pl-1"></i>حفظ
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <i class="fas fa-trash-alt pl-1"></i>إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- تأجيل الحجز تغيير مدرب data-toggle="modal" data-target="#changeTrainerModal" -->
+    <div
+      class="Delay edit_modal modal"
+      id="changeTrainerModal"
+      aria-labelledby="changeTrainerModalLabel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title bold">تغيير المدرب</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!-- start form -->
+            <form class="service_form">
+              <div class="form-row">
+                <div class="form-group mb-0 col-lg-6">
+                  <label>المدرب القديم</label>
+                  <input type="text" class="form-control border-0" disabled />
+                </div>
+                <div class="form-group mb-0 col-lg-6">
+                  <label>المدرب الجديد</label>
+                  <input type="text" class="form-control" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">
+              <i class="fas fa-check pl-1"></i>حفظ
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <i class="fas fa-trash-alt pl-1"></i>إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
@@ -1709,7 +1820,6 @@
 
     <script>
       var ctx = document.getElementById('Chart').getContext('2d');
-      var ctxP = $('#pieChart');
       var Chart = new Chart(ctx, {
           type: 'bar',
           data: {
@@ -1756,31 +1866,10 @@
           }
       });
       
+
+      var ctxP = $('#pieChart');
       var pieChart = new Chart(ctxP, {
         type: 'pie',
-        data: {labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-              datasets: [{
-                  label: '# of Votes',
-                  data: [12, 19, 3, 5, 2, 3],
-                  backgroundColor: [
-                      'rgba(255, 99, 132, 0.2)',
-                      'rgba(54, 162, 235, 0.2)',
-                      'rgba(255, 206, 86, 0.2)',
-                      'rgba(75, 192, 192, 0.2)',
-                      'rgba(153, 102, 255, 0.2)',
-                      'rgba(255, 159, 64, 0.2)'
-                  ],
-                  borderColor: [
-                      'rgba(255, 99, 132, 1)',
-                      'rgba(54, 162, 235, 1)',
-                      'rgba(255, 206, 86, 1)',
-                      'rgba(75, 192, 192, 1)',
-                      'rgba(153, 102, 255, 1)',
-                      'rgba(255, 159, 64, 1)'
-                  ],
-                  borderWidth: 1
-              }]
-          },
         options: {}
       });
       </script>
