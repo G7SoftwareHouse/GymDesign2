@@ -2,7 +2,6 @@
 /* scrollbar */
 html,
 body {
-  height: 100%;
   scrollbar-width: thin;
   scrollbar-color: var(--basic-main-color) #f1f1f1;
 }
@@ -88,7 +87,10 @@ select {
 }
 .ag-theme-balham .ag-cell .form-check-input {
   margin: 0;
-  right: 20px;
+  right: 0;
+}
+.ag-theme-balham .ag-row {
+  min-height: 45px !important;
 }
 /* toggle btn */
 .toggle-off.btn,
@@ -226,7 +228,8 @@ select {
 }
 
 .customer_card_name,
-.customer_card_fingerPrint , .customer_card_fingerPrintD,
+.customer_card_fingerPrint,
+.customer_card_fingerPrintD,
 .customer_card_list li p {
   font-weight: bolder;
 }
@@ -1645,6 +1648,6 @@ a.alert_message:hover {
 .inbody_table .col-form-label {
   padding: 0;
 }
-.inbody_table  .form-control {
+.inbody_table .form-control {
   height: 30px !important;
 }

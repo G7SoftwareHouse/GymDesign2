@@ -284,6 +284,9 @@
   .col-sm .btn_add_rec {
     margin-bottom: 1rem;
   }
+  .two-btns .btn.basic_background_color {
+    margin: 1rem 0 0 !important;
+  }
 }
 
 @media (max-width: 450px) {
