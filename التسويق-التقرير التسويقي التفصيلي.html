@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
-    <title>انشاء فعالية جديدة</title>
+    <title>التقرير التسويقي التفصيلي</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/bootstrap.min.css" />
@@ -408,7 +408,9 @@
                   >
                   <a class="dropdown-item" href="#">المدفوعات </a>
                   <a class="dropdown-item" href="#">المتحصلات</a>
-                  <a class="dropdown-item" href="./العملاء-ارصدة العملاء.html">ارصدة العملاء</a>
+                  <a class="dropdown-item" href="./العملاء-ارصدة العملاء.html"
+                    >ارصدة العملاء</a
+                  >
                   <a class="dropdown-item" href="#"
                     >تقرير مدعوين تحولوا الى مشتركين</a
                   >
@@ -488,10 +490,14 @@
                   <a class="dropdown-item" href="./التسويق-ادخال هدف شهري.html"
                     >ادخال الهدف الشهري</a
                   >
-                  <a class="dropdown-item" href="./التسويق-التقرير التسويقي التفصيلي.html"
+                  <a
+                    class="dropdown-item"
+                    href="./التسويق-التقرير التسويقي التفصيلي.html"
                     >التقرير التسويقي التفصيلي</a
                   >
-                  <a class="dropdown-item" href="./التسويق-التقرير التسويقي الاجمالي.html"
+                  <a
+                    class="dropdown-item"
+                    href="./التسويق-التقرير التسويقي الاجمالي.html"
                     >التقرير التسويقي الاجمالي</a
                   >
                   <a class="dropdown-item" href="./التسويق-تقارير العمولات الشهرية للتسويق.html"
@@ -539,8 +545,69 @@
     </header>
 
     <main class="p-4">
-      <!-- Start services form -->
-      <form class="services">
+      <!-- Start services section -->
+      <section class="services_index">
+        <div class="card card_index mt-2 border-0">
+          <div class="card-header border-0 p-0">
+            <!-- START TABS DIV -->
+            <div class="tabbable-responsive overflow-none">
+              <div class="tabbable">
+                <ul class="nav nav-tabs border-0" role="tablist">
+                  <li class="nav-item float-left">
+                    <a
+                      class="nav-link text-center bold active"
+                      role="tab"
+                      aria-controls="contact"
+                      aria-selected="false"
+                      >التقرير التسويقي التفصيلي
+                    </a>
+                  </li>
+                  <li class="nav-item float-right">
+                    <button
+                        type="button"
+                        class="btn btn_add_rec btn-info mt--5"
+                      >
+                        <i class="fas fa-print font-size-14 ml-1"></i>
+                        <p class="d-inline m-0">طباعة</p>
+                      </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="card-body p-0">
+            <div class="tab-content basic_background_white_color mt--5 p-3">
+              <div class="tab-pane fade show active" role="tabpanel">
+                <form>
+                  <div class="form-row algin-items-end no-gutters">
+                    <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                      <label>اليوم والتاريخ</label>
+                      <input type="date" class="form-control" />
+                    </div>
+                    <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
+                      <label>المسوقين </label>
+                      <select class="form-control">
+                        <option selected></option>
+                        <option></option>
+                      </select>
+                    </div>
+                    <div
+                      class="form-group d-flex align-items-end justify-content-end col-lg-6 col-sm-12 px-3"
+                    >
+                      <button
+                        class="btn box-shadow basic_background_color text-white m-0"
+                      >
+                        <i class="fas fa-share mx-2 rotate"></i>
+                        <p class="d-inline m-0">عرض</p>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="card card_index mt-2 border-0">
           <div class="card-header border-0 p-0">
             <!-- START TABS DIV -->
@@ -550,94 +617,27 @@
                   <li class="nav-item float-left">
                     <a
                       class="nav-link text-center bold active"
+                      data-toggle="tab"
                       role="tab"
                       aria-controls="contact"
                       aria-selected="false"
-                      >انشاء فعالية جديدة</a
+                      >جدول العرض</a
                     >
-                  </li>
-                  <li class="nav-item float-right">
-                    <div class="buttons-container">
-                      <button type="button" class="btn btn-info m-1">
-                        <i class="fas fa-paperclip font-size-14 ml-1"></i>
-                        <p class="d-inline m-0">إرفاق</p>
-                      </button>
-                      <button type="button" class="btn btn-warning m-1">
-                        <i class="fas fa-pen font-size-14 ml-1"></i>
-                        <p class="d-inline m-0">تعديل</p>
-                      </button>
-                      <button type="button" class="btn btn-success m-1">
-                        <i class="fas fa-check font-size-14 ml-1"></i>
-                        <p class="d-inline m-0">حفظ</p>
-                      </button>
-                      <button type="button" class="btn btn-danger m-1">
-                        <i class="fas fa-trash-alt font-size-14 ml-1"></i>
-                        <p class="d-inline m-0">إلغاء</p>
-                      </button>
-                    </div>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="card-body p-0">
-            <div class="tab-content bg-white min-h mt--5 p-3">
-              <div
-                class="tab-pane fade show active"
-                role="tabpanel"
-              >
-                <div class="form-row no-gutters">
-                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                    <label>الرقم</label>
-                    <input type="numer" class="form-control border-0" disabled />
-                  </div>
-                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                    <label>التاريخ</label>
-                    <input type="date" class="form-control" />
-                  </div>
-                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                    <label>الحالة</label>
-                    <select id="status" class="form-control">
-                      <option selected disabled>اختر...</option>
-                      <option></option>
-                    </select>
-                  </div>
-                </div>
-                <div class="form-row no-gutters">
-                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                    <label>اسم الفعالية</label>
-                    <input type="text" class="form-control" />
-                  </div>
-                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                    <label>مناسبة الفعالية</label>
-                    <input type="text" class="form-control" />
-                  </div>
-                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                    <label>تاريخ بداية الفعالية</label>
-                    <input type="date" class="form-control" />
-                  </div>
-                  <div class="form-group col-lg-3 col-md-6 col-sm-12 px-3">
-                    <label>المدة </label>
-                    <input type="text" class="form-control" />
-                  </div>
-                </div>
-                <div class="more_info_table my-3 px-3">
-                  <h6>الجهات المشاركة</h6>
-                  <b>grid</b>
-                    <!-- <div id="Grid" class="dropdownGrid ag-theme-balham"></div> -->
-                </div>
-                <div class="form-row mt-3 no-gutters">
-                  <div class="form-group col-lg-9 col-md-6 col-sm-12 px-3">
-                    <label>ملاحظات</label>
-                    <textarea rows="5" class="form-control"></textarea>
-                  </div>
-                </div>
+            <div class="tab-content basic_background_white_color mt--5 p-3">
+              <div class="tab-pane fade show active" role="tabpanel">
+                <div id="servicesGrid" class="ag-theme-balham"></div>
               </div>
             </div>
           </div>
         </div>
-      </form>
-      <!-- End services form -->
+      </section>
+      <!-- End services section -->
     </main>
 
     <script src="js/jquery-3.4.1.slim.min.js"></script>
@@ -655,5 +655,131 @@
     <script src="js/jstree.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script>
+      // services index grid
+      self.actions2 = function () {};
+      self.actions2.prototype = {
+        init: function (params) {
+          this.actions2Button = document.createElement("div");
+          this.actions2Button.innerHTML = `
+          <ul class="actions-list list-inline">
+              <li class="list-inline-item info-color"><a href="#" title="مرفقات"><i class="fas fa-paperclip mx-1"></i></a></li>
+              <li class="list-inline-item"><a href="#" title="عرض"><i class="fas fa-eye mx-1"></i></a></li>
+              <li class="list-inline-item warning-color"><a href="#" title="تعديل"><i class="fas fa-pen mx-1"></i></a></li>
+              <li class="list-inline-item danger-color"><a href="#" title="الغاء"><i class="fas fa-trash-alt mx-1"></i></a></li>
+          </ul>
+        `;
+        },
+        getGui: function () {
+          return this.actions2Button;
+        },
+        refresh: function () {
+          return true;
+        },
+        destroy: function () {
+          $(this.actions2Button).remove();
+        },
+      };
+
+      // specify the columns
+      const columnDefs3 = [
+        {
+          headerName: "م",
+          field: "id",
+          resizable: true,
+          minWidth: 50,
+          sortable: true,
+        },
+        {
+          headerName: "الكود",
+          field: "branch",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "إسم التصنيف",
+          field: "recpNo",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "نوع التصنيف",
+          field: "serviceNo",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "الحالة",
+          field: "status",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "تاريخ التفعيل",
+          field: "serviceNo",
+          resizable: true,
+          minWidth: 100,
+          sortable: true,
+        },
+        {
+          headerName: "اجراءات",
+          field: "actions",
+          resizable: true,
+          minWidth: 200,
+          cellRenderer: actions2,
+          sortable: true,
+        },
+      ];
+
+      // specify the data
+      const dataSource3 = [
+        {
+          id: "1",
+          branch: "",
+          recpNo: "A-12342",
+          serviceNo: "302",
+          service: "12-month gym mem",
+          datePurchase: "12-2-2020",
+          height: 100,
+        },
+      ];
+      var gridOptions3 = {
+        columnDefs: columnDefs3,
+        rowData: dataSource3,
+        enableRowGroup: true,
+        enableColResize: true,
+        enableFilter: true,
+        enableSorting: true,
+        enableFilter: true,
+        enableRtl: true,
+        wrapText: true,
+        sortable: true,
+        resizable: true,
+        rowDragManaged: true,
+        animateRows: true,
+        rowHeight: 45,
+        defaultColDef: {
+          flex: 1,
+          autoHeight: true,
+          wrapText: true,
+          sortable: true,
+          resizable: true,
+        },
+        suppressRowTransform: true,
+        domLayout: "autoHeight",
+        onGridReady: function (params) {
+          params.api.sizeColumnsToFit();
+        },
+      };
+      // setup the grid after the page has finished loading
+      document.addEventListener("DOMContentLoaded", function () {
+        var gridDiv3 = document.querySelector("#servicesGrid");
+        new agGrid.Grid(gridDiv3, gridOptions3);
+      });
+    </script>
   </body>
 </html>

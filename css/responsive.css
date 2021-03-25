@@ -181,7 +181,9 @@
     flex-direction: column-reverse !important;
     align-items: flex-start !important;
   }
-  .btn.basic_background_color {
+  .btn.basic_background_color,
+  .buttons-container .btn,
+  .nav-item.float-right .btn {
     line-height: 2.2;
     font-size: 0.8rem;
   }
