@@ -1,4 +1,7 @@
+var scrolled=0;
+
 $(document).ready(function () {
+
   $("[data-toggle=popover]").popover({
     html: true,
     trigger: "focus",
@@ -17,12 +20,12 @@ $(document).ready(function () {
     if ($height > 50) {
       if (prevScrollpos > currentScrollPos) {
         document.getElementById("header").style.top = "0";
-        $(".vertical_tabs .tab").css("top", header);
-        $(".vertical_tabs .tab").css("min-height", bH - header);
+        // $(".vertical_tabs .tab").css("top", header);
+        // $(".vertical_tabs .tab").css("min-height", bH - header);
       } else if (header > 100) {
         document.getElementById("header").style.top = "-68px";
-        $(".vertical_tabs .tab").css("top", header - 68);
-        $(".vertical_tabs .tab").css("min-height", bH - (header - 68));
+        // $(".vertical_tabs .tab").css("top", header - 68);
+        // $(".vertical_tabs .tab").css("min-height", bH - (header - 68));
       }
       prevScrollpos = currentScrollPos;
     }
@@ -37,19 +40,19 @@ $(document).ready(function () {
       header = $("#header").height(),
       totalH = $(".total_sale").innerHeight();
 
-    $(".vertical_tabs .tab").css("min-height", bH - header);
-    $(".vertical_tabs .tab").css("top", header);
+    // $(".vertical_tabs .tab").css("min-height", bH - header);
+    // $(".vertical_tabs .tab").css("top", header);
     $("main").css("margin-top", header);
-    $(".vertical_tabs .tabcontent").css("margin-right", tabW);
-    $(".vertical_tabs .tabcontent").css("width", bW - tabW - 48);
-    $(".vertical_tabs .tabcontent#tab_1").css("margin-bottom", totalH + 10);
-    $(".vertical_tabs .tab button").css("min-height", bH / 13);
+    // $(".vertical_tabs .tabcontent").css("margin-right", tabW);
+    // $(".vertical_tabs .tabcontent").css("width", bW - tabW - 48);
+    // $(".vertical_tabs .tabcontent#tab_1").css("margin-bottom", totalH + 10);
+    // $(".vertical_tabs .tab button").css("min-height", bH / 13);
   });
 
   // slick slider
   $(".slick_slider").slick({
     rtl: true,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     infinite: true,
     speed: 500,
@@ -63,7 +66,7 @@ $(document).ready(function () {
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: "40px",
+          centerPadding: "20px",
           slidesToShow: 3,
         },
       },
@@ -72,7 +75,7 @@ $(document).ready(function () {
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: "40px",
+          centerPadding: "30px",
           slidesToShow: 2,
         },
       },
@@ -118,19 +121,17 @@ $(document).ready(function () {
   $("#chCategories").select2();
   $("#reservType").select2();
   $("#infoType").select2();
-});
+  
 
-// date inputs format
-// $("input")
-//   .on("change", function () {
-//     this.setAttribute(
-//       "data-date",
-//       moment(this.value, "YYYY-MM-DD").format(
-//         this.getAttribute("data-date-format")
-//       )
-//     );
-//   })
-//   .trigger("change");
+  // click down button
+  $(".btn_click_down").on("click", function () {
+    scrolled = scrolled + 300;
+  
+    $(".services_view").animate({
+      scrollTop: scrolled,
+    });
+  });
+});
 
 $(function () {
   $("#status-toggle").bootstrapToggle({

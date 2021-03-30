@@ -677,9 +677,11 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   background-color: white;
   position: fixed;
   right: 0;
+  top: 0;
   transition: all 0.3s;
   width: 72px;
-  /* overflow-y: scroll; */
+  height: 100%;
+  min-height: 100%;
   box-shadow: 0 3px 25px rgba(182, 53, 148, 0.45);
 }
 .vertical_tabs .tab::-webkit-scrollbar {
@@ -690,9 +692,6 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 }
 .vertical_tabs .tab::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.4);
-}
-.vertical_tabs .tab {
-  min-height: calc(100% - 145px);
 }
 .vertical_tabs .tab button {
   color: black;
@@ -734,6 +733,7 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 }
 .vertical_tabs .tabcontent {
   border: none;
+  padding-right: 72px;
 }
 .Exit_tab {
   padding-bottom: 2rem;
@@ -763,7 +763,14 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   color: var(--basic-main-color);
 }
 .head_box .btn {
-  font-size: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: bold;
+  min-height: 37px;
+  min-width: 110px;
+}
+.head_box .btn.btn-danger {
+  background-color: #fd6b7f;
+  border-color: #fd6b7f;
 }
 .head_box h6,
 .head_box h5 {
@@ -812,9 +819,15 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 .customer_inputs .svg-inline--fa {
   color: var(--basic-main-color) !important;
 }
-.our_services_section .btn {
-  font-size: 0.9rem;
-  min-width: 155px;
+.our_services_section {
+  height: calc(100% - 276px);
+  position: relative;
+}
+.our_services_section .slick-slide .btn {
+  font-size: 0.75rem;
+  min-height: 50px;
+  min-width: 95%;
+  font-weight: bold;
 }
 .our_services_section .btn.border-transparent,
 .services_card {
@@ -822,12 +835,12 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 }
 .slide-arrow {
   position: absolute;
-  top: 16%;
+  top: 17px;
   z-index: 20;
   background-color: #b8c2c8;
   width: 33px;
   height: 33px;
-  opacity: 0.7;
+  opacity: 1;
   border-radius: 50%;
   border: none !important;
   outline: none !important;
@@ -866,6 +879,9 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   border-top: 7px solid transparent;
   border-bottom: 7px solid transparent;
 }
+.vertical_tabs .customer_inputs.form-inline {
+  height: 10.4%;
+}
 .btn-outline-primary {
   background-color: transparent !important;
   border-color: var(--basic-main-color) !important;
@@ -888,6 +904,8 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 }
 .our_services_section .btn-group .btn {
   min-width: auto;
+  line-height: 0.9;
+  padding: 0.5rem 1rem;
 }
 .customer_inputs.form-inline .select2 {
   width: auto !important;
@@ -908,6 +926,12 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   .select2-selection__arrow
   b {
   top: 44%;
+}
+.tab-content .form-group .form-check-input {
+  margin: 4px 0 0 !important;
+}
+.tab-content .form-group .form-check-label {
+  padding: 0 20px;
 }
 .btn-group > .btn-group:not(:last-child) > .btn,
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
@@ -934,6 +958,18 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   cursor: pointer;
   background-color: #efefef;
 }
+.btn_click_down {
+  position: absolute;
+  bottom: -20px;
+  left: -4px;
+}
+.btn_click_down .svg-inline--fa {
+  vertical-align: baseline;
+}
+.services_view {
+  height: calc(85% - 68px);
+  overflow-y: scroll;
+}
 .services_card img {
   width: 85%;
   height: 100px;
@@ -947,16 +983,12 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   text-overflow: ellipsis;
 }
 .total_sale {
-  position: fixed;
-  bottom: 10px;
+  height: 80px;
   color: white;
   z-index: 10;
-  -ms-flex: 0 0 60.666667%;
-  flex: 0 0 60.666667%;
-  min-width: 60.666667%;
   border-radius: 3px;
   border: 1px solid #707070;
-  background-color: #919191;
+  background-color: #6f6e6e;
   box-shadow: 0 3px 10px 0 rgba(182, 53, 148, 0.45);
 }
 .total_sale h6,
@@ -993,7 +1025,7 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   padding: 0 5px;
 }
 .table_list.m_h {
-  height: 117px;
+  height: calc(100% - 330px);
 }
 .invoices_table {
   margin: 1rem 0;
@@ -1068,7 +1100,10 @@ input[type="number"] {
 .total_price .list-group-item,
 .total_price .list-group-item .badge,
 .footer_btn .btn-info {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+}
+.total_price .list-group-item:last-child {
+  font-size: 0.9rem;
 }
 .footer_btn .btn-info {
   padding: 0 0.7rem;

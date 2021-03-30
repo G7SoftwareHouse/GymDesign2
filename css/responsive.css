@@ -12,6 +12,11 @@
     max-width: 83.333333%;
   }
 }
+@media (min-width: 992px) and (max-width: 1287px) {
+  .table_list.m_h {
+    height: calc(100% - 400px);
+  }
+}
 @media (min-width: 992px) and (max-width: 1025px) {
   .col-lg-3 {
     -ms-flex: 0 0 50%;
@@ -35,7 +40,12 @@
   }
 }
 
-@media (max-width: 990px) {
+@media (min-width: 768px) and (max-width: 992px) {
+  .our_services_section {
+    height: calc(100% - 440px) !important;
+  }
+}
+@media (max-width: 992px) {
   .edit_modal .modal-header .col.p-0,
   .edit_modal .modal-header .btn {
     margin-bottom: 10px;
@@ -83,6 +93,9 @@
   }
   .points_balance {
     margin-bottom: 1rem;
+  }
+  .table_list.m_h {
+    height: calc(100% - 400px);
   }
 }
 
@@ -217,10 +230,36 @@
   .customer_card.px-3 {
     padding: 0 !important;
   }
+  .our_services_section {
+    height: calc(100% - 665px);
+  }
+  .vertical_tabs .col-lg-4.pl-3 {
+    margin-top: 3rem !important;
+  }
+  .footer_btn {
+    margin-top: 1.5rem !important;
+  }
 }
 
 /* Portrait phones and smaller */
 @media (max-width: 550px) {
+  .invoices_page.h-100,
+  .invoices_page .h-100, .vertical_tabs .customer_inputs.form-inline {
+    height: auto !important;
+  }
+  .services_view {
+    height: 410px;
+  }
+  .table_list.m_h {
+    height: 270px;
+  }
+  .vertical_tabs .col-lg-4.pl-3 {
+    margin-top: 2.3rem !important;
+  }
+  .vertical_tabs .h-100.bg-white.p-3 {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
   .col-md.border-right {
     border-right: none;
     border-top: 1px solid;
