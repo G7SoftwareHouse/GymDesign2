@@ -106,7 +106,7 @@ select {
 }
 .ag-theme-balham .ag-cell {
   line-height: 15px;
-  /* white-space: normal; */
+  white-space: normal;
 }
 .ag-theme-balham .ag-cell button.dropdown-toggle {
   padding: 0;
