@@ -399,7 +399,11 @@
                     data-target="#salePointsModal"
                     >الدخول على نقاط البيع</a
                   >
-                  <a class="dropdown-item" href="./العملاء-فواتير المبيعات-الاندكس.html">فواتير المبيعات</a>
+                  <a
+                    class="dropdown-item"
+                    href="./العملاء-فواتير المبيعات-الاندكس.html"
+                    >فواتير المبيعات</a
+                  >
                   <a class="dropdown-item" href="#">مرتجع مبيعات</a>
                   <a class="dropdown-item" href="#">التجميد</a>
                   <a class="dropdown-item" href="#">ترقية الاشتراكات</a>
@@ -411,7 +415,9 @@
                   >
                   <a class="dropdown-item" href="#">المدفوعات </a>
                   <a class="dropdown-item" href="#">المتحصلات</a>
-                  <a class="dropdown-item" href="./العملاء-ارصدة العملاء.html">ارصدة العملاء</a>
+                  <a class="dropdown-item" href="./العملاء-ارصدة العملاء.html"
+                    >ارصدة العملاء</a
+                  >
                   <a class="dropdown-item" href="#"
                     >تقرير مدعوين تحولوا الى مشتركين</a
                   >
@@ -491,13 +497,19 @@
                   <a class="dropdown-item" href="./التسويق-ادخال هدف شهري.html"
                     >ادخال الهدف الشهري</a
                   >
-                  <a class="dropdown-item" href="./التسويق-التقرير التسويقي التفصيلي.html"
+                  <a
+                    class="dropdown-item"
+                    href="./التسويق-التقرير التسويقي التفصيلي.html"
                     >التقرير التسويقي التفصيلي</a
                   >
-                  <a class="dropdown-item" href="./التسويق-التقرير التسويقي الاجمالي.html"
+                  <a
+                    class="dropdown-item"
+                    href="./التسويق-التقرير التسويقي الاجمالي.html"
                     >التقرير التسويقي الاجمالي</a
                   >
-                  <a class="dropdown-item" href="./التسويق-تقارير العمولات الشهرية للتسويق.html"
+                  <a
+                    class="dropdown-item"
+                    href="./التسويق-تقارير العمولات الشهرية للتسويق.html"
                     >تقرير العمولات الشهرية للتسويق</a
                   >
                   <a class="dropdown-item" href="#"
@@ -689,7 +701,7 @@
                 aria-labelledby="viewTable-tab"
               >
                 <div
-                  class="class-timetable table-responsive w-100 details-timetable"
+                  class="class-timetable add_new_table table-responsive w-100 details-timetable"
                 >
                   <table class="table">
                     <thead>
@@ -734,47 +746,67 @@
                           class="dark-bg hover-dp ts-meta"
                           data-tsmeta="workout"
                         >
-                          <table
-                            class="table classes_table"
-                            data-toggle="modal"
-                            data-target="#addClassModal"
-                          >
-                            <tr>
+                          <table class="table classes_table">
+                            <button
+                              class="btn btn-primary add_info_btn"
+                              data-toggle="modal"
+                              data-target="#addClassModal2"
+                            >
+                              +
+                            </button>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
                               <td>الكلاس</td>
-                              <td>الكلاس</td>
-                              <td>الكلاس</td>
-                            </tr>
-                            <tr>
                               <td>المدرب</td>
-                              <td>المدرب</td>
-                              <td>المدرب</td>
-                            </tr>
-                            <tr>
                               <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
                               <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
                               <td>الصالة</td>
                             </tr>
                           </table>
                         </td>
                         <td class="hover-dp ts-meta" data-tsmeta="fitness">
-                          <table
-                            class="table classes_table"
-                            data-toggle="modal"
-                            data-target="#addClassModal"
-                          >
-                            <tr>
+                          <table class="table classes_table">
+                            <button class="btn btn-primary add_info_btn">
+                              +
+                            </button>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
                               <td>الكلاس</td>
-                              <td>الكلاس</td>
-                              <td>الكلاس</td>
-                            </tr>
-                            <tr>
                               <td>المدرب</td>
-                              <td>المدرب</td>
-                              <td>المدرب</td>
-                            </tr>
-                            <tr>
                               <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
                               <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
                               <td>الصالة</td>
                             </tr>
                           </table>
@@ -783,103 +815,126 @@
                           class="dark-bg hover-dp ts-meta"
                           data-tsmeta="workout"
                         >
-                          <table
-                            class="table classes_table"
-                            data-toggle="modal"
-                            data-target="#addClassModal"
-                          >
-                            <tr>
+                          <table class="table classes_table">
+                            <button class="btn btn-primary add_info_btn">
+                              +
+                            </button>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
                               <td>الكلاس</td>
-                              <td>الكلاس</td>
-                              <td>الكلاس</td>
-                            </tr>
-                            <tr>
                               <td>المدرب</td>
-                              <td>المدرب</td>
-                              <td>المدرب</td>
-                            </tr>
-                            <tr>
                               <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
                               <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
                               <td>الصالة</td>
                             </tr>
                           </table>
                         </td>
                         <td class="hover-dp ts-meta" data-tsmeta="fitness">
                           <table class="table classes_table">
-                            <tr>
+                            <button class="btn btn-primary add_info_btn">
+                              +
+                            </button>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
                               <td>الكلاس</td>
-                              <td>الكلاس</td>
-                              <td>الكلاس</td>
-                            </tr>
-                            <tr>
                               <td>المدرب</td>
-                              <td>المدرب</td>
-                              <td>المدرب</td>
-                            </tr>
-                            <tr>
                               <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
                               <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
                               <td>الصالة</td>
                             </tr>
                           </table>
                         </td>
                         <td class="hover-dp ts-meta">
                           <table class="table classes_table">
-                            <tr>
+                            <button class="btn btn-primary add_info_btn">
+                              +
+                            </button>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
                               <td>الكلاس</td>
-                              <td>الكلاس</td>
-                              <td>الكلاس</td>
-                            </tr>
-                            <tr>
                               <td>المدرب</td>
-                              <td>المدرب</td>
-                              <td>المدرب</td>
-                            </tr>
-                            <tr>
                               <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
                               <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
                               <td>الصالة</td>
                             </tr>
                           </table>
                         </td>
+                        <td class="blank-td"></td>
                         <td class="hover-dp ts-meta" data-tsmeta="motivation">
                           <table class="table classes_table">
-                            <tr>
+                            <button class="btn btn-primary add_info_btn">
+                              +
+                            </button>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
                               <td>الكلاس</td>
-                              <td>الكلاس</td>
-                              <td>الكلاس</td>
-                            </tr>
-                            <tr>
                               <td>المدرب</td>
-                              <td>المدرب</td>
-                              <td>المدرب</td>
-                            </tr>
-                            <tr>
-                              <td>الصالة</td>
-                              <td>الصالة</td>
                               <td>الصالة</td>
                             </tr>
-                          </table>
-                        </td>
-                        <td
-                          class="dark-bg hover-dp ts-meta"
-                          data-tsmeta="workout"
-                        >
-                          <table class="table classes_table">
-                            <tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
                               <td>الكلاس</td>
-                              <td>الكلاس</td>
-                              <td>الكلاس</td>
-                            </tr>
-                            <tr>
                               <td>المدرب</td>
-                              <td>المدرب</td>
-                              <td>المدرب</td>
-                            </tr>
-                            <tr>
                               <td>الصالة</td>
-                              <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
                               <td>الصالة</td>
                             </tr>
                           </table>
@@ -892,115 +947,203 @@
                             cellspacing="3"
                           >
                             <tr>
-                              <td class="border-0">10.00am</td>
-                              <td>12.00am</td>
+                              <td class="border-0">6.00am</td>
+                              <td>8.00am</td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td
+                          class="dark-bg hover-dp ts-meta"
+                          data-tsmeta="workout"
+                        >
+                          <table class="table classes_table">
+                            <button class="btn btn-primary add_info_btn">
+                              +
+                            </button>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td class="hover-dp ts-meta" data-tsmeta="fitness">
+                          <table class="table classes_table">
+                            <button class="btn btn-primary add_info_btn">
+                              +
+                            </button>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td
+                          class="dark-bg hover-dp ts-meta"
+                          data-tsmeta="workout"
+                        >
+                          <table class="table classes_table">
+                            <button class="btn btn-primary add_info_btn">
+                              +
+                            </button>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td class="hover-dp ts-meta" data-tsmeta="fitness">
+                          <table class="table classes_table">
+                            <button class="btn btn-primary add_info_btn">
+                              +
+                            </button>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td class="hover-dp ts-meta">
+                          <table class="table classes_table">
+                            <button class="btn btn-primary add_info_btn">
+                              +
+                            </button>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
                             </tr>
                           </table>
                         </td>
                         <td class="blank-td"></td>
-                        <td
-                          class="dark-bg hover-dp ts-meta"
-                          data-tsmeta="fitness"
-                        >
-                          <h5>Fitness</h5>
-                          <span>Kimberly Stone</span>
-                        </td>
-                        <td class="hover-dp ts-meta" data-tsmeta="workout">
-                          <h5>WEIGHT LOOSE</h5>
-                          <span>RLefew D. Loee</span>
-                        </td>
-                        <td
-                          class="dark-bg hover-dp ts-meta"
-                          data-tsmeta="motivation"
-                        >
-                          <h5>Cardio</h5>
-                          <span>RLefew D. Loee</span>
-                        </td>
-                        <td class="hover-dp ts-meta" data-tsmeta="workout">
-                          <h5>Body Building</h5>
-                          <span>Robert Cage</span>
-                        </td>
-                        <td
-                          class="dark-bg hover-dp ts-meta"
-                          data-tsmeta="motivation"
-                        >
-                          <h5>Karate</h5>
-                          <span>Donald Grey</span>
-                        </td>
-                        <td class="blank-td"></td>
-                      </tr>
-                      <tr>
-                        <td class="class-time">5.00pm - 7.00pm</td>
-                        <td
-                          class="dark-bg hover-dp ts-meta"
-                          data-tsmeta="fitness"
-                        >
-                          <h5>Boxing</h5>
-                          <span>Rachel Adam</span>
-                        </td>
                         <td class="hover-dp ts-meta" data-tsmeta="motivation">
-                          <h5>Karate</h5>
-                          <span>Donald Grey</span>
-                        </td>
-                        <td
-                          class="dark-bg hover-dp ts-meta"
-                          data-tsmeta="workout"
-                        >
-                          <h5>Body Building</h5>
-                          <span>Robert Cage</span>
-                        </td>
-                        <td class="blank-td"></td>
-                        <td
-                          class="dark-bg hover-dp ts-meta"
-                          data-tsmeta="workout"
-                        >
-                          <h5>Yoga</h5>
-                          <span>Keaf Shen</span>
-                        </td>
-                        <td class="hover-dp ts-meta" data-tsmeta="motivation">
-                          <h5>Cardio</h5>
-                          <span>RLefew D. Loee</span>
-                        </td>
-                        <td
-                          class="dark-bg hover-dp ts-meta"
-                          data-tsmeta="fitness"
-                        >
-                          <h5>Fitness</h5>
-                          <span>Kimberly Stone</span>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="class-time">7.00pm - 9.00pm</td>
-                        <td class="hover-dp ts-meta" data-tsmeta="motivation">
-                          <h5>Cardio</h5>
-                          <span>RLefew D. Loee</span>
-                        </td>
-                        <td class="dark-bg blank-td"></td>
-                        <td class="hover-dp ts-meta" data-tsmeta="fitness">
-                          <h5>Boxing</h5>
-                          <span>Rachel Adam</span>
-                        </td>
-                        <td
-                          class="dark-bg hover-dp ts-meta"
-                          data-tsmeta="workout"
-                        >
-                          <h5>Yoga</h5>
-                          <span>Keaf Shen</span>
-                        </td>
-                        <td class="hover-dp ts-meta" data-tsmeta="motivation">
-                          <h5>Karate</h5>
-                          <span>Donald Grey</span>
-                        </td>
-                        <td
-                          class="dark-bg hover-dp ts-meta"
-                          data-tsmeta="fitness"
-                        >
-                          <h5>Boxing</h5>
-                          <span>Rachel Adam</span>
-                        </td>
-                        <td class="hover-dp ts-meta" data-tsmeta="workout">
-                          <h5>WEIGHT LOOSE</h5>
-                          <span>RLefew D. Loee</span>
+                          <table class="table classes_table">
+                            <button class="btn btn-primary add_info_btn">
+                              +
+                            </button>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                            <tr
+                              data-toggle="modal"
+                              data-target="#addClassModal"
+                            >
+                              <td>الكلاس</td>
+                              <td>المدرب</td>
+                              <td>الصالة</td>
+                            </tr>
+                          </table>
                         </td>
                       </tr>
                     </tbody>
@@ -1074,12 +1217,62 @@
       </div>
     </div>
 
+    <!-- add class Modal -->
+    <div
+      class="add_class edit_modal modal"
+      id="addClassModal2"
+      aria-labelledby="addClassModalLabel"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <!-- start form -->
+            <form class="service_form">
+              <div class="form-row">
+                <div class="form-group mb-0 col-md-6">
+                  <label>الكلاس</label>
+                  <select id="class" class="form-control">
+                    <option selected>الكلاس</option>
+                    <option>الكلاس</option>
+                  </select>
+                </div>
+                <div class="form-group mb-0 col-md-6">
+                  <label>المدرب</label>
+                  <select id="captin" class="form-control">
+                    <option selected>المدرب</option>
+                    <option>المدرب</option>
+                  </select>
+                </div>
+                <div class="form-group mb-0 col-md-6">
+                  <label>الصالة</label>
+                  <select id="place" class="form-control">
+                    <option selected>الصالة</option>
+                    <option>الصالة</option>
+                  </select>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">
+              <i class="fas fa-check pl-1"></i>حفظ
+            </button>
+            <button type="button" class="btn btn-danger" data-dismiss="modal">
+              <i class="fas fa-trash-alt pl-1"></i>إلغاء
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="js/jquery-3.4.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-toggle.min.js"></script>
     <!-- datetimepicker  -->
-    <script src="js/tempusdominus-bootstrap.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
     <script
       src="https://kit.fontawesome.com/7f37d9c53b.js"
       crossorigin="anonymous"

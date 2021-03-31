@@ -1,5 +1,3 @@
-var scrolled=0;
-
 $(document).ready(function () {
 
   $("[data-toggle=popover]").popover({
@@ -125,11 +123,7 @@ $(document).ready(function () {
 
   // click down button
   $(".btn_click_down").on("click", function () {
-    scrolled = scrolled + 300;
-  
-    $(".services_view").animate({
-      scrollTop: scrolled,
-    });
+    $(".total_sale").slideToggle();
   });
 });
 

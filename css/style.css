@@ -31,8 +31,8 @@ body {
   color: var(--basic-green-color);
 }
 .btn-primary {
-  border-color: var(--basic-main-color);
-  background-color: var(--basic-main-color);
+  border-color: var(--basic-main-color) !important;
+  background-color: var(--basic-main-color) !important;
 }
 .underline {
   text-decoration: underline;
@@ -366,7 +366,7 @@ select {
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
 }
 .ag-theme-balham .ag-cell button.dropdown-toggle {
   padding: 0;
@@ -374,7 +374,7 @@ select {
   direction: rtl;
   outline: none !important;
   box-shadow: none !important;
-  /* justify-content: flex-start; */
+  justify-content: flex-start;
 }
 .ag-theme-balham .ag-cell button:focus,
 .ag-theme-balham .ag-cell button:hover {
@@ -393,7 +393,12 @@ select {
   background-color: #efefef;
 }
 .ag-theme-balham .dropdown-menu button {
-  justify-content: flex-end !important;
+  /* justify-content: flex-end !important; */
+}
+.ag-paging-page-summary-panel {
+  display: flex;
+  min-width: 150px;
+  justify-content: space-between;
 }
 .ag-theme-balham .dropdown-menu a {
   color: #707070;
@@ -412,6 +417,7 @@ select {
 .actions-list .list-inline-item {
   font-size: 0.9rem;
   margin: 7px 0 0 !important;
+  cursor: pointer;
 }
 .actions-list .svg-inline--fa {
   display: block;
@@ -615,6 +621,35 @@ select {
   width: 26px !important;
 }
 /* date inputs */
+.bootstrap-datetimepicker-widget,
+.bootstrap-datetimepicker-widget table {
+  padding: 0 !important;
+}
+.bootstrap-datetimepicker-widget table th {
+  color: white !important;
+  background-color: #00a0bb;
+  border-radius: 0;
+  border: none !important;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  font-weight: normal;
+  font-size: 0.9rem;
+}
+.bootstrap-datetimepicker-widget table th.picker-switch {
+  background-color: #00a0bb;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+.bootstrap-datetimepicker-widget table tbody {
+  padding: 9px !important;
+}
+.bootstrap-datetimepicker-widget table td {
+  padding: 6px;
+  border: none !important;
+  font-size: 0.9rem;
+  border-radius: 0;
+}
+
 input.date_inputs {
   position: relative;
 }
@@ -1603,9 +1638,39 @@ a.alert_message:hover {
 .class-timetable .classes_table tr td {
   border-bottom: 0;
   border-width: 1px;
-  padding: 5px;
+  padding: 8px 5px;
   font-size: 13px;
   min-width: auto;
+  border-right: none;
+}
+.class-timetable .classes_table tr {
+  border-bottom: 1px solid #363636;
+}
+.add_new_table .classes_table {
+  margin-bottom: 1rem;
+}
+.add_new_table td {
+  position: relative;
+}
+.add_new_table .add_info_btn {
+  position: absolute;
+  left: 1px;
+  right: 1px;
+  bottom: 3px;
+  margin: 0 auto;
+  z-index: 2;
+  color: var(--basic-main-color) !important;
+  font-size: 1.9rem;
+  line-height: 0.7;
+  border: none !important;
+  background: rgba(182, 53, 148, 0.2) !important;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+}
+.add_new_table .add_info_btn:focus {
+  box-shadow: 0 0 0 0.2rem #b6359433 !important;
 }
 
 /* monthly goals */

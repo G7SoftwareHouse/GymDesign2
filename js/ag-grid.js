@@ -364,6 +364,8 @@ var gridOptions = {
   wrapText: true,
   sortable: true,
   resizable: true,
+  pagination: true,
+  paginationPageSize: 10,
   rowDragManaged: true,
   animateRows: true,
   rowHeight: 45,
