@@ -322,7 +322,7 @@ const dataSource = [
     recpNo: "A-12342",
     codeNo: "12342",
     serviceNo: "302",
-    service: "12-month gym mem",
+    service: "12-month gym mem 12-month gym mem 12-month gym mem 12-month gym mem",
     datePurchase: "12-2-2020",
     dateActive: "18-2-2020",
     dateExpire: "18-5-2020",
