@@ -63,7 +63,7 @@ select {
 /* ag-grid */
 .ag-cell,
 .ag-row {
-  overflow: visible !important;
+  /* overflow: visible !important; */
 }
 .ag-row {
   z-index: 0;
@@ -74,7 +74,7 @@ select {
 .ag-root.ag-layout-auto-height,
 .ag-body-viewport.ag-layout-auto-height,
 .ag-body-viewport-wrapper.ag-layout-auto-height {
-  overflow-y: visible !important;
+  /* overflow-y: visible !important; */
 }
 .dropdownGrid .ag-root.ag-layout-auto-height,
 .dropdownGrid .ag-body-viewport.ag-layout-auto-height,
@@ -100,13 +100,9 @@ select {
 .ag-theme-balham .ag-cell {
   width: 100%;
   height: 100%;
-  display: flex;
-  align-items: center;
-  /* justify-content: flex-end; */
 }
 .ag-theme-balham .ag-cell {
   line-height: 15px;
-  white-space: normal;
 }
 .ag-theme-balham .ag-cell button.dropdown-toggle {
   padding: 0;
