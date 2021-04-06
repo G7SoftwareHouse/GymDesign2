@@ -33,9 +33,13 @@ body {
 .btn-success {
   color: white !important;
 }
-.btn-primary {
+.btn-primary,
+.page-item.active .page-link {
   border-color: var(--basic-main-color) !important;
   background-color: var(--basic-main-color) !important;
+}
+.page-link {
+  color: var(--basic-main-color);
 }
 .underline {
   text-decoration: underline;
@@ -1007,12 +1011,12 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   vertical-align: baseline;
 }
 .services_view {
-  height: calc(85% - 68px);
+  height: calc(85% - 120px);
   overflow-y: scroll;
 }
 .services_card img {
-  width: 85%;
-  height: 100px;
+  width: 95%;
+  height: 60px;
   object-fit: contain;
   margin-bottom: 0.5rem;
 }

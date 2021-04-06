@@ -108,6 +108,9 @@
   .table_list.m_h {
     height: calc(100% - 400px);
   }
+  .pagination_list {
+    display: none;
+  }
 }
 @media (min-width: 847px) and (max-width: 991px) {
   .vertical_tabs .customer_inputs.form-inline {
@@ -361,6 +364,12 @@
   }
   .table_list.m_h {
     height: 270px;
+  }
+  .services_view {
+    height: 155px;
+  }
+  .pagination_list {
+    display: block;
   }
 }
 @media (min-width: 450px) and (max-width: 551px) {
