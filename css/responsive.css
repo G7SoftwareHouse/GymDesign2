@@ -16,6 +16,17 @@
   .table_list.m_h {
     height: calc(100% - 400px);
   }
+  .our_services_section {
+    height: calc(100% - 293px);
+  }
+  .vertical_tabs .customer_inputs.form-inline p {
+    font-size: 0.85rem;
+  }
+  .vertical_tabs .customer_inputs.form-inline .col-md-7 {
+    -ms-flex: 0 0 100% !important;
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
 }
 @media (min-width: 992px) and (max-width: 1025px) {
   .col-lg-3 {
@@ -98,7 +109,17 @@
     height: calc(100% - 400px);
   }
 }
-
+@media (min-width: 847px) and (max-width: 991px) {
+  .vertical_tabs .customer_inputs.form-inline {
+    height: 14.4%;
+  }
+  .our_services_section {
+    height: calc(100% - 360px) !important;
+  }
+  .services_view {
+    height: calc(80% - 68px);
+  }
+}
 /* Landscape phones and portrait tablets */
 @media (max-width: 769px) {
   .modal-dialog {
@@ -244,7 +265,8 @@
 /* Portrait phones and smaller */
 @media (max-width: 550px) {
   .invoices_page.h-100,
-  .invoices_page .h-100, .vertical_tabs .customer_inputs.form-inline {
+  .invoices_page .h-100,
+  .vertical_tabs .customer_inputs.form-inline {
     height: auto !important;
   }
   .services_view {
@@ -325,7 +347,34 @@
     margin: 1rem 0 0 !important;
   }
 }
-
+@media (min-width: 551px) and (max-width: 846px) {
+  .h-100,
+  .vertical_tabs .customer_inputs.form-inline,
+  .our_services_section {
+    height: auto !important;
+  }
+  .services_view {
+    height: 200px;
+  }
+  .vertical_tabs .col-lg-4.pl-3 {
+    margin-top: 1rem !important;
+  }
+  .table_list.m_h {
+    height: 270px;
+  }
+}
+@media (min-width: 450px) and (max-width: 551px) {
+  .our_services_section {
+    height: calc(100% - 463px);
+  }
+}
+@media (min-width: 450px) and (max-width: 600px) {
+  .total_sale h6,
+  .total_sale p {
+    font-size: 0.45rem;
+    font-weight: bold;
+  }
+}
 @media (max-width: 450px) {
   .sidenav {
     padding-top: 15px;
@@ -333,8 +382,12 @@
   .sidenav a {
     font-size: 18px;
   }
-  .total_sale {
+  .total_sale,
+  .btn_click_down {
     display: none;
+  }
+  .our_services_section {
+    height: auto;
   }
   .d-s-none {
     display: none !important;

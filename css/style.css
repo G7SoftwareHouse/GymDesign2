@@ -30,6 +30,9 @@ body {
 .green-color {
   color: var(--basic-green-color);
 }
+.btn-success {
+  color: white !important;
+}
 .btn-primary {
   border-color: var(--basic-main-color) !important;
   background-color: var(--basic-main-color) !important;
@@ -1025,12 +1028,13 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   z-index: 10;
   border-radius: 3px;
   border: 1px solid #707070;
-  background-color: #6f6e6e;
+  background-color: #353535;
   box-shadow: 0 3px 10px 0 rgba(182, 53, 148, 0.45);
 }
 .total_sale h6,
 .total_sale p {
   font-size: 0.75rem;
+  font-weight: bold;
 }
 .invoices_head h6,
 .invoices_head p {
