@@ -302,7 +302,8 @@ div.error {
 
 /*MAIN MENU*/
 .img-size {
-  width: 70px !important;
+  /*width: 70px !important;*/
+  width:100% !important;
   height: 70px;
   object-fit: cover;
   border-radius: 50%;
