@@ -740,8 +740,10 @@ caption {
   border-left-color: initial;
 }
 
-.popover {
+.popover:not(.clockpicker-popover) {
   right: 0;
+}
+.popover{
   left: initial;
   text-align: right;
 }

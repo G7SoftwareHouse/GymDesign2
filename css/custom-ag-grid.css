@@ -104,7 +104,7 @@ html[dir] .ag-theme-balham .ag-root-wrapper .ag-root-wrapper-body .ag-root {
   color: gray;
 }
 
-.popover {
+.popover:not(.clockpicker-popover) {
   max-width: 500px;
 }
 .popover .popover-body #myform {
