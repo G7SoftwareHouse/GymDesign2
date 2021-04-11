@@ -38,207 +38,13 @@
     <!-- Favicons -->
     <link rel="shortcut icon" href="images/fa-icon.png" />
     <link rel="apple-touch-icon" href="images/fa-icon.png" />
-    <style>
-      /* slider widget */
-      .ui-slider {
-        text-decoration: none !important;
-      }
-      .ui-slider .ui-slider-handle {
-        overflow: visible !important;
-      }
-      .ui-slider .ui-slider-tooltip {
-        display: none;
-      }
-      .ui-slider .ui-state-active .ui-slider-tooltip,
-      .ui-slider .ui-state-focus .ui-slider-tooltip,
-      .ui-slider .ui-state-hover .ui-slider-tooltip {
-        display: block;
-        position: absolute;
-        bottom: 20px;
-        text-align: center;
-        padding: 0.2em;
-        font-size: 0.9em;
-        width: 14em;
-        /*width: auto;*/
-        margin-left: -4em;
-      }
-      .ui-slider a {
-        text-decoration: none;
-      }
-      .ui-slider ol,
-      .ui-slider li,
-      .ui-slider dl,
-      .ui-slider dd,
-      .ui-slider dt {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-      .ui-slider ol,
-      .ui-slider dl {
-        position: relative;
-        top: 1.3em;
-        width: 100%;
-      }
-      .ui-slider dt {
-        top: 1.5em;
-        position: absolute;
-        padding-top: 0.2em;
-        text-align: center;
-        border-bottom: 1px dotted #ddd;
-        height: 0.7em;
-        color: #999;
-      }
-      .ui-slider dt span {
-        background: #fff;
-        padding: 0 0.5em;
-      }
-      .ui-slider li,
-      .ui-slider dd {
-        position: absolute;
-        overflow: visible;
-        color: #666;
-      }
-      .ui-slider li span.ui-slider-label,
-      .ui-slider dd span.ui-slider-label {
-        display: none;
-      }
-      .ui-slider li span.ui-slider-label-show,
-      .ui-slider dd span.ui-slider-label-show {
-        display: block;
-      }
-      .ui-slider span.ui-slider-tic {
-        position: absolute;
-        left: 0;
-        height: 0.8em;
-        top: -1.3em;
-      }
-      .ui-slider li span.ui-widget-content,
-      .ui-slider dd span.ui-widget-content {
-        border-right: 0;
-        border-left-width: 1px;
-        border-left-style: solid;
-        border-top: 0;
-        border-bottom: 0;
-      }
-      .ui-slider .first .ui-slider-tic,
-      .ui-slider .last .ui-slider-tic {
-        display: none;
-      }
-      .slider {
-        margin-bottom: 50px;
-        width: 100%;
-        float: left;
-      }
-      .slider.sleep {
-        background: #a3e5f4;
-      }
-      .slider-controller {
-        padding-top: 0;
-      }
-      .slider-controller select {
-        width: 100px;
-      }
-      .ui-slider-handle.minimum,
-      a[data-temperature="minimum"],
-      .ui-slider-range.minimum {
-        background: #a3e5f4;
-      }
-      .ui-slider-handle.saving,
-      a[data-temperature="saving"],
-      .ui-slider-range.saving {
-        background: #f2e079;
-      }
-      .ui-slider-handle.comfort,
-      a[data-temperature="comfort"],
-      .ui-slider-range.comfort {
-        background: #e6a235;
-      }
-      .ui-slider-handle.sleep,
-      a[data-temperature="sleep"],
-      .ui-slider-range.sleep {
-        background: #a3e5f4;
-      }
-      .ui-slider-handle.leave,
-      a[data-temperature="leave"],
-      .ui-slider-range.leave {
-        background: #f2e079;
-      }
-      .ui-slider-handle.return,
-      a[data-temperature="return"],
-      .ui-slider-range.return {
-        background: #e6a235;
-      }
-      .ui-slider-handle.wake,
-      a[data-temperature="wake"],
-      .ui-slider-range.wake {
-        background: #e96223;
-      }
-      .temperature-wake {
-        background-color: #e96223;
-        color: #fff;
-      }
-      .temperature-leave {
-        background-color: #f2e079;
-      }
-      .temperature-return {
-        background-color: #e6a235;
-        color: #fff;
-      }
-      .temperature-sleep {
-        background-color: #a3e5f4;
-      }
-      .temperatures input {
-        text-align: right;
-      }
-      .slider-tick-mark-main {
-        display: inline-block;
-        width: 1px;
-        background: #bbb;
-        height: 7px;
-        position: absolute;
-        top: 15px;
-        font-size: 11px;
-      }
-      .slider-tick-mark-main-text {
-        display: inline-block;
-        width: 20px;
-        height: 10px;
-        position: absolute;
-        top: 25px;
-        font-size: 11px;
-        text-align: center;
-        margin-left: -9px;
-      }
-      .slider-tick-mark-side {
-        display: inline-block;
-        width: 1px;
-        background: #ccc;
-        height: 5px;
-        position: absolute;
-        top: 15px;
-      }
-      .slider-tick-mark-side-text {
-        display: inline-block;
-        width: 20px;
-        height: 10px;
-        position: absolute;
-        top: 25px;
-        font-size: 9px;
-        text-align: center;
-        margin-left: -9px;
-      }
-      .slider span.ui-slider-tooltip {
-        width: auto;
-      }
-    </style>
   </head>
   <body>
     <main class="p-4">
       <input type="text" class="rangeSlider" name="example_name" value="" />
 
       <!-- <div id="slider" class="mt-5"></div> -->
-      <div class="slider sleep mt-5" id="slider"></div>
+      <div class="slider noTime mt-5" id="slider"></div>
 
       <input type="range" multiple value="10,80" />
       <!-- Button trigger modal -->
@@ -519,7 +325,7 @@
               </div>
             </div>
             <div class="form-group form-check mt-4">
-              <input type="checkbox" class="form-check-input">
+              <input type="checkbox" class="form-check-input" />
               <label class="form-check-label">جدول اجازات</label>
             </div>
           </div>
@@ -562,9 +368,11 @@
                 <label>جدول اليوم</label>
               </div>
               <div class="form-group mb-2 col-8 px-3">
-                <input type="text" class="form-control w-100" disabled>
+                <input type="text" class="form-control w-100" disabled />
               </div>
-              <button type="submit" class="btn btn-primary mb-2 col-2">مسح</button>
+              <button type="submit" class="btn btn-primary mb-2 col-2">
+                مسح
+              </button>
             </form>
             <div class="border mt-3 pb-2 px-3">
               <form class="form-row align-items-center no-gutters pt-3">
@@ -572,16 +380,16 @@
                   <label>الوقت 1</label>
                 </div>
                 <div class="form-group col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
                 <div class="form-group points col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
                 <div class="form-group slash col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
                 <div class="form-group points col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
               </form>
               <form class="form-row align-items-center no-gutters pt-3">
@@ -589,16 +397,16 @@
                   <label>الوقت 2</label>
                 </div>
                 <div class="form-group col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
                 <div class="form-group points col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
                 <div class="form-group slash col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
                 <div class="form-group points col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
               </form>
               <form class="form-row align-items-center no-gutters pt-3">
@@ -606,16 +414,16 @@
                   <label>الوقت 3</label>
                 </div>
                 <div class="form-group col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
                 <div class="form-group points col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
                 <div class="form-group slash col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
                 <div class="form-group points col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
               </form>
               <form class="form-row align-items-center no-gutters pt-3">
@@ -623,16 +431,16 @@
                   <label>الوقت 4</label>
                 </div>
                 <div class="form-group col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
                 <div class="form-group points col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
                 <div class="form-group slash col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
                 <div class="form-group points col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
               </form>
               <form class="form-row align-items-center no-gutters pt-3">
@@ -640,16 +448,16 @@
                   <label>الوقت 5</label>
                 </div>
                 <div class="form-group col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
                 <div class="form-group points col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
                 <div class="form-group slash col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
                 <div class="form-group points col mb-1 px-3">
-                  <input type="text" class="form-control w-100">
+                  <input type="text" class="form-control w-100" />
                 </div>
               </form>
             </div>
@@ -671,9 +479,9 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/all.min.js"></script>
 
+    <!-- range slider  -->
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <!--Plugin JavaScript file-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="js/multirange.js"></script>
     <script>
@@ -719,9 +527,6 @@
     <script>
       /*
        * Edited jQuery UI Slider
-       *
-       * Depends:
-       *	ui.core.js
        */
 
       (function ($) {
@@ -745,6 +550,7 @@
             type: "number",
             ranges: null,
             step: 1,
+            disabled: true,
             ticks: {
               // use default values
               // main tick is 3
@@ -1736,32 +1542,32 @@
           // current data
           handles: [
             {
-              value: 7,
-              type: "wake",
+              value: 1,
+              type: "timeOne",
+            },
+            {
+              value: 2,
+              type: "timeTwo",
             },
             {
               value: 10,
-              type: "leave",
+              type: "timeThree",
             },
             {
-              value: 15,
-              type: "return",
-            },
-            {
-              value: 22,
-              type: "sleep",
+              value: 7,
+              type: "timeFour",
             },
           ],
           // display type names
           showTypeNames: true,
           typeNames: {
-            wake: "Wake Up",
-            leave: "Leave",
-            return: "Return",
-            sleep: "Sleep",
+            timeOne: "Time one",
+            timeTwo: "Time two",
+            timeThree: "Time three",
+            timeFour: "Time four",
           },
           // main css class (of unset data)
-          mainClass: "sleep",
+          mainClass: "noTime",
           // slide callback
           slide: function (e, ui) {
             console.log(e, ui);
