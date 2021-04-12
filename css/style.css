@@ -1867,7 +1867,7 @@ a.alert_message:hover {
 }
 .ui-slider .ui-slider-handle {
   height: 1.4em;
-  /* display: none; */
+  display: none;
 }
 .ui-slider dt {
   top: 1.5em;
@@ -1954,19 +1954,35 @@ a[data-temperature="noTime"],
 .ui-slider-range.noTime {
   background: #e1e4e9;
 }
-.ui-slider-handle.timeTwo,
-a[data-temperature="timeTwo"],
-.ui-slider-range.timeTwo {
-  background: var(--basic-main-color);
-}
-.ui-slider-handle.timeThree,
-a[data-temperature="timeThree"],
-.ui-slider-range.timeThree {
-  background: var(--basic-main-color);
-}
 .ui-slider-handle.timeOne,
 a[data-temperature="timeOne"],
 .ui-slider-range.timeOne,
+.ui-slider-handle.timeThree,
+a[data-temperature="timeThree"],
+.ui-slider-range.timeThree,
+.ui-slider-handle.timeFive,
+a[data-temperature="timeFive"],
+.ui-slider-range.timeFive,
+.ui-slider-handle.timeSeven,
+a[data-temperature="timeSeven"],
+.ui-slider-range.timeSeven {
+  background: var(--basic-main-color);
+}
+.ui-slider-handle.timeTwo,
+a[data-temperature="timeTwo"],
+.ui-slider-range.timeTwo,
+.ui-slider-handle.timeFour,
+a[data-temperature="timeFour"],
+.ui-slider-range.timeFour,
+.ui-slider-handle.timeSix,
+a[data-temperature="timeSix"],
+.ui-slider-range.timeSix,
+.ui-slider-handle.timeEight,
+a[data-temperature="timeEight"],
+.ui-slider-range.timeEight {
+  background: transparent;
+}
+
 .ui-state-active,
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active,
