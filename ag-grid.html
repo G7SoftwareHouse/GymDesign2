@@ -19,6 +19,11 @@
     <link rel="stylesheet" href="./css/ag-theme-balham.css" />
     <link rel="stylesheet" href="./css/custom-ag-grid.css" />
     <script src="js/ag-grid-enterprise.min.noStyle.js"></script>
+    <!-- ui -->
+    <link
+      rel="stylesheet"
+      href="css/jquery-ui.css"
+    />
     <!-- Custom style -->
     <link rel="stylesheet" href="./css/custom.css" />
     <link rel="stylesheet" href="./css/style.css" />
@@ -32,6 +37,7 @@
 
     <main class="p-5">
       <!-- Start Billing procedures section -->
+      <p><input type="text" id="datepicker"></p>
     <section class="billing_section p-4">
       <div class="card sales-invoices mt-2 border-0">
           <div class="card-header border-0 p-0">
@@ -321,12 +327,12 @@
     </div>
 
 
-    <script src="js/jquery-3.4.1.slim.min.js"></script>
+    <!-- <script src="js/jquery-3.4.1.slim.min.js"></script> -->
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-toggle.min.js"></script>
     <!-- datetimepicker  -->
-    <script src="js/tempusdominus-bootstrap.js"></script>
+    <!-- <script src="js/tempusdominus-bootstrap.js"></script> -->
     <script
       src="https://kit.fontawesome.com/7f37d9c53b.js"
       crossorigin="anonymous"
@@ -335,7 +341,19 @@
     <script src="js/select2.min.js"></script>
     <script src="js/jstree.min.js"></script>
     <script src="js/slick.min.js"></script>
+
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+      $( function() {
+        $( "#datepicker" ).datepicker({
+          nextText: '',
+          prevText: ''
+        });
+      } );
+    </script>
     <!-- <script src="js/scripts.js"></script> -->
     <script src="js/ag-grid.js"></script>
+    
   </body>
 </html>

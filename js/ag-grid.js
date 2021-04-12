@@ -204,6 +204,25 @@ self.checkBox.prototype = {
   },
 };
 
+
+self.getDatePicker = function () {};
+self.getDatePicker.prototype = {
+  init: function (params) {
+    this.getDatePickerButton = document.createElement("div");
+    this.getDatePickerButton.innerHTML =
+      '<input type="date" style="width: 100%;height: 100%;border: 0;background:none">';
+  },
+  getGui: function () {
+    return this.getDatePickerButton;
+  },
+  refresh: function () {
+    return true;
+  },
+  destroy: function () {
+    $(this.getDatePickerButton).remove();
+  },
+};
+
 function GenderCellRenderer() {}
 
 GenderCellRenderer.prototype.init = function (params) {
@@ -288,9 +307,9 @@ const columnDefs = [
   { headerName: "الخدمة", field: "service", resizable: true, minWidth: 200 },
   {
     headerName: "تاريخ الشراء",
-    field: "datePurchase",
     resizable: true,
     minWidth: 140,
+    cellRenderer: getDatePicker,
   },
   {
     headerName: "تاريخ التفعيل",
@@ -323,31 +342,29 @@ const dataSource = [
     codeNo: "12342",
     serviceNo: "302",
     service: "12-month gym mem 12-month gym mem 12-month gym mem 12-month gym mem",
-    datePurchase: "12-2-2020",
     dateActive: "18-2-2020",
     dateExpire: "18-5-2020",
     value: "3500 R.S",
     paid: "3000",
     remain: "500",
     status: "نشط",
-    height: 100,
+    // height: 100,
   },
-  {
-    id: "1",
-    gender: "انثي",
-    recpNo: "A-12342",
-    codeNo: "12342",
-    serviceNo: "302",
-    service: "12-month gym mem",
-    datePurchase: "12-2-2020",
-    dateActive: "18-2-2020",
-    dateExpire: "18-5-2020",
-    value: "3500 R.S",
-    paid: "3000",
-    remain: "500",
-    status: "منتهي",
-    height: 100,
-  },
+  // {
+  //   id: "1",
+  //   gender: "انثي",
+  //   recpNo: "A-12342",
+  //   codeNo: "12342",
+  //   serviceNo: "302",
+  //   service: "12-month gym mem",
+  //   dateActive: "18-2-2020",
+  //   dateExpire: "18-5-2020",
+  //   value: "3500 R.S",
+  //   paid: "3000",
+  //   remain: "500",
+  //   status: "منتهي",
+  //   // height: 100,
+  // },
 ];
 
 var gridOptions = {
@@ -368,7 +385,7 @@ var gridOptions = {
   paginationPageSize: 10,
   rowDragManaged: true,
   animateRows: true,
-  rowHeight: 45,
+  // rowHeight: 45,
   defaultColDef: {
     flex: 1,
     autoHeight: true,
@@ -417,3 +434,4 @@ document.addEventListener("DOMContentLoaded", function () {
   var gridDiv1 = document.querySelector("#Grid");
   new agGrid.Grid(gridDiv1, gridOptions);
 });
+

@@ -27,7 +27,7 @@
     />
     <link
       rel="stylesheet"
-      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+      href="css/jquery-ui.css"
     />
     <link href="css/multirange.css" />
     <!-- Custom style -->
@@ -480,8 +480,8 @@
     <script src="js/all.min.js"></script>
 
     <!-- range slider  -->
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
     <script src="js/multirange.js"></script>
     <script>
@@ -590,9 +590,6 @@
             this._detectOrientation();
             this._mouseInit();
 
-            // add slider wrapper
-            //$('<div class="wrapper"></div>').appendTo(this.element);
-
             // add tick wrapper
             $('<div class="ticks"></div>').appendTo(this.element);
 
@@ -608,55 +605,6 @@
                 " ui-widget-content" +
                 " ui-corner-all"
             );
-
-            // only when one range present
-            /*this.range = $([]);
-        if (o.range) {
-            // add range wrapper
-            this.range = $('<div></div>');
-            if (o.range === true) {
-                if (!o.values) o.values = [this._valueMin(), this._valueMin()];
-                if (o.values.length && o.values.length < 2) {
-                    o.values = [o.values[0], o.values[0]];
-                }
-            }
-            // append to slider
-            this.range
-            .appendTo(this.element)
-            .addClass("ui-slider-range");
-
-            if (o.range == "min" || o.range == "max") {
-                this.range.addClass("ui-slider-range-" + o.range);
-            }
-
-            // note: this isn't the most fittingly semantic framework class for this element,
-            // but worked best visually with a variety of themes
-            this.range.addClass("ui-widget-header");
-        }*/
-            /*
-        // add handles for present values
-        if (o.values && o.values.length) {
-            o.ranges = new Array();
-            while ($(".ui-slider-handle", this.element).length < o.values.length) {
-                $('<a href="#"></a>')
-                .appendTo(this.element)
-                .addClass("ui-slider-handle");
-                var range = $('<div></div>');
-                range
-                .appendTo(this.element)
-                .addClass("ui-slider-range").addClass("ui-widget-header");
-                o.ranges.push(range);
-            }
-        }
-        **/
-
-            // add base handler
-            /*
-        if ($(".ui-slider-handle", this.element).length == 0)
-            $('<a href="#"></a>')
-            .appendTo(this.element)
-            .addClass("ui-slider-handle");
-        */
             // create handles
             this._refreshHandles();
 
@@ -1583,19 +1531,19 @@
             },
           ],
           // display type names
-          showTypeNames: true,
-          typeNames: {
-            timeOne: "Time one",
-            timeTwo: "Time two",
-            timeThree: "Time three",
-            timeFour: "Time four",
-            timeFive: "Time five",
-            timeSix: "Time six",
-            timeSeven: "Time seven",
-            timeEight: "Time eight",
-            timeNine: "Time nine",
-            timeTen: "Time ten",
-          },
+          // showTypeNames: true,
+          // typeNames: {
+          //   timeOne: "Time one",
+          //   timeTwo: "Time two",
+          //   timeThree: "Time three",
+          //   timeFour: "Time four",
+          //   timeFive: "Time five",
+          //   timeSix: "Time six",
+          //   timeSeven: "Time seven",
+          //   timeEight: "Time eight",
+          //   timeNine: "Time nine",
+          //   timeTen: "Time ten",
+          // },
           // main css class (of unset data)
           mainClass: "noTime",
           // slide callback

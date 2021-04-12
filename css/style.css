@@ -30,9 +30,6 @@ body {
 .green-color {
   color: var(--basic-green-color);
 }
-.btn-success {
-  color: white !important;
-}
 .btn-primary,
 .page-item.active .page-link {
   border-color: var(--basic-main-color) !important;
@@ -66,6 +63,12 @@ a {
 }
 select {
   font-size: 0.9rem !important;
+}
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="time"] {
+  text-align: right;
 }
 .tab-content .form-group .form-check-input {
   margin: 4px 0 0 !important;
@@ -124,14 +127,18 @@ select {
   outline: none !important;
   box-shadow: none !important;
   display: flex !important;
+  align-items: center;
 }
 .ag-theme-balham .ag-cell .form-check-input {
-  margin: 0;
   right: 0;
-  margin: 7px 0 0 !important;
+  top: 13px;
+  margin: 0 !important;
 }
-.ag-theme-balham .ag-row {
+/* .ag-theme-balham .ag-row {
   min-height: 45px !important;
+} */
+.ag-body-container.ag-layout-auto-height {
+  min-height: 40px !important;
 }
 .ag-theme-balham {
   font-family: var(--neo-sans-regular);
@@ -143,7 +150,8 @@ select {
   height: 100%;
 }
 .ag-theme-balham .ag-cell {
-  padding-top: 4px;
+  padding-top: 0;
+  line-height: 40px;
 }
 .ag-theme-balham .ag-cell button.dropdown-toggle {
   padding: 0;
@@ -216,6 +224,13 @@ select {
 }
 .form-check-label {
   vertical-align: super;
+}
+/* select 2 */
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__arrow
+  b {
+  margin-left: 6px;
 }
 
 /* new header */
@@ -390,6 +405,10 @@ select {
 .customer_info h6 {
   font-size: 0.75rem;
   font-weight: bold;
+  min-height: 30px;
+}
+.customer_card.fst-card .customer_info h6 {
+  min-height: auto;
 }
 .customer_info p {
   color: #707070;
@@ -718,6 +737,32 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 .flex_btn {
   width: calc((100% - 5rem) / 3);
 }
+.ui-datepicker-prev span,
+.ui-datepicker-next span {
+  background-image: none !important;
+}
+.ui-datepicker-prev span.ui-icon,.ui-datepicker-next span.ui-icon {
+  width: 11px;
+  height: 21px;
+  display: block;
+  text-indent: 0;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+.ui-datepicker-prev span:before {
+  content: "\f053";
+  font-family: FontAwesome;
+  position: absolute;
+  right: -1px;
+  top: -3px;
+}
+.ui-datepicker-next span:before{
+  content: "\f054";
+  font-family: FontAwesome;
+  position: absolute;
+  left: -1px;
+  top: -3px;
+}
 
 /* fingerPrint modal  */
 #fingerPrintModal .modal-dialog {
@@ -759,6 +804,9 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   height: 100%;
   min-height: 100%;
   box-shadow: 0 3px 25px rgba(182, 53, 148, 0.45);
+}
+.vertical_tabs .btn-success {
+  color: white !important;
 }
 .vertical_tabs .tab::-webkit-scrollbar {
   width: 2px;
@@ -1260,7 +1308,7 @@ a.alert_message:hover {
   font-size: 0.7rem;
 }
 .services_img {
-  height: 180px;
+  height: 130px;
   object-fit: contain;
 }
 .product-info h5 {
@@ -1416,6 +1464,9 @@ a.alert_message:hover {
 .customer_balances .col.btn-danger,
 .customers_balances div {
   cursor: pointer;
+}
+.customer_balances .col.btn-danger {
+  min-height: 101px;
 }
 .balance_no .badge-pill {
   padding: 0.5rem 1.2rem;
@@ -1965,7 +2016,8 @@ a[data-temperature="timeFive"],
 .ui-slider-range.timeFive,
 .ui-slider-handle.timeSeven,
 a[data-temperature="timeSeven"],
-.ui-slider-range.timeSeven,.ui-slider-handle.timeNine,
+.ui-slider-range.timeSeven,
+.ui-slider-handle.timeNine,
 a[data-temperature="timeNine"],
 .ui-slider-range.timeNine {
   background: var(--basic-main-color);
@@ -1981,7 +2033,8 @@ a[data-temperature="timeSix"],
 .ui-slider-range.timeSix,
 .ui-slider-handle.timeEight,
 a[data-temperature="timeEight"],
-.ui-slider-range.timeEight,.ui-slider-handle.timeTen,
+.ui-slider-range.timeEight,
+.ui-slider-handle.timeTen,
 a[data-temperature="timeTen"],
 .ui-slider-range.timeTen {
   background: transparent;
