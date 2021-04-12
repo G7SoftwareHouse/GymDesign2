@@ -1965,7 +1965,9 @@ a[data-temperature="timeFive"],
 .ui-slider-range.timeFive,
 .ui-slider-handle.timeSeven,
 a[data-temperature="timeSeven"],
-.ui-slider-range.timeSeven {
+.ui-slider-range.timeSeven,.ui-slider-handle.timeNine,
+a[data-temperature="timeNine"],
+.ui-slider-range.timeNine {
   background: var(--basic-main-color);
 }
 .ui-slider-handle.timeTwo,
@@ -1979,7 +1981,9 @@ a[data-temperature="timeSix"],
 .ui-slider-range.timeSix,
 .ui-slider-handle.timeEight,
 a[data-temperature="timeEight"],
-.ui-slider-range.timeEight {
+.ui-slider-range.timeEight,.ui-slider-handle.timeTen,
+a[data-temperature="timeTen"],
+.ui-slider-range.timeTen {
   background: transparent;
 }
 
