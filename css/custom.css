@@ -396,7 +396,7 @@ div.error {
 }
 
 .button_search_tabs {
-  width: 220px;
+  min-width: 220px;
   height: 40px;
   border: none;
   border-radius: 5px;
