@@ -1967,12 +1967,15 @@ a.alert_message:hover {
   display: none;
 }
 .slider {
-  margin-bottom: 50px;
+  margin: 14px 0;
   width: 100%;
   float: left;
 }
 .ui-slider-horizontal {
   height: 16px;
+}
+.slider-tick-mark-main-text{
+  font-size: 9px !important;
 }
 .ui-widget.ui-widget-content {
   border: none;
