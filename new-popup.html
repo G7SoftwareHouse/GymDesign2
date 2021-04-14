@@ -44,7 +44,7 @@
       <input type="text" class="rangeSlider" name="example_name" value="" />
 
       <!-- <div id="slider" class="mt-5"></div> -->
-      <div class="slider noTime mt-5" id="slider"></div>
+      <!-- <div class="slider noTime mt-5" id="slider"></div> -->
 
       <input type="range" multiple value="10,80" />
       <!-- Button trigger modal -->
@@ -100,17 +100,13 @@
                       class="d-inline-block cursor float-right"
                       data-toggle="modal"
                       data-target="#addTimeModal"
+                      data-dismiss="modal"
                       ><i class="far fa-plus-square"></i
                     ></span>
                   </h6>
                 </div>
                 <div class="col">
-                  <input
-                    type="text"
-                    class="rangeSlider"
-                    name="example_name"
-                    value=""
-                  />
+                  <div class="slider noTime" id="slider"></div>
                 </div>
                 <div class="col-1">
                   <a href="#"
@@ -133,17 +129,13 @@
                       class="d-inline-block cursor float-right"
                       data-toggle="modal"
                       data-target="#addTimeModal"
+                      data-dismiss="modal"
                       ><i class="far fa-plus-square"></i
                     ></span>
                   </h6>
                 </div>
                 <div class="col">
-                  <input
-                    type="text"
-                    class="rangeSlider"
-                    name="example_name"
-                    value=""
-                  />
+                  <div class="slider noTime" id="slider2"></div>
                 </div>
                 <div class="col-1">
                   <a href="#"
@@ -166,17 +158,13 @@
                       class="d-inline-block cursor float-right"
                       data-toggle="modal"
                       data-target="#addTimeModal"
+                      data-dismiss="modal"
                       ><i class="far fa-plus-square"></i
                     ></span>
                   </h6>
                 </div>
                 <div class="col">
-                  <input
-                    type="text"
-                    class="rangeSlider"
-                    name="example_name"
-                    value=""
-                  />
+                  
                 </div>
                 <div class="col-1">
                   <a href="#"
@@ -199,17 +187,13 @@
                       class="d-inline-block cursor float-right"
                       data-toggle="modal"
                       data-target="#addTimeModal"
+                      data-dismiss="modal"
                       ><i class="far fa-plus-square"></i
                     ></span>
                   </h6>
                 </div>
                 <div class="col">
-                  <input
-                    type="text"
-                    class="rangeSlider"
-                    name="example_name"
-                    value=""
-                  />
+                  
                 </div>
                 <div class="col-1">
                   <a href="#"
@@ -232,17 +216,13 @@
                       class="d-inline-block cursor float-right"
                       data-toggle="modal"
                       data-target="#addTimeModal"
+                      data-dismiss="modal"
                       ><i class="far fa-plus-square"></i
                     ></span>
                   </h6>
                 </div>
                 <div class="col">
-                  <input
-                    type="text"
-                    class="rangeSlider"
-                    name="example_name"
-                    value=""
-                  />
+                  
                 </div>
                 <div class="col-1">
                   <a href="#"
@@ -265,17 +245,13 @@
                       class="d-inline-block cursor float-right"
                       data-toggle="modal"
                       data-target="#addTimeModal"
+                      data-dismiss="modal"
                       ><i class="far fa-plus-square"></i
                     ></span>
                   </h6>
                 </div>
                 <div class="col">
-                  <input
-                    type="text"
-                    class="rangeSlider"
-                    name="example_name"
-                    value=""
-                  />
+                  
                 </div>
                 <div class="col-1">
                   <a href="#"
@@ -298,17 +274,13 @@
                       class="d-inline-block cursor float-right"
                       data-toggle="modal"
                       data-target="#addTimeModal"
+                      data-dismiss="modal"
                       ><i class="far fa-plus-square"></i
                     ></span>
                   </h6>
                 </div>
                 <div class="col">
-                  <input
-                    type="text"
-                    class="rangeSlider"
-                    name="example_name"
-                    value=""
-                  />
+                  
                 </div>
                 <div class="col-1">
                   <a href="#"
@@ -551,6 +523,7 @@
             ranges: null,
             step: 1,
             disabled: true,
+            isRTL: true,
             ticks: {
               // use default values
               // main tick is 3
@@ -1487,6 +1460,8 @@
           range: false,
           // show tooltips
           tooltips: true,
+          // RTL
+          isRTL: true,
           // current data
           handles: [
             {
@@ -1530,20 +1505,79 @@
               type: "timeTen",
             },
           ],
-          // display type names
-          // showTypeNames: true,
-          // typeNames: {
-          //   timeOne: "Time one",
-          //   timeTwo: "Time two",
-          //   timeThree: "Time three",
-          //   timeFour: "Time four",
-          //   timeFive: "Time five",
-          //   timeSix: "Time six",
-          //   timeSeven: "Time seven",
-          //   timeEight: "Time eight",
-          //   timeNine: "Time nine",
-          //   timeTen: "Time ten",
-          // },
+          // main css class (of unset data)
+          mainClass: "noTime",
+          // slide callback
+          slide: function (e, ui) {
+            console.log(e, ui);
+          },
+          // handle clicked callback
+          handleActivated: function (event, handle) {
+            // get select element
+            var select = $(this).parent().find(".slider-controller select");
+            // set selected option
+            select.val(handle.type);
+          },
+        });
+
+        // create slider
+        $("#slider2").slider({
+          // set min and maximum values
+          // day hours in this example
+          min: 0,
+          max: 24,
+          // step
+          // quarter of an hour in this example
+          step: 0.25,
+          // range
+          range: false,
+          // show tooltips
+          tooltips: true,
+          // RTL
+          isRTL: true,
+          // current data
+          handles: [
+            {
+              value: 1,
+              type: "timeOne",
+            },
+            {
+              value: 2,
+              type: "timeTwo",
+            },
+            {
+              value: 5,
+              type: "timeThree",
+            },
+            {
+              value: 8,
+              type: "timeFour",
+            },
+            {
+              value: 10,
+              type: "timeFive",
+            },
+            {
+              value: 15,
+              type: "timeSix",
+            },
+            {
+              value: 17,
+              type: "timeSeven",
+            },
+            {
+              value: 20,
+              type: "timeEight",
+            },
+            {
+              value: 23,
+              type: "timeNine",
+            },
+            {
+              value: 24,
+              type: "timeTen",
+            },
+          ],
           // main css class (of unset data)
           mainClass: "noTime",
           // slide callback
