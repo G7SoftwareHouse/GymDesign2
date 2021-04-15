@@ -210,7 +210,7 @@ self.getDatePicker.prototype = {
   init: function (params) {
     this.getDatePickerButton = document.createElement("div");
     this.getDatePickerButton.innerHTML =
-      '<input type="date" style="width: 100%;height: 100%;border: 0;background:none">';
+      '<input type="date" style="width: 100%;height: calc(100% - 11px);border: 0;background:none">';
   },
   getGui: function () {
     return this.getDatePickerButton;
@@ -388,7 +388,7 @@ var gridOptions = {
   // rowHeight: 45,
   defaultColDef: {
     flex: 1,
-    autoHeight: true,
+    // autoHeight: true,
     wrapText: true,
     sortable: true,
     resizable: true,
