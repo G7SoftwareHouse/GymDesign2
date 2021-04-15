@@ -352,10 +352,10 @@
         });
       } );
     </script>
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       function addHandlers(root) {
           if (root == null) root = $(document);
-              root.find("#datepicker").removeClass('hasDatepicker').datepicker({
+              root.find(".datepicker").removeClass('hasDatepicker').datepicker({
               showOn: 'focus',
               showButtonPanel: true
           });
@@ -364,11 +364,11 @@
           addHandlers($(Document));
           $('#availabilityRanges').dynamicForm("#plus",  "#minus", {limit: 50,
               afterClone: function(clone) {
-                  $('#datepicker').removeClass('hasDatepicker').datepicker();
+                  $('.datepicker').removeClass('hasDatepicker').datepicker();
               }
           });
       });
-  </script> -->
+  </script>
     <!-- <script src="js/scripts.js"></script> -->
     <script src="js/ag-grid.js"></script>
     
