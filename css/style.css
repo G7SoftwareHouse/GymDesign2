@@ -1255,7 +1255,8 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   outline: none !important;
 }
 .number-input input[type="number"] {
-  max-width: 1.8rem;
+  /*max-width: 1.8rem;*/
+   max-width: 4rem;
   height: 1.8rem;
   padding: 0.5rem;
   font-size: 0.8rem;
