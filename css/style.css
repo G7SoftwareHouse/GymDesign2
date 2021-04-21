@@ -17,7 +17,7 @@ body {
 }
 ::-webkit-scrollbar {
   width: 5px;
-  height: 4px;
+  height: 8px;
 }
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
@@ -66,6 +66,10 @@ a {
 }
 select {
   font-size: 0.9rem !important;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: middle;
 }
 input[type="date"],
 input[type="datetime-local"],
@@ -363,7 +367,7 @@ input[type="time"] {
 .customer_card_list li::marker {
   color: var(--basic-main-color);
 }
-.customer_card_list li p {
+.customer_card_list li p, .customer_card_list.new li div.d-flex span, .customer_card_list.new li div.d-flex p {
   color: #707070;
   font-size: 0.9rem;
 }
@@ -427,11 +431,11 @@ input[type="time"] {
 }
 .tabbable-responsive::-webkit-scrollbar:vertical,
 .ag-body-horizontal-scroll-viewport::-webkit-scrollbar:vertical {
-  width: 10px;
+  width: 25px;
 }
 .tabbable-responsive::-webkit-scrollbar:horizontal,
 .ag-body-horizontal-scroll-viewport::-webkit-scrollbar:horizontal {
-  height: 10px;
+  height: 25px;
 }
 .tabbable-responsive::-webkit-scrollbar-thumb,
 .ag-body-horizontal-scroll-viewport::-webkit-scrollbar-thumb {
@@ -570,16 +574,16 @@ input[type="time"] {
   width: 65px;
   height: 65px;
 }
-.customer_card_list.new li p {
-  font-size: 1rem;
+.customer_card_list.new li p{
+  margin-bottom: 5px !important;
 }
-.customer_card_list.new li p span {
-  min-width: 145px;
+.customer_card_list.new li p span, .customer_card_list.new li div.d-flex span {
+  min-width: 125px;
   display: inline-block;
   position: relative;
   margin-left: 1rem;
 }
-.customer_card_list.new li p span::after {
+.customer_card_list.new li p span::after,.customer_card_list.new li div.d-flex span::after {
   content: ":";
   position: absolute;
   left: 0;
@@ -827,14 +831,14 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   border: none !important;
   color: #212529 !important;
   font-family: var(--neo-sans-regular);
-  padding: .35em .2rem;
+  padding: 0.35em 0.2rem;
   text-align: center;
 }
-.ui-datepicker-today{
+.ui-datepicker-today {
   background-color: #007bff !important;
   color: white !important;
 }
-.ui-datepicker-today .ui-state-default{
+.ui-datepicker-today .ui-state-default {
   color: white !important;
 }
 
@@ -1256,7 +1260,7 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 }
 .number-input input[type="number"] {
   /*max-width: 1.8rem;*/
-   max-width: 4rem;
+  max-width: 4rem;
   height: 1.8rem;
   padding: 0.5rem;
   font-size: 0.8rem;
@@ -1523,7 +1527,8 @@ a.alert_message:hover {
 
 /* sumarry page */
 .scrolling {
-  height: 150px;
+  min-height: 100%;
+  max-height: 200px;
   overflow-y: scroll;
 }
 .member_list a {
@@ -1542,6 +1547,9 @@ a.alert_message:hover {
 }
 .customer_balances .col.btn-danger {
   min-height: 101px;
+}
+.customer_balances .col.btn-danger h6 {
+  min-height: auto !important;
 }
 .balance_no .badge-pill {
   padding: 0.5rem 1.2rem;
@@ -1587,6 +1595,12 @@ a.alert_message:hover {
   color: #707070;
   text-align: center;
   border: 1px solid var(--basic-main-color) !important;
+}
+.convert_modal .freez_info .row.w-100 .btn{
+  min-width: 125px;
+}
+.freez_info.box-shadow-gray{
+  min-height: 280px;
 }
 .customer_card_list input[type="number"] {
   max-width: 5rem;

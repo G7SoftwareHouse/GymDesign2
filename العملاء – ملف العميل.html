@@ -33,7 +33,7 @@
   <body>
     <header class="navbar_section-1 navbar_section" id="header">
       <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light row p-2 p-lg-0">
+        <nav class="navbar navbar-expand-lg navbar-light row p-2 px-0 p-lg-0">
           <a class="navbar-brand m-0 d-block d-lg-none" href="#!">
             <img src="./images/logo.png" alt="logo" class="w-100" />
           </a>
@@ -136,18 +136,18 @@
             id="navbarNavDropdown"
           >
             <div
-              class="top-header d-flex w-100 p-0 p-lg-3 box-shadow-main justify-content-between align-items-center"
+              class="top-header d-flex w-100 p-0 px-3 p-lg-3 box-shadow-main justify-content-between align-items-center"
             >
-              <a class="navbar-brand col-2 m-0 d-none d-lg-block" href="#!">
-                <img src="./images/logo.png" alt="logo" class="w-100" />
+              <a class="navbar-brand m-0 d-none d-lg-block px-0" href="#!">
+                <img src="./images/logo.png" alt="logo" />
               </a>
               <!-- Right -->
               <div class="d-none d-lg-block">
                 <ul
-                  class="navbar-nav p-0 d-flex justify-content-center align-items-center custom-nav"
+                  class="navbar-nav p-0 d-flex justify-content-center align-items-center custom-nav  mx-1"
                 >
                   <li class="nav-item">
-                    <a href="#!" class="nav-link navbar-link-2 waves-effect">
+                    <a href="#!" class="nav-link navbar-link-2 waves-effect mx-1">
                       <i
                         class="fas fa-globe-asia basic_text_color font-size-25"
                       ></i>
@@ -156,7 +156,7 @@
                   <li class="nav-item">
                     <div class="dropdown">
                       <button
-                        class="dropdown-toggle arrow_style"
+                        class="dropdown-toggle arrow_style mx-1"
                         type="button"
                         id="dropdownMenuButton"
                         data-toggle="dropdown"
@@ -739,20 +739,22 @@
                               <h6>العقد</h6>
                               <p class="m-0">تم تحميل المرفقات</p>
                             </div>
-                            <div class="col-sm-2 border-right member_list scrolling">
-                              <h6 class="m-0 pt-2 basic_text_color">الأعضاء المرشحين :</h6>
-                              <ul class="list-unstyled p-0">
-                                <li><a href=""> -فردوس - 23349</a></li>
-                                <li><a href=""> -آثار - 45678</a></li>
-                                <li><a href=""> -نور - 34678</a></li>
-                                <li><a href=""> -ايمان - 46553</a></li>
-                                <li><a href=""> -علياء - 34678 </a></li>
-                                <li><a href=""> -فردوس - 23349</a></li>
-                                <li><a href=""> -آثار - 45678</a></li>
-                                <li><a href=""> -نور - 34678</a></li>
-                                <li><a href=""> -ايمان - 46553</a></li>
-                                <li><a href=""> -علياء - 34678 </a></li>
-                              </ul>
+                            <div class="col-sm-2 h-100 border-right member_list">
+                              <div class="scrolling">
+                                <h6 class="m-0 pt-2 basic_text_color">الأعضاء المرشحين :</h6>
+                                <ul class="list-unstyled p-0">
+                                  <li><a href=""> -فردوس - 23349</a></li>
+                                  <li><a href=""> -آثار - 45678</a></li>
+                                  <li><a href=""> -نور - 34678</a></li>
+                                  <li><a href=""> -ايمان - 46553</a></li>
+                                  <li><a href=""> -علياء - 34678 </a></li>
+                                  <li><a href=""> -فردوس - 23349</a></li>
+                                  <li><a href=""> -آثار - 45678</a></li>
+                                  <li><a href=""> -نور - 34678</a></li>
+                                  <li><a href=""> -ايمان - 46553</a></li>
+                                  <li><a href=""> -علياء - 34678 </a></li>
+                                </ul>
+                              </div>
                             </div>
                             <div class="col-sm-2 d-flex align-items-center justify-content-center flex-column border-right" data-toggle="modal" data-target="#medicalModal"><h6 class="btn basic_text_color mb-0">التنبيهات الطبية</h6></div>
                             </div>
@@ -3254,7 +3256,7 @@
           <div class="modal-body">
             <div class="row no-gutters">
               <div class="col-lg-6">
-                <div class="freez_info box-shadow-gray p-3 mb-3">
+                <div class="freez_info box-shadow-gray h-100 p-3 mb-3">
                   <div class="row align-items-center m-0 pb-4">
                     <div class="col-md-4 p-0">
                       <!-- customer card -->
@@ -3264,9 +3266,9 @@
                     </div>
                     <div class="col-md-8">
                       <ul class="customer_card_list new list-unstyled list-group p-0">
-                        <li class=""><p class="mb-1"><span>ملف واسم العميل </span> 2345 اسم العميل</p></li>
-                        <li class=""><p class="mb-1"><span>رقم الفاتورة </span>1234 </p></li>
-                        <li class=""><p class="mb-1"><span>تاريخ الفاتورة </span>22-10-2020</p></li>
+                        <li class=""><div class="d-flex mb-1"><span>ملف واسم العميل </span> <p class="d-inline-block" >1-محمد احمد ابراهيم المنصوري</p></div></li>
+                        <li class=""><div class="d-flex mb-1"><span>رقم الفاتورة </span> <p class="d-inline-block" >1234</p></div></li>
+                        <li class=""><div class="d-flex mb-1"><span>تاريخ الفاتورة </span> <p class="d-inline-block" >22-10-2020</p></div></li>
                       </ul>
                     </div>
                   </div>
@@ -3288,9 +3290,9 @@
                 </div>
               </div>
               <div class="col-lg-6 pr-3">
-                <div class="freez_info box-shadow-gray p-3 mb-3">
+                <div class="freez_info box-shadow-gray h-100 p-3 mb-3">
                   <div class="row m-0 pb-4">
-                    <div class="col-md-4">
+                    <div class="col-md-4 px-0">
                       <div class="customer_card_header text-center p-1">
                         <img src="./images/avatar.png" class="customer_card_img" />
                       </div>
@@ -3315,18 +3317,18 @@
                         </div>
                     </div>
                     <div class="col-md-8 p-0">
-                      <div class="row w-100 justify-content-end align-items-center m-0">
+                      <div class="row w-100 justify-content-end align-items-center m-0 mb-3">
                         <button type="button" class="btn btn_add_rec basic_background_color mr-3 text-white">تأكيد العملية</button>
                           <input type="number" placeholder="رقم تأكيد العملية" class="form-control basic_text_color">
+                      </div>
+                      <div class="row w-100 justify-content-end align-items-center m-0">
+                        <button type="button" class="btn btn_add_rec basic_background_color mr-3 text-white">دفع</button>
+                        <button type="button" class="btn btn_add_rec basic_background_color mr-0 text-white">إلغاء</button>
                       </div>
                     </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="modal-footer border-0">
-            <button type="button" class="btn btn_add_rec basic_background_color text-white">دفع</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal">إلغاء</button>
           </div>
         </div>
       </div>

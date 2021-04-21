@@ -32,19 +32,8 @@ $(document).ready(function () {
   // fixed sidebar
   $(function () {
     "use strict";
-    var bH = $(window).height(),
-      bW = $(window).width(),
-      tabW = $(".vertical_tabs .tab").innerWidth(),
-      header = $("#header").height(),
-      totalH = $(".total_sale").innerHeight();
-
-    // $(".vertical_tabs .tab").css("min-height", bH - header);
-    // $(".vertical_tabs .tab").css("top", header);
+      header = $("#header").innerHeight();
     $("main").css("margin-top", header);
-    // $(".vertical_tabs .tabcontent").css("margin-right", tabW);
-    // $(".vertical_tabs .tabcontent").css("width", bW - tabW - 48);
-    // $(".vertical_tabs .tabcontent#tab_1").css("margin-bottom", totalH + 10);
-    // $(".vertical_tabs .tab button").css("min-height", bH / 13);
   });
 
   // slick slider

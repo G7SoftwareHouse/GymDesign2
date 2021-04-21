@@ -303,7 +303,7 @@ div.error {
 /*MAIN MENU*/
 .img-size {
   /*width: 70px !important;*/
-  width:100% !important;
+  width: 100% !important;
   height: 70px;
   object-fit: cover;
   border-radius: 50%;
@@ -578,7 +578,7 @@ div.error {
 
 .user-account {
   flex-wrap: wrap;
-  min-width: 150px;
+  /* min-width: 150px; */
 }
 
 .user-img {
@@ -1123,7 +1123,7 @@ body {
 }
 
 .rad {
-  border-radius: 35px 0px 0px 0px;
+  border-radius: 25px 0 0 0;
   overflow: hidden;
 }
 
@@ -1132,17 +1132,17 @@ body {
 }
 
 .w-custom {
-  width: 94px !important;
+  width: 70px !important;
 }
 
 .Transformation-card .card-box {
-  min-height: 300px;
+  min-height: 270px;
 }
 
 .lead-1 {
   width: auto;
   display: block;
-
+  font-size: 0.9rem;
   text-align: right;
 }
 
@@ -1150,7 +1150,12 @@ body {
   width: auto;
   display: block;
   margin: auto;
+  font-size: 0.9rem;
   text-align: right;
+}
+
+.Arrow{
+  line-height: 2.3;
 }
 
 /***************************End Assumptions **********************************/
@@ -1448,12 +1453,15 @@ body {
 .Employees-heading-box h5,
 h5.box-shadow-gray {
   font-size: 0.9rem;
+  min-width: 225px;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
 }
 .navbar_section .active::after {
   display: none;
 }
 h5.box-shadow-gray {
-  box-shadow: 5px -5px 6px -3px #00000030;
+  box-shadow: 5px -1px 10px -3px #00000030 !important;
 }
 .form-setting label {
   font-size: 0.9rem;
@@ -1464,6 +1472,13 @@ h5.box-shadow-gray {
 }
 .Employees-index {
   margin-bottom: 20px;
+}
+.Transformation-card-img {
+  object-fit: contain;
+}
+.col-5 h6,
+.col h6 {
+  font-size: 0.85rem;
 }
 
 @media (max-width: 1125px) {
