@@ -95,6 +95,7 @@ body {
   padding: 0.2rem 1rem 0.6rem 1rem !important;
   line-height: 1.7;
   height: 38px;
+  min-width: 95px;
 }
 
 .basic_background_white_color {
