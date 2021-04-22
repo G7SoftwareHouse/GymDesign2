@@ -55,6 +55,10 @@ body {
   position: absolute;
   left: 0.25rem;
 }
+input[type=time]::-webkit-calendar-picker-indicator{
+  position: absolute;
+  left: 1.3rem;
+}
 .mt--5 {
   margin-top: -5px !important;
 }
@@ -367,7 +371,9 @@ input[type="time"] {
 .customer_card_list li::marker {
   color: var(--basic-main-color);
 }
-.customer_card_list li p, .customer_card_list.new li div.d-flex span, .customer_card_list.new li div.d-flex p {
+.customer_card_list li p,
+.customer_card_list.new li div.d-flex span,
+.customer_card_list.new li div.d-flex p {
   color: #707070;
   font-size: 0.9rem;
 }
@@ -574,16 +580,18 @@ input[type="time"] {
   width: 65px;
   height: 65px;
 }
-.customer_card_list.new li p{
+.customer_card_list.new li p {
   margin-bottom: 5px !important;
 }
-.customer_card_list.new li p span, .customer_card_list.new li div.d-flex span {
+.customer_card_list.new li p span,
+.customer_card_list.new li div.d-flex span {
   min-width: 125px;
   display: inline-block;
   position: relative;
   margin-left: 1rem;
 }
-.customer_card_list.new li p span::after,.customer_card_list.new li div.d-flex span::after {
+.customer_card_list.new li p span::after,
+.customer_card_list.new li div.d-flex span::after {
   content: ":";
   position: absolute;
   left: 0;
@@ -1022,12 +1030,13 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   color: var(--basic-main-color) !important;
 }
 .our_services_section {
-  height: calc(100% - 276px);
+  height: calc(100% - 196px);
   position: relative;
 }
 .our_services_section .slick-slide .btn {
   font-size: 0.75rem;
   min-height: 50px;
+  max-width: 95%;
   min-width: 95%;
   font-weight: bold;
 }
@@ -1093,15 +1102,18 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 .btn-outline-primary:focus {
   background-color: transparent !important;
 }
+.slick_slider .btn.active{
+  transition: all .2s ease-in-out;
+}
 .btn-outline-primary.active,
 .btn-outline-primary:hover,
-.pay_tab .btn.active {
+.pay_tab .btn.active, .slick_slider .btn.active {
   background-color: var(--basic-main-color) !important;
   border-color: var(--basic-main-color) !important;
 }
 .customer_inputs .btn-outline-primary.active .svg-inline--fa,
 .customer_inputs .btn-outline-primary:hover .svg-inline--fa,
-.pay_tab .btn.active {
+.pay_tab .btn.active, .slick_slider .btn.active {
   color: white !important;
 }
 .our_services_section .btn-group .btn {
@@ -1156,8 +1168,14 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 }
 .btn_click_down {
   position: absolute;
-  bottom: -20px;
+  bottom: 69px;
   left: -4px;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+.btn_click_down.btn_toggled {
+  bottom: 0;
+  transition: all 0.3s ease-in-out;
 }
 .btn_click_down .svg-inline--fa {
   vertical-align: baseline;
@@ -1179,6 +1197,8 @@ input.date_inputs::-webkit-calendar-picker-indicator {
   text-overflow: ellipsis;
 }
 .total_sale {
+  position: absolute;
+  bottom: 0;
   height: 80px;
   color: white;
   z-index: 10;
@@ -1596,10 +1616,10 @@ a.alert_message:hover {
   text-align: center;
   border: 1px solid var(--basic-main-color) !important;
 }
-.convert_modal .freez_info .row.w-100 .btn{
+.convert_modal .freez_info .row.w-100 .btn {
   min-width: 125px;
 }
-.freez_info.box-shadow-gray{
+.freez_info.box-shadow-gray {
   min-height: 280px;
 }
 .customer_card_list input[type="number"] {

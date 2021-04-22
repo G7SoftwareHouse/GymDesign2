@@ -42,9 +42,9 @@ $(document).ready(function () {
     slidesToShow: 4,
     slidesToScroll: 1,
     infinite: true,
-    speed: 500,
-    autoplay: true,
-    autoplaySpeed: 2500,
+    // speed: 500,
+    // autoplay: true,
+    // autoplaySpeed: 2500,
     prevArrow: '<button class="slide-arrow prev-arrow"></button>',
     nextArrow: '<button class="slide-arrow next-arrow"></button>',
     responsive: [
@@ -113,6 +113,7 @@ $(document).ready(function () {
   // click down button
   $(".btn_click_down").on("click", function () {
     $(".total_sale").slideToggle();
+    $( ".btn_click_down" ).toggleClass( " btn_toggled");
   });
 });
 
