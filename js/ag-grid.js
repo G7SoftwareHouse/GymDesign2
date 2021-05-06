@@ -210,7 +210,7 @@ self.getDatePicker.prototype = {
   init: function (params) {
     this.getDatePickerButton = document.createElement("div");
     this.getDatePickerButton.innerHTML =
-      '<input type="date" style="width: 100%;height: calc(100% - 11px);border: 0;background:none">';
+      '<input type="date" style="width: 100%;border: 0;background:none">';
   },
   getGui: function () {
     return this.getDatePickerButton;
@@ -245,12 +245,12 @@ const columnDefs = [
     headerName: "م",
     field: "id",
     resizable: true,
-    minWidth: 50,
+    suppressSizeToFit: true
   },
   {
     headerName: "النوع",
     field: "gender",
-    minWidth: 120,
+    suppressSizeToFit: true,
     cellRenderer: "genderCellRenderer",
     cellEditor: "agRichSelectCellEditor",
     cellEditorParams: {
@@ -262,75 +262,75 @@ const columnDefs = [
     headerName: "كود الحساب",
     field: "codeNo",
     resizable: true,
-    minWidth: 150,
     cellRenderer: code,
     suppressSorting: true,
     editable: true,
+    suppressSizeToFit: true
   },
   {
     headerName: "الاجراء",
     field: "action",
     resizable: true,
-    minWidth: 100,
     cellRenderer: actionCellRenderer,
     suppressSorting: true,
+    suppressSizeToFit: true
   },
   {
     headerName: "الحالة",
     field: "status",
     resizable: true,
-    minWidth: 160,
     cellRenderer: checkBox,
+    suppressSizeToFit: true
   },
   {
     headerName: "المرفقات",
     field: "attach",
     resizable: true,
-    minWidth: 100,
     cellRenderer: attach,
     suppressSorting: true,
+    suppressSizeToFit: true
   },
   {
     headerName: "اجراءات",
     field: "actions",
     resizable: true,
-    minWidth: 200,
     cellRenderer: actions,
     suppressSorting: true,
+    suppressSizeToFit: true
   },
   {
     headerName: "رقم الخدمة",
     field: "serviceNo",
     resizable: true,
-    minWidth: 100,
+    suppressSizeToFit: true
   },
-  { headerName: "الخدمة", field: "service", resizable: true, minWidth: 200 },
+  { headerName: "الخدمة", field: "service", resizable: true, suppressSizeToFit: true },
   {
     headerName: "تاريخ الشراء",
     resizable: true,
-    minWidth: 140,
     cellRenderer: getDatePicker,
+    suppressSizeToFit: true
   },
   {
     headerName: "تاريخ التفعيل",
     field: "dateActive",
     resizable: true,
-    minWidth: 140,
+    suppressSizeToFit: true
   },
   {
     headerName: "تاريخ الانتهاء",
     field: "dateExpire",
     resizable: true,
-    minWidth: 140,
+    suppressSizeToFit: true
   },
   {
     headerName: "قيمة الاشتراك",
     field: "value",
     resizable: true,
-    minWidth: 130,
+    suppressSizeToFit: true
   },
-  { headerName: "المدفوع", field: "paid", resizable: true, minWidth: 100 },
-  { headerName: "المتبقي", field: "remain", resizable: true, minWidth: 100 },
+  { headerName: "المدفوع", field: "paid", resizable: true, suppressSizeToFit: true },
+  { headerName: "المتبقي", field: "remain", resizable: true, suppressSizeToFit: true },
 ];
 
 // specify the data
