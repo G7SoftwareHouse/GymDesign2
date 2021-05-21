@@ -108,22 +108,14 @@ self.attach.prototype = {
   init: function (params) {
     this.attachButton = document.createElement("div");
     this.attachButton.innerHTML = `
-    <ul class="attach-list text-center">
-      <li>
-        <button
-        type="button"
-        class="btn green-color"
-        data-toggle="modal"
-        data-target="#fingerPrintModal"
-        ><i class="fas fa-paperclip mx-1"></i>العقد</button>
-      </li>
-      <li>
+    <ul class="attach-list h-100">
+      <li class="h-100">
         <button
         type="button"
         class="btn"
         data-toggle="modal"
         data-target="#fingerPrintModal"
-        ><i class="fas fa-paperclip mx-1"></i>مرفقات اخرى</button>
+        ><i class="fas fa-paperclip mx-1"></i>مرفقات </button>
       </li>
     </ul>
         `;
@@ -210,7 +202,7 @@ self.getDatePicker.prototype = {
   init: function (params) {
     this.getDatePickerButton = document.createElement("div");
     this.getDatePickerButton.innerHTML =
-      '<input type="date" style="width: 100%;border: 0;background:none">';
+      '<input type="date" class="w-100 h-100" style="border: 0;background:none">';
   },
   getGui: function () {
     return this.getDatePickerButton;

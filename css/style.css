@@ -140,8 +140,8 @@ input[type="time"] {
 .ag-theme-balham .btn {
   outline: none !important;
   box-shadow: none !important;
-  display: flex !important;
-  align-items: center;
+  /* display: flex !important; */
+  /* align-items: center; */
 }
 .ag-theme-balham .ag-cell .form-check-input {
   right: 0;
@@ -201,8 +201,9 @@ input[type="time"] {
 }
 .ag-theme-balham .ag-cell .attach-list button {
   display: block;
-  height: auto;
+  height: 100%;
   font-size: 0.7rem;
+  text-align: right;
 }
 /* toggle btn */
 .toggle-off.btn,
