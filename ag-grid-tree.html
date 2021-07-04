@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
   <head>
     <title>Collapse table</title>
     <meta charset="UTF-8" />
@@ -17,14 +17,21 @@
     <link rel="stylesheet" href="./css/ag-grid.css" />
     <link rel="stylesheet" href="./css/ag-theme-balham.css" />
     <link rel="stylesheet" href="./css/custom-ag-grid.css" />
+
+    <link type="text/css" href="css/editor.css" rel="stylesheet" />
     <style media="only screen">
       html,
       body {
         height: 100%;
         width: 100%;
         margin: 0;
+        text-align: right;
         box-sizing: border-box;
         -webkit-overflow-scrolling: touch;
+      }
+
+      .line-control-status-bar {
+        display: none;
       }
 
       ul li {
@@ -41,6 +48,7 @@
       td {
         padding: 2px 4px;
         border: 1px solid;
+        text-align: right;
       }
       .connectedSortable tr,
       .ui-sortable-helper {
@@ -72,11 +80,39 @@
       .myTable .table {
         background-color: transparent;
       }
+      .myTable td, .myTable th {
+        vertical-align: middle;
+        border-left: 1px solid ;
+        text-align: center;
+        width: calc(91% / 3);
+      }
+      .myTable td:first-child, .myTable th:first-child{
+        width: 9%;
+      }
+      .myTable .custom_table td:first-child{
+        width: calc(91% / 3);
+      }
+      .custom_table,.custom_table tr,.custom_table th{
+        border: none !important;
+      }
+      .myTable .card-header {
+        padding: 0.1rem 1.25rem;
+      }
+      .myTable .form-control {
+        border: none;
+        border-radius: 0;
+        margin-bottom: 0;
+        background-color: #f5f5f5;
+      }
+      .myTable .form-control:focus {
+        border-color: transparent;
+        box-shadow: none;
+      }
       .bold {
         font-weight: 600;
       }
       .bg-white {
-        background-color: white impo !important;
+        background-color: white !important;
       }
 
       [data-toggle="collapse"]:before {
@@ -87,29 +123,41 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         content: "\f054";
-        margin-top: 10px;
+        margin-top: 7px;
         transform: rotate(90deg);
         transition: all linear 0.25s;
       }
       [data-toggle="collapse"].collapsed:before {
-        transform: rotate(0deg);
+        transform: rotate(180deg);
       }
     </style>
   </head>
   <body class="py-5">
-    <div class="container mb-5">
+    <textarea id="editor"></textarea>
+    <div class="container my-5">
       <div class="table myTable">
         <thead>
           <div class="card-header">
             <table class="table table-sm mb-0">
               <tbody style="width: 100%">
                 <tr>
-                  <td class="border-0 bold">#</td>
-                  <td class="border-0 bold">Mark</td>
-                  <td class="border-0 bold">Otto</td>
-                  <td class="border-0 bold">@mdo</td>
-                  <td class="border-0 bold text-right">
-                    <i class="fa"></i>
+                  <td class="border-0 bold" width="9%"></td>
+                  <td class="border-0 bold">المنتج</td>
+                  <td class="border-0 bold">الوحدة</td>
+                  <td class="custom_table">
+                    <table
+                      class="table table-sm table-borderless border-0 p-0 m-0"
+                      cellspacing="0"
+                    >
+                      <tr class="p-0">
+                        <th colspan="3" class="text-center p-0">العمل</th>
+                      </tr>
+                      <tr class="p-0">
+                        <td class="text-center p-0">من</td>
+                        <td class="text-center p-0">الي</td>
+                        <td class="border-0 text-center p-0">الي</td>
+                      </tr>
+                    </table>
                   </td>
                 </tr>
               </tbody>
@@ -117,278 +165,486 @@
           </div>
         </thead>
         <tbody id="myTable">
-          <tr class="card border-0" id="1">
-            <div class="card-header bg-white">
-              <table class="table table-sm mb-0">
-                <tbody style="width: 100%">
-                  <tr
-                    id="headingOne"
-                    data-toggle="collapse"
-                    data-target="#collapseOne"
-                  >
-                    <td class="border-0"></td>
-                    <td class="border-0">Mark</td>
-                    <td class="border-0">Otto</td>
-                    <td class="border-0">@mdo</td>
-                    <td class="border-0 text-right">
-                      <i class="fa"></i>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div
-              id="collapseOne"
-              class="collapse show"
-              role="tabpanel"
-              aria-labelledby="headingOne"
-              data-parent="#accordion"
-            >
-              <div class="card-body px-5">
-                <table class="table border table-sm w-100">
-                  <tbody style="width: 100%">
-                    <tr class="card-header">
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="table table-hover table-hover border table-sm">
-                  <tbody style="width: 100%">
-                    <tr class="card-header">
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="table table-hover border table-sm">
-                  <tbody style="width: 100%">
-                    <tr class="card-header">
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="table table-hover border table-sm">
-                  <tbody style="width: 100%">
-                    <tr class="card-header">
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+          <div class="new_row">
+            <tr class="border-bottom">
+              <input type="text" class="form-control" placeholder="سكشن #" />
+            </tr>
+            <tr class="card border-0" id="1">
+              <div class="card-header bg-white">
+                <table class="table table-sm mb-0">
+                  <tbody class="connectedSortable" style="width: 100%">
+                    <tr id="headingOne">
+                      <td
+                        class="border-0 text-right collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        width="9%"
+                      >
+                        <i class="fa"></i>
+                      </td>
+                      <td class="border-0">
+                        <div class="form-group m-0">
+                          <select class="form-control text-center" style="background-color: transparent;width: auto;margin: 0 auto;">
+                            <option selected disabled>اختار المنتج</option>
+                            <option>توريد تكيفات</option>
+                            <option>توريد وظيفة</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td class="border-0">
+                        <input class="form-control text-center" style="background-color: transparent" value="45" type="text" />
+                      </td>
+                      <td class="border-0">
+                        <input class="form-control text-center" style="background-color: transparent" value="الوحده" type="text" />
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-            </div>
-          </tr>
-          <tr class="card border-0" id="2">
-            <div
-              class="card-header bg-white collapsed"
-              role="tab"
-              id="headingTwo"
-            >
-              <table class="table table-sm mb-0">
-                <tbody style="width: 100%">
-                  <tr
-                    id="headingTwo"
-                    data-toggle="collapse"
-                    data-target="#collapseTwo"
-                  >
-                    <td class="border-0"></td>
-                    <td class="border-0">2222</td>
-                    <td class="border-0">Otto</td>
-                    <td class="border-0">@mdo</td>
-                    <td class="border-0 text-right">
-                      <i class="fa"></i>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div
-              id="collapseTwo"
-              class="collapse"
-              role="tabpanel"
-              aria-labelledby="headingTwo"
-              data-parent="#accordion"
-            >
-              <div class="card-body">
-                <table class="table border table-sm">
-                  <tbody style="width: 100%">
-                    <tr class="card-header bg-white">
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="table table-hover table-hover border table-sm">
-                  <tbody style="width: 100%">
-                    <tr class="card-header">
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="table table-hover border table-sm">
-                  <tbody style="width: 100%">
-                    <tr class="card-header">
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="table table-hover border table-sm">
-                  <tbody style="width: 100%">
-                    <tr class="card-header">
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+              <div
+                id="collapseOne"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  <table class="table border table-sm">
+                    <tbody class="connectedSortable" style="width: 100%">
+                      <tr class="card-header bg-white">
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table table-hover table-hover border table-sm">
+                    <tbody class="connectedSortable" style="width: 100%">
+                      <tr class="card-header">
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table table-hover border table-sm">
+                    <tbody class="connectedSortable" style="width: 100%">
+                      <tr class="card-header">
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table table-hover border table-sm">
+                    <tbody class="connectedSortable" style="width: 100%">
+                      <tr class="card-header">
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </tr>
+          </div>
+          <div class="new_row">
+            <tr class="border-bottom">
+              <input type="text" class="form-control" placeholder="سكشن #" />
+            </tr>
+            <tr class="card border-0" id="2">
+              <div
+                class="card-header bg-white collapsed"
+                role="tab"
+                id="headingTwo"
+              >
+                <table class="table table-sm mb-0">
+                  <tbody class="connectedSortable" style="width: 100%">
+                    <tr id="headingTwo">
+                      <td
+                        class="border-0 text-right collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapseOne"
+                        width="9%"
+                      >
+                        <i class="fa"></i>
+                      </td>
+                      <td class="border-0">
+                        <div class="form-group m-0">
+                          <select class="form-control text-center" style="background-color: transparent;width: auto;margin: 0 auto;">
+                            <option selected disabled>اختار المنتج</option>
+                            <option>توريد تكيفات</option>
+                            <option>توريد وظيفة</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                      </td>
+                      <td class="border-0">
+                        <input class="form-control text-center" style="background-color: transparent" value="45" type="text" />
+                      </td>
+                      <td class="border-0">
+                        <input class="form-control text-center" style="background-color: transparent" value="الوحده" type="text" />
+                      </td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-            </div>
-          </tr>
-          <tr class="card border-0" id="3">
-            <div
-              class="card-header bg-white collapsed"
-              role="tab"
-              id="headingThree"
-            >
-              <table class="table table-sm mb-0">
-                <tbody style="width: 100%">
-                  <tr
-                    id="headingThree"
-                    data-toggle="collapse"
-                    data-target="#collapseThree"
-                  >
-                    <td class="border-0"></td>
-                    <td class="border-0">3333</td>
-                    <td class="border-0">Otto</td>
-                    <td class="border-0">@mdo</td>
-                    <td class="border-0 text-right">
-                      <i class="fa"></i>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div
-              id="collapseThree"
-              class="collapse"
-              role="tabpanel"
-              aria-labelledby="headingThree"
-              data-parent="#accordion"
-            >
-              <div class="card-body">
-                <table class="table border table-sm">
-                  <tbody style="width: 100%">
-                    <tr class="card-header">
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="table table-hover table-hover border table-sm">
-                  <tbody style="width: 100%">
-                    <tr class="card-header">
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="table table-hover border table-sm">
-                  <tbody style="width: 100%">
-                    <tr class="card-header">
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                  </tbody>
-                </table>
-                <table class="table table-hover border table-sm">
-                  <tbody style="width: 100%">
-                    <tr class="card-header">
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
+              <div
+                id="collapseTwo"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="headingTwo"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  <table class="table border table-sm">
+                    <tbody class="connectedSortable" style="width: 100%">
+                      <tr class="card-header bg-white">
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table table-hover table-hover border table-sm">
+                    <tbody class="connectedSortable" style="width: 100%">
+                      <tr class="card-header">
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table table-hover border table-sm">
+                    <tbody class="connectedSortable" style="width: 100%">
+                      <tr class="card-header">
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table table-hover border table-sm">
+                    <tbody class="connectedSortable" style="width: 100%">
+                      <tr class="card-header">
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </tr>
+          </div>
+          <div class="new_row">
+            <tr class="border-bottom">
+              <input type="text" class="form-control" placeholder="سكشن #" />
+            </tr>
+            <tr class="card border-0" id="3">
+              <div
+                class="card-header bg-white collapsed"
+                role="tab"
+                id="headingThree"
+              >
+                <table class="table table-sm mb-0">
+                  <tbody class="connectedSortable" style="width: 100%">
+                    <tr id="headingThree">
+                      <td
+                        class="border-0 text-right collapsed"
+                        data-toggle="collapse"
+                        data-target="#collapseThree"
+                        width="9%"
+                      >
+                        <i class="fa"></i>
+                      </td>
+                      <td class="border-0">3333</td>
+                      <td class="border-0">Otto</td>
+                      <td class="border-0">@mdo</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-            </div>
-          </tr>
+              <div
+                id="collapseThree"
+                class="collapse"
+                role="tabpanel"
+                aria-labelledby="headingThree"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  <table class="table border table-sm">
+                    <tbody style="width: 100%">
+                      <tr class="card-header">
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table table-hover table-hover border table-sm">
+                    <tbody style="width: 100%">
+                      <tr class="card-header">
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table table-hover border table-sm">
+                    <tbody style="width: 100%">
+                      <tr class="card-header">
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <table class="table table-hover border table-sm">
+                    <tbody style="width: 100%">
+                      <tr class="card-header">
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="form-group form-check m-0">
+                            <input type="checkbox" class="form-check-input">
+                          </div>
+                        </td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </tr>
+          </div>
         </tbody>
       </div>
+
+      <button onclick="myFunction()">add section</button>
     </div>
+
+
+
+    <table class="table table-hover" id="myTable">
+      <thead>
+        <tr>
+          <th scope="col" class="text-center">#</th>
+          <th scope="col">Input</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody style="width: 100%">
+        <tr id="1">
+          <td class="index">1</td>
+          <td class="indexInput">
+            <input type="text" name="abc" id="index" value="1" />
+          </td>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr id="2">
+          <td class="index">2</td>
+          <td class="indexInput">
+            <input type="text" name="abc" id="index" value="2" />
+          </td>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr id="3">
+          <td class="index">3</td>
+          <td class="indexInput">
+            <input type="text" name="abc" id="index" value="3" />
+          </td>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
 
     <!-- <div class="container">
       <div class="row">
@@ -403,7 +659,7 @@
                 <th scope="col">Handle</th>
               </tr>
             </thead>
-            <tbody style="width:100%">
+            <tbody style="width: 100%">
               <tr id="1">
                 <td class="index">1</td>
                 <td class="indexInput">
@@ -435,15 +691,37 @@
           </table>
         </div>
       </div>
-    </div> -->
+    </div>
+
+    <table id="table-draggable1">
+      <tbody class="connectedSortable">
+        <tr>
+          <th>col1</th>
+          <th>col2</th>
+          <th>col3</th>
+          <th>col4</th>
+        </tr>
+        <tr>
+          <td>156</td>
+          <td>668</td>
+          <td>100.95</td>
+          <td>1.82</td>
+        </tr>
+        <tr>
+          <td>256</td>
+          <td>668</td>
+          <td>100.95</td>
+          <td>1.82</td>
+        </tr>
+      </tbody>
+    </table> -->
 
     <!-- AG-GRID -->
     <div id="myGrid" class="ag-theme-balham"></div>
 
-    <div class="m-5 p-5"></div>
-    <script>
+     <script>
       var __basePath = "./";
-    </script>
+    </script> 
     <script src="js/ag-grid-enterprise.min.noStyle.js"></script>
     <script>
       function DetailCellRenderer() {}
@@ -527,6 +805,50 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script src="js/editor.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#txtEditor").Editor({
+          fonts: false,
+          styles: false,
+          font_size: false,
+          unlink: false,
+          insert_link: false,
+          insert_img: false,
+          hr_line: false,
+          indent: false,
+          outdent: false,
+        });
+
+        $("tbody.connectedSortable")
+          .sortable({
+            connectWith: ".connectedSortable",
+            items: "> tr:not(:first)",
+            appendTo: $tabs,
+            helper: "clone",
+            zIndex: 999990,
+            start: function () {
+              $tabs.addClass("dragging");
+            },
+            stop: function () {
+              $tabs.removeClass("dragging");
+            },
+          })
+          .disableSelection();
+
+        var $tab_items = $(".nav-tabs > li", $tabs).droppable({
+          accept: ".connectedSortable tr",
+          hoverClass: "ui-state-hover",
+          over: function (event, ui) {
+            var $item = $(this);
+            $item.find("a").tab("show");
+          },
+          drop: function (event, ui) {
+            return false;
+          },
+        });
+      });
+    </script>
     <script>
       var fixHelperModified = function (e, tr) {
           var $originals = tr.children();
@@ -559,6 +881,56 @@
         cursor: "move",
         update: function () {},
       });
+
+      function myFunction() {
+        $('.myTable').append('<div class="new_row"><tr class="border-bottom"><input type="text" class="form-control" placeholder="سكشن #" id="newInput" /></tr><tr class="card border-0" id="1"><div class="card-header bg-white"><table class="table table-sm mb-0"><tbody class="connectedSortable" style="width: 100%"><tr id="headingFour"><td class="border-0 text-right collapsed" data-toggle="collapse" data-target="#collapseFour" width="9%"> <i class="fa"></i></td><td class="border-0"><div class="form-group m-0"><select class="form-control text-center" style="background-color: transparent;width: auto;margin: 0 auto;"><option selected disabled>اختار المنتج</option><option>توريد تكيفات</option><option>توريد وظيفة</option><option>4</option><option>5</option></select></div></td><td class="border-0"><input class="form-control text-center" style="background-color: transparent" value="45" type="text" /></td><td class="border-0"><input class="form-control text-center" style="background-color: transparent" value="الوحده" type="text" /></td></tr></tbody></table></div><div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion"><div class="card-body"><table class="table border table-sm"><tbody class="connectedSortable" style="width: 100%"><tr class="card-header bg-white"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table><table class="table table-hover table-hover border table-sm"><tbody class="connectedSortable" style="width: 100%"><tr class="card-header"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table><table class="table table-hover border table-sm"><tbody class="connectedSortable" style="width: 100%"><tr class="card-header"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table><table class="table table-hover border table-sm"><tbody class="connectedSortable" style="width: 100%"><tr class="card-header"><td>Mark</td><td>Otto</td><td>@mdo</td></tr><tr><td>Mark</td><td>Otto</td><td>@mdo</td></tr></tbody></table></div></div></tr></div>');
+        $( "#newInput" ).focus();
+      }
     </script>
+    <script
+      src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+
+    <script>
+      tinymce.init({
+        selector: "#editor",
+        menubar: false,
+        statusbar: false,
+        plugins:
+          "autoresize anchor autolink charmap code codesample directionality fullpage help hr image imagetools insertdatetime link lists media nonbreaking pagebreak preview print searchreplace table template textpattern toc visualblocks visualchars",
+        toolbar:
+          "h1 h2 bold italic strikethrough blockquote bullist numlist backcolor | link image media | removeformat help fullscreen ",
+        skin: "bootstrap",
+        toolbar_drawer: "floating",
+        min_height: 200,
+        autoresize_bottom_margin: 16,
+        setup: (editor) => {
+          editor.on("init", () => {
+            editor.getContainer().style.transition =
+              "border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out";
+          });
+          editor.on("focus", () => {
+            (editor.getContainer().style.boxShadow =
+              "0 0 0 .2rem rgba(0, 123, 255, .25)"),
+              (editor.getContainer().style.borderColor = "#80bdff");
+          });
+          editor.on("blur", () => {
+            (editor.getContainer().style.boxShadow = ""),
+              (editor.getContainer().style.borderColor = "");
+          });
+        },
+      });
+    </script>
+
+    <div class="row mb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 nopadding">
+            <textarea id="txtEditor"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -121,16 +121,16 @@ input[type="time"] {
 .ag-row {
   /* overflow: visible !important; */
 }
+.ag-root.ag-layout-auto-height,
+.ag-body-viewport.ag-layout-auto-height,
+.ag-body-viewport-wrapper.ag-layout-auto-height {
+  /* overflow-y: visible !important; */
+}
 .ag-row {
   z-index: 0;
 }
 .ag-row.ag-row-focus {
   z-index: 1;
-}
-.ag-root.ag-layout-auto-height,
-.ag-body-viewport.ag-layout-auto-height,
-.ag-body-viewport-wrapper.ag-layout-auto-height {
-  /* overflow-y: visible !important; */
 }
 .dropdownGrid .ag-root.ag-layout-auto-height,
 .dropdownGrid .ag-body-viewport.ag-layout-auto-height,
@@ -807,7 +807,6 @@ input.date_inputs::-webkit-calendar-picker-indicator {
 .ui-widget.ui-widget-content {
   padding: 0;
   border-radius: 4px;
-  overflow: hidden;
   border: 1px solid #d9d9d9 !important;
 }
 .ui-datepicker .ui-datepicker-header {
