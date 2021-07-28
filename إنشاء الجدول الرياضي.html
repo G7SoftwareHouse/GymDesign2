@@ -1225,12 +1225,12 @@
       tabindex="-1"
       role="dialog"
     >
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-body">
             <!-- start form -->
             <form class="service_form">
-              <div class="form-row">
+              <div class="form-row align-items-end">
                 <div class="form-group mb-0 col-md-6">
                   <label>الكلاس</label>
                   <select id="class" class="form-control">
@@ -1251,6 +1251,43 @@
                     <option selected>الصالة</option>
                     <option>الصالة</option>
                   </select>
+                </div>
+                <div class="form-group form-check mb-0 col-md-6">
+                  <div class="px-4">
+                    <input type="checkbox" class="form-check-input" id="nameOfCheck">
+                    <label class="form-check-label" for="nameOfCheck">عرض اسم الصالة</label>
+                  </div>
+                </div>
+              </div>
+            </form>
+
+
+            <!-- new for any popup -->
+            <form class="service_form">
+              <div class="form-row align-items-center mt-4">
+                <div class="col-md-4">
+                  <div class="row form-group align-items-center mb-0 font-size-14">
+                    <label class="col-sm-4 col-form-label">الكلاس</label>
+                    <div class="col-sm-8">
+                      <p class="mb-0">250ريال</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="row form-group align-items-center mb-0 font-size-14">
+                    <label class="col-sm-4 col-form-label">المدرب</label>
+                    <div class="col-sm-8">
+                      <p class="mb-0">250ريال</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="row form-group align-items-center mb-0 font-size-14">
+                    <label class="col-sm-4 col-form-label">الصالة</label>
+                    <div class="col-sm-8">
+                      <p class="mb-0">250ريال</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </form>
