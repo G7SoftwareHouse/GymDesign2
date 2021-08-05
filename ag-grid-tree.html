@@ -20,6 +20,14 @@
 
     <link type="text/css" href="css/editor.css" rel="stylesheet" />
     <style media="only screen">
+
+.modal:nth-of-type(even) {
+    z-index: 1052 !important;
+}
+.modal-backdrop.show:nth-of-type(even) {
+    z-index: 1051 !important;
+}
+    
       html,
       body {
         height: 100%;
@@ -133,7 +141,55 @@
     </style>
   </head>
   <body class="py-5">
-    <textarea id="editor"></textarea>
+
+
+  <!-- start modal  -->
+    <a data-toggle="modal" href="#myModal" class="btn btn-primary">Launch modal</a>
+
+      <div class="modal" id="myModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Modal title</h4>    
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              </div><div class="container"></div>
+              <div class="modal-body">
+                Content for the dialog / modal goes here.
+                <a data-toggle="modal" href="#myModal2" class="btn btn-primary">Launch modal</a>
+              </div>
+              <div class="modal-footer">
+                <a href="#" data-dismiss="modal" class="btn">Close</a>
+                <a href="#" class="btn btn-primary">Save changes</a>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="modal" id="myModal2" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">2nd Modal title</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              </div><div class="container"></div>
+              <div class="modal-body">
+                Content for the dialog / modal goes here.
+                Content for the dialog / modal goes here.
+                Content for the dialog / modal goes here.
+                Content for the dialog / modal goes here.
+                Content for the dialog / modal goes here.
+              </div>
+              <div class="modal-footer">
+                <a href="#" data-dismiss="modal" class="btn">Close</a>
+                <a href="#" class="btn btn-primary">Save changes</a>
+              </div>
+            </div>
+          </div>
+      </div>
+<!-- end modal  -->
+
+
+
+
     <div class="container my-5">
       <div class="table myTable">
         <thead>
@@ -893,34 +949,9 @@
     ></script>
 
     <script>
-      tinymce.init({
-        selector: "#editor",
-        menubar: false,
-        statusbar: false,
-        plugins:
-          "autoresize anchor autolink charmap code codesample directionality fullpage help hr image imagetools insertdatetime link lists media nonbreaking pagebreak preview print searchreplace table template textpattern toc visualblocks visualchars",
-        toolbar:
-          "h1 h2 bold italic strikethrough blockquote bullist numlist backcolor | link image media | removeformat help fullscreen ",
-        skin: "bootstrap",
-        toolbar_drawer: "floating",
-        min_height: 200,
-        autoresize_bottom_margin: 16,
-        setup: (editor) => {
-          editor.on("init", () => {
-            editor.getContainer().style.transition =
-              "border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out";
-          });
-          editor.on("focus", () => {
-            (editor.getContainer().style.boxShadow =
-              "0 0 0 .2rem rgba(0, 123, 255, .25)"),
-              (editor.getContainer().style.borderColor = "#80bdff");
-          });
-          editor.on("blur", () => {
-            (editor.getContainer().style.boxShadow = ""),
-              (editor.getContainer().style.borderColor = "");
-          });
-        },
-      });
+      $('#openBtn').click(function(){
+        $('#myModal').modal({show:true});
+      })
     </script>
 
     <div class="row mb-5">
